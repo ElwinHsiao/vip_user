@@ -30,6 +30,11 @@
 #include "helloworld.grpc.pb.h"
 // #endif
 
+#include <fstream>
+#include <sstream>
+#include <iostream>
+
+
 using grpc::Server;
 using grpc::ServerBuilder;
 using grpc::ServerContext;
@@ -37,6 +42,18 @@ using grpc::Status;
 using helloworld::HelloRequest;
 using helloworld::HelloReply;
 using helloworld::Greeter;
+
+
+
+grpc::string ReadFile(char *filePath) {
+  std::ifstream ifile(filePath);
+  std::ostringstream buf;
+  char ch;
+  while(buf&&ifile.get(ch))
+    buf.put(ch);
+
+  return buf.str();
+}
 
 // Logic and data behind the server's behavior.
 class GreeterServiceImpl final : public Greeter::Service {
@@ -50,14 +67,33 @@ class GreeterServiceImpl final : public Greeter::Service {
 };
 
 void RunServer() {
+  char *keyFilePath = getenv("VIP_USER_SEVER_KEY");
+  char *crtFilePath = getenv("VIP_USER_SEVER_CRT");
+  if (keyFilePath == NULL || crtFilePath == NULL) {
+    std::cout << "no rsa key path" << std::endl;
+    return;
+  } 
+
+  auto key = ReadFile(keyFilePath);
+  auto crt = ReadFile(crtFilePath);
+
+  grpc::SslServerCredentialsOptions sslOpts{};
+  sslOpts.pem_key_cert_pairs.push_back(
+    grpc::SslServerCredentialsOptions::PemKeyCertPair {
+      key, crt
+    }
+  );
+
+
   std::string server_address("0.0.0.0:50051");
   GreeterServiceImpl service;
+
 
   grpc::EnableDefaultHealthCheckService(true);
   grpc::reflection::InitProtoReflectionServerBuilderPlugin();
   ServerBuilder builder;
   // Listen on the given address without any authentication mechanism.
-  builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
+  builder.AddListeningPort(server_address, grpc::SslServerCredentials(sslOpts));
   // Register "service" as the instance through which we'll communicate with
   // clients. In this case it corresponds to an *synchronous* service.
   builder.RegisterService(&service);
