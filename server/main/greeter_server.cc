@@ -24,11 +24,11 @@
 #include <grpcpp/health_check_service_interface.h>
 #include <grpcpp/ext/proto_server_reflection_plugin.h>
 
-#ifdef BAZEL_BUILD
-#include "examples/protos/helloworld.grpc.pb.h"
-#else
+// #ifdef BAZEL_BUILD
+// #include "examples/protos/helloworld.grpc.pb.h"
+// #else
 #include "helloworld.grpc.pb.h"
-#endif
+// #endif
 
 using grpc::Server;
 using grpc::ServerBuilder;
@@ -43,6 +43,7 @@ class GreeterServiceImpl final : public Greeter::Service {
   Status SayHello(ServerContext* context, const HelloRequest* request,
                   HelloReply* reply) override {
     std::string prefix("Hello ");
+    std::cout << "handle request: name=" << request->name() << std::endl;
     reply->set_message(prefix + request->name());
     return Status::OK;
   }
