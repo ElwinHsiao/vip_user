@@ -1,7 +1,7 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 cc_binary(
-    name = "hello",
+    name = "server",
     srcs = [
         "greeter_server.cc",
         "helloworld.pb.cc",
