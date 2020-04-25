@@ -6,7 +6,13 @@
 
 
 namespace vipuser {
-    class Redis
+
+enum RedisDBIndex {
+    RedisDBIndexToken = 0,
+    RedisDBIndexUser = 1,
+};
+
+class Redis
 {
 public:
  
@@ -21,12 +27,14 @@ public:
 
     bool Contains(std::string key);
     void AppendToList(std::string key);
+
+    void SwitchDB(RedisDBIndex index);
  
 private:
     redisContext* _connect;
     redisReply* _reply;
 
-    inline bool isConnected() { return (this->_connect != NULL && this->_connect->err == 0); };
+    // inline bool isConnected() { return (this->_connect != NULL && this->_connect->err == 0); };
 };
 }
 

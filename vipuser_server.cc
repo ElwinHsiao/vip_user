@@ -2,7 +2,6 @@
 
 using namespace vipuser;
 
-static const uint DB_INDEX_LOGIN = 1;
 
 AccountServer::AccountServer(Redis &redis):_redis(redis) {
     
@@ -14,8 +13,10 @@ AccountServer::~AccountServer() {
 
 VipUserStatus AccountServer::createAccount(std::string userId, std::string passwordHash, VipUserTicket &ticket)
 {
-    //_redis.select(DB_INDEX_LOGIN)
-    _redis.Get(userId);
+    _redis.SwitchDB(RedisDBIndexUser);
+    if (_redis.Contains(userId)) {
+        return VipUserStatusError;
+    }
 
     return VipUserStatusOK;
 }
