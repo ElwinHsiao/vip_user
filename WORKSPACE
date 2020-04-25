@@ -13,3 +13,16 @@ grpc_deps()
 
 load("@com_github_grpc_grpc//bazel:grpc_extra_deps.bzl", "grpc_extra_deps")
 grpc_extra_deps()
+
+
+new_local_repository(
+  name = "usr_local_include",
+  path = "/usr/local/include",
+  build_file = "third_party/usr_local.BUILD",
+)
+
+new_local_repository(
+  name = "usr_local_lib",
+  path = "/usr/local/lib",
+  build_file = "third_party/usr_local_lib.BUILD",
+)

@@ -34,6 +34,9 @@
 #include <sstream>
 #include <iostream>
 
+#include "dbhelper.h"
+using namespace vipuser;
+
 
 using grpc::Server;
 using grpc::ServerBuilder;
@@ -67,6 +70,16 @@ class GreeterServiceImpl final : public Greeter::Service {
 };
 
 void RunServer() {
+  Redis *redisClient = new Redis();
+  redisClient->Connect("127.0.0.1", 6379);
+  const auto userId = "userAAA";
+  auto pass = redisClient->Get(userId);
+  std::cout << "pass before set: " << pass << std::endl;
+  // redisClient->Set(userId, "hahahaha ok ya !");
+  // pass = redisClient->Get(userId);
+  // std::cout << "pass after set: " << pass << std::endl;
+
+
   char *keyFilePath = getenv("VIP_USER_SEVER_KEY");
   char *crtFilePath = getenv("VIP_USER_SEVER_CRT");
   if (keyFilePath == NULL || crtFilePath == NULL) {
