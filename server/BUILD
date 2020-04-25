@@ -16,7 +16,9 @@ cc_binary(
         "helloworld.grpc.pb.h",
         "helloworld.pb.h",
         "dbhelper.cc",
-        "dbhelper.h"
+        "dbhelper.h",
+        "vipuser_server.cc",
+        "vipuser_server.h",
     ],
     # copts = ["-I/usr/local/include"],
     # linkopts = ["-lhiredis"],

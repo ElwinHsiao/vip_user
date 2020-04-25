@@ -18,6 +18,8 @@ VipUserStatus AccountServer::createAccount(std::string userId, std::string passw
         return VipUserStatusError;
     }
 
+    
+
     return VipUserStatusOK;
 }
 
