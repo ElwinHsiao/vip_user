@@ -87,9 +87,9 @@ Logout:
 | :---------- | -------- | ------------- | ------------ |
 | accessToken | <string> | <UInt64>      | <string>     |
 
-> accessToken： 随机生成的一个uuid，相当于session的唯一标识。
->
 > refreshToken：encrypt(accessToken, userId, timestamp, salt)，可以逆向解密
+>
+> accessToken： hash(refreshToken, salt)，相当于session的唯一标识。
 
 已登录状态：
 
@@ -101,9 +101,9 @@ Logout:
 
 账户数据：
 
-| Key         | Value  |
-| :---------- | :----- |
-| accessToken | UserId |
+| Uin      | userId   | passwordHash |
+| -------- | :------- | :----------- |
+| <uint64> | <string> | <string>     |
 
 > 账户数据在初期系统接入量少且业务简单的情形下，先直接保存在接入机。后续业务复杂后，支持多种登录方式，有手机/邮箱/别名等更多字段时，再使用关系型数据库保存。
 

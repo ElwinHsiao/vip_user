@@ -16,13 +16,25 @@ grpc_extra_deps()
 
 
 new_local_repository(
-  name = "usr_local_include",
-  path = "/usr/local/include",
+  name = "usr_local",
+  path = "/usr/local",
   build_file = "third_party/usr_local.BUILD",
 )
 
+# new_local_repository(
+#   name = "usr_local_lib",
+#   path = "/usr/local/lib",
+#   build_file = "third_party/usr_local_lib.BUILD",
+# )
+
 new_local_repository(
-  name = "usr_local_lib",
-  path = "/usr/local/lib",
-  build_file = "third_party/usr_local_lib.BUILD",
+  name = "boost_uuid",
+  path = "third_party/boost_uuid/include",
+  build_file = "third_party/boost_uuid.BUILD"
+)
+
+new_local_repository(
+  name = "boost_config",
+  path = "third_party/boost_config/include",
+  build_file = "third_party/boost_config.BUILD"
 )

@@ -1,10 +1,19 @@
 #include "vipuser_server.h"
 
+#include "boost/uuid/uuid.hpp"
+#include "boost/uuid/uuid_io.hpp"
+#include "boost/uuid/uuid_generators.hpp"
+
 using namespace vipuser;
 
+std::string Genuuid()
+{
+    boost::uuids::uuid a_uuid = boost::uuids::random_generator()();
+    return boost::uuids::to_string(a_uuid);
+}
 
 AccountServer::AccountServer(Redis &redis):_redis(redis) {
-    
+    std::cout << "uuid=" << Genuuid() << std::endl;
 }
 
 AccountServer::~AccountServer() {
@@ -18,6 +27,7 @@ VipUserStatus AccountServer::createAccount(std::string userId, std::string passw
         return VipUserStatusError;
     }
 
+    
     
 
     return VipUserStatusOK;
