@@ -38,6 +38,10 @@ cc_binary(
         "vipuser_server.h",
         "dbhelper.cc",
         "dbhelper.h",
+        "crypt_helper.cc",
+        "crypt_helper.h",
+        "crypt_plus.cc",
+        "crypt_plus.h"
     ],
     # includes = [
     #     "third_party/boost_uuid/include"
@@ -49,7 +53,7 @@ cc_binary(
         # "@usr_local//:hiredis",
         "@hiredis//:hiredis",
         "@boost//:uuid",
-        "@picosha2//:picosha2"
+        # "@picosha2//:picosha2"
         # "@boost_uuid//:boost_uuid",
         # ":hiredis"
     ],
