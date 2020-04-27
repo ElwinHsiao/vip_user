@@ -33,6 +33,12 @@ new_local_repository(
 #   build_file = "third_party/boost_uuid.BUILD"
 # )
 
+new_local_repository(
+  name = "hiredis",
+  path = "third_party/hiredis",
+  build_file = "third_party/hiredis.BUILD"
+)
+
 
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 

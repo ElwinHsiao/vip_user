@@ -8,8 +8,10 @@ using namespace vipuser;
 
 std::string AccountServer::Genuuid()
 {
-    boost::uuids::uuid a_uuid = boost::uuids::random_generator()();
-    return boost::uuids::to_string(a_uuid);
+//    boost::uuids::uuid uuid = boost::uuids::random_generator()();
+    boost::uuids::random_generator gen;
+    boost::uuids::uuid uuid = gen();
+    return boost::uuids::to_string(uuid);
 }
 
 AccountServer::AccountServer(Redis &redis):_redis(redis) {
