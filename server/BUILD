@@ -49,6 +49,7 @@ cc_binary(
         # "@usr_local//:hiredis",
         "@hiredis//:hiredis",
         "@boost//:uuid",
+        "@picosha2//:picosha2"
         # "@boost_uuid//:boost_uuid",
         # ":hiredis"
     ],
