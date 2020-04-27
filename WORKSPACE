@@ -29,12 +29,6 @@ new_local_repository(
 
 new_local_repository(
   name = "boost_uuid",
-  path = "third_party/boost_uuid/include",
+  path = "third_party/boost",
   build_file = "third_party/boost_uuid.BUILD"
-)
-
-new_local_repository(
-  name = "boost_config",
-  path = "third_party/boost_config/include",
-  build_file = "third_party/boost_config.BUILD"
 )

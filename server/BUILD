@@ -22,7 +22,7 @@ cc_binary(
     # linkopts = ["-lhiredis"],
     deps = [
         "@com_github_grpc_grpc//:grpc++_reflection",
-        "@usr_local//:headers",
+        "@usr_local//:hiredis",
         # "@usr_local//:libs",
         # ":hiredis"
     ],
@@ -46,9 +46,8 @@ cc_binary(
     # linkopts = ["-lhiredis"],
     deps = [
         "@com_github_grpc_grpc//:grpc++_reflection",
-        "@usr_local_include//:hiredis",
-        "@usr_local_lib//:hiredis_lib",
-        "@boost_uuid//:lib",
+        "@usr_local//:hiredis",
+        "@boost_uuid//:boost_uuid",
         # ":hiredis"
     ],
     # linkstatic = 1,

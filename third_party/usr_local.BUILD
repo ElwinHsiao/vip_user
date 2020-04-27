@@ -1,7 +1,7 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 cc_library(
-  name = "headers",
+  name = "hiredis",
   strip_include_prefix = "include",
   hdrs = glob(["include/hiredis/**"]),
   srcs = [
