@@ -22,19 +22,33 @@ option objc_class_prefix = "HLW";
 package vipuser;
 
 // The greeting service definition.
-service Greeter {
+service AccountService {
   // Sends a greeting
-  rpc CreateAcount (VipUserRequest) returns (VipUserResponse) {}
+  rpc CreateAcount (AccountInfo) returns (TokenInfo) {}
+  rpc Login (AccountInfo) returns (TokenInfo) {}
+  rpc Logout (LogoutRequest) returns (LogoutResponse) {}
 }
 
-message UserInfo {
+message AccountInfo {
   string userId = 1;
-  string passwordHash = 2;
+  string passwordSHA256 = 2;
 }
 
-// The request message containing the user's name.
+message TokenInfo {
+  string accessToken = 1;
+  string refreshToken = 2;
+}
+
+message LogoutRequest {
+  string accessToken = 1;
+}
+
+message LogoutResponse {
+  string accessToken = 1;
+}
+
 message VipUserRequest {
-  string name = 1;
+  string userId = 1;
 }
 
 // The response message containing the greetings

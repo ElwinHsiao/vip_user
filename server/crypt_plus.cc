@@ -74,10 +74,13 @@ CryptPlus::~CryptPlus()
     EVP_CIPHER_CTX_free(_ctx);
 }
 
-std::string CryptPlus::EncryptAEScbc(std::string text) 
+std::string CryptPlus::EncryptAEScbc(std::string text)
 {
-    unsigned char outtext[4096] = {0};
-    int len = encrypt(_ctx, (const unsigned char *)(text.c_str()), text.size(), (const unsigned char *)(_key.c_str()), outtext);
+    return EncryptAEScbc(text.c_str(), text.size());
+}
+
+std::string CryptPlus::EncryptAEScbc(const void *buffer, size_t len) {
+    int len = encrypt(_ctx, (const unsigned char *)buffer, len, (const unsigned char *)(_key.c_str()), outtext);
     if (len <= 0) {
         return "";
     }

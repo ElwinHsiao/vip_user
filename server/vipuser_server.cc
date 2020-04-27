@@ -1,5 +1,7 @@
 #include "vipuser_server.h"
 
+#include <random>
+
 #include "boost/uuid/uuid.hpp"
 #include "boost/uuid/uuid_io.hpp"
 #include "boost/uuid/uuid_generators.hpp"
@@ -8,6 +10,51 @@
 #include "crypt_plus.h"
 
 using namespace vipuser;
+struct RefreshTokenInfo
+{
+    std::string uuid;
+    uint64_t timestamp;
+    uint64_t salt;
+};
+
+struct AccountDetailInfo {
+    std::string uuid;
+    std::string userId;
+    std::string passwordSum;
+    std::string email;
+    std::string phone;
+    uint64_t createTimeMills;
+    uint64_t index;     // the DB auto increate index;
+};
+
+
+uint64_t getCurrentTimeMills() {
+    struct timeval tp;
+    gettimeofday(&tp, NULL);
+    return tp.tv_sec * 1000 + tp.tv_usec / 1000; 
+}
+
+uint64_t genRandom() {
+    // obtain a seed from the system clock:
+    unsigned seed1 = std::chrono::system_clock::now().time_since_epoch().count();
+    
+    std::mt19937 g1 (seed1);  // mt19937 is a standard mersenne_twister_engine
+    uint32_t u32Random = g1();
+    std::cout << "A time seed produced: " << u32Random << std::endl;
+    
+    std::mt19937_64 g2 (seed1);
+    uint64_t u64Random = g2();
+    return u64Random;
+}
+
+
+VipUserStatus readUserDetail(std::string uuid, AccountDetailInfo &accountDetail) {
+
+    return VipUserStatusOK;
+}
+
+
+const uint PASSWORD_SUM_LENGTH = 256;
 
 std::string AccountServer::Genuuid()
 {
@@ -19,6 +66,8 @@ std::string AccountServer::Genuuid()
 
 
 AccountServer::AccountServer(Redis &redis):_redis(redis) {
+    _cryptPlus = new CryptPlus("defaultKey");
+
     std::cout << "world" << std::endl;
     std::cout << "uuid=" << Genuuid() << std::endl;
 
@@ -41,28 +90,57 @@ AccountServer::AccountServer(Redis &redis):_redis(redis) {
     plainText = cryptPlus.DecryptAEScbc(cipherText);
     std::cout << "decrypted plainText=|" << plainText << "|" << std::endl;
 
+
+
 }
 
 AccountServer::~AccountServer() {
-    
+    delete _cryptPlus;
 }
 
-VipUserStatus AccountServer::createAccount(std::string userId, std::string passwordHash, VipUserTicket &ticket)
+VipUserStatus AccountServer::CreateAccount(std::string userId, std::string passwordSHA256, VipUserTicket &ticket)
 {
-    _redis.SwitchDB(RedisDBIndexUser);
-    if (_redis.Contains(userId)) {
-        return VipUserStatusError;
+
+    if (accountExist(userId)) {
+        return VipUserStatusAccountExist;
     }
 
-    
-    
+    if (passwordSHA256.size() != PASSWORD_SUM_LENGTH) {
+        return VipUserStatusErrorFormat;
+    }
+
+    std::string uuid = Genuuid();
+    auto status = StoreNewUser(uuid, userId, passwordSHA256);
+    if (status != VipUserStatusOK) {
+        return status;
+    }
+
+    std::string refreshToken = makeRefreshToken(uuid, GetCurrentTimeMills(), passwordSHA256);
+    if (refreshToken.size() == 0) {
+        return VipUserStatusError;
+    }
+    ticket.refreshToken = refreshToken;
+    ticket.accessToken = sha256(refreshToken);
 
     return VipUserStatusOK;
 }
 
-VipUserStatus AccountServer::Login(std::string userId, std::string passwordHash, VipUserTicket &ticket)
+VipUserStatus AccountServer::Login(std::string userId, std::string passwordSHA256, VipUserTicket &ticket)
 {
+    if (!accountExist(userId)) {
+        return VipUserStatusAccountNotExist;
+    }
+
+    // validate password
+    // ...
+
+
     return VipUserStatusOK;
+}
+
+VipUserStatus AccountServer::CheckLogin(std::string accessToken)
+{
+    
 }
 
 VipUserStatus AccountServer::Logout(std::string accessToken)
@@ -74,3 +152,38 @@ VipUserStatus AccountServer::Relogin(std::string refreshToken, VipUserTicket &ti
 {
     return VipUserStatusOK;
 }
+
+bool AccountServer::AccountExist(std::string userId) {
+    _redis.SwitchDB(RedisDBIndexUser);
+    if (_redis.Contains(userId)) {
+        return true;
+    }
+
+    // check db contains
+    // ...
+
+    return false;
+}
+
+
+VipUserStatus AccountServer::StoreNewUser(std::string uuid, std::string userId, std::string passwordSHA256)
+{
+    // store to db
+    // ...
+    return VipUserStatusOK;
+}
+
+std::string AccountServer::MakeRefreshToken(std::string uuid, uint64_t timestamp, std::string key) {
+    RefreshTokenInfo rti;
+    rti.uuid = uuid;
+    rti.timestamp = timestamp;
+    rti.salt = genRandom();
+
+    _cryptPlus->setKey(key);
+    return _cryptPlus->EncryptAEScbc(&rti, sizeof(rti));
+}
+
+
+// VipUserStatus WriteSession(std::string accessToken, std::string refreshToken) {
+    
+// }

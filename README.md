@@ -73,7 +73,7 @@ Logout:
 
 业务机负责处理具体业务处理，不用关心用户合法验证等其它外围逻辑。
 
-`[可选]` 账户机是一个特殊的业务机，接管接入机的认证职责，负责用户管理，包含创建用户和验证用户，同时保存用户的敏感数据，比如密码hash、手机、邮箱、别名、第三方openid/appid，这些都可以做为用户的登录的唯一key。
+账户机是一个特殊的业务机，接管接入机的认证职责，负责用户管理，包含创建用户和验证用户，同时保存用户的敏感数据，比如密码hash、手机、邮箱、别名、第三方openid/appid，这些都可以做为用户的登录的唯一key。
 
 ## 数据存储结构
 
@@ -83,25 +83,25 @@ Logout:
 
 票据数据：
 
-| Key         | userId   | timestamp(ms) | refreshToken |
+| key         | uuid     | timestamp(ms) | refreshToken |
 | :---------- | -------- | ------------- | ------------ |
 | accessToken | <string> | <UInt64>      | <string>     |
 
-> refreshToken：encrypt_aes_cbc(accessToken, userId, timestamp, salt)，可以逆向解密
+> refreshToken：encrypt_aes_cbc(uuid, timestamp, random32)，可以逆向解密
 >
-> accessToken： sha256(refreshToken, salt)，相当于session的唯一标识。
+> accessToken： sha256(refreshToken)，相当于session的唯一标识。
 
 已登录状态：
 
-| userId | accessToken-Set（后期可能允许多端登录） |
-| ------ | --------------------------------------- |
-|        |                                         |
+| uuid | accessToken-Set（后期可能允许多端登录） |
+| ---- | --------------------------------------- |
+|      |                                         |
 
 
 
 账户数据：
 
-| Uuid     | userId   | passwordSHA256 |
+| uuid     | userId   | passwordSHA256 |
 | -------- | :------- | :------------- |
 | <string> | <string> | <string>       |
 

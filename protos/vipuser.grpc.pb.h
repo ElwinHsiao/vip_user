@@ -44,37 +44,75 @@
 namespace vipuser {
 
 // The greeting service definition.
-class Greeter final {
+class AccountService final {
  public:
   static constexpr char const* service_full_name() {
-    return "vipuser.Greeter";
+    return "vipuser.AccountService";
   }
   class StubInterface {
    public:
     virtual ~StubInterface() {}
     // Sends a greeting
-    virtual ::grpc::Status CreateAcount(::grpc::ClientContext* context, const ::vipuser::VipUserRequest& request, ::vipuser::VipUserResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::VipUserResponse>> AsyncCreateAcount(::grpc::ClientContext* context, const ::vipuser::VipUserRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::VipUserResponse>>(AsyncCreateAcountRaw(context, request, cq));
+    virtual ::grpc::Status CreateAcount(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::vipuser::TokenInfo* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::TokenInfo>> AsyncCreateAcount(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::TokenInfo>>(AsyncCreateAcountRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::VipUserResponse>> PrepareAsyncCreateAcount(::grpc::ClientContext* context, const ::vipuser::VipUserRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::VipUserResponse>>(PrepareAsyncCreateAcountRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::TokenInfo>> PrepareAsyncCreateAcount(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::TokenInfo>>(PrepareAsyncCreateAcountRaw(context, request, cq));
+    }
+    virtual ::grpc::Status Login(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::vipuser::TokenInfo* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::TokenInfo>> AsyncLogin(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::TokenInfo>>(AsyncLoginRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::TokenInfo>> PrepareAsyncLogin(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::TokenInfo>>(PrepareAsyncLoginRaw(context, request, cq));
+    }
+    virtual ::grpc::Status Logout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::vipuser::LogoutResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::LogoutResponse>> AsyncLogout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::LogoutResponse>>(AsyncLogoutRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::LogoutResponse>> PrepareAsyncLogout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::LogoutResponse>>(PrepareAsyncLogoutRaw(context, request, cq));
     }
     class experimental_async_interface {
      public:
       virtual ~experimental_async_interface() {}
       // Sends a greeting
-      virtual void CreateAcount(::grpc::ClientContext* context, const ::vipuser::VipUserRequest* request, ::vipuser::VipUserResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::VipUserResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void CreateAcount(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void CreateAcount(::grpc::ClientContext* context, const ::vipuser::VipUserRequest* request, ::vipuser::VipUserResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void CreateAcount(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void CreateAcount(::grpc::ClientContext* context, const ::vipuser::VipUserRequest* request, ::vipuser::VipUserResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void CreateAcount(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::VipUserResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::VipUserResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      virtual void Login(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Login(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void Login(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void Login(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void Login(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void Login(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      virtual void Logout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest* request, ::vipuser::LogoutResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Logout(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::LogoutResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void Logout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest* request, ::vipuser::LogoutResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void Logout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest* request, ::vipuser::LogoutResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void Logout(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::LogoutResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void Logout(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::LogoutResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
     };
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -85,33 +123,75 @@ class Greeter final {
     #endif
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::VipUserResponse>* AsyncCreateAcountRaw(::grpc::ClientContext* context, const ::vipuser::VipUserRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::VipUserResponse>* PrepareAsyncCreateAcountRaw(::grpc::ClientContext* context, const ::vipuser::VipUserRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::TokenInfo>* AsyncCreateAcountRaw(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::TokenInfo>* PrepareAsyncCreateAcountRaw(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::TokenInfo>* AsyncLoginRaw(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::TokenInfo>* PrepareAsyncLoginRaw(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::LogoutResponse>* AsyncLogoutRaw(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::vipuser::LogoutResponse>* PrepareAsyncLogoutRaw(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
-    ::grpc::Status CreateAcount(::grpc::ClientContext* context, const ::vipuser::VipUserRequest& request, ::vipuser::VipUserResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::VipUserResponse>> AsyncCreateAcount(::grpc::ClientContext* context, const ::vipuser::VipUserRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::VipUserResponse>>(AsyncCreateAcountRaw(context, request, cq));
+    ::grpc::Status CreateAcount(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::vipuser::TokenInfo* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>> AsyncCreateAcount(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>>(AsyncCreateAcountRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::VipUserResponse>> PrepareAsyncCreateAcount(::grpc::ClientContext* context, const ::vipuser::VipUserRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::VipUserResponse>>(PrepareAsyncCreateAcountRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>> PrepareAsyncCreateAcount(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>>(PrepareAsyncCreateAcountRaw(context, request, cq));
+    }
+    ::grpc::Status Login(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::vipuser::TokenInfo* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>> AsyncLogin(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>>(AsyncLoginRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>> PrepareAsyncLogin(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>>(PrepareAsyncLoginRaw(context, request, cq));
+    }
+    ::grpc::Status Logout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::vipuser::LogoutResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::LogoutResponse>> AsyncLogout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::LogoutResponse>>(AsyncLogoutRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::LogoutResponse>> PrepareAsyncLogout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::vipuser::LogoutResponse>>(PrepareAsyncLogoutRaw(context, request, cq));
     }
     class experimental_async final :
       public StubInterface::experimental_async_interface {
      public:
-      void CreateAcount(::grpc::ClientContext* context, const ::vipuser::VipUserRequest* request, ::vipuser::VipUserResponse* response, std::function<void(::grpc::Status)>) override;
-      void CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::VipUserResponse* response, std::function<void(::grpc::Status)>) override;
+      void CreateAcount(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, std::function<void(::grpc::Status)>) override;
+      void CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void CreateAcount(::grpc::ClientContext* context, const ::vipuser::VipUserRequest* request, ::vipuser::VipUserResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void CreateAcount(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void CreateAcount(::grpc::ClientContext* context, const ::vipuser::VipUserRequest* request, ::vipuser::VipUserResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void CreateAcount(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::VipUserResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::VipUserResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      void Login(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, std::function<void(::grpc::Status)>) override;
+      void Login(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void Login(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void Login(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void Login(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void Login(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      void Logout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest* request, ::vipuser::LogoutResponse* response, std::function<void(::grpc::Status)>) override;
+      void Logout(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::LogoutResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void Logout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest* request, ::vipuser::LogoutResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void Logout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest* request, ::vipuser::LogoutResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void Logout(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::LogoutResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void Logout(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::LogoutResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
      private:
       friend class Stub;
@@ -124,9 +204,15 @@ class Greeter final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class experimental_async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::vipuser::VipUserResponse>* AsyncCreateAcountRaw(::grpc::ClientContext* context, const ::vipuser::VipUserRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::vipuser::VipUserResponse>* PrepareAsyncCreateAcountRaw(::grpc::ClientContext* context, const ::vipuser::VipUserRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>* AsyncCreateAcountRaw(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>* PrepareAsyncCreateAcountRaw(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>* AsyncLoginRaw(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>* PrepareAsyncLoginRaw(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::vipuser::LogoutResponse>* AsyncLogoutRaw(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::vipuser::LogoutResponse>* PrepareAsyncLogoutRaw(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_CreateAcount_;
+    const ::grpc::internal::RpcMethod rpcmethod_Login_;
+    const ::grpc::internal::RpcMethod rpcmethod_Logout_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -135,7 +221,9 @@ class Greeter final {
     Service();
     virtual ~Service();
     // Sends a greeting
-    virtual ::grpc::Status CreateAcount(::grpc::ServerContext* context, const ::vipuser::VipUserRequest* request, ::vipuser::VipUserResponse* response);
+    virtual ::grpc::Status CreateAcount(::grpc::ServerContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response);
+    virtual ::grpc::Status Login(::grpc::ServerContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response);
+    virtual ::grpc::Status Logout(::grpc::ServerContext* context, const ::vipuser::LogoutRequest* request, ::vipuser::LogoutResponse* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_CreateAcount : public BaseClass {
@@ -149,15 +237,55 @@ class Greeter final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CreateAcount(::grpc::ServerContext* /*context*/, const ::vipuser::VipUserRequest* /*request*/, ::vipuser::VipUserResponse* /*response*/) override {
+    ::grpc::Status CreateAcount(::grpc::ServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestCreateAcount(::grpc::ServerContext* context, ::vipuser::VipUserRequest* request, ::grpc::ServerAsyncResponseWriter< ::vipuser::VipUserResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestCreateAcount(::grpc::ServerContext* context, ::vipuser::AccountInfo* request, ::grpc::ServerAsyncResponseWriter< ::vipuser::TokenInfo>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_CreateAcount<Service > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_Login : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_Login() {
+      ::grpc::Service::MarkMethodAsync(1);
+    }
+    ~WithAsyncMethod_Login() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Login(::grpc::ServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestLogin(::grpc::ServerContext* context, ::vipuser::AccountInfo* request, ::grpc::ServerAsyncResponseWriter< ::vipuser::TokenInfo>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_Logout : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_Logout() {
+      ::grpc::Service::MarkMethodAsync(2);
+    }
+    ~WithAsyncMethod_Logout() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Logout(::grpc::ServerContext* /*context*/, const ::vipuser::LogoutRequest* /*request*/, ::vipuser::LogoutResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestLogout(::grpc::ServerContext* context, ::vipuser::LogoutRequest* request, ::grpc::ServerAsyncResponseWriter< ::vipuser::LogoutResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_CreateAcount<WithAsyncMethod_Login<WithAsyncMethod_Logout<Service > > > AsyncService;
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_CreateAcount : public BaseClass {
    private:
@@ -170,46 +298,140 @@ class Greeter final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(0,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::vipuser::VipUserRequest, ::vipuser::VipUserResponse>(
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::vipuser::AccountInfo, ::vipuser::TokenInfo>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::vipuser::VipUserRequest* request, ::vipuser::VipUserResponse* response) { return this->CreateAcount(context, request, response); }));}
+                     context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response) { return this->CreateAcount(context, request, response); }));}
     void SetMessageAllocatorFor_CreateAcount(
-        ::grpc::experimental::MessageAllocator< ::vipuser::VipUserRequest, ::vipuser::VipUserResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::vipuser::AccountInfo, ::vipuser::TokenInfo>* allocator) {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::vipuser::VipUserRequest, ::vipuser::VipUserResponse>*>(handler)
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::vipuser::AccountInfo, ::vipuser::TokenInfo>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_CreateAcount() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CreateAcount(::grpc::ServerContext* /*context*/, const ::vipuser::VipUserRequest* /*request*/, ::vipuser::VipUserResponse* /*response*/) override {
+    ::grpc::Status CreateAcount(::grpc::ServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* CreateAcount(
-      ::grpc::CallbackServerContext* /*context*/, const ::vipuser::VipUserRequest* /*request*/, ::vipuser::VipUserResponse* /*response*/)
+      ::grpc::CallbackServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/)
     #else
     virtual ::grpc::experimental::ServerUnaryReactor* CreateAcount(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::vipuser::VipUserRequest* /*request*/, ::vipuser::VipUserResponse* /*response*/)
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/)
+    #endif
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class ExperimentalWithCallbackMethod_Login : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    ExperimentalWithCallbackMethod_Login() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::vipuser::AccountInfo, ::vipuser::TokenInfo>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response) { return this->Login(context, request, response); }));}
+    void SetMessageAllocatorFor_Login(
+        ::grpc::experimental::MessageAllocator< ::vipuser::AccountInfo, ::vipuser::TokenInfo>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::vipuser::AccountInfo, ::vipuser::TokenInfo>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~ExperimentalWithCallbackMethod_Login() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Login(::grpc::ServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* Login(
+      ::grpc::CallbackServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* Login(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/)
+    #endif
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class ExperimentalWithCallbackMethod_Logout : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    ExperimentalWithCallbackMethod_Logout() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::vipuser::LogoutRequest, ::vipuser::LogoutResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::vipuser::LogoutRequest* request, ::vipuser::LogoutResponse* response) { return this->Logout(context, request, response); }));}
+    void SetMessageAllocatorFor_Logout(
+        ::grpc::experimental::MessageAllocator< ::vipuser::LogoutRequest, ::vipuser::LogoutResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(2);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::vipuser::LogoutRequest, ::vipuser::LogoutResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~ExperimentalWithCallbackMethod_Logout() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Logout(::grpc::ServerContext* /*context*/, const ::vipuser::LogoutRequest* /*request*/, ::vipuser::LogoutResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* Logout(
+      ::grpc::CallbackServerContext* /*context*/, const ::vipuser::LogoutRequest* /*request*/, ::vipuser::LogoutResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* Logout(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::vipuser::LogoutRequest* /*request*/, ::vipuser::LogoutResponse* /*response*/)
     #endif
       { return nullptr; }
   };
   #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-  typedef ExperimentalWithCallbackMethod_CreateAcount<Service > CallbackService;
+  typedef ExperimentalWithCallbackMethod_CreateAcount<ExperimentalWithCallbackMethod_Login<ExperimentalWithCallbackMethod_Logout<Service > > > CallbackService;
   #endif
 
-  typedef ExperimentalWithCallbackMethod_CreateAcount<Service > ExperimentalCallbackService;
+  typedef ExperimentalWithCallbackMethod_CreateAcount<ExperimentalWithCallbackMethod_Login<ExperimentalWithCallbackMethod_Logout<Service > > > ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_CreateAcount : public BaseClass {
    private:
@@ -222,7 +444,41 @@ class Greeter final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CreateAcount(::grpc::ServerContext* /*context*/, const ::vipuser::VipUserRequest* /*request*/, ::vipuser::VipUserResponse* /*response*/) override {
+    ::grpc::Status CreateAcount(::grpc::ServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_Login : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_Login() {
+      ::grpc::Service::MarkMethodGeneric(1);
+    }
+    ~WithGenericMethod_Login() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Login(::grpc::ServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_Logout : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_Logout() {
+      ::grpc::Service::MarkMethodGeneric(2);
+    }
+    ~WithGenericMethod_Logout() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Logout(::grpc::ServerContext* /*context*/, const ::vipuser::LogoutRequest* /*request*/, ::vipuser::LogoutResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -239,12 +495,52 @@ class Greeter final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CreateAcount(::grpc::ServerContext* /*context*/, const ::vipuser::VipUserRequest* /*request*/, ::vipuser::VipUserResponse* /*response*/) override {
+    ::grpc::Status CreateAcount(::grpc::ServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestCreateAcount(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_Login : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_Login() {
+      ::grpc::Service::MarkMethodRaw(1);
+    }
+    ~WithRawMethod_Login() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Login(::grpc::ServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestLogin(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_Logout : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_Logout() {
+      ::grpc::Service::MarkMethodRaw(2);
+    }
+    ~WithRawMethod_Logout() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Logout(::grpc::ServerContext* /*context*/, const ::vipuser::LogoutRequest* /*request*/, ::vipuser::LogoutResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestLogout(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -272,7 +568,7 @@ class Greeter final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CreateAcount(::grpc::ServerContext* /*context*/, const ::vipuser::VipUserRequest* /*request*/, ::vipuser::VipUserResponse* /*response*/) override {
+    ::grpc::Status CreateAcount(::grpc::ServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -286,6 +582,82 @@ class Greeter final {
       { return nullptr; }
   };
   template <class BaseClass>
+  class ExperimentalWithRawCallbackMethod_Login : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    ExperimentalWithRawCallbackMethod_Login() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Login(context, request, response); }));
+    }
+    ~ExperimentalWithRawCallbackMethod_Login() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Login(::grpc::ServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* Login(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* Login(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class ExperimentalWithRawCallbackMethod_Logout : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    ExperimentalWithRawCallbackMethod_Logout() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Logout(context, request, response); }));
+    }
+    ~ExperimentalWithRawCallbackMethod_Logout() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Logout(::grpc::ServerContext* /*context*/, const ::vipuser::LogoutRequest* /*request*/, ::vipuser::LogoutResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* Logout(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* Logout(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
+  };
+  template <class BaseClass>
   class WithStreamedUnaryMethod_CreateAcount : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
@@ -293,10 +665,10 @@ class Greeter final {
     WithStreamedUnaryMethod_CreateAcount() {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::vipuser::VipUserRequest, ::vipuser::VipUserResponse>(
+          ::vipuser::AccountInfo, ::vipuser::TokenInfo>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerUnaryStreamer<
-                     ::vipuser::VipUserRequest, ::vipuser::VipUserResponse>* streamer) {
+                     ::vipuser::AccountInfo, ::vipuser::TokenInfo>* streamer) {
                        return this->StreamedCreateAcount(context,
                          streamer);
                   }));
@@ -305,16 +677,70 @@ class Greeter final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status CreateAcount(::grpc::ServerContext* /*context*/, const ::vipuser::VipUserRequest* /*request*/, ::vipuser::VipUserResponse* /*response*/) override {
+    ::grpc::Status CreateAcount(::grpc::ServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedCreateAcount(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::vipuser::VipUserRequest,::vipuser::VipUserResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedCreateAcount(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::vipuser::AccountInfo,::vipuser::TokenInfo>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_CreateAcount<Service > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_Login : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_Login() {
+      ::grpc::Service::MarkMethodStreamed(1,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::vipuser::AccountInfo, ::vipuser::TokenInfo>(
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
+                     ::vipuser::AccountInfo, ::vipuser::TokenInfo>* streamer) {
+                       return this->StreamedLogin(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_Login() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status Login(::grpc::ServerContext* /*context*/, const ::vipuser::AccountInfo* /*request*/, ::vipuser::TokenInfo* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedLogin(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::vipuser::AccountInfo,::vipuser::TokenInfo>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_Logout : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_Logout() {
+      ::grpc::Service::MarkMethodStreamed(2,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::vipuser::LogoutRequest, ::vipuser::LogoutResponse>(
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
+                     ::vipuser::LogoutRequest, ::vipuser::LogoutResponse>* streamer) {
+                       return this->StreamedLogout(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_Logout() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status Logout(::grpc::ServerContext* /*context*/, const ::vipuser::LogoutRequest* /*request*/, ::vipuser::LogoutResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedLogout(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::vipuser::LogoutRequest,::vipuser::LogoutResponse>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_CreateAcount<WithStreamedUnaryMethod_Login<WithStreamedUnaryMethod_Logout<Service > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_CreateAcount<Service > StreamedService;
+  typedef WithStreamedUnaryMethod_CreateAcount<WithStreamedUnaryMethod_Login<WithStreamedUnaryMethod_Logout<Service > > > StreamedService;
 };
 
 }  // namespace vipuser
