@@ -47,7 +47,8 @@ cc_binary(
     deps = [
         "@com_github_grpc_grpc//:grpc++_reflection",
         "@usr_local//:hiredis",
-        "@boost_uuid//:boost_uuid",
+        "@boost//:uuid",
+        # "@boost_uuid//:boost_uuid",
         # ":hiredis"
     ],
     # linkstatic = 1,
