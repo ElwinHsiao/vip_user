@@ -5,6 +5,7 @@
 #include "dbhelper.h"
 
 namespace vipuser {
+    
     enum VipUserStatus {
         VipUserStatusOK = 0,
         VipUserStatusError = -1,
@@ -26,6 +27,9 @@ namespace vipuser {
 
     private:
         Redis &_redis;
+
+        std::string Genuuid();
+
     };
 
 };

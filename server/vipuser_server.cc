@@ -6,13 +6,14 @@
 
 using namespace vipuser;
 
-std::string Genuuid()
+std::string AccountServer::Genuuid()
 {
     boost::uuids::uuid a_uuid = boost::uuids::random_generator()();
     return boost::uuids::to_string(a_uuid);
 }
 
 AccountServer::AccountServer(Redis &redis):_redis(redis) {
+    std::cout << "world" << std::endl;
     std::cout << "uuid=" << Genuuid() << std::endl;
 }
 
