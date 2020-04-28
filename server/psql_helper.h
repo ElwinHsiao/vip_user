@@ -16,6 +16,8 @@ private:
     pqxx::connection *_conn;
     int Connect();
     void DisConnect();
+
+    int CreateUserDetailTable();
 };
 
 }
