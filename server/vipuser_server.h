@@ -2,7 +2,7 @@
 #define _VIPUSER_SERVER_H_
 
 #include <iostream>
-#include "dbhelper.h"
+#include "redis_helper.h"
 #include "crypt_plus.h"
 
 namespace vipuser {
@@ -11,7 +11,7 @@ namespace vipuser {
 enum VipUserStatus {
     VipUserStatusOK = 0,
     VipUserStatusError = -1,
-    VipUserStatusErrorFormat = -3;
+    VipUserStatusErrorFormat = -3,
     VipUserStatusAccountExist = -10001,
     VipUserStatusAccountNotExist = -10002,
 };

@@ -79,8 +79,9 @@ std::string CryptPlus::EncryptAEScbc(std::string text)
     return EncryptAEScbc(text.c_str(), text.size());
 }
 
-std::string CryptPlus::EncryptAEScbc(const void *buffer, size_t len) {
-    int len = encrypt(_ctx, (const unsigned char *)buffer, len, (const unsigned char *)(_key.c_str()), outtext);
+std::string CryptPlus::EncryptAEScbc(const void *buffer, size_t bufLen) {
+    unsigned char outtext[4096] = {0};
+    int len = encrypt(_ctx, (const unsigned char *)buffer, bufLen, (const unsigned char *)(_key.c_str()), outtext);
     if (len <= 0) {
         return "";
     }

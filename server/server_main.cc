@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
   AccountServer server(redis);
 
   VipUserTicket ticket;
-  server.createAccount("", "", ticket);
+  server.CreateAccount("", "", ticket);
   // std::cout << "uuid=" << Genuuid() << std::endl;
   return 0;
 }

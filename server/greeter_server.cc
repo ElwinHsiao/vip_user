@@ -34,7 +34,7 @@
 #include <sstream>
 #include <iostream>
 
-#include "dbhelper.h"
+#include "redis_helper.h"
 using namespace vipuser;
 
 

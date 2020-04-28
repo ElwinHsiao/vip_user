@@ -36,14 +36,14 @@ uint64_t getCurrentTimeMills() {
 
 uint64_t genRandom() {
     // obtain a seed from the system clock:
-    unsigned seed1 = std::chrono::system_clock::now().time_since_epoch().count();
-    
-    std::mt19937 g1 (seed1);  // mt19937 is a standard mersenne_twister_engine
-    uint32_t u32Random = g1();
-    std::cout << "A time seed produced: " << u32Random << std::endl;
-    
-    std::mt19937_64 g2 (seed1);
-    uint64_t u64Random = g2();
+    unsigned seed1 = std::chrono::system_clock::now().time_since_epoch().count();
+
+    std::mt19937 g1 (seed1); // mt19937 is a standard mersenne_twister_engine
+    uint32_t u32Random = g1();
+    std::cout << "A time seed produced: " << u32Random << std::endl;
+
+    std::mt19937_64 g2 (seed1);
+    uint64_t u64Random = g2();
     return u64Random;
 }
 
@@ -80,7 +80,7 @@ AccountServer::AccountServer(Redis &redis):_redis(redis) {
 
 
     /* A 256 bit key */
-    unsigned char *key = (unsigned char *)"01234567890123456789012345678901";
+    //unsigned char *key = (unsigned char *)"01234567890123456789012345678901";
     /* Message to be encrypted */
     std::string plainText = "This is a test.";
     std::cout << "original plainText=" << plainText << std::endl;
@@ -101,7 +101,7 @@ AccountServer::~AccountServer() {
 VipUserStatus AccountServer::CreateAccount(std::string userId, std::string passwordSHA256, VipUserTicket &ticket)
 {
 
-    if (accountExist(userId)) {
+    if (AccountExist(userId)) {
         return VipUserStatusAccountExist;
     }
 
@@ -115,7 +115,7 @@ VipUserStatus AccountServer::CreateAccount(std::string userId, std::string passw
         return status;
     }
 
-    std::string refreshToken = makeRefreshToken(uuid, GetCurrentTimeMills(), passwordSHA256);
+    std::string refreshToken = MakeRefreshToken(uuid, getCurrentTimeMills(), passwordSHA256);
     if (refreshToken.size() == 0) {
         return VipUserStatusError;
     }
@@ -127,7 +127,7 @@ VipUserStatus AccountServer::CreateAccount(std::string userId, std::string passw
 
 VipUserStatus AccountServer::Login(std::string userId, std::string passwordSHA256, VipUserTicket &ticket)
 {
-    if (!accountExist(userId)) {
+    if (!AccountExist(userId)) {
         return VipUserStatusAccountNotExist;
     }
 
@@ -141,6 +141,7 @@ VipUserStatus AccountServer::Login(std::string userId, std::string passwordSHA25
 VipUserStatus AccountServer::CheckLogin(std::string accessToken)
 {
     
+    return VipUserStatusOK;
 }
 
 VipUserStatus AccountServer::Logout(std::string accessToken)
