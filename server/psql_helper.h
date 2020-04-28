@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "pqxx/pqxx"
+#include "vipuser_common.h"
 
 namespace vipuser {
 
@@ -18,6 +19,9 @@ private:
     void DisConnect();
 
     int CreateUserDetailTable();
+    int AddUser(AccountDetailInfo &accountDetail);
+    int QueryUserByAlias(std::string &userAlias, AccountDetailInfo &accountDetail);
+    int UpdateUserPasswdSum(std::string &uuid, std::string passwdSum);
 };
 
 }

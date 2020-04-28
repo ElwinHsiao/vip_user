@@ -1,4 +1,5 @@
 #include "vipuser_server.h"
+#include "vipuser_common.h"
 
 #include <random>
 
@@ -15,16 +16,6 @@ struct RefreshTokenInfo
     std::string uuid;
     uint64_t timestamp;
     uint64_t salt;
-};
-
-struct AccountDetailInfo {
-    std::string uuid;
-    std::string userId;
-    std::string passwordSum;
-    std::string email;
-    std::string phone;
-    uint64_t createTimeMills;
-    uint64_t index;     // the DB auto increate index;
 };
 
 

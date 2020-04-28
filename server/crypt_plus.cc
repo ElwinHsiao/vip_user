@@ -1,4 +1,4 @@
-#include "crypt_plus.h"
+#include "crypt_plus"
 
 #include <string>
 #include <openssl/conf.h>
