@@ -7,7 +7,8 @@ int main(int argc, char** argv) {
   std::cout << "hello" << std::endl;
 
   Redis redis;
-  AccountServer server(redis);
+  Psql psql;
+  AccountServer server(redis, psql);
 
   VipUserTicket ticket;
   server.CreateAccount("", "", ticket);

@@ -30,25 +30,21 @@ cc_binary(
 )
 
 load("@rules_foreign_cc//tools/build_defs:cmake.bzl", "cmake_external")
-
-
 cmake_external(
-   name = "libpgxx",
-   lib_name = "libpgxx",
-   # Values to be passed as -Dkey=value on the CMake command line;
-   # here are serving to provide some CMake script configuration options
-   cache_entries = {
-       "NOFORTRAN": "on",
-       "BUILD_WITHOUT_LAPACK": "no",
-   },
-   lib_source = "@libpgxx//:all",
-
-   # We are selecting the resulting static library to be passed in C/C++ provider
-   # as the result of the build;
-   # However, the cmake_external dependants could use other artefacts provided by the build,
-   # according to their CMake script
-   static_libraries = ["libpqxx-7.0.a"],
+   name = "libpqxx",
+   lib_name = "libpqxx",
+   lib_source = "@libpqxx//:all",
+#    out_lib_dir = "src",
+   #static_libraries = ["libpqxx-7.0.a"],
+   shared_libraries = ["libpqxx.dylib"],
 )
+
+# load("@rules_foreign_cc//tools/build_defs:configure.bzl", "configure_make")
+# configure_make(
+#     name = "libpqxx",
+#     lib_source = "@libpqxx//:all",
+#     #static_libraries = ["libpqxx.a"],
+# )
 
 cc_binary(
     name = "vipuserserver",
@@ -61,7 +57,9 @@ cc_binary(
         "crypt_helper.cc",
         "crypt_helper.h",
         "crypt_plus.cc",
-        "crypt_plus.h"
+        "crypt_plus.h",
+        "psql_helper.cc",
+        "psql_helper.h",
     ],
     # includes = [
     #     "third_party/boost_uuid/include"
@@ -73,11 +71,11 @@ cc_binary(
         # "@usr_local//:hiredis",
         "@hiredis//:hiredis",
         "@boost//:uuid",
-        ":libpgxx",
+        ":libpqxx",
         # "@picosha2//:picosha2"
         # "@boost_uuid//:boost_uuid",
         # ":hiredis"
     ],
-    # linkstatic = 1,
+    # linkstatic = False,
 )
 

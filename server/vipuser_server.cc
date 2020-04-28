@@ -65,7 +65,7 @@ std::string AccountServer::Genuuid()
 }
 
 
-AccountServer::AccountServer(Redis &redis):_redis(redis) {
+AccountServer::AccountServer(Redis &redis, Psql &psql):_redis(redis),_psql(psql) {
     _cryptPlus = new CryptPlus("defaultKey");
 
     std::cout << "world" << std::endl;
@@ -90,7 +90,7 @@ AccountServer::AccountServer(Redis &redis):_redis(redis) {
     plainText = cryptPlus.DecryptAEScbc(cipherText);
     std::cout << "decrypted plainText=|" << plainText << "|" << std::endl;
 
-
+    
 
 }
 

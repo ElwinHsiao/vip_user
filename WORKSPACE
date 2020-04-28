@@ -86,8 +86,8 @@ load("@rules_foreign_cc//:workspace_definitions.bzl", "rules_foreign_cc_dependen
 rules_foreign_cc_dependencies()
 
 http_archive(
-   name = "libpgxx",
+   name = "libpqxx",
    build_file_content = all_content,
-   strip_prefix = "libpqxx-7.0.6",
-   urls = ["https://github.com/jtv/libpqxx/archive/7.0.6.tar.gz"],
+   strip_prefix = "libpqxx-6.4.6",
+   urls = ["https://github.com/jtv/libpqxx/archive/6.4.6.tar.gz"],
 )

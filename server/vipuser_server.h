@@ -4,6 +4,7 @@
 #include <iostream>
 #include "redis_helper.h"
 #include "crypt_plus.h"
+#include "psql_helper.h"
 
 namespace vipuser {
 
@@ -21,7 +22,7 @@ struct VipUserTicket {
 };
 class AccountServer {
 public:
-    AccountServer(Redis &redis);
+    AccountServer(Redis &redis, Psql &_psql);
     ~AccountServer();
     VipUserStatus CreateAccount(std::string userId, std::string passwordSHA256, VipUserTicket &ticket);
     VipUserStatus Login(std::string userId, std::string passwordSHA256, VipUserTicket &ticket);
@@ -31,6 +32,7 @@ public:
 private:
     Redis &_redis;
     CryptPlus *_cryptPlus;
+    Psql &_psql;
 
     std::string Genuuid();
     VipUserStatus StoreNewUser(std::string uuid, std::string userId, std::string passwordSHA256);
