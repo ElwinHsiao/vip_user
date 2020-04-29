@@ -2,6 +2,7 @@
 
 #include <grpcpp/grpcpp.h>
 
+using namespace vipuser;
 
 
 VipUserClient::VipUserClient(std::string &serverAddr, std::string &sslKey)
@@ -22,22 +23,30 @@ VipUserClient::~VipUserClient()
 }
 
 
-int CreateAccount(std::string userAlias, std::string passwordSum)
+int VipUserClient::CreateAccount(std::string userAlias, std::string passwordSum)
 {
-    // vipuser_proto::LoginRequest request;
-    // vipuser_proto::AccountInfo accountInfo;
-    // accountInfo.set_useralias(userAlias);
-    // accountInfo.set_passwordsha256(passwordSum);
-    // request.accountinfo = accountInfo;
+    auto accountInfo = new vipuser_proto::AccountInfo();
+    accountInfo->set_useralias(userAlias);
+    accountInfo->set_passwordsha256(passwordSum);
 
-    // vipuser_proto::LoginResponse response;
-    // _stub->CreateAcount(_stub, request, &response);
+    vipuser_proto::CreateAccountRequest request;
+    request.set_allocated_accountinfo(accountInfo);
 
-    // std::cout << "response: resultCode=" << response.result->code << ", message=" << response.result->message;
+    grpc::ClientContext context;
+    vipuser_proto::CreateAccountResponse response;
+    grpc::Status status = _stub->CreateAcount(&context, request, &response);
+
+    if (!status.ok()) {
+        std::cout << "server response error: " << status.error_message() << std::endl;
+        return -1;
+    }
+
+    std::cout << "response: resultCode=" << response.result().code() << ", message=" << response.result().message() << std::endl;
 
     return 0;
 }
-int Login(std::string userAlias, std::string passwordSum)
+
+int VipUserClient::Login(std::string userAlias, std::string passwordSum)
 {
 
     return 0;

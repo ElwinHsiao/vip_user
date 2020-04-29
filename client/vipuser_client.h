@@ -6,7 +6,7 @@
 #include "protos/vipuser.grpc.pb.h"
 
 
-namespace {
+namespace vipuser {
 
 class VipUserClient
 {
@@ -17,11 +17,11 @@ public:
     int CreateAccount(std::string userAlias, std::string passwordSum);
     int Login(std::string userAlias, std::string passwordSum);
 private:
-    
-};
     // std::string _serverAddr;
     // std::string _sslKey;
     std::unique_ptr<vipuser_proto::VipUser::Stub> _stub;
+
+};
 
 }
 

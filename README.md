@@ -109,5 +109,25 @@ Logout:
 
 
 
+### 安全
+
+Server与Client采用SSL加密连接，客户端的App保存Server的公钥。
+
+密码先在Client端计算出SHA256，再通过加密通道传给Server。
+
+Server端保存的refreshToken是用密码的SHA256做为Key加密的，当发送业务请求时，Server会解密refreshToken，如果用户改密码就解不出了，解开之后还有一个时间截，从而得知这个accessToken是否过期。
+
+refreshToken是先加盐再加密的，就算破解了加密算法，是伪造不了refreshToken
+
+### 性能 & 扩展性
+
+接入机的数据存入了Redis，当业务请求包来的时候，可以快速的检查用户的登录态，然后转发给业务服务器。
+
+存入Redis的Key是uuid+accessToken，将来可以很方便的支持多端同时登录，通过一个uuid有多个accessToken，每一条记录当成一个session，对应每一个登录态。
+
+### 
+
+
+
 
 

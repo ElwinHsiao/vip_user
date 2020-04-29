@@ -1,7 +1,16 @@
 #include <iostream>
-#include "account_server.h"
 
+#include <fstream>
+#include <sstream>
+#include <iostream>
+
+#include <grpcpp/grpcpp.h>
+#include <grpcpp/health_check_service_interface.h>
+#include <grpcpp/ext/proto_server_reflection_plugin.h>
+
+#include "account_server.h"
 #include "protos/vipuser.grpc.pb.h"
+
 
 using namespace vipuser;
 
@@ -9,9 +18,9 @@ class VipUserGRPC final : public vipuser_proto::VipUser::Service
 {
   grpc::Status CreateAcount(::grpc::ServerContext *context, const ::vipuser_proto::CreateAccountRequest *request, ::vipuser_proto::CreateAccountResponse *response)
   {
-    vipuser_proto::Result result;
-    result.set_message("success");
-    response->result = result;
+    auto result = new vipuser_proto::Result();
+    result->set_message("success");
+    response->set_allocated_result(result);
     return grpc::Status::OK;
   }
   grpc::Status Login(::grpc::ServerContext *context, const ::vipuser_proto::LoginRequest *request, ::vipuser_proto::LoginResponse *response)
@@ -32,16 +41,62 @@ class VipUserGRPC final : public vipuser_proto::VipUser::Service
   }
 };
 
+grpc::string ReadFile(char *filePath) {
+  std::ifstream ifile(filePath);
+  std::ostringstream buf;
+  char ch;
+  while(buf&&ifile.get(ch))
+    buf.put(ch);
+
+  return buf.str();
+}
+
 int main(int argc, char **argv)
 {
-  std::cout << "hello" << std::endl;
+  std::cout << "server is coming - _ - ..." << std::endl;
 
-  Redis redis;
-  Psql psql;
-  AccountServer server(redis, psql);
+  // Redis redis;
+  // Psql psql;
+  // AccountServer server(redis, psql);
 
-  UserTicket ticket;
-  server.CreateAccount("", "", ticket);
+  // UserTicket ticket;
+  // server.CreateAccount("", "", ticket);
   // std::cout << "uuid=" << Genuuid() << std::endl;
+
+
+  char *keyFilePath = getenv("VIP_USER_SEVER_KEY");
+  char *crtFilePath = getenv("VIP_USER_SEVER_CRT");
+  if (keyFilePath == NULL || crtFilePath == NULL) {
+    std::cout << "no rsa key path" << std::endl;
+    return -1;
+  } 
+
+  auto key = ReadFile(keyFilePath);
+  auto crt = ReadFile(crtFilePath);
+  std::cout << "key=" << key << std::endl;
+
+  grpc::SslServerCredentialsOptions sslOpts{};
+  sslOpts.pem_key_cert_pairs.push_back(
+    grpc::SslServerCredentialsOptions::PemKeyCertPair {
+      key, crt
+    }
+  );
+
+
+  grpc::EnableDefaultHealthCheckService(true);
+  grpc::reflection::InitProtoReflectionServerBuilderPlugin();
+
+  std::string server_address("0.0.0.0:50051");
+  grpc::ServerBuilder builder;
+  builder.AddListeningPort(server_address, grpc::SslServerCredentials(sslOpts));
+  
+  VipUserGRPC service;
+  builder.RegisterService(&service);
+  
+  std::unique_ptr<grpc::Server> server(builder.BuildAndStart());
+  std::cout << "Server listening on " << server_address << std::endl;
+
+  server->Wait();
+
   return 0;
 }

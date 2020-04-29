@@ -70,24 +70,24 @@ cmake_external(
 
 
 
-# cc_binary(
-#     name = "greeting_server",
-#     srcs = [
-#         "greeter_server.cc",
-#         "helloworld.pb.cc",
-#         "helloworld.grpc.pb.cc",
-#         "helloworld.grpc.pb.h",
-#         "helloworld.pb.h",
-#         "redis_helper.cc",
-#         "redis_helper.h",
-#     ],
-#     # copts = ["-I/usr/local/include"],
-#     # linkopts = ["-lhiredis"],
-#     deps = [
-#         "@com_github_grpc_grpc//:grpc++_reflection",
-#         # "@usr_local//:hiredis",
-#         # "@usr_local//:libs",
-#         # ":hiredis"
-#     ],
-#     # linkstatic = 1,
-# )
+cc_binary(
+    name = "greeting_server",
+    srcs = [
+        "greeter_server.cc",
+        "helloworld.pb.cc",
+        "helloworld.grpc.pb.cc",
+        "helloworld.grpc.pb.h",
+        "helloworld.pb.h",
+        "account_service/redis_helper.cc",
+        "account_service/redis_helper.h",
+    ],
+    # copts = ["-I/usr/local/include"],
+    # linkopts = ["-lhiredis"],
+    deps = [
+        "@com_github_grpc_grpc//:grpc++_reflection",
+        # "@usr_local//:hiredis",
+        # "@usr_local//:libs",
+        "@hiredis//:hiredis",
+    ],
+    # linkstatic = 1,
+)
