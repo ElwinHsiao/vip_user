@@ -34,7 +34,24 @@ int VipUserClient::CreateAccount(std::string userAlias, std::string passwordSum)
 
     grpc::ClientContext context;
     vipuser_proto::CreateAccountResponse response;
-    grpc::Status status = _stub->CreateAcount(&context, request, &response);
+    
+    grpc::CompletionQueue cq;
+    std::unique_ptr<grpc::ClientAsyncResponseReader<vipuser_proto::CreateAccountResponse> > rpc(
+        _stub->AsyncCreateAcount(&context, request, &cq));
+
+    grpc::Status status;
+    //rpc->StartCall();
+    rpc->Finish(&response, &status, (void*)1);
+
+    void* got_tag;
+    bool ok = false;
+    cq.Next(&got_tag, &ok);
+    if (!ok || got_tag != (void*)1) {
+        std::cout << "wait tag failed" << std::endl;
+        return -1;
+    }
+
+    // grpc::Status status = _stub->CreateAcount(&context, request, &response);
 
     if (!status.ok()) {
         std::cout << "server response error: " << status.error_message() << std::endl;
