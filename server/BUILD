@@ -60,71 +60,30 @@ cmake_external(
    shared_libraries = ["libpqxx.dylib"],
 )
 
-# load("@rules_foreign_cc//tools/build_defs:configure.bzl", "configure_make")
-# configure_make(
-#     name = "libpqxx",
-#     lib_source = "@libpqxx//:all",
-#     #static_libraries = ["libpqxx.a"],
+
+
+
+
+
+
+# cc_binary(
+#     name = "greeting_server",
+#     srcs = [
+#         "greeter_server.cc",
+#         "helloworld.pb.cc",
+#         "helloworld.grpc.pb.cc",
+#         "helloworld.grpc.pb.h",
+#         "helloworld.pb.h",
+#         "redis_helper.cc",
+#         "redis_helper.h",
+#     ],
+#     # copts = ["-I/usr/local/include"],
+#     # linkopts = ["-lhiredis"],
+#     deps = [
+#         "@com_github_grpc_grpc//:grpc++_reflection",
+#         # "@usr_local//:hiredis",
+#         # "@usr_local//:libs",
+#         # ":hiredis"
+#     ],
+#     # linkstatic = 1,
 # )
-
-
-
-
-
-cc_binary(
-    name = "vipuserserver2",
-    srcs = [
-        "server_main.cc",
-        "vipuser_server.cc",
-        "vipuser_server.h",
-        "redis_helper.cc",
-        "redis_helper.h",
-        "crypt_helper.cc",
-        "crypt_helper.h",
-        "crypt_plus.cc",
-        "crypt_plus.h",
-        "psql_helper.cc",
-        "psql_helper.h",
-        "vipuser_common.cc",
-        "vipuser_common.h",
-    ],
-    # includes = [
-    #     "third_party/boost_uuid/include"
-    # ],
-    # copts = ["-Ithird_party/boost_uuid/include"],
-    # linkopts = ["-lhiredis"],
-    deps = [
-        "@com_github_grpc_grpc//:grpc++_reflection",
-        # "@usr_local//:hiredis",
-        "@hiredis//:hiredis",
-        "@boost//:uuid",
-        ":libpqxx",
-        # "@picosha2//:picosha2"
-        # "@boost_uuid//:boost_uuid",
-        # ":hiredis"
-    ],
-    # linkstatic = False,
-)
-
-
-cc_binary(
-    name = "greeting_server",
-    srcs = [
-        "greeter_server.cc",
-        "helloworld.pb.cc",
-        "helloworld.grpc.pb.cc",
-        "helloworld.grpc.pb.h",
-        "helloworld.pb.h",
-        "redis_helper.cc",
-        "redis_helper.h",
-    ],
-    # copts = ["-I/usr/local/include"],
-    # linkopts = ["-lhiredis"],
-    deps = [
-        "@com_github_grpc_grpc//:grpc++_reflection",
-        # "@usr_local//:hiredis",
-        # "@usr_local//:libs",
-        # ":hiredis"
-    ],
-    # linkstatic = 1,
-)

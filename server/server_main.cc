@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
   Psql psql;
   AccountServer server(redis, psql);
 
-  VipUserTicket ticket;
+  UserTicket ticket;
   server.CreateAccount("", "", ticket);
   // std::cout << "uuid=" << Genuuid() << std::endl;
   return 0;

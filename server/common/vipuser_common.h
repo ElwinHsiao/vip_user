@@ -3,6 +3,7 @@
 
 #include <iostream>
 
+// namespace vipuser {
 
 struct AccountDetailInfo {
     std::string uuid;
@@ -13,6 +14,13 @@ struct AccountDetailInfo {
     uint64_t createTimeMills;
     uint64_t index;     // the DB auto increate index;
 };
+
+uint64_t getCurrentTimeMills();
+uint64_t genRandom();
+std::string generateUuid();
+
+
+// }
 
 
 #endif

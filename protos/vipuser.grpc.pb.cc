@@ -25,6 +25,7 @@ static const char* AccountService_method_names[] = {
   "/vipuser.AccountService/CreateAcount",
   "/vipuser.AccountService/Login",
   "/vipuser.AccountService/Logout",
+  "/vipuser.AccountService/ReLogin",
 };
 
 std::unique_ptr< AccountService::Stub> AccountService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -37,143 +38,255 @@ AccountService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& cha
   : channel_(channel), rpcmethod_CreateAcount_(AccountService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_Login_(AccountService_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_Logout_(AccountService_method_names[2], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ReLogin_(AccountService_method_names[3], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status AccountService::Stub::CreateAcount(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::vipuser::TokenInfo* response) {
+::grpc::Status AccountService::Stub::CreateAcount(::grpc::ClientContext* context, const ::vipuser::CreateAccountRequest& request, ::vipuser::CreateAccountReply* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_CreateAcount_, context, request, response);
 }
 
-void AccountService::Stub::experimental_async::CreateAcount(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, std::function<void(::grpc::Status)> f) {
+void AccountService::Stub::experimental_async::CreateAcount(::grpc::ClientContext* context, const ::vipuser::CreateAccountRequest* request, ::vipuser::CreateAccountReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_CreateAcount_, context, request, response, std::move(f));
 }
 
-void AccountService::Stub::experimental_async::CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, std::function<void(::grpc::Status)> f) {
+void AccountService::Stub::experimental_async::CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::CreateAccountReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_CreateAcount_, context, request, response, std::move(f));
 }
 
-void AccountService::Stub::experimental_async::CreateAcount(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void AccountService::Stub::experimental_async::CreateAcount(::grpc::ClientContext* context, const ::vipuser::CreateAccountRequest* request, ::vipuser::CreateAccountReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_CreateAcount_, context, request, response, reactor);
 }
 
-void AccountService::Stub::experimental_async::CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void AccountService::Stub::experimental_async::CreateAcount(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::CreateAccountReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_CreateAcount_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>* AccountService::Stub::AsyncCreateAcountRaw(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::TokenInfo>::Create(channel_.get(), cq, rpcmethod_CreateAcount_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::vipuser::CreateAccountReply>* AccountService::Stub::AsyncCreateAcountRaw(::grpc::ClientContext* context, const ::vipuser::CreateAccountRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::CreateAccountReply>::Create(channel_.get(), cq, rpcmethod_CreateAcount_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>* AccountService::Stub::PrepareAsyncCreateAcountRaw(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::TokenInfo>::Create(channel_.get(), cq, rpcmethod_CreateAcount_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::vipuser::CreateAccountReply>* AccountService::Stub::PrepareAsyncCreateAcountRaw(::grpc::ClientContext* context, const ::vipuser::CreateAccountRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::CreateAccountReply>::Create(channel_.get(), cq, rpcmethod_CreateAcount_, context, request, false);
 }
 
-::grpc::Status AccountService::Stub::Login(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::vipuser::TokenInfo* response) {
+::grpc::Status AccountService::Stub::Login(::grpc::ClientContext* context, const ::vipuser::LoginRequest& request, ::vipuser::LoginReply* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_Login_, context, request, response);
 }
 
-void AccountService::Stub::experimental_async::Login(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, std::function<void(::grpc::Status)> f) {
+void AccountService::Stub::experimental_async::Login(::grpc::ClientContext* context, const ::vipuser::LoginRequest* request, ::vipuser::LoginReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_Login_, context, request, response, std::move(f));
 }
 
-void AccountService::Stub::experimental_async::Login(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, std::function<void(::grpc::Status)> f) {
+void AccountService::Stub::experimental_async::Login(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::LoginReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_Login_, context, request, response, std::move(f));
 }
 
-void AccountService::Stub::experimental_async::Login(::grpc::ClientContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void AccountService::Stub::experimental_async::Login(::grpc::ClientContext* context, const ::vipuser::LoginRequest* request, ::vipuser::LoginReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_Login_, context, request, response, reactor);
 }
 
-void AccountService::Stub::experimental_async::Login(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::TokenInfo* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void AccountService::Stub::experimental_async::Login(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::LoginReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_Login_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>* AccountService::Stub::AsyncLoginRaw(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::TokenInfo>::Create(channel_.get(), cq, rpcmethod_Login_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::vipuser::LoginReply>* AccountService::Stub::AsyncLoginRaw(::grpc::ClientContext* context, const ::vipuser::LoginRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::LoginReply>::Create(channel_.get(), cq, rpcmethod_Login_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::vipuser::TokenInfo>* AccountService::Stub::PrepareAsyncLoginRaw(::grpc::ClientContext* context, const ::vipuser::AccountInfo& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::TokenInfo>::Create(channel_.get(), cq, rpcmethod_Login_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::vipuser::LoginReply>* AccountService::Stub::PrepareAsyncLoginRaw(::grpc::ClientContext* context, const ::vipuser::LoginRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::LoginReply>::Create(channel_.get(), cq, rpcmethod_Login_, context, request, false);
 }
 
-::grpc::Status AccountService::Stub::Logout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::vipuser::LogoutResponse* response) {
+::grpc::Status AccountService::Stub::Logout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::vipuser::LogoutReply* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_Logout_, context, request, response);
 }
 
-void AccountService::Stub::experimental_async::Logout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest* request, ::vipuser::LogoutResponse* response, std::function<void(::grpc::Status)> f) {
+void AccountService::Stub::experimental_async::Logout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest* request, ::vipuser::LogoutReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_Logout_, context, request, response, std::move(f));
 }
 
-void AccountService::Stub::experimental_async::Logout(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::LogoutResponse* response, std::function<void(::grpc::Status)> f) {
+void AccountService::Stub::experimental_async::Logout(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::LogoutReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_Logout_, context, request, response, std::move(f));
 }
 
-void AccountService::Stub::experimental_async::Logout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest* request, ::vipuser::LogoutResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void AccountService::Stub::experimental_async::Logout(::grpc::ClientContext* context, const ::vipuser::LogoutRequest* request, ::vipuser::LogoutReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_Logout_, context, request, response, reactor);
 }
 
-void AccountService::Stub::experimental_async::Logout(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::LogoutResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void AccountService::Stub::experimental_async::Logout(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::LogoutReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_Logout_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::vipuser::LogoutResponse>* AccountService::Stub::AsyncLogoutRaw(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::LogoutResponse>::Create(channel_.get(), cq, rpcmethod_Logout_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::vipuser::LogoutReply>* AccountService::Stub::AsyncLogoutRaw(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::LogoutReply>::Create(channel_.get(), cq, rpcmethod_Logout_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::vipuser::LogoutResponse>* AccountService::Stub::PrepareAsyncLogoutRaw(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::LogoutResponse>::Create(channel_.get(), cq, rpcmethod_Logout_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::vipuser::LogoutReply>* AccountService::Stub::PrepareAsyncLogoutRaw(::grpc::ClientContext* context, const ::vipuser::LogoutRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::LogoutReply>::Create(channel_.get(), cq, rpcmethod_Logout_, context, request, false);
+}
+
+::grpc::Status AccountService::Stub::ReLogin(::grpc::ClientContext* context, const ::vipuser::ReLoginRequest& request, ::vipuser::ReLoginReply* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ReLogin_, context, request, response);
+}
+
+void AccountService::Stub::experimental_async::ReLogin(::grpc::ClientContext* context, const ::vipuser::ReLoginRequest* request, ::vipuser::ReLoginReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ReLogin_, context, request, response, std::move(f));
+}
+
+void AccountService::Stub::experimental_async::ReLogin(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::ReLoginReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ReLogin_, context, request, response, std::move(f));
+}
+
+void AccountService::Stub::experimental_async::ReLogin(::grpc::ClientContext* context, const ::vipuser::ReLoginRequest* request, ::vipuser::ReLoginReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ReLogin_, context, request, response, reactor);
+}
+
+void AccountService::Stub::experimental_async::ReLogin(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::ReLoginReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ReLogin_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::vipuser::ReLoginReply>* AccountService::Stub::AsyncReLoginRaw(::grpc::ClientContext* context, const ::vipuser::ReLoginRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::ReLoginReply>::Create(channel_.get(), cq, rpcmethod_ReLogin_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::vipuser::ReLoginReply>* AccountService::Stub::PrepareAsyncReLoginRaw(::grpc::ClientContext* context, const ::vipuser::ReLoginRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::ReLoginReply>::Create(channel_.get(), cq, rpcmethod_ReLogin_, context, request, false);
 }
 
 AccountService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       AccountService_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< AccountService::Service, ::vipuser::AccountInfo, ::vipuser::TokenInfo>(
+      new ::grpc::internal::RpcMethodHandler< AccountService::Service, ::vipuser::CreateAccountRequest, ::vipuser::CreateAccountReply>(
           [](AccountService::Service* service,
              ::grpc_impl::ServerContext* ctx,
-             const ::vipuser::AccountInfo* req,
-             ::vipuser::TokenInfo* resp) {
+             const ::vipuser::CreateAccountRequest* req,
+             ::vipuser::CreateAccountReply* resp) {
                return service->CreateAcount(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       AccountService_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< AccountService::Service, ::vipuser::AccountInfo, ::vipuser::TokenInfo>(
+      new ::grpc::internal::RpcMethodHandler< AccountService::Service, ::vipuser::LoginRequest, ::vipuser::LoginReply>(
           [](AccountService::Service* service,
              ::grpc_impl::ServerContext* ctx,
-             const ::vipuser::AccountInfo* req,
-             ::vipuser::TokenInfo* resp) {
+             const ::vipuser::LoginRequest* req,
+             ::vipuser::LoginReply* resp) {
                return service->Login(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       AccountService_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< AccountService::Service, ::vipuser::LogoutRequest, ::vipuser::LogoutResponse>(
+      new ::grpc::internal::RpcMethodHandler< AccountService::Service, ::vipuser::LogoutRequest, ::vipuser::LogoutReply>(
           [](AccountService::Service* service,
              ::grpc_impl::ServerContext* ctx,
              const ::vipuser::LogoutRequest* req,
-             ::vipuser::LogoutResponse* resp) {
+             ::vipuser::LogoutReply* resp) {
                return service->Logout(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      AccountService_method_names[3],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< AccountService::Service, ::vipuser::ReLoginRequest, ::vipuser::ReLoginReply>(
+          [](AccountService::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::vipuser::ReLoginRequest* req,
+             ::vipuser::ReLoginReply* resp) {
+               return service->ReLogin(ctx, req, resp);
              }, this)));
 }
 
 AccountService::Service::~Service() {
 }
 
-::grpc::Status AccountService::Service::CreateAcount(::grpc::ServerContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response) {
+::grpc::Status AccountService::Service::CreateAcount(::grpc::ServerContext* context, const ::vipuser::CreateAccountRequest* request, ::vipuser::CreateAccountReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AccountService::Service::Login(::grpc::ServerContext* context, const ::vipuser::AccountInfo* request, ::vipuser::TokenInfo* response) {
+::grpc::Status AccountService::Service::Login(::grpc::ServerContext* context, const ::vipuser::LoginRequest* request, ::vipuser::LoginReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AccountService::Service::Logout(::grpc::ServerContext* context, const ::vipuser::LogoutRequest* request, ::vipuser::LogoutResponse* response) {
+::grpc::Status AccountService::Service::Logout(::grpc::ServerContext* context, const ::vipuser::LogoutRequest* request, ::vipuser::LogoutReply* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status AccountService::Service::ReLogin(::grpc::ServerContext* context, const ::vipuser::ReLoginRequest* request, ::vipuser::ReLoginReply* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+
+static const char* BusinessService_method_names[] = {
+  "/vipuser.BusinessService/DoBusiness",
+};
+
+std::unique_ptr< BusinessService::Stub> BusinessService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
+  (void)options;
+  std::unique_ptr< BusinessService::Stub> stub(new BusinessService::Stub(channel));
+  return stub;
+}
+
+BusinessService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
+  : channel_(channel), rpcmethod_DoBusiness_(BusinessService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  {}
+
+::grpc::Status BusinessService::Stub::DoBusiness(::grpc::ClientContext* context, const ::vipuser::BusinessRequest& request, ::vipuser::BusinessReply* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_DoBusiness_, context, request, response);
+}
+
+void BusinessService::Stub::experimental_async::DoBusiness(::grpc::ClientContext* context, const ::vipuser::BusinessRequest* request, ::vipuser::BusinessReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_DoBusiness_, context, request, response, std::move(f));
+}
+
+void BusinessService::Stub::experimental_async::DoBusiness(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::BusinessReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_DoBusiness_, context, request, response, std::move(f));
+}
+
+void BusinessService::Stub::experimental_async::DoBusiness(::grpc::ClientContext* context, const ::vipuser::BusinessRequest* request, ::vipuser::BusinessReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_DoBusiness_, context, request, response, reactor);
+}
+
+void BusinessService::Stub::experimental_async::DoBusiness(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::vipuser::BusinessReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_DoBusiness_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::vipuser::BusinessReply>* BusinessService::Stub::AsyncDoBusinessRaw(::grpc::ClientContext* context, const ::vipuser::BusinessRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::BusinessReply>::Create(channel_.get(), cq, rpcmethod_DoBusiness_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::vipuser::BusinessReply>* BusinessService::Stub::PrepareAsyncDoBusinessRaw(::grpc::ClientContext* context, const ::vipuser::BusinessRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::vipuser::BusinessReply>::Create(channel_.get(), cq, rpcmethod_DoBusiness_, context, request, false);
+}
+
+BusinessService::Service::Service() {
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      BusinessService_method_names[0],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< BusinessService::Service, ::vipuser::BusinessRequest, ::vipuser::BusinessReply>(
+          [](BusinessService::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::vipuser::BusinessRequest* req,
+             ::vipuser::BusinessReply* resp) {
+               return service->DoBusiness(ctx, req, resp);
+             }, this)));
+}
+
+BusinessService::Service::~Service() {
+}
+
+::grpc::Status BusinessService::Service::DoBusiness(::grpc::ServerContext* context, const ::vipuser::BusinessRequest* request, ::vipuser::BusinessReply* response) {
   (void) context;
   (void) request;
   (void) response;

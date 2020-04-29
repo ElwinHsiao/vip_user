@@ -81,33 +81,27 @@ Logout:
 
 接入机采用redis保存用户的登录态，提高转发效率。
 
-票据数据：
+票据数据：(存入Redis)
 
-| key         | uuid     | timestamp(ms) | refreshToken |
-| :---------- | -------- | ------------- | ------------ |
-| accessToken | <string> | <UInt64>      | <string>     |
+| key                  | value        |
+| :------------------- | ------------ |
+| <uuid>_<accessToken> | refreshToken |
 
-> refreshToken：encrypt_aes_cbc(uuid, timestamp, random32)，可以逆向解密
+> key：uuid+accessToken存入Redis，很容易就可以支持多登录。
 >
-> accessToken： sha256(refreshToken)，相当于session的唯一标识。
-
-已登录状态：
-
-| uuid | accessToken-Set（后期可能允许多端登录） |
-| ---- | --------------------------------------- |
-|      |                                         |
+> refreshToken：encrypt_aes_cbc(uuid, timestamp, random32, key=passwordSHA256)，AES可以逆向解密，加个随机数的目的是即使破解了加密算法也伪造不了。key就是用户的密码SHA256，如果用户改密码，导致解不开，从而达到自动失效的效果。
+>
+> accessToken： md5(refreshToken)，相当该用户session的唯一标识。
 
 
 
-账户数据：
+账户数据：（存入账户机的DB）
 
-| uuid     | userId   | passwordSHA256 |
-| -------- | :------- | :------------- |
-| <string> | <string> | <string>       |
-
-> 账户数据在初期系统接入量少且业务简单的情形下，先直接保存在接入机。后续业务复杂后，支持多种登录方式，有手机/邮箱/别名等更多字段时，再使用关系型数据库保存。
-
-
+- uuid: char(36)
+- user_alias: varchar(40)
+- password_sum: char(64)
+- phone: varchar(18)
+- email: varchar(50)
 
 
 

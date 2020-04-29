@@ -16,7 +16,7 @@ enum VipUserStatus {
     VipUserStatusAccountExist = -10001,
     VipUserStatusAccountNotExist = -10002,
 };
-struct VipUserTicket {
+struct UserTicket {
     std::string accessToken;
     std::string refreshToken;
 };
@@ -24,17 +24,16 @@ class AccountServer {
 public:
     AccountServer(Redis &redis, Psql &_psql);
     ~AccountServer();
-    VipUserStatus CreateAccount(std::string userId, std::string passwordSHA256, VipUserTicket &ticket);
-    VipUserStatus Login(std::string userId, std::string passwordSHA256, VipUserTicket &ticket);
+    VipUserStatus CreateAccount(std::string userId, std::string passwordSHA256, UserTicket &ticket);
+    VipUserStatus Login(std::string userId, std::string passwordSHA256, UserTicket &ticket);
     VipUserStatus CheckLogin(std::string accessToken);
     VipUserStatus Logout(std::string accessToken);
-    VipUserStatus Relogin(std::string refreshToken, VipUserTicket &ticket);
+    VipUserStatus Relogin(std::string refreshToken, UserTicket &ticket);
 private:
     Redis &_redis;
     CryptPlus *_cryptPlus;
     Psql &_psql;
 
-    std::string Genuuid();
     VipUserStatus StoreNewUser(std::string uuid, std::string userId, std::string passwordSHA256);
     std::string MakeRefreshToken(std::string uuid, uint64_t timestamp, std::string key);
     bool AccountExist(std::string userId);

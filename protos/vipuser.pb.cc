@@ -14,6 +14,10 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+extern PROTOBUF_INTERNAL_EXPORT_vipuser_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AccountInfo_vipuser_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_vipuser_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ReplyResult_vipuser_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_vipuser_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TokenInfo_vipuser_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_vipuser_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_UserSession_vipuser_2eproto;
 namespace vipuser {
 class AccountInfoDefaultTypeInternal {
  public:
@@ -23,22 +27,54 @@ class TokenInfoDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TokenInfo> _instance;
 } _TokenInfo_default_instance_;
+class ReplyResultDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ReplyResult> _instance;
+} _ReplyResult_default_instance_;
+class CreateAccountRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CreateAccountRequest> _instance;
+} _CreateAccountRequest_default_instance_;
+class CreateAccountReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CreateAccountReply> _instance;
+} _CreateAccountReply_default_instance_;
+class LoginRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LoginRequest> _instance;
+} _LoginRequest_default_instance_;
+class LoginReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LoginReply> _instance;
+} _LoginReply_default_instance_;
 class LogoutRequestDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LogoutRequest> _instance;
 } _LogoutRequest_default_instance_;
-class LogoutResponseDefaultTypeInternal {
+class LogoutReplyDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LogoutResponse> _instance;
-} _LogoutResponse_default_instance_;
-class VipUserRequestDefaultTypeInternal {
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LogoutReply> _instance;
+} _LogoutReply_default_instance_;
+class ReLoginRequestDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VipUserRequest> _instance;
-} _VipUserRequest_default_instance_;
-class VipUserResponseDefaultTypeInternal {
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ReLoginRequest> _instance;
+} _ReLoginRequest_default_instance_;
+class ReLoginReplyDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VipUserResponse> _instance;
-} _VipUserResponse_default_instance_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ReLoginReply> _instance;
+} _ReLoginReply_default_instance_;
+class UserSessionDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UserSession> _instance;
+} _UserSession_default_instance_;
+class BusinessRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<BusinessRequest> _instance;
+} _BusinessRequest_default_instance_;
+class BusinessReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<BusinessReply> _instance;
+} _BusinessReply_default_instance_;
 }  // namespace vipuser
 static void InitDefaultsscc_info_AccountInfo_vipuser_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -54,6 +90,113 @@ static void InitDefaultsscc_info_AccountInfo_vipuser_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AccountInfo_vipuser_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_AccountInfo_vipuser_2eproto}, {}};
 
+static void InitDefaultsscc_info_BusinessReply_vipuser_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::vipuser::_BusinessReply_default_instance_;
+    new (ptr) ::vipuser::BusinessReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::vipuser::BusinessReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_BusinessReply_vipuser_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_BusinessReply_vipuser_2eproto}, {
+      &scc_info_ReplyResult_vipuser_2eproto.base,}};
+
+static void InitDefaultsscc_info_BusinessRequest_vipuser_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::vipuser::_BusinessRequest_default_instance_;
+    new (ptr) ::vipuser::BusinessRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::vipuser::BusinessRequest::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_BusinessRequest_vipuser_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_BusinessRequest_vipuser_2eproto}, {
+      &scc_info_UserSession_vipuser_2eproto.base,}};
+
+static void InitDefaultsscc_info_CreateAccountReply_vipuser_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::vipuser::_CreateAccountReply_default_instance_;
+    new (ptr) ::vipuser::CreateAccountReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::vipuser::CreateAccountReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_CreateAccountReply_vipuser_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_CreateAccountReply_vipuser_2eproto}, {
+      &scc_info_ReplyResult_vipuser_2eproto.base,
+      &scc_info_TokenInfo_vipuser_2eproto.base,}};
+
+static void InitDefaultsscc_info_CreateAccountRequest_vipuser_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::vipuser::_CreateAccountRequest_default_instance_;
+    new (ptr) ::vipuser::CreateAccountRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::vipuser::CreateAccountRequest::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CreateAccountRequest_vipuser_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CreateAccountRequest_vipuser_2eproto}, {
+      &scc_info_AccountInfo_vipuser_2eproto.base,}};
+
+static void InitDefaultsscc_info_LoginReply_vipuser_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::vipuser::_LoginReply_default_instance_;
+    new (ptr) ::vipuser::LoginReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::vipuser::LoginReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_LoginReply_vipuser_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_LoginReply_vipuser_2eproto}, {
+      &scc_info_ReplyResult_vipuser_2eproto.base,
+      &scc_info_TokenInfo_vipuser_2eproto.base,}};
+
+static void InitDefaultsscc_info_LoginRequest_vipuser_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::vipuser::_LoginRequest_default_instance_;
+    new (ptr) ::vipuser::LoginRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::vipuser::LoginRequest::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_LoginRequest_vipuser_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_LoginRequest_vipuser_2eproto}, {
+      &scc_info_AccountInfo_vipuser_2eproto.base,}};
+
+static void InitDefaultsscc_info_LogoutReply_vipuser_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::vipuser::_LogoutReply_default_instance_;
+    new (ptr) ::vipuser::LogoutReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::vipuser::LogoutReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_LogoutReply_vipuser_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_LogoutReply_vipuser_2eproto}, {
+      &scc_info_ReplyResult_vipuser_2eproto.base,}};
+
 static void InitDefaultsscc_info_LogoutRequest_vipuser_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -68,19 +211,49 @@ static void InitDefaultsscc_info_LogoutRequest_vipuser_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LogoutRequest_vipuser_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LogoutRequest_vipuser_2eproto}, {}};
 
-static void InitDefaultsscc_info_LogoutResponse_vipuser_2eproto() {
+static void InitDefaultsscc_info_ReLoginReply_vipuser_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::vipuser::_LogoutResponse_default_instance_;
-    new (ptr) ::vipuser::LogoutResponse();
+    void* ptr = &::vipuser::_ReLoginReply_default_instance_;
+    new (ptr) ::vipuser::ReLoginReply();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::vipuser::LogoutResponse::InitAsDefaultInstance();
+  ::vipuser::ReLoginReply::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LogoutResponse_vipuser_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LogoutResponse_vipuser_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ReLoginReply_vipuser_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_ReLoginReply_vipuser_2eproto}, {
+      &scc_info_ReplyResult_vipuser_2eproto.base,
+      &scc_info_TokenInfo_vipuser_2eproto.base,}};
+
+static void InitDefaultsscc_info_ReLoginRequest_vipuser_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::vipuser::_ReLoginRequest_default_instance_;
+    new (ptr) ::vipuser::ReLoginRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::vipuser::ReLoginRequest::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ReLoginRequest_vipuser_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ReLoginRequest_vipuser_2eproto}, {}};
+
+static void InitDefaultsscc_info_ReplyResult_vipuser_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::vipuser::_ReplyResult_default_instance_;
+    new (ptr) ::vipuser::ReplyResult();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::vipuser::ReplyResult::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ReplyResult_vipuser_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ReplyResult_vipuser_2eproto}, {}};
 
 static void InitDefaultsscc_info_TokenInfo_vipuser_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -96,35 +269,21 @@ static void InitDefaultsscc_info_TokenInfo_vipuser_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TokenInfo_vipuser_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_TokenInfo_vipuser_2eproto}, {}};
 
-static void InitDefaultsscc_info_VipUserRequest_vipuser_2eproto() {
+static void InitDefaultsscc_info_UserSession_vipuser_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::vipuser::_VipUserRequest_default_instance_;
-    new (ptr) ::vipuser::VipUserRequest();
+    void* ptr = &::vipuser::_UserSession_default_instance_;
+    new (ptr) ::vipuser::UserSession();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::vipuser::VipUserRequest::InitAsDefaultInstance();
+  ::vipuser::UserSession::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VipUserRequest_vipuser_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_VipUserRequest_vipuser_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_UserSession_vipuser_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_UserSession_vipuser_2eproto}, {}};
 
-static void InitDefaultsscc_info_VipUserResponse_vipuser_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::vipuser::_VipUserResponse_default_instance_;
-    new (ptr) ::vipuser::VipUserResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::vipuser::VipUserResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VipUserResponse_vipuser_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_VipUserResponse_vipuser_2eproto}, {}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_vipuser_2eproto[6];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_vipuser_2eproto[14];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_vipuser_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_vipuser_2eproto = nullptr;
 
@@ -134,15 +293,49 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vipuser_2eproto::offsets[] PRO
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::vipuser::AccountInfo, userid_),
+  PROTOBUF_FIELD_OFFSET(::vipuser::AccountInfo, useralias_),
   PROTOBUF_FIELD_OFFSET(::vipuser::AccountInfo, passwordsha256_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vipuser::TokenInfo, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vipuser::TokenInfo, uuid_),
   PROTOBUF_FIELD_OFFSET(::vipuser::TokenInfo, accesstoken_),
   PROTOBUF_FIELD_OFFSET(::vipuser::TokenInfo, refreshtoken_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::vipuser::ReplyResult, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vipuser::ReplyResult, result_),
+  PROTOBUF_FIELD_OFFSET(::vipuser::ReplyResult, message_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::vipuser::CreateAccountRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vipuser::CreateAccountRequest, accountinfo_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::vipuser::CreateAccountReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vipuser::CreateAccountReply, result_),
+  PROTOBUF_FIELD_OFFSET(::vipuser::CreateAccountReply, tokeninfo_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::vipuser::LoginRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vipuser::LoginRequest, accountinfo_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::vipuser::LoginReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vipuser::LoginReply, result_),
+  PROTOBUF_FIELD_OFFSET(::vipuser::LoginReply, tokeninfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vipuser::LogoutRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -150,75 +343,141 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vipuser_2eproto::offsets[] PRO
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::vipuser::LogoutRequest, accesstoken_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::vipuser::LogoutResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::vipuser::LogoutReply, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::vipuser::LogoutResponse, accesstoken_),
+  PROTOBUF_FIELD_OFFSET(::vipuser::LogoutReply, result_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::vipuser::VipUserRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::vipuser::ReLoginRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::vipuser::VipUserRequest, userid_),
+  PROTOBUF_FIELD_OFFSET(::vipuser::ReLoginRequest, refreshtoken_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::vipuser::VipUserResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::vipuser::ReLoginReply, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::vipuser::VipUserResponse, message_),
+  PROTOBUF_FIELD_OFFSET(::vipuser::ReLoginReply, result_),
+  PROTOBUF_FIELD_OFFSET(::vipuser::ReLoginReply, tokeninfo_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::vipuser::UserSession, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vipuser::UserSession, uuid_),
+  PROTOBUF_FIELD_OFFSET(::vipuser::UserSession, accesstoken_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::vipuser::BusinessRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vipuser::BusinessRequest, session_),
+  PROTOBUF_FIELD_OFFSET(::vipuser::BusinessRequest, params_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::vipuser::BusinessReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vipuser::BusinessReply, result_),
+  PROTOBUF_FIELD_OFFSET(::vipuser::BusinessReply, data_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::vipuser::AccountInfo)},
   { 7, -1, sizeof(::vipuser::TokenInfo)},
-  { 14, -1, sizeof(::vipuser::LogoutRequest)},
-  { 20, -1, sizeof(::vipuser::LogoutResponse)},
-  { 26, -1, sizeof(::vipuser::VipUserRequest)},
-  { 32, -1, sizeof(::vipuser::VipUserResponse)},
+  { 15, -1, sizeof(::vipuser::ReplyResult)},
+  { 22, -1, sizeof(::vipuser::CreateAccountRequest)},
+  { 28, -1, sizeof(::vipuser::CreateAccountReply)},
+  { 35, -1, sizeof(::vipuser::LoginRequest)},
+  { 41, -1, sizeof(::vipuser::LoginReply)},
+  { 48, -1, sizeof(::vipuser::LogoutRequest)},
+  { 54, -1, sizeof(::vipuser::LogoutReply)},
+  { 60, -1, sizeof(::vipuser::ReLoginRequest)},
+  { 66, -1, sizeof(::vipuser::ReLoginReply)},
+  { 73, -1, sizeof(::vipuser::UserSession)},
+  { 80, -1, sizeof(::vipuser::BusinessRequest)},
+  { 87, -1, sizeof(::vipuser::BusinessReply)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_AccountInfo_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_TokenInfo_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_ReplyResult_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_CreateAccountRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_CreateAccountReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_LoginRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_LoginReply_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_LogoutRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_LogoutResponse_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_VipUserRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_VipUserResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_LogoutReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_ReLoginRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_ReLoginReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_UserSession_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_BusinessRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vipuser::_BusinessReply_default_instance_),
 };
 
 const char descriptor_table_protodef_vipuser_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\rvipuser.proto\022\007vipuser\"5\n\013AccountInfo\022"
-  "\016\n\006userId\030\001 \001(\t\022\026\n\016passwordSHA256\030\002 \001(\t\""
-  "6\n\tTokenInfo\022\023\n\013accessToken\030\001 \001(\t\022\024\n\014ref"
-  "reshToken\030\002 \001(\t\"$\n\rLogoutRequest\022\023\n\013acce"
-  "ssToken\030\001 \001(\t\"%\n\016LogoutResponse\022\023\n\013acces"
-  "sToken\030\001 \001(\t\" \n\016VipUserRequest\022\016\n\006userId"
-  "\030\001 \001(\t\"\"\n\017VipUserResponse\022\017\n\007message\030\001 \001"
-  "(\t2\276\001\n\016AccountService\022:\n\014CreateAcount\022\024."
-  "vipuser.AccountInfo\032\022.vipuser.TokenInfo\""
-  "\000\0223\n\005Login\022\024.vipuser.AccountInfo\032\022.vipus"
-  "er.TokenInfo\"\000\022;\n\006Logout\022\026.vipuser.Logou"
-  "tRequest\032\027.vipuser.LogoutResponse\"\000B6\n\033i"
-  "o.grpc.examples.helloworldB\017HelloWorldPr"
-  "otoP\001\242\002\003HLWb\006proto3"
+  "\n\rvipuser.proto\022\007vipuser\"8\n\013AccountInfo\022"
+  "\021\n\tuserAlias\030\001 \001(\t\022\026\n\016passwordSHA256\030\002 \001"
+  "(\t\"D\n\tTokenInfo\022\014\n\004uuid\030\001 \001(\t\022\023\n\013accessT"
+  "oken\030\002 \001(\t\022\024\n\014refreshToken\030\003 \001(\t\".\n\013Repl"
+  "yResult\022\016\n\006result\030\001 \001(\005\022\017\n\007message\030\002 \001(\t"
+  "\"A\n\024CreateAccountRequest\022)\n\013accountInfo\030"
+  "\001 \001(\0132\024.vipuser.AccountInfo\"a\n\022CreateAcc"
+  "ountReply\022$\n\006result\030\001 \001(\0132\024.vipuser.Repl"
+  "yResult\022%\n\ttokenInfo\030\002 \001(\0132\022.vipuser.Tok"
+  "enInfo\"9\n\014LoginRequest\022)\n\013accountInfo\030\001 "
+  "\001(\0132\024.vipuser.AccountInfo\"Y\n\nLoginReply\022"
+  "$\n\006result\030\001 \001(\0132\024.vipuser.ReplyResult\022%\n"
+  "\ttokenInfo\030\002 \001(\0132\022.vipuser.TokenInfo\"$\n\r"
+  "LogoutRequest\022\023\n\013accessToken\030\001 \001(\t\"3\n\013Lo"
+  "goutReply\022$\n\006result\030\001 \001(\0132\024.vipuser.Repl"
+  "yResult\"&\n\016ReLoginRequest\022\024\n\014refreshToke"
+  "n\030\001 \001(\t\"[\n\014ReLoginReply\022$\n\006result\030\001 \001(\0132"
+  "\024.vipuser.ReplyResult\022%\n\ttokenInfo\030\002 \001(\013"
+  "2\022.vipuser.TokenInfo\"0\n\013UserSession\022\014\n\004u"
+  "uid\030\001 \001(\t\022\023\n\013accessToken\030\002 \001(\t\"H\n\017Busine"
+  "ssRequest\022%\n\007session\030\001 \001(\0132\024.vipuser.Use"
+  "rSession\022\016\n\006params\030\002 \001(\t\"C\n\rBusinessRepl"
+  "y\022$\n\006result\030\001 \001(\0132\024.vipuser.ReplyResult\022"
+  "\014\n\004data\030\002 \001(\t2\214\002\n\016AccountService\022L\n\014Crea"
+  "teAcount\022\035.vipuser.CreateAccountRequest\032"
+  "\033.vipuser.CreateAccountReply\"\000\0225\n\005Login\022"
+  "\025.vipuser.LoginRequest\032\023.vipuser.LoginRe"
+  "ply\"\000\0228\n\006Logout\022\026.vipuser.LogoutRequest\032"
+  "\024.vipuser.LogoutReply\"\000\022;\n\007ReLogin\022\027.vip"
+  "user.ReLoginRequest\032\025.vipuser.ReLoginRep"
+  "ly\"\0002S\n\017BusinessService\022@\n\nDoBusiness\022\030."
+  "vipuser.BusinessRequest\032\026.vipuser.Busine"
+  "ssReply\"\000B6\n\033io.grpc.examples.helloworld"
+  "B\017HelloWorldProtoP\001\242\002\003HLWb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_vipuser_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vipuser_2eproto_sccs[6] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vipuser_2eproto_sccs[14] = {
   &scc_info_AccountInfo_vipuser_2eproto.base,
+  &scc_info_BusinessReply_vipuser_2eproto.base,
+  &scc_info_BusinessRequest_vipuser_2eproto.base,
+  &scc_info_CreateAccountReply_vipuser_2eproto.base,
+  &scc_info_CreateAccountRequest_vipuser_2eproto.base,
+  &scc_info_LoginReply_vipuser_2eproto.base,
+  &scc_info_LoginRequest_vipuser_2eproto.base,
+  &scc_info_LogoutReply_vipuser_2eproto.base,
   &scc_info_LogoutRequest_vipuser_2eproto.base,
-  &scc_info_LogoutResponse_vipuser_2eproto.base,
+  &scc_info_ReLoginReply_vipuser_2eproto.base,
+  &scc_info_ReLoginRequest_vipuser_2eproto.base,
+  &scc_info_ReplyResult_vipuser_2eproto.base,
   &scc_info_TokenInfo_vipuser_2eproto.base,
-  &scc_info_VipUserRequest_vipuser_2eproto.base,
-  &scc_info_VipUserResponse_vipuser_2eproto.base,
+  &scc_info_UserSession_vipuser_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_vipuser_2eproto_once;
 static bool descriptor_table_vipuser_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_vipuser_2eproto = {
-  &descriptor_table_vipuser_2eproto_initialized, descriptor_table_protodef_vipuser_2eproto, "vipuser.proto", 539,
-  &descriptor_table_vipuser_2eproto_once, descriptor_table_vipuser_2eproto_sccs, descriptor_table_vipuser_2eproto_deps, 6, 0,
+  &descriptor_table_vipuser_2eproto_initialized, descriptor_table_protodef_vipuser_2eproto, "vipuser.proto", 1353,
+  &descriptor_table_vipuser_2eproto_once, descriptor_table_vipuser_2eproto_sccs, descriptor_table_vipuser_2eproto_deps, 14, 0,
   schemas, file_default_instances, TableStruct_vipuser_2eproto::offsets,
-  file_level_metadata_vipuser_2eproto, 6, file_level_enum_descriptors_vipuser_2eproto, file_level_service_descriptors_vipuser_2eproto,
+  file_level_metadata_vipuser_2eproto, 14, file_level_enum_descriptors_vipuser_2eproto, file_level_service_descriptors_vipuser_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -242,9 +501,9 @@ AccountInfo::AccountInfo(const AccountInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  userid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_userid().empty()) {
-    userid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.userid_);
+  useralias_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_useralias().empty()) {
+    useralias_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.useralias_);
   }
   passwordsha256_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_passwordsha256().empty()) {
@@ -255,7 +514,7 @@ AccountInfo::AccountInfo(const AccountInfo& from)
 
 void AccountInfo::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AccountInfo_vipuser_2eproto.base);
-  userid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  useralias_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   passwordsha256_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -265,7 +524,7 @@ AccountInfo::~AccountInfo() {
 }
 
 void AccountInfo::SharedDtor() {
-  userid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  useralias_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   passwordsha256_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -284,7 +543,7 @@ void AccountInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  userid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  useralias_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   passwordsha256_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   _internal_metadata_.Clear();
 }
@@ -296,12 +555,12 @@ const char* AccountInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string userId = 1;
+      // string userAlias = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_userid();
+          auto str = _internal_mutable_useralias();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vipuser.AccountInfo.userId"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vipuser.AccountInfo.userAlias"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -340,14 +599,14 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string userId = 1;
-  if (this->userid().size() > 0) {
+  // string userAlias = 1;
+  if (this->useralias().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_userid().data(), static_cast<int>(this->_internal_userid().length()),
+      this->_internal_useralias().data(), static_cast<int>(this->_internal_useralias().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "vipuser.AccountInfo.userId");
+      "vipuser.AccountInfo.userAlias");
     target = stream->WriteStringMaybeAliased(
-        1, this->_internal_userid(), target);
+        1, this->_internal_useralias(), target);
   }
 
   // string passwordSHA256 = 2;
@@ -376,11 +635,11 @@ size_t AccountInfo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string userId = 1;
-  if (this->userid().size() > 0) {
+  // string userAlias = 1;
+  if (this->useralias().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_userid());
+        this->_internal_useralias());
   }
 
   // string passwordSHA256 = 2;
@@ -421,9 +680,9 @@ void AccountInfo::MergeFrom(const AccountInfo& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.userid().size() > 0) {
+  if (from.useralias().size() > 0) {
 
-    userid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.userid_);
+    useralias_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.useralias_);
   }
   if (from.passwordsha256().size() > 0) {
 
@@ -452,7 +711,7 @@ bool AccountInfo::IsInitialized() const {
 void AccountInfo::InternalSwap(AccountInfo* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  userid_.Swap(&other->userid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  useralias_.Swap(&other->useralias_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   passwordsha256_.Swap(&other->passwordsha256_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
@@ -480,6 +739,10 @@ TokenInfo::TokenInfo(const TokenInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_uuid().empty()) {
+    uuid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.uuid_);
+  }
   accesstoken_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_accesstoken().empty()) {
     accesstoken_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.accesstoken_);
@@ -493,6 +756,7 @@ TokenInfo::TokenInfo(const TokenInfo& from)
 
 void TokenInfo::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TokenInfo_vipuser_2eproto.base);
+  uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   accesstoken_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   refreshtoken_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -503,6 +767,7 @@ TokenInfo::~TokenInfo() {
 }
 
 void TokenInfo::SharedDtor() {
+  uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   accesstoken_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   refreshtoken_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -522,6 +787,7 @@ void TokenInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  uuid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   accesstoken_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   refreshtoken_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   _internal_metadata_.Clear();
@@ -534,18 +800,27 @@ const char* TokenInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string accessToken = 1;
+      // string uuid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_uuid();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vipuser.TokenInfo.uuid"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string accessToken = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_accesstoken();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vipuser.TokenInfo.accessToken"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string refreshToken = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+      // string refreshToken = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_refreshtoken();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vipuser.TokenInfo.refreshToken"));
@@ -578,24 +853,34 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string accessToken = 1;
+  // string uuid = 1;
+  if (this->uuid().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_uuid().data(), static_cast<int>(this->_internal_uuid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "vipuser.TokenInfo.uuid");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_uuid(), target);
+  }
+
+  // string accessToken = 2;
   if (this->accesstoken().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_accesstoken().data(), static_cast<int>(this->_internal_accesstoken().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "vipuser.TokenInfo.accessToken");
     target = stream->WriteStringMaybeAliased(
-        1, this->_internal_accesstoken(), target);
+        2, this->_internal_accesstoken(), target);
   }
 
-  // string refreshToken = 2;
+  // string refreshToken = 3;
   if (this->refreshtoken().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_refreshtoken().data(), static_cast<int>(this->_internal_refreshtoken().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "vipuser.TokenInfo.refreshToken");
     target = stream->WriteStringMaybeAliased(
-        2, this->_internal_refreshtoken(), target);
+        3, this->_internal_refreshtoken(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -614,14 +899,21 @@ size_t TokenInfo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string accessToken = 1;
+  // string uuid = 1;
+  if (this->uuid().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_uuid());
+  }
+
+  // string accessToken = 2;
   if (this->accesstoken().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_accesstoken());
   }
 
-  // string refreshToken = 2;
+  // string refreshToken = 3;
   if (this->refreshtoken().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
@@ -659,6 +951,10 @@ void TokenInfo::MergeFrom(const TokenInfo& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (from.uuid().size() > 0) {
+
+    uuid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.uuid_);
+  }
   if (from.accesstoken().size() > 0) {
 
     accesstoken_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.accesstoken_);
@@ -690,6 +986,8 @@ bool TokenInfo::IsInitialized() const {
 void TokenInfo::InternalSwap(TokenInfo* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
+  uuid_.Swap(&other->uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   accesstoken_.Swap(&other->accesstoken_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   refreshtoken_.Swap(&other->refreshtoken_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
@@ -697,6 +995,1138 @@ void TokenInfo::InternalSwap(TokenInfo* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata TokenInfo::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void ReplyResult::InitAsDefaultInstance() {
+}
+class ReplyResult::_Internal {
+ public:
+};
+
+ReplyResult::ReplyResult()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:vipuser.ReplyResult)
+}
+ReplyResult::ReplyResult(const ReplyResult& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_message().empty()) {
+    message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
+  }
+  result_ = from.result_;
+  // @@protoc_insertion_point(copy_constructor:vipuser.ReplyResult)
+}
+
+void ReplyResult::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ReplyResult_vipuser_2eproto.base);
+  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  result_ = 0;
+}
+
+ReplyResult::~ReplyResult() {
+  // @@protoc_insertion_point(destructor:vipuser.ReplyResult)
+  SharedDtor();
+}
+
+void ReplyResult::SharedDtor() {
+  message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void ReplyResult::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ReplyResult& ReplyResult::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ReplyResult_vipuser_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ReplyResult::Clear() {
+// @@protoc_insertion_point(message_clear_start:vipuser.ReplyResult)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  message_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  result_ = 0;
+  _internal_metadata_.Clear();
+}
+
+const char* ReplyResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // int32 result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string message = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_message();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vipuser.ReplyResult.message"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* ReplyResult::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:vipuser.ReplyResult)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 result = 1;
+  if (this->result() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_result(), target);
+  }
+
+  // string message = 2;
+  if (this->message().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "vipuser.ReplyResult.message");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_message(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:vipuser.ReplyResult)
+  return target;
+}
+
+size_t ReplyResult::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vipuser.ReplyResult)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string message = 2;
+  if (this->message().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_message());
+  }
+
+  // int32 result = 1;
+  if (this->result() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_result());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ReplyResult::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vipuser.ReplyResult)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ReplyResult* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ReplyResult>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vipuser.ReplyResult)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vipuser.ReplyResult)
+    MergeFrom(*source);
+  }
+}
+
+void ReplyResult::MergeFrom(const ReplyResult& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vipuser.ReplyResult)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.message().size() > 0) {
+
+    message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
+  }
+  if (from.result() != 0) {
+    _internal_set_result(from._internal_result());
+  }
+}
+
+void ReplyResult::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vipuser.ReplyResult)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ReplyResult::CopyFrom(const ReplyResult& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vipuser.ReplyResult)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ReplyResult::IsInitialized() const {
+  return true;
+}
+
+void ReplyResult::InternalSwap(ReplyResult* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(result_, other->result_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ReplyResult::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void CreateAccountRequest::InitAsDefaultInstance() {
+  ::vipuser::_CreateAccountRequest_default_instance_._instance.get_mutable()->accountinfo_ = const_cast< ::vipuser::AccountInfo*>(
+      ::vipuser::AccountInfo::internal_default_instance());
+}
+class CreateAccountRequest::_Internal {
+ public:
+  static const ::vipuser::AccountInfo& accountinfo(const CreateAccountRequest* msg);
+};
+
+const ::vipuser::AccountInfo&
+CreateAccountRequest::_Internal::accountinfo(const CreateAccountRequest* msg) {
+  return *msg->accountinfo_;
+}
+CreateAccountRequest::CreateAccountRequest()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:vipuser.CreateAccountRequest)
+}
+CreateAccountRequest::CreateAccountRequest(const CreateAccountRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from._internal_has_accountinfo()) {
+    accountinfo_ = new ::vipuser::AccountInfo(*from.accountinfo_);
+  } else {
+    accountinfo_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:vipuser.CreateAccountRequest)
+}
+
+void CreateAccountRequest::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CreateAccountRequest_vipuser_2eproto.base);
+  accountinfo_ = nullptr;
+}
+
+CreateAccountRequest::~CreateAccountRequest() {
+  // @@protoc_insertion_point(destructor:vipuser.CreateAccountRequest)
+  SharedDtor();
+}
+
+void CreateAccountRequest::SharedDtor() {
+  if (this != internal_default_instance()) delete accountinfo_;
+}
+
+void CreateAccountRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const CreateAccountRequest& CreateAccountRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CreateAccountRequest_vipuser_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void CreateAccountRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:vipuser.CreateAccountRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && accountinfo_ != nullptr) {
+    delete accountinfo_;
+  }
+  accountinfo_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+const char* CreateAccountRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .vipuser.AccountInfo accountInfo = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_accountinfo(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* CreateAccountRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:vipuser.CreateAccountRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .vipuser.AccountInfo accountInfo = 1;
+  if (this->has_accountinfo()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::accountinfo(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:vipuser.CreateAccountRequest)
+  return target;
+}
+
+size_t CreateAccountRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vipuser.CreateAccountRequest)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .vipuser.AccountInfo accountInfo = 1;
+  if (this->has_accountinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *accountinfo_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void CreateAccountRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vipuser.CreateAccountRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CreateAccountRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CreateAccountRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vipuser.CreateAccountRequest)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vipuser.CreateAccountRequest)
+    MergeFrom(*source);
+  }
+}
+
+void CreateAccountRequest::MergeFrom(const CreateAccountRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vipuser.CreateAccountRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_accountinfo()) {
+    _internal_mutable_accountinfo()->::vipuser::AccountInfo::MergeFrom(from._internal_accountinfo());
+  }
+}
+
+void CreateAccountRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vipuser.CreateAccountRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CreateAccountRequest::CopyFrom(const CreateAccountRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vipuser.CreateAccountRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CreateAccountRequest::IsInitialized() const {
+  return true;
+}
+
+void CreateAccountRequest::InternalSwap(CreateAccountRequest* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(accountinfo_, other->accountinfo_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CreateAccountRequest::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void CreateAccountReply::InitAsDefaultInstance() {
+  ::vipuser::_CreateAccountReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::vipuser::ReplyResult*>(
+      ::vipuser::ReplyResult::internal_default_instance());
+  ::vipuser::_CreateAccountReply_default_instance_._instance.get_mutable()->tokeninfo_ = const_cast< ::vipuser::TokenInfo*>(
+      ::vipuser::TokenInfo::internal_default_instance());
+}
+class CreateAccountReply::_Internal {
+ public:
+  static const ::vipuser::ReplyResult& result(const CreateAccountReply* msg);
+  static const ::vipuser::TokenInfo& tokeninfo(const CreateAccountReply* msg);
+};
+
+const ::vipuser::ReplyResult&
+CreateAccountReply::_Internal::result(const CreateAccountReply* msg) {
+  return *msg->result_;
+}
+const ::vipuser::TokenInfo&
+CreateAccountReply::_Internal::tokeninfo(const CreateAccountReply* msg) {
+  return *msg->tokeninfo_;
+}
+CreateAccountReply::CreateAccountReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:vipuser.CreateAccountReply)
+}
+CreateAccountReply::CreateAccountReply(const CreateAccountReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from._internal_has_result()) {
+    result_ = new ::vipuser::ReplyResult(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  if (from._internal_has_tokeninfo()) {
+    tokeninfo_ = new ::vipuser::TokenInfo(*from.tokeninfo_);
+  } else {
+    tokeninfo_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:vipuser.CreateAccountReply)
+}
+
+void CreateAccountReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CreateAccountReply_vipuser_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&tokeninfo_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(tokeninfo_));
+}
+
+CreateAccountReply::~CreateAccountReply() {
+  // @@protoc_insertion_point(destructor:vipuser.CreateAccountReply)
+  SharedDtor();
+}
+
+void CreateAccountReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+  if (this != internal_default_instance()) delete tokeninfo_;
+}
+
+void CreateAccountReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const CreateAccountReply& CreateAccountReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CreateAccountReply_vipuser_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void CreateAccountReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:vipuser.CreateAccountReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && tokeninfo_ != nullptr) {
+    delete tokeninfo_;
+  }
+  tokeninfo_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+const char* CreateAccountReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .vipuser.ReplyResult result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .vipuser.TokenInfo tokenInfo = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_tokeninfo(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* CreateAccountReply::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:vipuser.CreateAccountReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .vipuser.ReplyResult result = 1;
+  if (this->has_result()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::result(this), target, stream);
+  }
+
+  // .vipuser.TokenInfo tokenInfo = 2;
+  if (this->has_tokeninfo()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::tokeninfo(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:vipuser.CreateAccountReply)
+  return target;
+}
+
+size_t CreateAccountReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vipuser.CreateAccountReply)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .vipuser.ReplyResult result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // .vipuser.TokenInfo tokenInfo = 2;
+  if (this->has_tokeninfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *tokeninfo_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void CreateAccountReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vipuser.CreateAccountReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CreateAccountReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CreateAccountReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vipuser.CreateAccountReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vipuser.CreateAccountReply)
+    MergeFrom(*source);
+  }
+}
+
+void CreateAccountReply::MergeFrom(const CreateAccountReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vipuser.CreateAccountReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    _internal_mutable_result()->::vipuser::ReplyResult::MergeFrom(from._internal_result());
+  }
+  if (from.has_tokeninfo()) {
+    _internal_mutable_tokeninfo()->::vipuser::TokenInfo::MergeFrom(from._internal_tokeninfo());
+  }
+}
+
+void CreateAccountReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vipuser.CreateAccountReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CreateAccountReply::CopyFrom(const CreateAccountReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vipuser.CreateAccountReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CreateAccountReply::IsInitialized() const {
+  return true;
+}
+
+void CreateAccountReply::InternalSwap(CreateAccountReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(tokeninfo_, other->tokeninfo_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CreateAccountReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void LoginRequest::InitAsDefaultInstance() {
+  ::vipuser::_LoginRequest_default_instance_._instance.get_mutable()->accountinfo_ = const_cast< ::vipuser::AccountInfo*>(
+      ::vipuser::AccountInfo::internal_default_instance());
+}
+class LoginRequest::_Internal {
+ public:
+  static const ::vipuser::AccountInfo& accountinfo(const LoginRequest* msg);
+};
+
+const ::vipuser::AccountInfo&
+LoginRequest::_Internal::accountinfo(const LoginRequest* msg) {
+  return *msg->accountinfo_;
+}
+LoginRequest::LoginRequest()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:vipuser.LoginRequest)
+}
+LoginRequest::LoginRequest(const LoginRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from._internal_has_accountinfo()) {
+    accountinfo_ = new ::vipuser::AccountInfo(*from.accountinfo_);
+  } else {
+    accountinfo_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:vipuser.LoginRequest)
+}
+
+void LoginRequest::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_LoginRequest_vipuser_2eproto.base);
+  accountinfo_ = nullptr;
+}
+
+LoginRequest::~LoginRequest() {
+  // @@protoc_insertion_point(destructor:vipuser.LoginRequest)
+  SharedDtor();
+}
+
+void LoginRequest::SharedDtor() {
+  if (this != internal_default_instance()) delete accountinfo_;
+}
+
+void LoginRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const LoginRequest& LoginRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_LoginRequest_vipuser_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void LoginRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:vipuser.LoginRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && accountinfo_ != nullptr) {
+    delete accountinfo_;
+  }
+  accountinfo_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+const char* LoginRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .vipuser.AccountInfo accountInfo = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_accountinfo(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* LoginRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:vipuser.LoginRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .vipuser.AccountInfo accountInfo = 1;
+  if (this->has_accountinfo()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::accountinfo(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:vipuser.LoginRequest)
+  return target;
+}
+
+size_t LoginRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vipuser.LoginRequest)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .vipuser.AccountInfo accountInfo = 1;
+  if (this->has_accountinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *accountinfo_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void LoginRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vipuser.LoginRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const LoginRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoginRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vipuser.LoginRequest)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vipuser.LoginRequest)
+    MergeFrom(*source);
+  }
+}
+
+void LoginRequest::MergeFrom(const LoginRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vipuser.LoginRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_accountinfo()) {
+    _internal_mutable_accountinfo()->::vipuser::AccountInfo::MergeFrom(from._internal_accountinfo());
+  }
+}
+
+void LoginRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vipuser.LoginRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void LoginRequest::CopyFrom(const LoginRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vipuser.LoginRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool LoginRequest::IsInitialized() const {
+  return true;
+}
+
+void LoginRequest::InternalSwap(LoginRequest* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(accountinfo_, other->accountinfo_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata LoginRequest::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void LoginReply::InitAsDefaultInstance() {
+  ::vipuser::_LoginReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::vipuser::ReplyResult*>(
+      ::vipuser::ReplyResult::internal_default_instance());
+  ::vipuser::_LoginReply_default_instance_._instance.get_mutable()->tokeninfo_ = const_cast< ::vipuser::TokenInfo*>(
+      ::vipuser::TokenInfo::internal_default_instance());
+}
+class LoginReply::_Internal {
+ public:
+  static const ::vipuser::ReplyResult& result(const LoginReply* msg);
+  static const ::vipuser::TokenInfo& tokeninfo(const LoginReply* msg);
+};
+
+const ::vipuser::ReplyResult&
+LoginReply::_Internal::result(const LoginReply* msg) {
+  return *msg->result_;
+}
+const ::vipuser::TokenInfo&
+LoginReply::_Internal::tokeninfo(const LoginReply* msg) {
+  return *msg->tokeninfo_;
+}
+LoginReply::LoginReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:vipuser.LoginReply)
+}
+LoginReply::LoginReply(const LoginReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from._internal_has_result()) {
+    result_ = new ::vipuser::ReplyResult(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  if (from._internal_has_tokeninfo()) {
+    tokeninfo_ = new ::vipuser::TokenInfo(*from.tokeninfo_);
+  } else {
+    tokeninfo_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:vipuser.LoginReply)
+}
+
+void LoginReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_LoginReply_vipuser_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&tokeninfo_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(tokeninfo_));
+}
+
+LoginReply::~LoginReply() {
+  // @@protoc_insertion_point(destructor:vipuser.LoginReply)
+  SharedDtor();
+}
+
+void LoginReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+  if (this != internal_default_instance()) delete tokeninfo_;
+}
+
+void LoginReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const LoginReply& LoginReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_LoginReply_vipuser_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void LoginReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:vipuser.LoginReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && tokeninfo_ != nullptr) {
+    delete tokeninfo_;
+  }
+  tokeninfo_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+const char* LoginReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .vipuser.ReplyResult result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .vipuser.TokenInfo tokenInfo = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_tokeninfo(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* LoginReply::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:vipuser.LoginReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .vipuser.ReplyResult result = 1;
+  if (this->has_result()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::result(this), target, stream);
+  }
+
+  // .vipuser.TokenInfo tokenInfo = 2;
+  if (this->has_tokeninfo()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::tokeninfo(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:vipuser.LoginReply)
+  return target;
+}
+
+size_t LoginReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vipuser.LoginReply)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .vipuser.ReplyResult result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // .vipuser.TokenInfo tokenInfo = 2;
+  if (this->has_tokeninfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *tokeninfo_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void LoginReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vipuser.LoginReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const LoginReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoginReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vipuser.LoginReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vipuser.LoginReply)
+    MergeFrom(*source);
+  }
+}
+
+void LoginReply::MergeFrom(const LoginReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vipuser.LoginReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    _internal_mutable_result()->::vipuser::ReplyResult::MergeFrom(from._internal_result());
+  }
+  if (from.has_tokeninfo()) {
+    _internal_mutable_tokeninfo()->::vipuser::TokenInfo::MergeFrom(from._internal_tokeninfo());
+  }
+}
+
+void LoginReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vipuser.LoginReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void LoginReply::CopyFrom(const LoginReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vipuser.LoginReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool LoginReply::IsInitialized() const {
+  return true;
+}
+
+void LoginReply::InternalSwap(LoginReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(tokeninfo_, other->tokeninfo_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata LoginReply::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -902,74 +2332,83 @@ void LogoutRequest::InternalSwap(LogoutRequest* other) {
 
 // ===================================================================
 
-void LogoutResponse::InitAsDefaultInstance() {
+void LogoutReply::InitAsDefaultInstance() {
+  ::vipuser::_LogoutReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::vipuser::ReplyResult*>(
+      ::vipuser::ReplyResult::internal_default_instance());
 }
-class LogoutResponse::_Internal {
+class LogoutReply::_Internal {
  public:
+  static const ::vipuser::ReplyResult& result(const LogoutReply* msg);
 };
 
-LogoutResponse::LogoutResponse()
+const ::vipuser::ReplyResult&
+LogoutReply::_Internal::result(const LogoutReply* msg) {
+  return *msg->result_;
+}
+LogoutReply::LogoutReply()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:vipuser.LogoutResponse)
+  // @@protoc_insertion_point(constructor:vipuser.LogoutReply)
 }
-LogoutResponse::LogoutResponse(const LogoutResponse& from)
+LogoutReply::LogoutReply(const LogoutReply& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  accesstoken_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_accesstoken().empty()) {
-    accesstoken_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.accesstoken_);
+  if (from._internal_has_result()) {
+    result_ = new ::vipuser::ReplyResult(*from.result_);
+  } else {
+    result_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:vipuser.LogoutResponse)
+  // @@protoc_insertion_point(copy_constructor:vipuser.LogoutReply)
 }
 
-void LogoutResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_LogoutResponse_vipuser_2eproto.base);
-  accesstoken_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+void LogoutReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_LogoutReply_vipuser_2eproto.base);
+  result_ = nullptr;
 }
 
-LogoutResponse::~LogoutResponse() {
-  // @@protoc_insertion_point(destructor:vipuser.LogoutResponse)
+LogoutReply::~LogoutReply() {
+  // @@protoc_insertion_point(destructor:vipuser.LogoutReply)
   SharedDtor();
 }
 
-void LogoutResponse::SharedDtor() {
-  accesstoken_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+void LogoutReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
 }
 
-void LogoutResponse::SetCachedSize(int size) const {
+void LogoutReply::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const LogoutResponse& LogoutResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_LogoutResponse_vipuser_2eproto.base);
+const LogoutReply& LogoutReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_LogoutReply_vipuser_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void LogoutResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:vipuser.LogoutResponse)
+void LogoutReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:vipuser.LogoutReply)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  accesstoken_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
   _internal_metadata_.Clear();
 }
 
-const char* LogoutResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LogoutReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string accessToken = 1;
+      // .vipuser.ReplyResult result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_accesstoken();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vipuser.LogoutResponse.accessToken"));
+          ptr = ctx->ParseMessage(_internal_mutable_result(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -993,39 +2432,715 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LogoutResponse::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* LogoutReply::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:vipuser.LogoutResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:vipuser.LogoutReply)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string accessToken = 1;
-  if (this->accesstoken().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_accesstoken().data(), static_cast<int>(this->_internal_accesstoken().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "vipuser.LogoutResponse.accessToken");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_accesstoken(), target);
+  // .vipuser.ReplyResult result = 1;
+  if (this->has_result()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::result(this), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:vipuser.LogoutResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:vipuser.LogoutReply)
   return target;
 }
 
-size_t LogoutResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:vipuser.LogoutResponse)
+size_t LogoutReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vipuser.LogoutReply)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string accessToken = 1;
+  // .vipuser.ReplyResult result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void LogoutReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vipuser.LogoutReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const LogoutReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LogoutReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vipuser.LogoutReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vipuser.LogoutReply)
+    MergeFrom(*source);
+  }
+}
+
+void LogoutReply::MergeFrom(const LogoutReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vipuser.LogoutReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    _internal_mutable_result()->::vipuser::ReplyResult::MergeFrom(from._internal_result());
+  }
+}
+
+void LogoutReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vipuser.LogoutReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void LogoutReply::CopyFrom(const LogoutReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vipuser.LogoutReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool LogoutReply::IsInitialized() const {
+  return true;
+}
+
+void LogoutReply::InternalSwap(LogoutReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata LogoutReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void ReLoginRequest::InitAsDefaultInstance() {
+}
+class ReLoginRequest::_Internal {
+ public:
+};
+
+ReLoginRequest::ReLoginRequest()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:vipuser.ReLoginRequest)
+}
+ReLoginRequest::ReLoginRequest(const ReLoginRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  refreshtoken_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_refreshtoken().empty()) {
+    refreshtoken_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.refreshtoken_);
+  }
+  // @@protoc_insertion_point(copy_constructor:vipuser.ReLoginRequest)
+}
+
+void ReLoginRequest::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ReLoginRequest_vipuser_2eproto.base);
+  refreshtoken_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+ReLoginRequest::~ReLoginRequest() {
+  // @@protoc_insertion_point(destructor:vipuser.ReLoginRequest)
+  SharedDtor();
+}
+
+void ReLoginRequest::SharedDtor() {
+  refreshtoken_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void ReLoginRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ReLoginRequest& ReLoginRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ReLoginRequest_vipuser_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ReLoginRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:vipuser.ReLoginRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  refreshtoken_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _internal_metadata_.Clear();
+}
+
+const char* ReLoginRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string refreshToken = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_refreshtoken();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vipuser.ReLoginRequest.refreshToken"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* ReLoginRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:vipuser.ReLoginRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string refreshToken = 1;
+  if (this->refreshtoken().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_refreshtoken().data(), static_cast<int>(this->_internal_refreshtoken().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "vipuser.ReLoginRequest.refreshToken");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_refreshtoken(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:vipuser.ReLoginRequest)
+  return target;
+}
+
+size_t ReLoginRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vipuser.ReLoginRequest)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string refreshToken = 1;
+  if (this->refreshtoken().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_refreshtoken());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ReLoginRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vipuser.ReLoginRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ReLoginRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ReLoginRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vipuser.ReLoginRequest)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vipuser.ReLoginRequest)
+    MergeFrom(*source);
+  }
+}
+
+void ReLoginRequest::MergeFrom(const ReLoginRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vipuser.ReLoginRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.refreshtoken().size() > 0) {
+
+    refreshtoken_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.refreshtoken_);
+  }
+}
+
+void ReLoginRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vipuser.ReLoginRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ReLoginRequest::CopyFrom(const ReLoginRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vipuser.ReLoginRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ReLoginRequest::IsInitialized() const {
+  return true;
+}
+
+void ReLoginRequest::InternalSwap(ReLoginRequest* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  refreshtoken_.Swap(&other->refreshtoken_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ReLoginRequest::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void ReLoginReply::InitAsDefaultInstance() {
+  ::vipuser::_ReLoginReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::vipuser::ReplyResult*>(
+      ::vipuser::ReplyResult::internal_default_instance());
+  ::vipuser::_ReLoginReply_default_instance_._instance.get_mutable()->tokeninfo_ = const_cast< ::vipuser::TokenInfo*>(
+      ::vipuser::TokenInfo::internal_default_instance());
+}
+class ReLoginReply::_Internal {
+ public:
+  static const ::vipuser::ReplyResult& result(const ReLoginReply* msg);
+  static const ::vipuser::TokenInfo& tokeninfo(const ReLoginReply* msg);
+};
+
+const ::vipuser::ReplyResult&
+ReLoginReply::_Internal::result(const ReLoginReply* msg) {
+  return *msg->result_;
+}
+const ::vipuser::TokenInfo&
+ReLoginReply::_Internal::tokeninfo(const ReLoginReply* msg) {
+  return *msg->tokeninfo_;
+}
+ReLoginReply::ReLoginReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:vipuser.ReLoginReply)
+}
+ReLoginReply::ReLoginReply(const ReLoginReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from._internal_has_result()) {
+    result_ = new ::vipuser::ReplyResult(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  if (from._internal_has_tokeninfo()) {
+    tokeninfo_ = new ::vipuser::TokenInfo(*from.tokeninfo_);
+  } else {
+    tokeninfo_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:vipuser.ReLoginReply)
+}
+
+void ReLoginReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ReLoginReply_vipuser_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&tokeninfo_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(tokeninfo_));
+}
+
+ReLoginReply::~ReLoginReply() {
+  // @@protoc_insertion_point(destructor:vipuser.ReLoginReply)
+  SharedDtor();
+}
+
+void ReLoginReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+  if (this != internal_default_instance()) delete tokeninfo_;
+}
+
+void ReLoginReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ReLoginReply& ReLoginReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ReLoginReply_vipuser_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ReLoginReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:vipuser.ReLoginReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && tokeninfo_ != nullptr) {
+    delete tokeninfo_;
+  }
+  tokeninfo_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+const char* ReLoginReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .vipuser.ReplyResult result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .vipuser.TokenInfo tokenInfo = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_tokeninfo(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* ReLoginReply::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:vipuser.ReLoginReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .vipuser.ReplyResult result = 1;
+  if (this->has_result()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::result(this), target, stream);
+  }
+
+  // .vipuser.TokenInfo tokenInfo = 2;
+  if (this->has_tokeninfo()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::tokeninfo(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:vipuser.ReLoginReply)
+  return target;
+}
+
+size_t ReLoginReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vipuser.ReLoginReply)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .vipuser.ReplyResult result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // .vipuser.TokenInfo tokenInfo = 2;
+  if (this->has_tokeninfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *tokeninfo_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ReLoginReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vipuser.ReLoginReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ReLoginReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ReLoginReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vipuser.ReLoginReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vipuser.ReLoginReply)
+    MergeFrom(*source);
+  }
+}
+
+void ReLoginReply::MergeFrom(const ReLoginReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vipuser.ReLoginReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    _internal_mutable_result()->::vipuser::ReplyResult::MergeFrom(from._internal_result());
+  }
+  if (from.has_tokeninfo()) {
+    _internal_mutable_tokeninfo()->::vipuser::TokenInfo::MergeFrom(from._internal_tokeninfo());
+  }
+}
+
+void ReLoginReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vipuser.ReLoginReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ReLoginReply::CopyFrom(const ReLoginReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vipuser.ReLoginReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ReLoginReply::IsInitialized() const {
+  return true;
+}
+
+void ReLoginReply::InternalSwap(ReLoginReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(tokeninfo_, other->tokeninfo_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ReLoginReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void UserSession::InitAsDefaultInstance() {
+}
+class UserSession::_Internal {
+ public:
+};
+
+UserSession::UserSession()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:vipuser.UserSession)
+}
+UserSession::UserSession(const UserSession& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_uuid().empty()) {
+    uuid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.uuid_);
+  }
+  accesstoken_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_accesstoken().empty()) {
+    accesstoken_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.accesstoken_);
+  }
+  // @@protoc_insertion_point(copy_constructor:vipuser.UserSession)
+}
+
+void UserSession::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_UserSession_vipuser_2eproto.base);
+  uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  accesstoken_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+UserSession::~UserSession() {
+  // @@protoc_insertion_point(destructor:vipuser.UserSession)
+  SharedDtor();
+}
+
+void UserSession::SharedDtor() {
+  uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  accesstoken_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void UserSession::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const UserSession& UserSession::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_UserSession_vipuser_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void UserSession::Clear() {
+// @@protoc_insertion_point(message_clear_start:vipuser.UserSession)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  uuid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  accesstoken_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _internal_metadata_.Clear();
+}
+
+const char* UserSession::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string uuid = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_uuid();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vipuser.UserSession.uuid"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string accessToken = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_accesstoken();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vipuser.UserSession.accessToken"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* UserSession::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:vipuser.UserSession)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string uuid = 1;
+  if (this->uuid().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_uuid().data(), static_cast<int>(this->_internal_uuid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "vipuser.UserSession.uuid");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_uuid(), target);
+  }
+
+  // string accessToken = 2;
+  if (this->accesstoken().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_accesstoken().data(), static_cast<int>(this->_internal_accesstoken().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "vipuser.UserSession.accessToken");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_accesstoken(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:vipuser.UserSession)
+  return target;
+}
+
+size_t UserSession::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vipuser.UserSession)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string uuid = 1;
+  if (this->uuid().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_uuid());
+  }
+
+  // string accessToken = 2;
   if (this->accesstoken().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
@@ -1041,134 +3156,165 @@ size_t LogoutResponse::ByteSizeLong() const {
   return total_size;
 }
 
-void LogoutResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:vipuser.LogoutResponse)
+void UserSession::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vipuser.UserSession)
   GOOGLE_DCHECK_NE(&from, this);
-  const LogoutResponse* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LogoutResponse>(
+  const UserSession* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<UserSession>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vipuser.LogoutResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vipuser.UserSession)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:vipuser.LogoutResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vipuser.UserSession)
     MergeFrom(*source);
   }
 }
 
-void LogoutResponse::MergeFrom(const LogoutResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:vipuser.LogoutResponse)
+void UserSession::MergeFrom(const UserSession& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vipuser.UserSession)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (from.uuid().size() > 0) {
+
+    uuid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.uuid_);
+  }
   if (from.accesstoken().size() > 0) {
 
     accesstoken_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.accesstoken_);
   }
 }
 
-void LogoutResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:vipuser.LogoutResponse)
+void UserSession::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vipuser.UserSession)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void LogoutResponse::CopyFrom(const LogoutResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:vipuser.LogoutResponse)
+void UserSession::CopyFrom(const UserSession& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vipuser.UserSession)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool LogoutResponse::IsInitialized() const {
+bool UserSession::IsInitialized() const {
   return true;
 }
 
-void LogoutResponse::InternalSwap(LogoutResponse* other) {
+void UserSession::InternalSwap(UserSession* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
+  uuid_.Swap(&other->uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   accesstoken_.Swap(&other->accesstoken_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata LogoutResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata UserSession::GetMetadata() const {
   return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void VipUserRequest::InitAsDefaultInstance() {
+void BusinessRequest::InitAsDefaultInstance() {
+  ::vipuser::_BusinessRequest_default_instance_._instance.get_mutable()->session_ = const_cast< ::vipuser::UserSession*>(
+      ::vipuser::UserSession::internal_default_instance());
 }
-class VipUserRequest::_Internal {
+class BusinessRequest::_Internal {
  public:
+  static const ::vipuser::UserSession& session(const BusinessRequest* msg);
 };
 
-VipUserRequest::VipUserRequest()
+const ::vipuser::UserSession&
+BusinessRequest::_Internal::session(const BusinessRequest* msg) {
+  return *msg->session_;
+}
+BusinessRequest::BusinessRequest()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:vipuser.VipUserRequest)
+  // @@protoc_insertion_point(constructor:vipuser.BusinessRequest)
 }
-VipUserRequest::VipUserRequest(const VipUserRequest& from)
+BusinessRequest::BusinessRequest(const BusinessRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  userid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_userid().empty()) {
-    userid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.userid_);
+  params_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_params().empty()) {
+    params_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.params_);
   }
-  // @@protoc_insertion_point(copy_constructor:vipuser.VipUserRequest)
+  if (from._internal_has_session()) {
+    session_ = new ::vipuser::UserSession(*from.session_);
+  } else {
+    session_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:vipuser.BusinessRequest)
 }
 
-void VipUserRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_VipUserRequest_vipuser_2eproto.base);
-  userid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+void BusinessRequest::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_BusinessRequest_vipuser_2eproto.base);
+  params_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  session_ = nullptr;
 }
 
-VipUserRequest::~VipUserRequest() {
-  // @@protoc_insertion_point(destructor:vipuser.VipUserRequest)
+BusinessRequest::~BusinessRequest() {
+  // @@protoc_insertion_point(destructor:vipuser.BusinessRequest)
   SharedDtor();
 }
 
-void VipUserRequest::SharedDtor() {
-  userid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+void BusinessRequest::SharedDtor() {
+  params_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete session_;
 }
 
-void VipUserRequest::SetCachedSize(int size) const {
+void BusinessRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const VipUserRequest& VipUserRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VipUserRequest_vipuser_2eproto.base);
+const BusinessRequest& BusinessRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_BusinessRequest_vipuser_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void VipUserRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:vipuser.VipUserRequest)
+void BusinessRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:vipuser.BusinessRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  userid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  params_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == nullptr && session_ != nullptr) {
+    delete session_;
+  }
+  session_ = nullptr;
   _internal_metadata_.Clear();
 }
 
-const char* VipUserRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* BusinessRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string userId = 1;
+      // .vipuser.UserSession session = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_userid();
+          ptr = ctx->ParseMessage(_internal_mutable_session(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string params = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_params();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vipuser.VipUserRequest.userId"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vipuser.BusinessRequest.params"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1192,43 +3338,58 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* VipUserRequest::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* BusinessRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:vipuser.VipUserRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:vipuser.BusinessRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string userId = 1;
-  if (this->userid().size() > 0) {
+  // .vipuser.UserSession session = 1;
+  if (this->has_session()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::session(this), target, stream);
+  }
+
+  // string params = 2;
+  if (this->params().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_userid().data(), static_cast<int>(this->_internal_userid().length()),
+      this->_internal_params().data(), static_cast<int>(this->_internal_params().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "vipuser.VipUserRequest.userId");
+      "vipuser.BusinessRequest.params");
     target = stream->WriteStringMaybeAliased(
-        1, this->_internal_userid(), target);
+        2, this->_internal_params(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:vipuser.VipUserRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:vipuser.BusinessRequest)
   return target;
 }
 
-size_t VipUserRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:vipuser.VipUserRequest)
+size_t BusinessRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vipuser.BusinessRequest)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string userId = 1;
-  if (this->userid().size() > 0) {
+  // string params = 2;
+  if (this->params().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_userid());
+        this->_internal_params());
+  }
+
+  // .vipuser.UserSession session = 1;
+  if (this->has_session()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *session_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1240,134 +3401,163 @@ size_t VipUserRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void VipUserRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:vipuser.VipUserRequest)
+void BusinessRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vipuser.BusinessRequest)
   GOOGLE_DCHECK_NE(&from, this);
-  const VipUserRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<VipUserRequest>(
+  const BusinessRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BusinessRequest>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vipuser.VipUserRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vipuser.BusinessRequest)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:vipuser.VipUserRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vipuser.BusinessRequest)
     MergeFrom(*source);
   }
 }
 
-void VipUserRequest::MergeFrom(const VipUserRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:vipuser.VipUserRequest)
+void BusinessRequest::MergeFrom(const BusinessRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vipuser.BusinessRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.userid().size() > 0) {
+  if (from.params().size() > 0) {
 
-    userid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.userid_);
+    params_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.params_);
+  }
+  if (from.has_session()) {
+    _internal_mutable_session()->::vipuser::UserSession::MergeFrom(from._internal_session());
   }
 }
 
-void VipUserRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:vipuser.VipUserRequest)
+void BusinessRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vipuser.BusinessRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void VipUserRequest::CopyFrom(const VipUserRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:vipuser.VipUserRequest)
+void BusinessRequest::CopyFrom(const BusinessRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vipuser.BusinessRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool VipUserRequest::IsInitialized() const {
+bool BusinessRequest::IsInitialized() const {
   return true;
 }
 
-void VipUserRequest::InternalSwap(VipUserRequest* other) {
+void BusinessRequest::InternalSwap(BusinessRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  userid_.Swap(&other->userid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  params_.Swap(&other->params_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
+  swap(session_, other->session_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata VipUserRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata BusinessRequest::GetMetadata() const {
   return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void VipUserResponse::InitAsDefaultInstance() {
+void BusinessReply::InitAsDefaultInstance() {
+  ::vipuser::_BusinessReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::vipuser::ReplyResult*>(
+      ::vipuser::ReplyResult::internal_default_instance());
 }
-class VipUserResponse::_Internal {
+class BusinessReply::_Internal {
  public:
+  static const ::vipuser::ReplyResult& result(const BusinessReply* msg);
 };
 
-VipUserResponse::VipUserResponse()
+const ::vipuser::ReplyResult&
+BusinessReply::_Internal::result(const BusinessReply* msg) {
+  return *msg->result_;
+}
+BusinessReply::BusinessReply()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:vipuser.VipUserResponse)
+  // @@protoc_insertion_point(constructor:vipuser.BusinessReply)
 }
-VipUserResponse::VipUserResponse(const VipUserResponse& from)
+BusinessReply::BusinessReply(const BusinessReply& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_message().empty()) {
-    message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
+  data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_data().empty()) {
+    data_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
-  // @@protoc_insertion_point(copy_constructor:vipuser.VipUserResponse)
+  if (from._internal_has_result()) {
+    result_ = new ::vipuser::ReplyResult(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:vipuser.BusinessReply)
 }
 
-void VipUserResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_VipUserResponse_vipuser_2eproto.base);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+void BusinessReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_BusinessReply_vipuser_2eproto.base);
+  data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  result_ = nullptr;
 }
 
-VipUserResponse::~VipUserResponse() {
-  // @@protoc_insertion_point(destructor:vipuser.VipUserResponse)
+BusinessReply::~BusinessReply() {
+  // @@protoc_insertion_point(destructor:vipuser.BusinessReply)
   SharedDtor();
 }
 
-void VipUserResponse::SharedDtor() {
-  message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+void BusinessReply::SharedDtor() {
+  data_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete result_;
 }
 
-void VipUserResponse::SetCachedSize(int size) const {
+void BusinessReply::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const VipUserResponse& VipUserResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VipUserResponse_vipuser_2eproto.base);
+const BusinessReply& BusinessReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_BusinessReply_vipuser_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void VipUserResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:vipuser.VipUserResponse)
+void BusinessReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:vipuser.BusinessReply)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  data_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
   _internal_metadata_.Clear();
 }
 
-const char* VipUserResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* BusinessReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string message = 1;
+      // .vipuser.ReplyResult result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_message();
+          ptr = ctx->ParseMessage(_internal_mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string data = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_data();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vipuser.VipUserResponse.message"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vipuser.BusinessReply.data"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1391,43 +3581,58 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* VipUserResponse::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* BusinessReply::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:vipuser.VipUserResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:vipuser.BusinessReply)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string message = 1;
-  if (this->message().size() > 0) {
+  // .vipuser.ReplyResult result = 1;
+  if (this->has_result()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::result(this), target, stream);
+  }
+
+  // string data = 2;
+  if (this->data().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
+      this->_internal_data().data(), static_cast<int>(this->_internal_data().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "vipuser.VipUserResponse.message");
+      "vipuser.BusinessReply.data");
     target = stream->WriteStringMaybeAliased(
-        1, this->_internal_message(), target);
+        2, this->_internal_data(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:vipuser.VipUserResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:vipuser.BusinessReply)
   return target;
 }
 
-size_t VipUserResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:vipuser.VipUserResponse)
+size_t BusinessReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vipuser.BusinessReply)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string message = 1;
-  if (this->message().size() > 0) {
+  // string data = 2;
+  if (this->data().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+        this->_internal_data());
+  }
+
+  // .vipuser.ReplyResult result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1439,60 +3644,64 @@ size_t VipUserResponse::ByteSizeLong() const {
   return total_size;
 }
 
-void VipUserResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:vipuser.VipUserResponse)
+void BusinessReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vipuser.BusinessReply)
   GOOGLE_DCHECK_NE(&from, this);
-  const VipUserResponse* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<VipUserResponse>(
+  const BusinessReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BusinessReply>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vipuser.VipUserResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vipuser.BusinessReply)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:vipuser.VipUserResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vipuser.BusinessReply)
     MergeFrom(*source);
   }
 }
 
-void VipUserResponse::MergeFrom(const VipUserResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:vipuser.VipUserResponse)
+void BusinessReply::MergeFrom(const BusinessReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vipuser.BusinessReply)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.message().size() > 0) {
+  if (from.data().size() > 0) {
 
-    message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
+    data_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.data_);
+  }
+  if (from.has_result()) {
+    _internal_mutable_result()->::vipuser::ReplyResult::MergeFrom(from._internal_result());
   }
 }
 
-void VipUserResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:vipuser.VipUserResponse)
+void BusinessReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vipuser.BusinessReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void VipUserResponse::CopyFrom(const VipUserResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:vipuser.VipUserResponse)
+void BusinessReply::CopyFrom(const BusinessReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vipuser.BusinessReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool VipUserResponse::IsInitialized() const {
+bool BusinessReply::IsInitialized() const {
   return true;
 }
 
-void VipUserResponse::InternalSwap(VipUserResponse* other) {
+void BusinessReply::InternalSwap(BusinessReply* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  data_.Swap(&other->data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
+  swap(result_, other->result_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata VipUserResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata BusinessReply::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -1506,17 +3715,41 @@ template<> PROTOBUF_NOINLINE ::vipuser::AccountInfo* Arena::CreateMaybeMessage< 
 template<> PROTOBUF_NOINLINE ::vipuser::TokenInfo* Arena::CreateMaybeMessage< ::vipuser::TokenInfo >(Arena* arena) {
   return Arena::CreateInternal< ::vipuser::TokenInfo >(arena);
 }
+template<> PROTOBUF_NOINLINE ::vipuser::ReplyResult* Arena::CreateMaybeMessage< ::vipuser::ReplyResult >(Arena* arena) {
+  return Arena::CreateInternal< ::vipuser::ReplyResult >(arena);
+}
+template<> PROTOBUF_NOINLINE ::vipuser::CreateAccountRequest* Arena::CreateMaybeMessage< ::vipuser::CreateAccountRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::vipuser::CreateAccountRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::vipuser::CreateAccountReply* Arena::CreateMaybeMessage< ::vipuser::CreateAccountReply >(Arena* arena) {
+  return Arena::CreateInternal< ::vipuser::CreateAccountReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::vipuser::LoginRequest* Arena::CreateMaybeMessage< ::vipuser::LoginRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::vipuser::LoginRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::vipuser::LoginReply* Arena::CreateMaybeMessage< ::vipuser::LoginReply >(Arena* arena) {
+  return Arena::CreateInternal< ::vipuser::LoginReply >(arena);
+}
 template<> PROTOBUF_NOINLINE ::vipuser::LogoutRequest* Arena::CreateMaybeMessage< ::vipuser::LogoutRequest >(Arena* arena) {
   return Arena::CreateInternal< ::vipuser::LogoutRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::vipuser::LogoutResponse* Arena::CreateMaybeMessage< ::vipuser::LogoutResponse >(Arena* arena) {
-  return Arena::CreateInternal< ::vipuser::LogoutResponse >(arena);
+template<> PROTOBUF_NOINLINE ::vipuser::LogoutReply* Arena::CreateMaybeMessage< ::vipuser::LogoutReply >(Arena* arena) {
+  return Arena::CreateInternal< ::vipuser::LogoutReply >(arena);
 }
-template<> PROTOBUF_NOINLINE ::vipuser::VipUserRequest* Arena::CreateMaybeMessage< ::vipuser::VipUserRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::vipuser::VipUserRequest >(arena);
+template<> PROTOBUF_NOINLINE ::vipuser::ReLoginRequest* Arena::CreateMaybeMessage< ::vipuser::ReLoginRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::vipuser::ReLoginRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::vipuser::VipUserResponse* Arena::CreateMaybeMessage< ::vipuser::VipUserResponse >(Arena* arena) {
-  return Arena::CreateInternal< ::vipuser::VipUserResponse >(arena);
+template<> PROTOBUF_NOINLINE ::vipuser::ReLoginReply* Arena::CreateMaybeMessage< ::vipuser::ReLoginReply >(Arena* arena) {
+  return Arena::CreateInternal< ::vipuser::ReLoginReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::vipuser::UserSession* Arena::CreateMaybeMessage< ::vipuser::UserSession >(Arena* arena) {
+  return Arena::CreateInternal< ::vipuser::UserSession >(arena);
+}
+template<> PROTOBUF_NOINLINE ::vipuser::BusinessRequest* Arena::CreateMaybeMessage< ::vipuser::BusinessRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::vipuser::BusinessRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::vipuser::BusinessReply* Arena::CreateMaybeMessage< ::vipuser::BusinessReply >(Arena* arena) {
+  return Arena::CreateInternal< ::vipuser::BusinessReply >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

@@ -1,42 +1,17 @@
 #include "account_server.h"
 #include "vipuser_common.h"
 
-#include <random>
-
-#include "boost/uuid/uuid.hpp"
-#include "boost/uuid/uuid_io.hpp"
-#include "boost/uuid/uuid_generators.hpp"
-
 #include "crypt_helper.h"
 #include "crypt_plus.h"
 
 using namespace vipuser;
+
 struct RefreshTokenInfo
 {
     std::string uuid;
     uint64_t timestamp;
     uint64_t salt;
 };
-
-
-uint64_t getCurrentTimeMills() {
-    struct timeval tp;
-    gettimeofday(&tp, NULL);
-    return tp.tv_sec * 1000 + tp.tv_usec / 1000; 
-}
-
-uint64_t genRandom() {
-    // obtain a seed from the system clock:
-    unsigned seed1 = std::chrono::system_clock::now().time_since_epoch().count();
-
-    std::mt19937 g1 (seed1); // mt19937 is a standard mersenne_twister_engine
-    uint32_t u32Random = g1();
-    std::cout << "A time seed produced: " << u32Random << std::endl;
-
-    std::mt19937_64 g2 (seed1);
-    uint64_t u64Random = g2();
-    return u64Random;
-}
 
 
 VipUserStatus readUserDetail(std::string uuid, AccountDetailInfo &accountDetail) {
@@ -47,20 +22,12 @@ VipUserStatus readUserDetail(std::string uuid, AccountDetailInfo &accountDetail)
 
 const uint PASSWORD_SUM_LENGTH = 256;
 
-std::string AccountServer::Genuuid()
-{
-//    boost::uuids::uuid uuid = boost::uuids::random_generator()();
-    boost::uuids::random_generator gen;
-    boost::uuids::uuid uuid = gen();
-    return boost::uuids::to_string(uuid);
-}
-
 
 AccountServer::AccountServer(Redis &redis, Psql &psql):_redis(redis),_psql(psql) {
     _cryptPlus = new CryptPlus("defaultKey");
 
     std::cout << "world" << std::endl;
-    std::cout << "uuid=" << Genuuid() << std::endl;
+    std::cout << "uuid=" << generateUuid() << std::endl;
 
     std::string src_str = "The quick brown fox jumps over the lazy dog";
     auto hex_str = sha256(src_str);
@@ -89,7 +56,7 @@ AccountServer::~AccountServer() {
     delete _cryptPlus;
 }
 
-VipUserStatus AccountServer::CreateAccount(std::string userId, std::string passwordSHA256, VipUserTicket &ticket)
+VipUserStatus AccountServer::CreateAccount(std::string userId, std::string passwordSHA256, UserTicket &ticket)
 {
 
     if (AccountExist(userId)) {
@@ -100,7 +67,7 @@ VipUserStatus AccountServer::CreateAccount(std::string userId, std::string passw
         return VipUserStatusErrorFormat;
     }
 
-    std::string uuid = Genuuid();
+    std::string uuid = generateUuid();
     auto status = StoreNewUser(uuid, userId, passwordSHA256);
     if (status != VipUserStatusOK) {
         return status;
@@ -116,7 +83,7 @@ VipUserStatus AccountServer::CreateAccount(std::string userId, std::string passw
     return VipUserStatusOK;
 }
 
-VipUserStatus AccountServer::Login(std::string userId, std::string passwordSHA256, VipUserTicket &ticket)
+VipUserStatus AccountServer::Login(std::string userId, std::string passwordSHA256, UserTicket &ticket)
 {
     if (!AccountExist(userId)) {
         return VipUserStatusAccountNotExist;
@@ -140,7 +107,7 @@ VipUserStatus AccountServer::Logout(std::string accessToken)
     return VipUserStatusOK;
 }
 
-VipUserStatus AccountServer::Relogin(std::string refreshToken, VipUserTicket &ticket)
+VipUserStatus AccountServer::Relogin(std::string refreshToken, UserTicket &ticket)
 {
     return VipUserStatusOK;
 }

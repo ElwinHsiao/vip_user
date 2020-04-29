@@ -1,57 +1,92 @@
-// Copyright 2015 gRPC authors.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "io.grpc.examples.helloworld";
-option java_outer_classname = "HelloWorldProto";
-option objc_class_prefix = "HLW";
+option java_package = "per.elwin.vipuser";
+option java_outer_classname = "VipUserProto";
+option objc_class_prefix = "VPU";
 
 package vipuser;
 
-// The greeting service definition.
 service AccountService {
-  // Sends a greeting
-  rpc CreateAcount (AccountInfo) returns (TokenInfo) {}
-  rpc Login (AccountInfo) returns (TokenInfo) {}
-  rpc Logout (LogoutRequest) returns (LogoutResponse) {}
+  rpc CreateAcount (CreateAccountRequest) returns (CreateAccountReply) {}
+  rpc Login (LoginRequest) returns (LoginReply) {}
+  rpc Logout (LogoutRequest) returns (LogoutReply) {}
+  rpc ReLogin (ReLoginRequest) returns (ReLoginReply) {}
 }
 
+
 message AccountInfo {
-  string userId = 1;
+  string userAlias = 1;
   string passwordSHA256 = 2;
 }
 
 message TokenInfo {
-  string accessToken = 1;
-  string refreshToken = 2;
+  string uuid = 1;
+  string accessToken = 2;
+  string refreshToken = 3;
 }
+
+message ReplyResult {
+  int32 result = 1;
+  string message = 2;
+}
+
+
+message CreateAccountRequest {
+  AccountInfo accountInfo = 1;
+}
+
+message CreateAccountReply {
+  ReplyResult result = 1;
+  TokenInfo tokenInfo = 2;
+}
+
+
+message LoginRequest {
+  AccountInfo accountInfo = 1;
+}
+
+message LoginReply {
+  ReplyResult result = 1;
+  TokenInfo tokenInfo = 2;
+}
+
 
 message LogoutRequest {
   string accessToken = 1;
 }
 
-message LogoutResponse {
-  string accessToken = 1;
+message LogoutReply {
+  ReplyResult result = 1;
 }
 
-message VipUserRequest {
-  string userId = 1;
+
+message ReLoginRequest {
+  string refreshToken = 1;
 }
 
-// The response message containing the greetings
-message VipUserResponse {
-  string message = 1;
+message ReLoginReply {
+  ReplyResult result = 1;
+  TokenInfo tokenInfo = 2;
+}
+
+
+
+service BusinessService {
+  rpc DoBusiness(BusinessRequest) returns (BusinessReply) {}
+}
+
+message UserSession {
+  string uuid = 1;;
+  string accessToken = 2;
+}
+
+message BusinessRequest {
+  UserSession session = 1;
+  string params = 2;
+}
+
+message BusinessReply {
+  ReplyResult result = 1;
+  string data = 2;
 }
