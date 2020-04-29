@@ -2,8 +2,8 @@
 
 
 #define CHECK_CONNECTION(conn) \
-    if (!conn.is_open()) { \
-         cout << "Can't open database" << endl; \
+    if (!conn->is_open()) { \
+         std::cout << "Can't open database" << std::endl; \
          return 1; \
     }
 
@@ -91,7 +91,7 @@ int Psql::AddUser(AccountDetailInfo &accountDetail) {
         /* Create SQL statement */
         char sql[1024] = {0};
         sprintf(sql, "INSERT INTO accountdetail (uuid,user_alias,passwd_sum,create_time) "  \
-         "VALUES ('%s', '%s', '%s', %llu ); ", accountDetail.uuid, accountDetail.userAlias, accountDetail.passwordSum, accountDetail.createTimeMills);
+         "VALUES ('%s', '%s', '%s', %llu ); ", accountDetail.uuid.c_str(), accountDetail.userAlias.c_str(), accountDetail.passwordSum.c_str(), accountDetail.createTimeMills);
 
         /* Create a transactional object. */
         pqxx::work work(*_conn);
@@ -118,7 +118,7 @@ int Psql::QueryUserByAlias(std::string &userAlias, AccountDetailInfo &accountDet
         /* Create SQL statement */
         char sql[1024] = {0};
         sprintf(sql, "SELECT (uuid,user_alias,passwd_sum,create_time) from accountdetail "  \
-        "WHERE user_alias = %s", userAlias);
+        "WHERE user_alias = %s", userAlias.c_str());
 
         /* Create a transactional object. */
         pqxx::work work(*_conn);
