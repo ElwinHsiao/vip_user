@@ -2,7 +2,7 @@ load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 
 cc_library(
-  name = "lib",
+  name = "sdk",
 #   strip_include_prefix = "common",
   hdrs = glob(["*.h"]),
   srcs = glob(["*.cc"]),
@@ -15,11 +15,11 @@ cc_library(
 )
 
 cc_binary(
-    name = "vipuser_client",
+    name = "vipuserclient",
     srcs = [
         "client_main.cc",
     ],
     deps = [
-        ":lib",
+        ":sdk",
     ],
 )

@@ -18,6 +18,26 @@ grpc::string ReadFile(char *filePath)
     return buf.str();
 }
 
+class ClientSink : public VipUserClientSink {
+    void OnCreateAccountEnd(ReplyResult &result, UserTicket &ticket)
+    {
+        std::cout << "OnCreateAccountEnd: result={code=" << result.code << ", message=" << result.message << "}" << std::endl;
+    }
+
+    void OnLoginEnd(ReplyResult &result, UserTicket &ticket)
+    {
+
+    }
+    void OnReLoginEnd(ReplyResult &result, UserTicket &ticket)
+    {
+
+    }
+    void OnLogoutEnd(ReplyResult &result)
+    {
+
+    }
+};
+
 int main(int argc, char **argv)
 {
     std::cout << "client is comming ^_^ ..." << std::endl;
@@ -34,6 +54,10 @@ int main(int argc, char **argv)
     std::string serverAddr = "localhost:50051";
     VipUserClient client(serverAddr, crt);
     client.CreateAccount("elwin", "c20b711740111b5141a3780b7c548bfadedbf7cb78663847d70647c7b6a90aeb");
+    client.setVipUserClientSink(new ClientSink());
+
+    std::this_thread::sleep_for(std::chrono::seconds(5));
+    
 
     return 0;
 }
