@@ -1,5 +1,5 @@
-#ifndef _VIPUSER_SERVER_H_
-#define _VIPUSER_SERVER_H_
+#ifndef _ACCOUNT_SERVER_H_
+#define _ACCOUNT_SERVER_H_
 
 #include <iostream>
 #include "redis_helper.h"

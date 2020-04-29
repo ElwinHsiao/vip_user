@@ -5,13 +5,15 @@ option java_package = "per.elwin.vipuser";
 option java_outer_classname = "VipUserProto";
 option objc_class_prefix = "VPU";
 
-package vipuser;
+package vipuser_proto;
 
-service AccountService {
-  rpc CreateAcount (CreateAccountRequest) returns (CreateAccountReply) {}
-  rpc Login (LoginRequest) returns (LoginReply) {}
-  rpc Logout (LogoutRequest) returns (LogoutReply) {}
-  rpc ReLogin (ReLoginRequest) returns (ReLoginReply) {}
+service VipUser {
+  rpc CreateAcount (CreateAccountRequest) returns (CreateAccountResponse) {}
+  rpc Login (LoginRequest) returns (LoginResponse) {}
+  rpc Logout (LogoutRequest) returns (LogoutResponse) {}
+  rpc ReLogin (ReLoginRequest) returns (ReLoginResponse) {}
+
+  rpc DoBusiness(BusinessRequest) returns (BusinessResponse) {}
 }
 
 
@@ -26,8 +28,8 @@ message TokenInfo {
   string refreshToken = 3;
 }
 
-message ReplyResult {
-  int32 result = 1;
+message Result {
+  int32 code = 1;
   string message = 2;
 }
 
@@ -36,8 +38,8 @@ message CreateAccountRequest {
   AccountInfo accountInfo = 1;
 }
 
-message CreateAccountReply {
-  ReplyResult result = 1;
+message CreateAccountResponse {
+  Result result = 1;
   TokenInfo tokenInfo = 2;
 }
 
@@ -46,8 +48,8 @@ message LoginRequest {
   AccountInfo accountInfo = 1;
 }
 
-message LoginReply {
-  ReplyResult result = 1;
+message LoginResponse {
+  Result result = 1;
   TokenInfo tokenInfo = 2;
 }
 
@@ -56,8 +58,8 @@ message LogoutRequest {
   string accessToken = 1;
 }
 
-message LogoutReply {
-  ReplyResult result = 1;
+message LogoutResponse {
+  Result result = 1;
 }
 
 
@@ -65,16 +67,16 @@ message ReLoginRequest {
   string refreshToken = 1;
 }
 
-message ReLoginReply {
-  ReplyResult result = 1;
+message ReLoginResponse {
+  Result result = 1;
   TokenInfo tokenInfo = 2;
 }
 
 
 
-service BusinessService {
-  rpc DoBusiness(BusinessRequest) returns (BusinessReply) {}
-}
+// service BusinessService {
+//   rpc DoBusiness(BusinessRequest) returns (BusinessResponse) {}
+// }
 
 message UserSession {
   string uuid = 1;;
@@ -83,10 +85,10 @@ message UserSession {
 
 message BusinessRequest {
   UserSession session = 1;
-  string params = 2;
+  bytes request = 2;
 }
 
-message BusinessReply {
-  ReplyResult result = 1;
-  string data = 2;
+message BusinessResponse {
+  Result result = 1;
+  bytes response = 2;
 }

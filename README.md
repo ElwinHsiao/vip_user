@@ -89,7 +89,11 @@ Logout:
 
 > key：uuid+accessToken存入Redis，很容易就可以支持多登录。
 >
-> refreshToken：encrypt_aes_cbc(uuid, timestamp, random32, key=passwordSHA256)，AES可以逆向解密，加个随机数的目的是即使破解了加密算法也伪造不了。key就是用户的密码SHA256，如果用户改密码，导致解不开，从而达到自动失效的效果。
+> refreshToken：encrypt_aes_cbc(uuid, timestamp, random32, key=passwordSHA256)；
+>
+> AES可以逆向解密，加个随机数的目的是即使破解了加密算法也伪造不了。
+>
+> 加密key就是用户的密码SHA256，如果用户改密码，导致解不开，从而达到自动失效的效果。
 >
 > accessToken： md5(refreshToken)，相当该用户session的唯一标识。
 

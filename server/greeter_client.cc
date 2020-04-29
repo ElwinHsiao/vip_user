@@ -22,6 +22,11 @@
 
 #include <grpcpp/grpcpp.h>
 
+#include <fstream>
+#include <sstream>
+#include <iostream>
+
+
 #ifdef BAZEL_BUILD
 #include "examples/protos/helloworld.grpc.pb.h"
 #else
@@ -34,6 +39,16 @@ using grpc::Status;
 using helloworld::HelloRequest;
 using helloworld::HelloReply;
 using helloworld::Greeter;
+
+grpc::string ReadFile(char *filePath) {
+  std::ifstream ifile(filePath);
+  std::ostringstream buf;
+  char ch;
+  while(buf&&ifile.get(ch))
+    buf.put(ch);
+
+  return buf.str();
+}
 
 class GreeterClient {
  public:
@@ -72,6 +87,16 @@ class GreeterClient {
 };
 
 int main(int argc, char** argv) {
+  char *crtFilePath = getenv("VIP_USER_SEVER_CRT");
+  if (crtFilePath == NULL) {
+    std::cout << "no rsa key path" << std::endl;
+    return -1;
+  } 
+  auto crt = ReadFile(crtFilePath);
+
+  grpc::SslCredentialsOptions sslOpts;
+  sslOpts.pem_root_certs = crt;
+
   // Instantiate the client. It requires a channel, out of which the actual RPCs
   // are created. This channel models a connection to an endpoint specified by
   // the argument "--target=" which is the only expected argument.
@@ -98,7 +123,7 @@ int main(int argc, char** argv) {
     target_str = "localhost:50051";
   }
   GreeterClient greeter(grpc::CreateChannel(
-      target_str, grpc::InsecureChannelCredentials()));
+      target_str, grpc::SslCredentials(sslOpts)));
   std::string user("world");
   std::string reply = greeter.SayHello(user);
   std::cout << "Greeter received: " << reply << std::endl;

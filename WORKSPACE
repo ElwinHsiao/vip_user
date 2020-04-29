@@ -91,3 +91,19 @@ http_archive(
    strip_prefix = "libpqxx-6.4.6",
    urls = ["https://github.com/jtv/libpqxx/archive/6.4.6.tar.gz"],
 )
+
+# git_repository(
+#     name = 'protobuf',
+#     remote = 'https://github.com/google/protobuf.git',
+#     commit = 'e35e24800fb8d694bdeea5fd63dc7d1b14d68723',
+# )
+
+# bind(
+#     name = 'protobuf_compiler',
+#     actual = '@protobuf//:protoc_lib',
+# )
+
+# bind(
+#     name = 'protobuf_clib',
+#     actual = '@protobuf//:protobuf',
+# )

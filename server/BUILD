@@ -41,10 +41,14 @@ cc_binary(
     name = "vipuserserver",
     srcs = [
         "server_main.cc",
+        "vipuser_server.cc",
+        "vipuser_server.h",
     ],
     deps = [
         # "@com_github_grpc_grpc//:grpc++_reflection",
         ":account_service",
+        ":access_service",
+        "//protos:vipuser_proto",
     ],
 )
 

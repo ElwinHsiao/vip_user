@@ -54,72 +54,72 @@ struct TableStruct_vipuser_2eproto {
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_vipuser_2eproto;
-namespace vipuser {
+namespace vipuser_proto {
 class AccountInfo;
 class AccountInfoDefaultTypeInternal;
 extern AccountInfoDefaultTypeInternal _AccountInfo_default_instance_;
-class BusinessReply;
-class BusinessReplyDefaultTypeInternal;
-extern BusinessReplyDefaultTypeInternal _BusinessReply_default_instance_;
 class BusinessRequest;
 class BusinessRequestDefaultTypeInternal;
 extern BusinessRequestDefaultTypeInternal _BusinessRequest_default_instance_;
-class CreateAccountReply;
-class CreateAccountReplyDefaultTypeInternal;
-extern CreateAccountReplyDefaultTypeInternal _CreateAccountReply_default_instance_;
+class BusinessResponse;
+class BusinessResponseDefaultTypeInternal;
+extern BusinessResponseDefaultTypeInternal _BusinessResponse_default_instance_;
 class CreateAccountRequest;
 class CreateAccountRequestDefaultTypeInternal;
 extern CreateAccountRequestDefaultTypeInternal _CreateAccountRequest_default_instance_;
-class LoginReply;
-class LoginReplyDefaultTypeInternal;
-extern LoginReplyDefaultTypeInternal _LoginReply_default_instance_;
+class CreateAccountResponse;
+class CreateAccountResponseDefaultTypeInternal;
+extern CreateAccountResponseDefaultTypeInternal _CreateAccountResponse_default_instance_;
 class LoginRequest;
 class LoginRequestDefaultTypeInternal;
 extern LoginRequestDefaultTypeInternal _LoginRequest_default_instance_;
-class LogoutReply;
-class LogoutReplyDefaultTypeInternal;
-extern LogoutReplyDefaultTypeInternal _LogoutReply_default_instance_;
+class LoginResponse;
+class LoginResponseDefaultTypeInternal;
+extern LoginResponseDefaultTypeInternal _LoginResponse_default_instance_;
 class LogoutRequest;
 class LogoutRequestDefaultTypeInternal;
 extern LogoutRequestDefaultTypeInternal _LogoutRequest_default_instance_;
-class ReLoginReply;
-class ReLoginReplyDefaultTypeInternal;
-extern ReLoginReplyDefaultTypeInternal _ReLoginReply_default_instance_;
+class LogoutResponse;
+class LogoutResponseDefaultTypeInternal;
+extern LogoutResponseDefaultTypeInternal _LogoutResponse_default_instance_;
 class ReLoginRequest;
 class ReLoginRequestDefaultTypeInternal;
 extern ReLoginRequestDefaultTypeInternal _ReLoginRequest_default_instance_;
-class ReplyResult;
-class ReplyResultDefaultTypeInternal;
-extern ReplyResultDefaultTypeInternal _ReplyResult_default_instance_;
+class ReLoginResponse;
+class ReLoginResponseDefaultTypeInternal;
+extern ReLoginResponseDefaultTypeInternal _ReLoginResponse_default_instance_;
+class Result;
+class ResultDefaultTypeInternal;
+extern ResultDefaultTypeInternal _Result_default_instance_;
 class TokenInfo;
 class TokenInfoDefaultTypeInternal;
 extern TokenInfoDefaultTypeInternal _TokenInfo_default_instance_;
 class UserSession;
 class UserSessionDefaultTypeInternal;
 extern UserSessionDefaultTypeInternal _UserSession_default_instance_;
-}  // namespace vipuser
+}  // namespace vipuser_proto
 PROTOBUF_NAMESPACE_OPEN
-template<> ::vipuser::AccountInfo* Arena::CreateMaybeMessage<::vipuser::AccountInfo>(Arena*);
-template<> ::vipuser::BusinessReply* Arena::CreateMaybeMessage<::vipuser::BusinessReply>(Arena*);
-template<> ::vipuser::BusinessRequest* Arena::CreateMaybeMessage<::vipuser::BusinessRequest>(Arena*);
-template<> ::vipuser::CreateAccountReply* Arena::CreateMaybeMessage<::vipuser::CreateAccountReply>(Arena*);
-template<> ::vipuser::CreateAccountRequest* Arena::CreateMaybeMessage<::vipuser::CreateAccountRequest>(Arena*);
-template<> ::vipuser::LoginReply* Arena::CreateMaybeMessage<::vipuser::LoginReply>(Arena*);
-template<> ::vipuser::LoginRequest* Arena::CreateMaybeMessage<::vipuser::LoginRequest>(Arena*);
-template<> ::vipuser::LogoutReply* Arena::CreateMaybeMessage<::vipuser::LogoutReply>(Arena*);
-template<> ::vipuser::LogoutRequest* Arena::CreateMaybeMessage<::vipuser::LogoutRequest>(Arena*);
-template<> ::vipuser::ReLoginReply* Arena::CreateMaybeMessage<::vipuser::ReLoginReply>(Arena*);
-template<> ::vipuser::ReLoginRequest* Arena::CreateMaybeMessage<::vipuser::ReLoginRequest>(Arena*);
-template<> ::vipuser::ReplyResult* Arena::CreateMaybeMessage<::vipuser::ReplyResult>(Arena*);
-template<> ::vipuser::TokenInfo* Arena::CreateMaybeMessage<::vipuser::TokenInfo>(Arena*);
-template<> ::vipuser::UserSession* Arena::CreateMaybeMessage<::vipuser::UserSession>(Arena*);
+template<> ::vipuser_proto::AccountInfo* Arena::CreateMaybeMessage<::vipuser_proto::AccountInfo>(Arena*);
+template<> ::vipuser_proto::BusinessRequest* Arena::CreateMaybeMessage<::vipuser_proto::BusinessRequest>(Arena*);
+template<> ::vipuser_proto::BusinessResponse* Arena::CreateMaybeMessage<::vipuser_proto::BusinessResponse>(Arena*);
+template<> ::vipuser_proto::CreateAccountRequest* Arena::CreateMaybeMessage<::vipuser_proto::CreateAccountRequest>(Arena*);
+template<> ::vipuser_proto::CreateAccountResponse* Arena::CreateMaybeMessage<::vipuser_proto::CreateAccountResponse>(Arena*);
+template<> ::vipuser_proto::LoginRequest* Arena::CreateMaybeMessage<::vipuser_proto::LoginRequest>(Arena*);
+template<> ::vipuser_proto::LoginResponse* Arena::CreateMaybeMessage<::vipuser_proto::LoginResponse>(Arena*);
+template<> ::vipuser_proto::LogoutRequest* Arena::CreateMaybeMessage<::vipuser_proto::LogoutRequest>(Arena*);
+template<> ::vipuser_proto::LogoutResponse* Arena::CreateMaybeMessage<::vipuser_proto::LogoutResponse>(Arena*);
+template<> ::vipuser_proto::ReLoginRequest* Arena::CreateMaybeMessage<::vipuser_proto::ReLoginRequest>(Arena*);
+template<> ::vipuser_proto::ReLoginResponse* Arena::CreateMaybeMessage<::vipuser_proto::ReLoginResponse>(Arena*);
+template<> ::vipuser_proto::Result* Arena::CreateMaybeMessage<::vipuser_proto::Result>(Arena*);
+template<> ::vipuser_proto::TokenInfo* Arena::CreateMaybeMessage<::vipuser_proto::TokenInfo>(Arena*);
+template<> ::vipuser_proto::UserSession* Arena::CreateMaybeMessage<::vipuser_proto::UserSession>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace vipuser {
+namespace vipuser_proto {
 
 // ===================================================================
 
 class AccountInfo :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser.AccountInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser_proto.AccountInfo) */ {
  public:
   AccountInfo();
   virtual ~AccountInfo();
@@ -199,7 +199,7 @@ class AccountInfo :
   void InternalSwap(AccountInfo* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "vipuser.AccountInfo";
+    return "vipuser_proto.AccountInfo";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -259,7 +259,7 @@ class AccountInfo :
   std::string* _internal_mutable_passwordsha256();
   public:
 
-  // @@protoc_insertion_point(class_scope:vipuser.AccountInfo)
+  // @@protoc_insertion_point(class_scope:vipuser_proto.AccountInfo)
  private:
   class _Internal;
 
@@ -272,7 +272,7 @@ class AccountInfo :
 // -------------------------------------------------------------------
 
 class TokenInfo :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser.TokenInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser_proto.TokenInfo) */ {
  public:
   TokenInfo();
   virtual ~TokenInfo();
@@ -352,7 +352,7 @@ class TokenInfo :
   void InternalSwap(TokenInfo* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "vipuser.TokenInfo";
+    return "vipuser_proto.TokenInfo";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -429,7 +429,7 @@ class TokenInfo :
   std::string* _internal_mutable_refreshtoken();
   public:
 
-  // @@protoc_insertion_point(class_scope:vipuser.TokenInfo)
+  // @@protoc_insertion_point(class_scope:vipuser_proto.TokenInfo)
  private:
   class _Internal;
 
@@ -442,23 +442,23 @@ class TokenInfo :
 };
 // -------------------------------------------------------------------
 
-class ReplyResult :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser.ReplyResult) */ {
+class Result :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser_proto.Result) */ {
  public:
-  ReplyResult();
-  virtual ~ReplyResult();
+  Result();
+  virtual ~Result();
 
-  ReplyResult(const ReplyResult& from);
-  ReplyResult(ReplyResult&& from) noexcept
-    : ReplyResult() {
+  Result(const Result& from);
+  Result(Result&& from) noexcept
+    : Result() {
     *this = ::std::move(from);
   }
 
-  inline ReplyResult& operator=(const ReplyResult& from) {
+  inline Result& operator=(const Result& from) {
     CopyFrom(from);
     return *this;
   }
-  inline ReplyResult& operator=(ReplyResult&& from) noexcept {
+  inline Result& operator=(Result&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -476,37 +476,37 @@ class ReplyResult :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const ReplyResult& default_instance();
+  static const Result& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const ReplyResult* internal_default_instance() {
-    return reinterpret_cast<const ReplyResult*>(
-               &_ReplyResult_default_instance_);
+  static inline const Result* internal_default_instance() {
+    return reinterpret_cast<const Result*>(
+               &_Result_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  friend void swap(ReplyResult& a, ReplyResult& b) {
+  friend void swap(Result& a, Result& b) {
     a.Swap(&b);
   }
-  inline void Swap(ReplyResult* other) {
+  inline void Swap(Result* other) {
     if (other == this) return;
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  inline ReplyResult* New() const final {
-    return CreateMaybeMessage<ReplyResult>(nullptr);
+  inline Result* New() const final {
+    return CreateMaybeMessage<Result>(nullptr);
   }
 
-  ReplyResult* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<ReplyResult>(arena);
+  Result* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Result>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const ReplyResult& from);
-  void MergeFrom(const ReplyResult& from);
+  void CopyFrom(const Result& from);
+  void MergeFrom(const Result& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -520,10 +520,10 @@ class ReplyResult :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(ReplyResult* other);
+  void InternalSwap(Result* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "vipuser.ReplyResult";
+    return "vipuser_proto.Result";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -549,7 +549,7 @@ class ReplyResult :
 
   enum : int {
     kMessageFieldNumber = 2,
-    kResultFieldNumber = 1,
+    kCodeFieldNumber = 1,
   };
   // string message = 2;
   void clear_message();
@@ -567,29 +567,29 @@ class ReplyResult :
   std::string* _internal_mutable_message();
   public:
 
-  // int32 result = 1;
-  void clear_result();
-  ::PROTOBUF_NAMESPACE_ID::int32 result() const;
-  void set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
+  // int32 code = 1;
+  void clear_code();
+  ::PROTOBUF_NAMESPACE_ID::int32 code() const;
+  void set_code(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_result() const;
-  void _internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_code() const;
+  void _internal_set_code(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:vipuser.ReplyResult)
+  // @@protoc_insertion_point(class_scope:vipuser_proto.Result)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-  ::PROTOBUF_NAMESPACE_ID::int32 result_;
+  ::PROTOBUF_NAMESPACE_ID::int32 code_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vipuser_2eproto;
 };
 // -------------------------------------------------------------------
 
 class CreateAccountRequest :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser.CreateAccountRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser_proto.CreateAccountRequest) */ {
  public:
   CreateAccountRequest();
   virtual ~CreateAccountRequest();
@@ -669,7 +669,7 @@ class CreateAccountRequest :
   void InternalSwap(CreateAccountRequest* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "vipuser.CreateAccountRequest";
+    return "vipuser_proto.CreateAccountRequest";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -696,49 +696,49 @@ class CreateAccountRequest :
   enum : int {
     kAccountInfoFieldNumber = 1,
   };
-  // .vipuser.AccountInfo accountInfo = 1;
+  // .vipuser_proto.AccountInfo accountInfo = 1;
   bool has_accountinfo() const;
   private:
   bool _internal_has_accountinfo() const;
   public:
   void clear_accountinfo();
-  const ::vipuser::AccountInfo& accountinfo() const;
-  ::vipuser::AccountInfo* release_accountinfo();
-  ::vipuser::AccountInfo* mutable_accountinfo();
-  void set_allocated_accountinfo(::vipuser::AccountInfo* accountinfo);
+  const ::vipuser_proto::AccountInfo& accountinfo() const;
+  ::vipuser_proto::AccountInfo* release_accountinfo();
+  ::vipuser_proto::AccountInfo* mutable_accountinfo();
+  void set_allocated_accountinfo(::vipuser_proto::AccountInfo* accountinfo);
   private:
-  const ::vipuser::AccountInfo& _internal_accountinfo() const;
-  ::vipuser::AccountInfo* _internal_mutable_accountinfo();
+  const ::vipuser_proto::AccountInfo& _internal_accountinfo() const;
+  ::vipuser_proto::AccountInfo* _internal_mutable_accountinfo();
   public:
 
-  // @@protoc_insertion_point(class_scope:vipuser.CreateAccountRequest)
+  // @@protoc_insertion_point(class_scope:vipuser_proto.CreateAccountRequest)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::vipuser::AccountInfo* accountinfo_;
+  ::vipuser_proto::AccountInfo* accountinfo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vipuser_2eproto;
 };
 // -------------------------------------------------------------------
 
-class CreateAccountReply :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser.CreateAccountReply) */ {
+class CreateAccountResponse :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser_proto.CreateAccountResponse) */ {
  public:
-  CreateAccountReply();
-  virtual ~CreateAccountReply();
+  CreateAccountResponse();
+  virtual ~CreateAccountResponse();
 
-  CreateAccountReply(const CreateAccountReply& from);
-  CreateAccountReply(CreateAccountReply&& from) noexcept
-    : CreateAccountReply() {
+  CreateAccountResponse(const CreateAccountResponse& from);
+  CreateAccountResponse(CreateAccountResponse&& from) noexcept
+    : CreateAccountResponse() {
     *this = ::std::move(from);
   }
 
-  inline CreateAccountReply& operator=(const CreateAccountReply& from) {
+  inline CreateAccountResponse& operator=(const CreateAccountResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline CreateAccountReply& operator=(CreateAccountReply&& from) noexcept {
+  inline CreateAccountResponse& operator=(CreateAccountResponse&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -756,37 +756,37 @@ class CreateAccountReply :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const CreateAccountReply& default_instance();
+  static const CreateAccountResponse& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const CreateAccountReply* internal_default_instance() {
-    return reinterpret_cast<const CreateAccountReply*>(
-               &_CreateAccountReply_default_instance_);
+  static inline const CreateAccountResponse* internal_default_instance() {
+    return reinterpret_cast<const CreateAccountResponse*>(
+               &_CreateAccountResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     4;
 
-  friend void swap(CreateAccountReply& a, CreateAccountReply& b) {
+  friend void swap(CreateAccountResponse& a, CreateAccountResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(CreateAccountReply* other) {
+  inline void Swap(CreateAccountResponse* other) {
     if (other == this) return;
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  inline CreateAccountReply* New() const final {
-    return CreateMaybeMessage<CreateAccountReply>(nullptr);
+  inline CreateAccountResponse* New() const final {
+    return CreateMaybeMessage<CreateAccountResponse>(nullptr);
   }
 
-  CreateAccountReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<CreateAccountReply>(arena);
+  CreateAccountResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CreateAccountResponse>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const CreateAccountReply& from);
-  void MergeFrom(const CreateAccountReply& from);
+  void CopyFrom(const CreateAccountResponse& from);
+  void MergeFrom(const CreateAccountResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -800,10 +800,10 @@ class CreateAccountReply :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(CreateAccountReply* other);
+  void InternalSwap(CreateAccountResponse* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "vipuser.CreateAccountReply";
+    return "vipuser_proto.CreateAccountResponse";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -831,50 +831,50 @@ class CreateAccountReply :
     kResultFieldNumber = 1,
     kTokenInfoFieldNumber = 2,
   };
-  // .vipuser.ReplyResult result = 1;
+  // .vipuser_proto.Result result = 1;
   bool has_result() const;
   private:
   bool _internal_has_result() const;
   public:
   void clear_result();
-  const ::vipuser::ReplyResult& result() const;
-  ::vipuser::ReplyResult* release_result();
-  ::vipuser::ReplyResult* mutable_result();
-  void set_allocated_result(::vipuser::ReplyResult* result);
+  const ::vipuser_proto::Result& result() const;
+  ::vipuser_proto::Result* release_result();
+  ::vipuser_proto::Result* mutable_result();
+  void set_allocated_result(::vipuser_proto::Result* result);
   private:
-  const ::vipuser::ReplyResult& _internal_result() const;
-  ::vipuser::ReplyResult* _internal_mutable_result();
+  const ::vipuser_proto::Result& _internal_result() const;
+  ::vipuser_proto::Result* _internal_mutable_result();
   public:
 
-  // .vipuser.TokenInfo tokenInfo = 2;
+  // .vipuser_proto.TokenInfo tokenInfo = 2;
   bool has_tokeninfo() const;
   private:
   bool _internal_has_tokeninfo() const;
   public:
   void clear_tokeninfo();
-  const ::vipuser::TokenInfo& tokeninfo() const;
-  ::vipuser::TokenInfo* release_tokeninfo();
-  ::vipuser::TokenInfo* mutable_tokeninfo();
-  void set_allocated_tokeninfo(::vipuser::TokenInfo* tokeninfo);
+  const ::vipuser_proto::TokenInfo& tokeninfo() const;
+  ::vipuser_proto::TokenInfo* release_tokeninfo();
+  ::vipuser_proto::TokenInfo* mutable_tokeninfo();
+  void set_allocated_tokeninfo(::vipuser_proto::TokenInfo* tokeninfo);
   private:
-  const ::vipuser::TokenInfo& _internal_tokeninfo() const;
-  ::vipuser::TokenInfo* _internal_mutable_tokeninfo();
+  const ::vipuser_proto::TokenInfo& _internal_tokeninfo() const;
+  ::vipuser_proto::TokenInfo* _internal_mutable_tokeninfo();
   public:
 
-  // @@protoc_insertion_point(class_scope:vipuser.CreateAccountReply)
+  // @@protoc_insertion_point(class_scope:vipuser_proto.CreateAccountResponse)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::vipuser::ReplyResult* result_;
-  ::vipuser::TokenInfo* tokeninfo_;
+  ::vipuser_proto::Result* result_;
+  ::vipuser_proto::TokenInfo* tokeninfo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vipuser_2eproto;
 };
 // -------------------------------------------------------------------
 
 class LoginRequest :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser.LoginRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser_proto.LoginRequest) */ {
  public:
   LoginRequest();
   virtual ~LoginRequest();
@@ -954,7 +954,7 @@ class LoginRequest :
   void InternalSwap(LoginRequest* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "vipuser.LoginRequest";
+    return "vipuser_proto.LoginRequest";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -981,49 +981,49 @@ class LoginRequest :
   enum : int {
     kAccountInfoFieldNumber = 1,
   };
-  // .vipuser.AccountInfo accountInfo = 1;
+  // .vipuser_proto.AccountInfo accountInfo = 1;
   bool has_accountinfo() const;
   private:
   bool _internal_has_accountinfo() const;
   public:
   void clear_accountinfo();
-  const ::vipuser::AccountInfo& accountinfo() const;
-  ::vipuser::AccountInfo* release_accountinfo();
-  ::vipuser::AccountInfo* mutable_accountinfo();
-  void set_allocated_accountinfo(::vipuser::AccountInfo* accountinfo);
+  const ::vipuser_proto::AccountInfo& accountinfo() const;
+  ::vipuser_proto::AccountInfo* release_accountinfo();
+  ::vipuser_proto::AccountInfo* mutable_accountinfo();
+  void set_allocated_accountinfo(::vipuser_proto::AccountInfo* accountinfo);
   private:
-  const ::vipuser::AccountInfo& _internal_accountinfo() const;
-  ::vipuser::AccountInfo* _internal_mutable_accountinfo();
+  const ::vipuser_proto::AccountInfo& _internal_accountinfo() const;
+  ::vipuser_proto::AccountInfo* _internal_mutable_accountinfo();
   public:
 
-  // @@protoc_insertion_point(class_scope:vipuser.LoginRequest)
+  // @@protoc_insertion_point(class_scope:vipuser_proto.LoginRequest)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::vipuser::AccountInfo* accountinfo_;
+  ::vipuser_proto::AccountInfo* accountinfo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vipuser_2eproto;
 };
 // -------------------------------------------------------------------
 
-class LoginReply :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser.LoginReply) */ {
+class LoginResponse :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser_proto.LoginResponse) */ {
  public:
-  LoginReply();
-  virtual ~LoginReply();
+  LoginResponse();
+  virtual ~LoginResponse();
 
-  LoginReply(const LoginReply& from);
-  LoginReply(LoginReply&& from) noexcept
-    : LoginReply() {
+  LoginResponse(const LoginResponse& from);
+  LoginResponse(LoginResponse&& from) noexcept
+    : LoginResponse() {
     *this = ::std::move(from);
   }
 
-  inline LoginReply& operator=(const LoginReply& from) {
+  inline LoginResponse& operator=(const LoginResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline LoginReply& operator=(LoginReply&& from) noexcept {
+  inline LoginResponse& operator=(LoginResponse&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -1041,37 +1041,37 @@ class LoginReply :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const LoginReply& default_instance();
+  static const LoginResponse& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const LoginReply* internal_default_instance() {
-    return reinterpret_cast<const LoginReply*>(
-               &_LoginReply_default_instance_);
+  static inline const LoginResponse* internal_default_instance() {
+    return reinterpret_cast<const LoginResponse*>(
+               &_LoginResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     6;
 
-  friend void swap(LoginReply& a, LoginReply& b) {
+  friend void swap(LoginResponse& a, LoginResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(LoginReply* other) {
+  inline void Swap(LoginResponse* other) {
     if (other == this) return;
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  inline LoginReply* New() const final {
-    return CreateMaybeMessage<LoginReply>(nullptr);
+  inline LoginResponse* New() const final {
+    return CreateMaybeMessage<LoginResponse>(nullptr);
   }
 
-  LoginReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<LoginReply>(arena);
+  LoginResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<LoginResponse>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const LoginReply& from);
-  void MergeFrom(const LoginReply& from);
+  void CopyFrom(const LoginResponse& from);
+  void MergeFrom(const LoginResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1085,10 +1085,10 @@ class LoginReply :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(LoginReply* other);
+  void InternalSwap(LoginResponse* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "vipuser.LoginReply";
+    return "vipuser_proto.LoginResponse";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -1116,50 +1116,50 @@ class LoginReply :
     kResultFieldNumber = 1,
     kTokenInfoFieldNumber = 2,
   };
-  // .vipuser.ReplyResult result = 1;
+  // .vipuser_proto.Result result = 1;
   bool has_result() const;
   private:
   bool _internal_has_result() const;
   public:
   void clear_result();
-  const ::vipuser::ReplyResult& result() const;
-  ::vipuser::ReplyResult* release_result();
-  ::vipuser::ReplyResult* mutable_result();
-  void set_allocated_result(::vipuser::ReplyResult* result);
+  const ::vipuser_proto::Result& result() const;
+  ::vipuser_proto::Result* release_result();
+  ::vipuser_proto::Result* mutable_result();
+  void set_allocated_result(::vipuser_proto::Result* result);
   private:
-  const ::vipuser::ReplyResult& _internal_result() const;
-  ::vipuser::ReplyResult* _internal_mutable_result();
+  const ::vipuser_proto::Result& _internal_result() const;
+  ::vipuser_proto::Result* _internal_mutable_result();
   public:
 
-  // .vipuser.TokenInfo tokenInfo = 2;
+  // .vipuser_proto.TokenInfo tokenInfo = 2;
   bool has_tokeninfo() const;
   private:
   bool _internal_has_tokeninfo() const;
   public:
   void clear_tokeninfo();
-  const ::vipuser::TokenInfo& tokeninfo() const;
-  ::vipuser::TokenInfo* release_tokeninfo();
-  ::vipuser::TokenInfo* mutable_tokeninfo();
-  void set_allocated_tokeninfo(::vipuser::TokenInfo* tokeninfo);
+  const ::vipuser_proto::TokenInfo& tokeninfo() const;
+  ::vipuser_proto::TokenInfo* release_tokeninfo();
+  ::vipuser_proto::TokenInfo* mutable_tokeninfo();
+  void set_allocated_tokeninfo(::vipuser_proto::TokenInfo* tokeninfo);
   private:
-  const ::vipuser::TokenInfo& _internal_tokeninfo() const;
-  ::vipuser::TokenInfo* _internal_mutable_tokeninfo();
+  const ::vipuser_proto::TokenInfo& _internal_tokeninfo() const;
+  ::vipuser_proto::TokenInfo* _internal_mutable_tokeninfo();
   public:
 
-  // @@protoc_insertion_point(class_scope:vipuser.LoginReply)
+  // @@protoc_insertion_point(class_scope:vipuser_proto.LoginResponse)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::vipuser::ReplyResult* result_;
-  ::vipuser::TokenInfo* tokeninfo_;
+  ::vipuser_proto::Result* result_;
+  ::vipuser_proto::TokenInfo* tokeninfo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vipuser_2eproto;
 };
 // -------------------------------------------------------------------
 
 class LogoutRequest :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser.LogoutRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser_proto.LogoutRequest) */ {
  public:
   LogoutRequest();
   virtual ~LogoutRequest();
@@ -1239,7 +1239,7 @@ class LogoutRequest :
   void InternalSwap(LogoutRequest* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "vipuser.LogoutRequest";
+    return "vipuser_proto.LogoutRequest";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -1282,7 +1282,7 @@ class LogoutRequest :
   std::string* _internal_mutable_accesstoken();
   public:
 
-  // @@protoc_insertion_point(class_scope:vipuser.LogoutRequest)
+  // @@protoc_insertion_point(class_scope:vipuser_proto.LogoutRequest)
  private:
   class _Internal;
 
@@ -1293,23 +1293,23 @@ class LogoutRequest :
 };
 // -------------------------------------------------------------------
 
-class LogoutReply :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser.LogoutReply) */ {
+class LogoutResponse :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser_proto.LogoutResponse) */ {
  public:
-  LogoutReply();
-  virtual ~LogoutReply();
+  LogoutResponse();
+  virtual ~LogoutResponse();
 
-  LogoutReply(const LogoutReply& from);
-  LogoutReply(LogoutReply&& from) noexcept
-    : LogoutReply() {
+  LogoutResponse(const LogoutResponse& from);
+  LogoutResponse(LogoutResponse&& from) noexcept
+    : LogoutResponse() {
     *this = ::std::move(from);
   }
 
-  inline LogoutReply& operator=(const LogoutReply& from) {
+  inline LogoutResponse& operator=(const LogoutResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline LogoutReply& operator=(LogoutReply&& from) noexcept {
+  inline LogoutResponse& operator=(LogoutResponse&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -1327,37 +1327,37 @@ class LogoutReply :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const LogoutReply& default_instance();
+  static const LogoutResponse& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const LogoutReply* internal_default_instance() {
-    return reinterpret_cast<const LogoutReply*>(
-               &_LogoutReply_default_instance_);
+  static inline const LogoutResponse* internal_default_instance() {
+    return reinterpret_cast<const LogoutResponse*>(
+               &_LogoutResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     8;
 
-  friend void swap(LogoutReply& a, LogoutReply& b) {
+  friend void swap(LogoutResponse& a, LogoutResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(LogoutReply* other) {
+  inline void Swap(LogoutResponse* other) {
     if (other == this) return;
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  inline LogoutReply* New() const final {
-    return CreateMaybeMessage<LogoutReply>(nullptr);
+  inline LogoutResponse* New() const final {
+    return CreateMaybeMessage<LogoutResponse>(nullptr);
   }
 
-  LogoutReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<LogoutReply>(arena);
+  LogoutResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<LogoutResponse>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const LogoutReply& from);
-  void MergeFrom(const LogoutReply& from);
+  void CopyFrom(const LogoutResponse& from);
+  void MergeFrom(const LogoutResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1371,10 +1371,10 @@ class LogoutReply :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(LogoutReply* other);
+  void InternalSwap(LogoutResponse* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "vipuser.LogoutReply";
+    return "vipuser_proto.LogoutResponse";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -1401,34 +1401,34 @@ class LogoutReply :
   enum : int {
     kResultFieldNumber = 1,
   };
-  // .vipuser.ReplyResult result = 1;
+  // .vipuser_proto.Result result = 1;
   bool has_result() const;
   private:
   bool _internal_has_result() const;
   public:
   void clear_result();
-  const ::vipuser::ReplyResult& result() const;
-  ::vipuser::ReplyResult* release_result();
-  ::vipuser::ReplyResult* mutable_result();
-  void set_allocated_result(::vipuser::ReplyResult* result);
+  const ::vipuser_proto::Result& result() const;
+  ::vipuser_proto::Result* release_result();
+  ::vipuser_proto::Result* mutable_result();
+  void set_allocated_result(::vipuser_proto::Result* result);
   private:
-  const ::vipuser::ReplyResult& _internal_result() const;
-  ::vipuser::ReplyResult* _internal_mutable_result();
+  const ::vipuser_proto::Result& _internal_result() const;
+  ::vipuser_proto::Result* _internal_mutable_result();
   public:
 
-  // @@protoc_insertion_point(class_scope:vipuser.LogoutReply)
+  // @@protoc_insertion_point(class_scope:vipuser_proto.LogoutResponse)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::vipuser::ReplyResult* result_;
+  ::vipuser_proto::Result* result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vipuser_2eproto;
 };
 // -------------------------------------------------------------------
 
 class ReLoginRequest :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser.ReLoginRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser_proto.ReLoginRequest) */ {
  public:
   ReLoginRequest();
   virtual ~ReLoginRequest();
@@ -1508,7 +1508,7 @@ class ReLoginRequest :
   void InternalSwap(ReLoginRequest* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "vipuser.ReLoginRequest";
+    return "vipuser_proto.ReLoginRequest";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -1551,7 +1551,7 @@ class ReLoginRequest :
   std::string* _internal_mutable_refreshtoken();
   public:
 
-  // @@protoc_insertion_point(class_scope:vipuser.ReLoginRequest)
+  // @@protoc_insertion_point(class_scope:vipuser_proto.ReLoginRequest)
  private:
   class _Internal;
 
@@ -1562,23 +1562,23 @@ class ReLoginRequest :
 };
 // -------------------------------------------------------------------
 
-class ReLoginReply :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser.ReLoginReply) */ {
+class ReLoginResponse :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser_proto.ReLoginResponse) */ {
  public:
-  ReLoginReply();
-  virtual ~ReLoginReply();
+  ReLoginResponse();
+  virtual ~ReLoginResponse();
 
-  ReLoginReply(const ReLoginReply& from);
-  ReLoginReply(ReLoginReply&& from) noexcept
-    : ReLoginReply() {
+  ReLoginResponse(const ReLoginResponse& from);
+  ReLoginResponse(ReLoginResponse&& from) noexcept
+    : ReLoginResponse() {
     *this = ::std::move(from);
   }
 
-  inline ReLoginReply& operator=(const ReLoginReply& from) {
+  inline ReLoginResponse& operator=(const ReLoginResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline ReLoginReply& operator=(ReLoginReply&& from) noexcept {
+  inline ReLoginResponse& operator=(ReLoginResponse&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -1596,37 +1596,37 @@ class ReLoginReply :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const ReLoginReply& default_instance();
+  static const ReLoginResponse& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const ReLoginReply* internal_default_instance() {
-    return reinterpret_cast<const ReLoginReply*>(
-               &_ReLoginReply_default_instance_);
+  static inline const ReLoginResponse* internal_default_instance() {
+    return reinterpret_cast<const ReLoginResponse*>(
+               &_ReLoginResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     10;
 
-  friend void swap(ReLoginReply& a, ReLoginReply& b) {
+  friend void swap(ReLoginResponse& a, ReLoginResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(ReLoginReply* other) {
+  inline void Swap(ReLoginResponse* other) {
     if (other == this) return;
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  inline ReLoginReply* New() const final {
-    return CreateMaybeMessage<ReLoginReply>(nullptr);
+  inline ReLoginResponse* New() const final {
+    return CreateMaybeMessage<ReLoginResponse>(nullptr);
   }
 
-  ReLoginReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<ReLoginReply>(arena);
+  ReLoginResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ReLoginResponse>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const ReLoginReply& from);
-  void MergeFrom(const ReLoginReply& from);
+  void CopyFrom(const ReLoginResponse& from);
+  void MergeFrom(const ReLoginResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1640,10 +1640,10 @@ class ReLoginReply :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(ReLoginReply* other);
+  void InternalSwap(ReLoginResponse* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "vipuser.ReLoginReply";
+    return "vipuser_proto.ReLoginResponse";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -1671,50 +1671,50 @@ class ReLoginReply :
     kResultFieldNumber = 1,
     kTokenInfoFieldNumber = 2,
   };
-  // .vipuser.ReplyResult result = 1;
+  // .vipuser_proto.Result result = 1;
   bool has_result() const;
   private:
   bool _internal_has_result() const;
   public:
   void clear_result();
-  const ::vipuser::ReplyResult& result() const;
-  ::vipuser::ReplyResult* release_result();
-  ::vipuser::ReplyResult* mutable_result();
-  void set_allocated_result(::vipuser::ReplyResult* result);
+  const ::vipuser_proto::Result& result() const;
+  ::vipuser_proto::Result* release_result();
+  ::vipuser_proto::Result* mutable_result();
+  void set_allocated_result(::vipuser_proto::Result* result);
   private:
-  const ::vipuser::ReplyResult& _internal_result() const;
-  ::vipuser::ReplyResult* _internal_mutable_result();
+  const ::vipuser_proto::Result& _internal_result() const;
+  ::vipuser_proto::Result* _internal_mutable_result();
   public:
 
-  // .vipuser.TokenInfo tokenInfo = 2;
+  // .vipuser_proto.TokenInfo tokenInfo = 2;
   bool has_tokeninfo() const;
   private:
   bool _internal_has_tokeninfo() const;
   public:
   void clear_tokeninfo();
-  const ::vipuser::TokenInfo& tokeninfo() const;
-  ::vipuser::TokenInfo* release_tokeninfo();
-  ::vipuser::TokenInfo* mutable_tokeninfo();
-  void set_allocated_tokeninfo(::vipuser::TokenInfo* tokeninfo);
+  const ::vipuser_proto::TokenInfo& tokeninfo() const;
+  ::vipuser_proto::TokenInfo* release_tokeninfo();
+  ::vipuser_proto::TokenInfo* mutable_tokeninfo();
+  void set_allocated_tokeninfo(::vipuser_proto::TokenInfo* tokeninfo);
   private:
-  const ::vipuser::TokenInfo& _internal_tokeninfo() const;
-  ::vipuser::TokenInfo* _internal_mutable_tokeninfo();
+  const ::vipuser_proto::TokenInfo& _internal_tokeninfo() const;
+  ::vipuser_proto::TokenInfo* _internal_mutable_tokeninfo();
   public:
 
-  // @@protoc_insertion_point(class_scope:vipuser.ReLoginReply)
+  // @@protoc_insertion_point(class_scope:vipuser_proto.ReLoginResponse)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::vipuser::ReplyResult* result_;
-  ::vipuser::TokenInfo* tokeninfo_;
+  ::vipuser_proto::Result* result_;
+  ::vipuser_proto::TokenInfo* tokeninfo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vipuser_2eproto;
 };
 // -------------------------------------------------------------------
 
 class UserSession :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser.UserSession) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser_proto.UserSession) */ {
  public:
   UserSession();
   virtual ~UserSession();
@@ -1794,7 +1794,7 @@ class UserSession :
   void InternalSwap(UserSession* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "vipuser.UserSession";
+    return "vipuser_proto.UserSession";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -1854,7 +1854,7 @@ class UserSession :
   std::string* _internal_mutable_accesstoken();
   public:
 
-  // @@protoc_insertion_point(class_scope:vipuser.UserSession)
+  // @@protoc_insertion_point(class_scope:vipuser_proto.UserSession)
  private:
   class _Internal;
 
@@ -1867,7 +1867,7 @@ class UserSession :
 // -------------------------------------------------------------------
 
 class BusinessRequest :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser.BusinessRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser_proto.BusinessRequest) */ {
  public:
   BusinessRequest();
   virtual ~BusinessRequest();
@@ -1947,7 +1947,7 @@ class BusinessRequest :
   void InternalSwap(BusinessRequest* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "vipuser.BusinessRequest";
+    return "vipuser_proto.BusinessRequest";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -1972,69 +1972,69 @@ class BusinessRequest :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kParamsFieldNumber = 2,
+    kRequestFieldNumber = 2,
     kSessionFieldNumber = 1,
   };
-  // string params = 2;
-  void clear_params();
-  const std::string& params() const;
-  void set_params(const std::string& value);
-  void set_params(std::string&& value);
-  void set_params(const char* value);
-  void set_params(const char* value, size_t size);
-  std::string* mutable_params();
-  std::string* release_params();
-  void set_allocated_params(std::string* params);
+  // bytes request = 2;
+  void clear_request();
+  const std::string& request() const;
+  void set_request(const std::string& value);
+  void set_request(std::string&& value);
+  void set_request(const char* value);
+  void set_request(const void* value, size_t size);
+  std::string* mutable_request();
+  std::string* release_request();
+  void set_allocated_request(std::string* request);
   private:
-  const std::string& _internal_params() const;
-  void _internal_set_params(const std::string& value);
-  std::string* _internal_mutable_params();
+  const std::string& _internal_request() const;
+  void _internal_set_request(const std::string& value);
+  std::string* _internal_mutable_request();
   public:
 
-  // .vipuser.UserSession session = 1;
+  // .vipuser_proto.UserSession session = 1;
   bool has_session() const;
   private:
   bool _internal_has_session() const;
   public:
   void clear_session();
-  const ::vipuser::UserSession& session() const;
-  ::vipuser::UserSession* release_session();
-  ::vipuser::UserSession* mutable_session();
-  void set_allocated_session(::vipuser::UserSession* session);
+  const ::vipuser_proto::UserSession& session() const;
+  ::vipuser_proto::UserSession* release_session();
+  ::vipuser_proto::UserSession* mutable_session();
+  void set_allocated_session(::vipuser_proto::UserSession* session);
   private:
-  const ::vipuser::UserSession& _internal_session() const;
-  ::vipuser::UserSession* _internal_mutable_session();
+  const ::vipuser_proto::UserSession& _internal_session() const;
+  ::vipuser_proto::UserSession* _internal_mutable_session();
   public:
 
-  // @@protoc_insertion_point(class_scope:vipuser.BusinessRequest)
+  // @@protoc_insertion_point(class_scope:vipuser_proto.BusinessRequest)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr params_;
-  ::vipuser::UserSession* session_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr request_;
+  ::vipuser_proto::UserSession* session_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vipuser_2eproto;
 };
 // -------------------------------------------------------------------
 
-class BusinessReply :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser.BusinessReply) */ {
+class BusinessResponse :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vipuser_proto.BusinessResponse) */ {
  public:
-  BusinessReply();
-  virtual ~BusinessReply();
+  BusinessResponse();
+  virtual ~BusinessResponse();
 
-  BusinessReply(const BusinessReply& from);
-  BusinessReply(BusinessReply&& from) noexcept
-    : BusinessReply() {
+  BusinessResponse(const BusinessResponse& from);
+  BusinessResponse(BusinessResponse&& from) noexcept
+    : BusinessResponse() {
     *this = ::std::move(from);
   }
 
-  inline BusinessReply& operator=(const BusinessReply& from) {
+  inline BusinessResponse& operator=(const BusinessResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline BusinessReply& operator=(BusinessReply&& from) noexcept {
+  inline BusinessResponse& operator=(BusinessResponse&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -2052,37 +2052,37 @@ class BusinessReply :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const BusinessReply& default_instance();
+  static const BusinessResponse& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const BusinessReply* internal_default_instance() {
-    return reinterpret_cast<const BusinessReply*>(
-               &_BusinessReply_default_instance_);
+  static inline const BusinessResponse* internal_default_instance() {
+    return reinterpret_cast<const BusinessResponse*>(
+               &_BusinessResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     13;
 
-  friend void swap(BusinessReply& a, BusinessReply& b) {
+  friend void swap(BusinessResponse& a, BusinessResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(BusinessReply* other) {
+  inline void Swap(BusinessResponse* other) {
     if (other == this) return;
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  inline BusinessReply* New() const final {
-    return CreateMaybeMessage<BusinessReply>(nullptr);
+  inline BusinessResponse* New() const final {
+    return CreateMaybeMessage<BusinessResponse>(nullptr);
   }
 
-  BusinessReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<BusinessReply>(arena);
+  BusinessResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<BusinessResponse>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const BusinessReply& from);
-  void MergeFrom(const BusinessReply& from);
+  void CopyFrom(const BusinessResponse& from);
+  void MergeFrom(const BusinessResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2096,10 +2096,10 @@ class BusinessReply :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(BusinessReply* other);
+  void InternalSwap(BusinessResponse* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "vipuser.BusinessReply";
+    return "vipuser_proto.BusinessResponse";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -2124,47 +2124,47 @@ class BusinessReply :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 2,
+    kResponseFieldNumber = 2,
     kResultFieldNumber = 1,
   };
-  // string data = 2;
-  void clear_data();
-  const std::string& data() const;
-  void set_data(const std::string& value);
-  void set_data(std::string&& value);
-  void set_data(const char* value);
-  void set_data(const char* value, size_t size);
-  std::string* mutable_data();
-  std::string* release_data();
-  void set_allocated_data(std::string* data);
+  // bytes response = 2;
+  void clear_response();
+  const std::string& response() const;
+  void set_response(const std::string& value);
+  void set_response(std::string&& value);
+  void set_response(const char* value);
+  void set_response(const void* value, size_t size);
+  std::string* mutable_response();
+  std::string* release_response();
+  void set_allocated_response(std::string* response);
   private:
-  const std::string& _internal_data() const;
-  void _internal_set_data(const std::string& value);
-  std::string* _internal_mutable_data();
+  const std::string& _internal_response() const;
+  void _internal_set_response(const std::string& value);
+  std::string* _internal_mutable_response();
   public:
 
-  // .vipuser.ReplyResult result = 1;
+  // .vipuser_proto.Result result = 1;
   bool has_result() const;
   private:
   bool _internal_has_result() const;
   public:
   void clear_result();
-  const ::vipuser::ReplyResult& result() const;
-  ::vipuser::ReplyResult* release_result();
-  ::vipuser::ReplyResult* mutable_result();
-  void set_allocated_result(::vipuser::ReplyResult* result);
+  const ::vipuser_proto::Result& result() const;
+  ::vipuser_proto::Result* release_result();
+  ::vipuser_proto::Result* mutable_result();
+  void set_allocated_result(::vipuser_proto::Result* result);
   private:
-  const ::vipuser::ReplyResult& _internal_result() const;
-  ::vipuser::ReplyResult* _internal_mutable_result();
+  const ::vipuser_proto::Result& _internal_result() const;
+  ::vipuser_proto::Result* _internal_mutable_result();
   public:
 
-  // @@protoc_insertion_point(class_scope:vipuser.BusinessReply)
+  // @@protoc_insertion_point(class_scope:vipuser_proto.BusinessResponse)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
-  ::vipuser::ReplyResult* result_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr response_;
+  ::vipuser_proto::Result* result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vipuser_2eproto;
 };
@@ -2184,15 +2184,15 @@ inline void AccountInfo::clear_useralias() {
   useralias_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& AccountInfo::useralias() const {
-  // @@protoc_insertion_point(field_get:vipuser.AccountInfo.userAlias)
+  // @@protoc_insertion_point(field_get:vipuser_proto.AccountInfo.userAlias)
   return _internal_useralias();
 }
 inline void AccountInfo::set_useralias(const std::string& value) {
   _internal_set_useralias(value);
-  // @@protoc_insertion_point(field_set:vipuser.AccountInfo.userAlias)
+  // @@protoc_insertion_point(field_set:vipuser_proto.AccountInfo.userAlias)
 }
 inline std::string* AccountInfo::mutable_useralias() {
-  // @@protoc_insertion_point(field_mutable:vipuser.AccountInfo.userAlias)
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.AccountInfo.userAlias)
   return _internal_mutable_useralias();
 }
 inline const std::string& AccountInfo::_internal_useralias() const {
@@ -2206,26 +2206,26 @@ inline void AccountInfo::set_useralias(std::string&& value) {
   
   useralias_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:vipuser.AccountInfo.userAlias)
+  // @@protoc_insertion_point(field_set_rvalue:vipuser_proto.AccountInfo.userAlias)
 }
 inline void AccountInfo::set_useralias(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   useralias_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:vipuser.AccountInfo.userAlias)
+  // @@protoc_insertion_point(field_set_char:vipuser_proto.AccountInfo.userAlias)
 }
 inline void AccountInfo::set_useralias(const char* value, size_t size) {
   
   useralias_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:vipuser.AccountInfo.userAlias)
+  // @@protoc_insertion_point(field_set_pointer:vipuser_proto.AccountInfo.userAlias)
 }
 inline std::string* AccountInfo::_internal_mutable_useralias() {
   
   return useralias_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* AccountInfo::release_useralias() {
-  // @@protoc_insertion_point(field_release:vipuser.AccountInfo.userAlias)
+  // @@protoc_insertion_point(field_release:vipuser_proto.AccountInfo.userAlias)
   
   return useralias_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -2236,7 +2236,7 @@ inline void AccountInfo::set_allocated_useralias(std::string* useralias) {
     
   }
   useralias_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), useralias);
-  // @@protoc_insertion_point(field_set_allocated:vipuser.AccountInfo.userAlias)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.AccountInfo.userAlias)
 }
 
 // string passwordSHA256 = 2;
@@ -2244,15 +2244,15 @@ inline void AccountInfo::clear_passwordsha256() {
   passwordsha256_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& AccountInfo::passwordsha256() const {
-  // @@protoc_insertion_point(field_get:vipuser.AccountInfo.passwordSHA256)
+  // @@protoc_insertion_point(field_get:vipuser_proto.AccountInfo.passwordSHA256)
   return _internal_passwordsha256();
 }
 inline void AccountInfo::set_passwordsha256(const std::string& value) {
   _internal_set_passwordsha256(value);
-  // @@protoc_insertion_point(field_set:vipuser.AccountInfo.passwordSHA256)
+  // @@protoc_insertion_point(field_set:vipuser_proto.AccountInfo.passwordSHA256)
 }
 inline std::string* AccountInfo::mutable_passwordsha256() {
-  // @@protoc_insertion_point(field_mutable:vipuser.AccountInfo.passwordSHA256)
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.AccountInfo.passwordSHA256)
   return _internal_mutable_passwordsha256();
 }
 inline const std::string& AccountInfo::_internal_passwordsha256() const {
@@ -2266,26 +2266,26 @@ inline void AccountInfo::set_passwordsha256(std::string&& value) {
   
   passwordsha256_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:vipuser.AccountInfo.passwordSHA256)
+  // @@protoc_insertion_point(field_set_rvalue:vipuser_proto.AccountInfo.passwordSHA256)
 }
 inline void AccountInfo::set_passwordsha256(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   passwordsha256_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:vipuser.AccountInfo.passwordSHA256)
+  // @@protoc_insertion_point(field_set_char:vipuser_proto.AccountInfo.passwordSHA256)
 }
 inline void AccountInfo::set_passwordsha256(const char* value, size_t size) {
   
   passwordsha256_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:vipuser.AccountInfo.passwordSHA256)
+  // @@protoc_insertion_point(field_set_pointer:vipuser_proto.AccountInfo.passwordSHA256)
 }
 inline std::string* AccountInfo::_internal_mutable_passwordsha256() {
   
   return passwordsha256_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* AccountInfo::release_passwordsha256() {
-  // @@protoc_insertion_point(field_release:vipuser.AccountInfo.passwordSHA256)
+  // @@protoc_insertion_point(field_release:vipuser_proto.AccountInfo.passwordSHA256)
   
   return passwordsha256_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -2296,7 +2296,7 @@ inline void AccountInfo::set_allocated_passwordsha256(std::string* passwordsha25
     
   }
   passwordsha256_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), passwordsha256);
-  // @@protoc_insertion_point(field_set_allocated:vipuser.AccountInfo.passwordSHA256)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.AccountInfo.passwordSHA256)
 }
 
 // -------------------------------------------------------------------
@@ -2308,15 +2308,15 @@ inline void TokenInfo::clear_uuid() {
   uuid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& TokenInfo::uuid() const {
-  // @@protoc_insertion_point(field_get:vipuser.TokenInfo.uuid)
+  // @@protoc_insertion_point(field_get:vipuser_proto.TokenInfo.uuid)
   return _internal_uuid();
 }
 inline void TokenInfo::set_uuid(const std::string& value) {
   _internal_set_uuid(value);
-  // @@protoc_insertion_point(field_set:vipuser.TokenInfo.uuid)
+  // @@protoc_insertion_point(field_set:vipuser_proto.TokenInfo.uuid)
 }
 inline std::string* TokenInfo::mutable_uuid() {
-  // @@protoc_insertion_point(field_mutable:vipuser.TokenInfo.uuid)
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.TokenInfo.uuid)
   return _internal_mutable_uuid();
 }
 inline const std::string& TokenInfo::_internal_uuid() const {
@@ -2330,26 +2330,26 @@ inline void TokenInfo::set_uuid(std::string&& value) {
   
   uuid_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:vipuser.TokenInfo.uuid)
+  // @@protoc_insertion_point(field_set_rvalue:vipuser_proto.TokenInfo.uuid)
 }
 inline void TokenInfo::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   uuid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:vipuser.TokenInfo.uuid)
+  // @@protoc_insertion_point(field_set_char:vipuser_proto.TokenInfo.uuid)
 }
 inline void TokenInfo::set_uuid(const char* value, size_t size) {
   
   uuid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:vipuser.TokenInfo.uuid)
+  // @@protoc_insertion_point(field_set_pointer:vipuser_proto.TokenInfo.uuid)
 }
 inline std::string* TokenInfo::_internal_mutable_uuid() {
   
   return uuid_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* TokenInfo::release_uuid() {
-  // @@protoc_insertion_point(field_release:vipuser.TokenInfo.uuid)
+  // @@protoc_insertion_point(field_release:vipuser_proto.TokenInfo.uuid)
   
   return uuid_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -2360,7 +2360,7 @@ inline void TokenInfo::set_allocated_uuid(std::string* uuid) {
     
   }
   uuid_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uuid);
-  // @@protoc_insertion_point(field_set_allocated:vipuser.TokenInfo.uuid)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.TokenInfo.uuid)
 }
 
 // string accessToken = 2;
@@ -2368,15 +2368,15 @@ inline void TokenInfo::clear_accesstoken() {
   accesstoken_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& TokenInfo::accesstoken() const {
-  // @@protoc_insertion_point(field_get:vipuser.TokenInfo.accessToken)
+  // @@protoc_insertion_point(field_get:vipuser_proto.TokenInfo.accessToken)
   return _internal_accesstoken();
 }
 inline void TokenInfo::set_accesstoken(const std::string& value) {
   _internal_set_accesstoken(value);
-  // @@protoc_insertion_point(field_set:vipuser.TokenInfo.accessToken)
+  // @@protoc_insertion_point(field_set:vipuser_proto.TokenInfo.accessToken)
 }
 inline std::string* TokenInfo::mutable_accesstoken() {
-  // @@protoc_insertion_point(field_mutable:vipuser.TokenInfo.accessToken)
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.TokenInfo.accessToken)
   return _internal_mutable_accesstoken();
 }
 inline const std::string& TokenInfo::_internal_accesstoken() const {
@@ -2390,26 +2390,26 @@ inline void TokenInfo::set_accesstoken(std::string&& value) {
   
   accesstoken_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:vipuser.TokenInfo.accessToken)
+  // @@protoc_insertion_point(field_set_rvalue:vipuser_proto.TokenInfo.accessToken)
 }
 inline void TokenInfo::set_accesstoken(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   accesstoken_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:vipuser.TokenInfo.accessToken)
+  // @@protoc_insertion_point(field_set_char:vipuser_proto.TokenInfo.accessToken)
 }
 inline void TokenInfo::set_accesstoken(const char* value, size_t size) {
   
   accesstoken_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:vipuser.TokenInfo.accessToken)
+  // @@protoc_insertion_point(field_set_pointer:vipuser_proto.TokenInfo.accessToken)
 }
 inline std::string* TokenInfo::_internal_mutable_accesstoken() {
   
   return accesstoken_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* TokenInfo::release_accesstoken() {
-  // @@protoc_insertion_point(field_release:vipuser.TokenInfo.accessToken)
+  // @@protoc_insertion_point(field_release:vipuser_proto.TokenInfo.accessToken)
   
   return accesstoken_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -2420,7 +2420,7 @@ inline void TokenInfo::set_allocated_accesstoken(std::string* accesstoken) {
     
   }
   accesstoken_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), accesstoken);
-  // @@protoc_insertion_point(field_set_allocated:vipuser.TokenInfo.accessToken)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.TokenInfo.accessToken)
 }
 
 // string refreshToken = 3;
@@ -2428,15 +2428,15 @@ inline void TokenInfo::clear_refreshtoken() {
   refreshtoken_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& TokenInfo::refreshtoken() const {
-  // @@protoc_insertion_point(field_get:vipuser.TokenInfo.refreshToken)
+  // @@protoc_insertion_point(field_get:vipuser_proto.TokenInfo.refreshToken)
   return _internal_refreshtoken();
 }
 inline void TokenInfo::set_refreshtoken(const std::string& value) {
   _internal_set_refreshtoken(value);
-  // @@protoc_insertion_point(field_set:vipuser.TokenInfo.refreshToken)
+  // @@protoc_insertion_point(field_set:vipuser_proto.TokenInfo.refreshToken)
 }
 inline std::string* TokenInfo::mutable_refreshtoken() {
-  // @@protoc_insertion_point(field_mutable:vipuser.TokenInfo.refreshToken)
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.TokenInfo.refreshToken)
   return _internal_mutable_refreshtoken();
 }
 inline const std::string& TokenInfo::_internal_refreshtoken() const {
@@ -2450,26 +2450,26 @@ inline void TokenInfo::set_refreshtoken(std::string&& value) {
   
   refreshtoken_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:vipuser.TokenInfo.refreshToken)
+  // @@protoc_insertion_point(field_set_rvalue:vipuser_proto.TokenInfo.refreshToken)
 }
 inline void TokenInfo::set_refreshtoken(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   refreshtoken_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:vipuser.TokenInfo.refreshToken)
+  // @@protoc_insertion_point(field_set_char:vipuser_proto.TokenInfo.refreshToken)
 }
 inline void TokenInfo::set_refreshtoken(const char* value, size_t size) {
   
   refreshtoken_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:vipuser.TokenInfo.refreshToken)
+  // @@protoc_insertion_point(field_set_pointer:vipuser_proto.TokenInfo.refreshToken)
 }
 inline std::string* TokenInfo::_internal_mutable_refreshtoken() {
   
   return refreshtoken_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* TokenInfo::release_refreshtoken() {
-  // @@protoc_insertion_point(field_release:vipuser.TokenInfo.refreshToken)
+  // @@protoc_insertion_point(field_release:vipuser_proto.TokenInfo.refreshToken)
   
   return refreshtoken_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -2480,98 +2480,98 @@ inline void TokenInfo::set_allocated_refreshtoken(std::string* refreshtoken) {
     
   }
   refreshtoken_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), refreshtoken);
-  // @@protoc_insertion_point(field_set_allocated:vipuser.TokenInfo.refreshToken)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.TokenInfo.refreshToken)
 }
 
 // -------------------------------------------------------------------
 
-// ReplyResult
+// Result
 
-// int32 result = 1;
-inline void ReplyResult::clear_result() {
-  result_ = 0;
+// int32 code = 1;
+inline void Result::clear_code() {
+  code_ = 0;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 ReplyResult::_internal_result() const {
-  return result_;
+inline ::PROTOBUF_NAMESPACE_ID::int32 Result::_internal_code() const {
+  return code_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 ReplyResult::result() const {
-  // @@protoc_insertion_point(field_get:vipuser.ReplyResult.result)
-  return _internal_result();
+inline ::PROTOBUF_NAMESPACE_ID::int32 Result::code() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.Result.code)
+  return _internal_code();
 }
-inline void ReplyResult::_internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void Result::_internal_set_code(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
-  result_ = value;
+  code_ = value;
 }
-inline void ReplyResult::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:vipuser.ReplyResult.result)
+inline void Result::set_code(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_code(value);
+  // @@protoc_insertion_point(field_set:vipuser_proto.Result.code)
 }
 
 // string message = 2;
-inline void ReplyResult::clear_message() {
+inline void Result::clear_message() {
   message_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline const std::string& ReplyResult::message() const {
-  // @@protoc_insertion_point(field_get:vipuser.ReplyResult.message)
+inline const std::string& Result::message() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.Result.message)
   return _internal_message();
 }
-inline void ReplyResult::set_message(const std::string& value) {
+inline void Result::set_message(const std::string& value) {
   _internal_set_message(value);
-  // @@protoc_insertion_point(field_set:vipuser.ReplyResult.message)
+  // @@protoc_insertion_point(field_set:vipuser_proto.Result.message)
 }
-inline std::string* ReplyResult::mutable_message() {
-  // @@protoc_insertion_point(field_mutable:vipuser.ReplyResult.message)
+inline std::string* Result::mutable_message() {
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.Result.message)
   return _internal_mutable_message();
 }
-inline const std::string& ReplyResult::_internal_message() const {
+inline const std::string& Result::_internal_message() const {
   return message_.GetNoArena();
 }
-inline void ReplyResult::_internal_set_message(const std::string& value) {
+inline void Result::_internal_set_message(const std::string& value) {
   
   message_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
 }
-inline void ReplyResult::set_message(std::string&& value) {
+inline void Result::set_message(std::string&& value) {
   
   message_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:vipuser.ReplyResult.message)
+  // @@protoc_insertion_point(field_set_rvalue:vipuser_proto.Result.message)
 }
-inline void ReplyResult::set_message(const char* value) {
+inline void Result::set_message(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   message_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:vipuser.ReplyResult.message)
+  // @@protoc_insertion_point(field_set_char:vipuser_proto.Result.message)
 }
-inline void ReplyResult::set_message(const char* value, size_t size) {
+inline void Result::set_message(const char* value, size_t size) {
   
   message_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:vipuser.ReplyResult.message)
+  // @@protoc_insertion_point(field_set_pointer:vipuser_proto.Result.message)
 }
-inline std::string* ReplyResult::_internal_mutable_message() {
+inline std::string* Result::_internal_mutable_message() {
   
   return message_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline std::string* ReplyResult::release_message() {
-  // @@protoc_insertion_point(field_release:vipuser.ReplyResult.message)
+inline std::string* Result::release_message() {
+  // @@protoc_insertion_point(field_release:vipuser_proto.Result.message)
   
   return message_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline void ReplyResult::set_allocated_message(std::string* message) {
+inline void Result::set_allocated_message(std::string* message) {
   if (message != nullptr) {
     
   } else {
     
   }
   message_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), message);
-  // @@protoc_insertion_point(field_set_allocated:vipuser.ReplyResult.message)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.Result.message)
 }
 
 // -------------------------------------------------------------------
 
 // CreateAccountRequest
 
-// .vipuser.AccountInfo accountInfo = 1;
+// .vipuser_proto.AccountInfo accountInfo = 1;
 inline bool CreateAccountRequest::_internal_has_accountinfo() const {
   return this != internal_default_instance() && accountinfo_ != nullptr;
 }
@@ -2584,35 +2584,35 @@ inline void CreateAccountRequest::clear_accountinfo() {
   }
   accountinfo_ = nullptr;
 }
-inline const ::vipuser::AccountInfo& CreateAccountRequest::_internal_accountinfo() const {
-  const ::vipuser::AccountInfo* p = accountinfo_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser::AccountInfo*>(
-      &::vipuser::_AccountInfo_default_instance_);
+inline const ::vipuser_proto::AccountInfo& CreateAccountRequest::_internal_accountinfo() const {
+  const ::vipuser_proto::AccountInfo* p = accountinfo_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser_proto::AccountInfo*>(
+      &::vipuser_proto::_AccountInfo_default_instance_);
 }
-inline const ::vipuser::AccountInfo& CreateAccountRequest::accountinfo() const {
-  // @@protoc_insertion_point(field_get:vipuser.CreateAccountRequest.accountInfo)
+inline const ::vipuser_proto::AccountInfo& CreateAccountRequest::accountinfo() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.CreateAccountRequest.accountInfo)
   return _internal_accountinfo();
 }
-inline ::vipuser::AccountInfo* CreateAccountRequest::release_accountinfo() {
-  // @@protoc_insertion_point(field_release:vipuser.CreateAccountRequest.accountInfo)
+inline ::vipuser_proto::AccountInfo* CreateAccountRequest::release_accountinfo() {
+  // @@protoc_insertion_point(field_release:vipuser_proto.CreateAccountRequest.accountInfo)
   
-  ::vipuser::AccountInfo* temp = accountinfo_;
+  ::vipuser_proto::AccountInfo* temp = accountinfo_;
   accountinfo_ = nullptr;
   return temp;
 }
-inline ::vipuser::AccountInfo* CreateAccountRequest::_internal_mutable_accountinfo() {
+inline ::vipuser_proto::AccountInfo* CreateAccountRequest::_internal_mutable_accountinfo() {
   
   if (accountinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::vipuser::AccountInfo>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::vipuser_proto::AccountInfo>(GetArenaNoVirtual());
     accountinfo_ = p;
   }
   return accountinfo_;
 }
-inline ::vipuser::AccountInfo* CreateAccountRequest::mutable_accountinfo() {
-  // @@protoc_insertion_point(field_mutable:vipuser.CreateAccountRequest.accountInfo)
+inline ::vipuser_proto::AccountInfo* CreateAccountRequest::mutable_accountinfo() {
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.CreateAccountRequest.accountInfo)
   return _internal_mutable_accountinfo();
 }
-inline void CreateAccountRequest::set_allocated_accountinfo(::vipuser::AccountInfo* accountinfo) {
+inline void CreateAccountRequest::set_allocated_accountinfo(::vipuser_proto::AccountInfo* accountinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete accountinfo_;
@@ -2628,55 +2628,55 @@ inline void CreateAccountRequest::set_allocated_accountinfo(::vipuser::AccountIn
     
   }
   accountinfo_ = accountinfo;
-  // @@protoc_insertion_point(field_set_allocated:vipuser.CreateAccountRequest.accountInfo)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.CreateAccountRequest.accountInfo)
 }
 
 // -------------------------------------------------------------------
 
-// CreateAccountReply
+// CreateAccountResponse
 
-// .vipuser.ReplyResult result = 1;
-inline bool CreateAccountReply::_internal_has_result() const {
+// .vipuser_proto.Result result = 1;
+inline bool CreateAccountResponse::_internal_has_result() const {
   return this != internal_default_instance() && result_ != nullptr;
 }
-inline bool CreateAccountReply::has_result() const {
+inline bool CreateAccountResponse::has_result() const {
   return _internal_has_result();
 }
-inline void CreateAccountReply::clear_result() {
+inline void CreateAccountResponse::clear_result() {
   if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
     delete result_;
   }
   result_ = nullptr;
 }
-inline const ::vipuser::ReplyResult& CreateAccountReply::_internal_result() const {
-  const ::vipuser::ReplyResult* p = result_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser::ReplyResult*>(
-      &::vipuser::_ReplyResult_default_instance_);
+inline const ::vipuser_proto::Result& CreateAccountResponse::_internal_result() const {
+  const ::vipuser_proto::Result* p = result_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser_proto::Result*>(
+      &::vipuser_proto::_Result_default_instance_);
 }
-inline const ::vipuser::ReplyResult& CreateAccountReply::result() const {
-  // @@protoc_insertion_point(field_get:vipuser.CreateAccountReply.result)
+inline const ::vipuser_proto::Result& CreateAccountResponse::result() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.CreateAccountResponse.result)
   return _internal_result();
 }
-inline ::vipuser::ReplyResult* CreateAccountReply::release_result() {
-  // @@protoc_insertion_point(field_release:vipuser.CreateAccountReply.result)
+inline ::vipuser_proto::Result* CreateAccountResponse::release_result() {
+  // @@protoc_insertion_point(field_release:vipuser_proto.CreateAccountResponse.result)
   
-  ::vipuser::ReplyResult* temp = result_;
+  ::vipuser_proto::Result* temp = result_;
   result_ = nullptr;
   return temp;
 }
-inline ::vipuser::ReplyResult* CreateAccountReply::_internal_mutable_result() {
+inline ::vipuser_proto::Result* CreateAccountResponse::_internal_mutable_result() {
   
   if (result_ == nullptr) {
-    auto* p = CreateMaybeMessage<::vipuser::ReplyResult>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::vipuser_proto::Result>(GetArenaNoVirtual());
     result_ = p;
   }
   return result_;
 }
-inline ::vipuser::ReplyResult* CreateAccountReply::mutable_result() {
-  // @@protoc_insertion_point(field_mutable:vipuser.CreateAccountReply.result)
+inline ::vipuser_proto::Result* CreateAccountResponse::mutable_result() {
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.CreateAccountResponse.result)
   return _internal_mutable_result();
 }
-inline void CreateAccountReply::set_allocated_result(::vipuser::ReplyResult* result) {
+inline void CreateAccountResponse::set_allocated_result(::vipuser_proto::Result* result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete result_;
@@ -2692,51 +2692,51 @@ inline void CreateAccountReply::set_allocated_result(::vipuser::ReplyResult* res
     
   }
   result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:vipuser.CreateAccountReply.result)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.CreateAccountResponse.result)
 }
 
-// .vipuser.TokenInfo tokenInfo = 2;
-inline bool CreateAccountReply::_internal_has_tokeninfo() const {
+// .vipuser_proto.TokenInfo tokenInfo = 2;
+inline bool CreateAccountResponse::_internal_has_tokeninfo() const {
   return this != internal_default_instance() && tokeninfo_ != nullptr;
 }
-inline bool CreateAccountReply::has_tokeninfo() const {
+inline bool CreateAccountResponse::has_tokeninfo() const {
   return _internal_has_tokeninfo();
 }
-inline void CreateAccountReply::clear_tokeninfo() {
+inline void CreateAccountResponse::clear_tokeninfo() {
   if (GetArenaNoVirtual() == nullptr && tokeninfo_ != nullptr) {
     delete tokeninfo_;
   }
   tokeninfo_ = nullptr;
 }
-inline const ::vipuser::TokenInfo& CreateAccountReply::_internal_tokeninfo() const {
-  const ::vipuser::TokenInfo* p = tokeninfo_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser::TokenInfo*>(
-      &::vipuser::_TokenInfo_default_instance_);
+inline const ::vipuser_proto::TokenInfo& CreateAccountResponse::_internal_tokeninfo() const {
+  const ::vipuser_proto::TokenInfo* p = tokeninfo_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser_proto::TokenInfo*>(
+      &::vipuser_proto::_TokenInfo_default_instance_);
 }
-inline const ::vipuser::TokenInfo& CreateAccountReply::tokeninfo() const {
-  // @@protoc_insertion_point(field_get:vipuser.CreateAccountReply.tokenInfo)
+inline const ::vipuser_proto::TokenInfo& CreateAccountResponse::tokeninfo() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.CreateAccountResponse.tokenInfo)
   return _internal_tokeninfo();
 }
-inline ::vipuser::TokenInfo* CreateAccountReply::release_tokeninfo() {
-  // @@protoc_insertion_point(field_release:vipuser.CreateAccountReply.tokenInfo)
+inline ::vipuser_proto::TokenInfo* CreateAccountResponse::release_tokeninfo() {
+  // @@protoc_insertion_point(field_release:vipuser_proto.CreateAccountResponse.tokenInfo)
   
-  ::vipuser::TokenInfo* temp = tokeninfo_;
+  ::vipuser_proto::TokenInfo* temp = tokeninfo_;
   tokeninfo_ = nullptr;
   return temp;
 }
-inline ::vipuser::TokenInfo* CreateAccountReply::_internal_mutable_tokeninfo() {
+inline ::vipuser_proto::TokenInfo* CreateAccountResponse::_internal_mutable_tokeninfo() {
   
   if (tokeninfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::vipuser::TokenInfo>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::vipuser_proto::TokenInfo>(GetArenaNoVirtual());
     tokeninfo_ = p;
   }
   return tokeninfo_;
 }
-inline ::vipuser::TokenInfo* CreateAccountReply::mutable_tokeninfo() {
-  // @@protoc_insertion_point(field_mutable:vipuser.CreateAccountReply.tokenInfo)
+inline ::vipuser_proto::TokenInfo* CreateAccountResponse::mutable_tokeninfo() {
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.CreateAccountResponse.tokenInfo)
   return _internal_mutable_tokeninfo();
 }
-inline void CreateAccountReply::set_allocated_tokeninfo(::vipuser::TokenInfo* tokeninfo) {
+inline void CreateAccountResponse::set_allocated_tokeninfo(::vipuser_proto::TokenInfo* tokeninfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete tokeninfo_;
@@ -2752,14 +2752,14 @@ inline void CreateAccountReply::set_allocated_tokeninfo(::vipuser::TokenInfo* to
     
   }
   tokeninfo_ = tokeninfo;
-  // @@protoc_insertion_point(field_set_allocated:vipuser.CreateAccountReply.tokenInfo)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.CreateAccountResponse.tokenInfo)
 }
 
 // -------------------------------------------------------------------
 
 // LoginRequest
 
-// .vipuser.AccountInfo accountInfo = 1;
+// .vipuser_proto.AccountInfo accountInfo = 1;
 inline bool LoginRequest::_internal_has_accountinfo() const {
   return this != internal_default_instance() && accountinfo_ != nullptr;
 }
@@ -2772,35 +2772,35 @@ inline void LoginRequest::clear_accountinfo() {
   }
   accountinfo_ = nullptr;
 }
-inline const ::vipuser::AccountInfo& LoginRequest::_internal_accountinfo() const {
-  const ::vipuser::AccountInfo* p = accountinfo_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser::AccountInfo*>(
-      &::vipuser::_AccountInfo_default_instance_);
+inline const ::vipuser_proto::AccountInfo& LoginRequest::_internal_accountinfo() const {
+  const ::vipuser_proto::AccountInfo* p = accountinfo_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser_proto::AccountInfo*>(
+      &::vipuser_proto::_AccountInfo_default_instance_);
 }
-inline const ::vipuser::AccountInfo& LoginRequest::accountinfo() const {
-  // @@protoc_insertion_point(field_get:vipuser.LoginRequest.accountInfo)
+inline const ::vipuser_proto::AccountInfo& LoginRequest::accountinfo() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.LoginRequest.accountInfo)
   return _internal_accountinfo();
 }
-inline ::vipuser::AccountInfo* LoginRequest::release_accountinfo() {
-  // @@protoc_insertion_point(field_release:vipuser.LoginRequest.accountInfo)
+inline ::vipuser_proto::AccountInfo* LoginRequest::release_accountinfo() {
+  // @@protoc_insertion_point(field_release:vipuser_proto.LoginRequest.accountInfo)
   
-  ::vipuser::AccountInfo* temp = accountinfo_;
+  ::vipuser_proto::AccountInfo* temp = accountinfo_;
   accountinfo_ = nullptr;
   return temp;
 }
-inline ::vipuser::AccountInfo* LoginRequest::_internal_mutable_accountinfo() {
+inline ::vipuser_proto::AccountInfo* LoginRequest::_internal_mutable_accountinfo() {
   
   if (accountinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::vipuser::AccountInfo>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::vipuser_proto::AccountInfo>(GetArenaNoVirtual());
     accountinfo_ = p;
   }
   return accountinfo_;
 }
-inline ::vipuser::AccountInfo* LoginRequest::mutable_accountinfo() {
-  // @@protoc_insertion_point(field_mutable:vipuser.LoginRequest.accountInfo)
+inline ::vipuser_proto::AccountInfo* LoginRequest::mutable_accountinfo() {
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.LoginRequest.accountInfo)
   return _internal_mutable_accountinfo();
 }
-inline void LoginRequest::set_allocated_accountinfo(::vipuser::AccountInfo* accountinfo) {
+inline void LoginRequest::set_allocated_accountinfo(::vipuser_proto::AccountInfo* accountinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete accountinfo_;
@@ -2816,55 +2816,55 @@ inline void LoginRequest::set_allocated_accountinfo(::vipuser::AccountInfo* acco
     
   }
   accountinfo_ = accountinfo;
-  // @@protoc_insertion_point(field_set_allocated:vipuser.LoginRequest.accountInfo)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.LoginRequest.accountInfo)
 }
 
 // -------------------------------------------------------------------
 
-// LoginReply
+// LoginResponse
 
-// .vipuser.ReplyResult result = 1;
-inline bool LoginReply::_internal_has_result() const {
+// .vipuser_proto.Result result = 1;
+inline bool LoginResponse::_internal_has_result() const {
   return this != internal_default_instance() && result_ != nullptr;
 }
-inline bool LoginReply::has_result() const {
+inline bool LoginResponse::has_result() const {
   return _internal_has_result();
 }
-inline void LoginReply::clear_result() {
+inline void LoginResponse::clear_result() {
   if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
     delete result_;
   }
   result_ = nullptr;
 }
-inline const ::vipuser::ReplyResult& LoginReply::_internal_result() const {
-  const ::vipuser::ReplyResult* p = result_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser::ReplyResult*>(
-      &::vipuser::_ReplyResult_default_instance_);
+inline const ::vipuser_proto::Result& LoginResponse::_internal_result() const {
+  const ::vipuser_proto::Result* p = result_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser_proto::Result*>(
+      &::vipuser_proto::_Result_default_instance_);
 }
-inline const ::vipuser::ReplyResult& LoginReply::result() const {
-  // @@protoc_insertion_point(field_get:vipuser.LoginReply.result)
+inline const ::vipuser_proto::Result& LoginResponse::result() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.LoginResponse.result)
   return _internal_result();
 }
-inline ::vipuser::ReplyResult* LoginReply::release_result() {
-  // @@protoc_insertion_point(field_release:vipuser.LoginReply.result)
+inline ::vipuser_proto::Result* LoginResponse::release_result() {
+  // @@protoc_insertion_point(field_release:vipuser_proto.LoginResponse.result)
   
-  ::vipuser::ReplyResult* temp = result_;
+  ::vipuser_proto::Result* temp = result_;
   result_ = nullptr;
   return temp;
 }
-inline ::vipuser::ReplyResult* LoginReply::_internal_mutable_result() {
+inline ::vipuser_proto::Result* LoginResponse::_internal_mutable_result() {
   
   if (result_ == nullptr) {
-    auto* p = CreateMaybeMessage<::vipuser::ReplyResult>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::vipuser_proto::Result>(GetArenaNoVirtual());
     result_ = p;
   }
   return result_;
 }
-inline ::vipuser::ReplyResult* LoginReply::mutable_result() {
-  // @@protoc_insertion_point(field_mutable:vipuser.LoginReply.result)
+inline ::vipuser_proto::Result* LoginResponse::mutable_result() {
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.LoginResponse.result)
   return _internal_mutable_result();
 }
-inline void LoginReply::set_allocated_result(::vipuser::ReplyResult* result) {
+inline void LoginResponse::set_allocated_result(::vipuser_proto::Result* result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete result_;
@@ -2880,51 +2880,51 @@ inline void LoginReply::set_allocated_result(::vipuser::ReplyResult* result) {
     
   }
   result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:vipuser.LoginReply.result)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.LoginResponse.result)
 }
 
-// .vipuser.TokenInfo tokenInfo = 2;
-inline bool LoginReply::_internal_has_tokeninfo() const {
+// .vipuser_proto.TokenInfo tokenInfo = 2;
+inline bool LoginResponse::_internal_has_tokeninfo() const {
   return this != internal_default_instance() && tokeninfo_ != nullptr;
 }
-inline bool LoginReply::has_tokeninfo() const {
+inline bool LoginResponse::has_tokeninfo() const {
   return _internal_has_tokeninfo();
 }
-inline void LoginReply::clear_tokeninfo() {
+inline void LoginResponse::clear_tokeninfo() {
   if (GetArenaNoVirtual() == nullptr && tokeninfo_ != nullptr) {
     delete tokeninfo_;
   }
   tokeninfo_ = nullptr;
 }
-inline const ::vipuser::TokenInfo& LoginReply::_internal_tokeninfo() const {
-  const ::vipuser::TokenInfo* p = tokeninfo_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser::TokenInfo*>(
-      &::vipuser::_TokenInfo_default_instance_);
+inline const ::vipuser_proto::TokenInfo& LoginResponse::_internal_tokeninfo() const {
+  const ::vipuser_proto::TokenInfo* p = tokeninfo_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser_proto::TokenInfo*>(
+      &::vipuser_proto::_TokenInfo_default_instance_);
 }
-inline const ::vipuser::TokenInfo& LoginReply::tokeninfo() const {
-  // @@protoc_insertion_point(field_get:vipuser.LoginReply.tokenInfo)
+inline const ::vipuser_proto::TokenInfo& LoginResponse::tokeninfo() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.LoginResponse.tokenInfo)
   return _internal_tokeninfo();
 }
-inline ::vipuser::TokenInfo* LoginReply::release_tokeninfo() {
-  // @@protoc_insertion_point(field_release:vipuser.LoginReply.tokenInfo)
+inline ::vipuser_proto::TokenInfo* LoginResponse::release_tokeninfo() {
+  // @@protoc_insertion_point(field_release:vipuser_proto.LoginResponse.tokenInfo)
   
-  ::vipuser::TokenInfo* temp = tokeninfo_;
+  ::vipuser_proto::TokenInfo* temp = tokeninfo_;
   tokeninfo_ = nullptr;
   return temp;
 }
-inline ::vipuser::TokenInfo* LoginReply::_internal_mutable_tokeninfo() {
+inline ::vipuser_proto::TokenInfo* LoginResponse::_internal_mutable_tokeninfo() {
   
   if (tokeninfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::vipuser::TokenInfo>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::vipuser_proto::TokenInfo>(GetArenaNoVirtual());
     tokeninfo_ = p;
   }
   return tokeninfo_;
 }
-inline ::vipuser::TokenInfo* LoginReply::mutable_tokeninfo() {
-  // @@protoc_insertion_point(field_mutable:vipuser.LoginReply.tokenInfo)
+inline ::vipuser_proto::TokenInfo* LoginResponse::mutable_tokeninfo() {
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.LoginResponse.tokenInfo)
   return _internal_mutable_tokeninfo();
 }
-inline void LoginReply::set_allocated_tokeninfo(::vipuser::TokenInfo* tokeninfo) {
+inline void LoginResponse::set_allocated_tokeninfo(::vipuser_proto::TokenInfo* tokeninfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete tokeninfo_;
@@ -2940,7 +2940,7 @@ inline void LoginReply::set_allocated_tokeninfo(::vipuser::TokenInfo* tokeninfo)
     
   }
   tokeninfo_ = tokeninfo;
-  // @@protoc_insertion_point(field_set_allocated:vipuser.LoginReply.tokenInfo)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.LoginResponse.tokenInfo)
 }
 
 // -------------------------------------------------------------------
@@ -2952,15 +2952,15 @@ inline void LogoutRequest::clear_accesstoken() {
   accesstoken_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& LogoutRequest::accesstoken() const {
-  // @@protoc_insertion_point(field_get:vipuser.LogoutRequest.accessToken)
+  // @@protoc_insertion_point(field_get:vipuser_proto.LogoutRequest.accessToken)
   return _internal_accesstoken();
 }
 inline void LogoutRequest::set_accesstoken(const std::string& value) {
   _internal_set_accesstoken(value);
-  // @@protoc_insertion_point(field_set:vipuser.LogoutRequest.accessToken)
+  // @@protoc_insertion_point(field_set:vipuser_proto.LogoutRequest.accessToken)
 }
 inline std::string* LogoutRequest::mutable_accesstoken() {
-  // @@protoc_insertion_point(field_mutable:vipuser.LogoutRequest.accessToken)
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.LogoutRequest.accessToken)
   return _internal_mutable_accesstoken();
 }
 inline const std::string& LogoutRequest::_internal_accesstoken() const {
@@ -2974,26 +2974,26 @@ inline void LogoutRequest::set_accesstoken(std::string&& value) {
   
   accesstoken_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:vipuser.LogoutRequest.accessToken)
+  // @@protoc_insertion_point(field_set_rvalue:vipuser_proto.LogoutRequest.accessToken)
 }
 inline void LogoutRequest::set_accesstoken(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   accesstoken_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:vipuser.LogoutRequest.accessToken)
+  // @@protoc_insertion_point(field_set_char:vipuser_proto.LogoutRequest.accessToken)
 }
 inline void LogoutRequest::set_accesstoken(const char* value, size_t size) {
   
   accesstoken_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:vipuser.LogoutRequest.accessToken)
+  // @@protoc_insertion_point(field_set_pointer:vipuser_proto.LogoutRequest.accessToken)
 }
 inline std::string* LogoutRequest::_internal_mutable_accesstoken() {
   
   return accesstoken_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* LogoutRequest::release_accesstoken() {
-  // @@protoc_insertion_point(field_release:vipuser.LogoutRequest.accessToken)
+  // @@protoc_insertion_point(field_release:vipuser_proto.LogoutRequest.accessToken)
   
   return accesstoken_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -3004,55 +3004,55 @@ inline void LogoutRequest::set_allocated_accesstoken(std::string* accesstoken) {
     
   }
   accesstoken_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), accesstoken);
-  // @@protoc_insertion_point(field_set_allocated:vipuser.LogoutRequest.accessToken)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.LogoutRequest.accessToken)
 }
 
 // -------------------------------------------------------------------
 
-// LogoutReply
+// LogoutResponse
 
-// .vipuser.ReplyResult result = 1;
-inline bool LogoutReply::_internal_has_result() const {
+// .vipuser_proto.Result result = 1;
+inline bool LogoutResponse::_internal_has_result() const {
   return this != internal_default_instance() && result_ != nullptr;
 }
-inline bool LogoutReply::has_result() const {
+inline bool LogoutResponse::has_result() const {
   return _internal_has_result();
 }
-inline void LogoutReply::clear_result() {
+inline void LogoutResponse::clear_result() {
   if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
     delete result_;
   }
   result_ = nullptr;
 }
-inline const ::vipuser::ReplyResult& LogoutReply::_internal_result() const {
-  const ::vipuser::ReplyResult* p = result_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser::ReplyResult*>(
-      &::vipuser::_ReplyResult_default_instance_);
+inline const ::vipuser_proto::Result& LogoutResponse::_internal_result() const {
+  const ::vipuser_proto::Result* p = result_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser_proto::Result*>(
+      &::vipuser_proto::_Result_default_instance_);
 }
-inline const ::vipuser::ReplyResult& LogoutReply::result() const {
-  // @@protoc_insertion_point(field_get:vipuser.LogoutReply.result)
+inline const ::vipuser_proto::Result& LogoutResponse::result() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.LogoutResponse.result)
   return _internal_result();
 }
-inline ::vipuser::ReplyResult* LogoutReply::release_result() {
-  // @@protoc_insertion_point(field_release:vipuser.LogoutReply.result)
+inline ::vipuser_proto::Result* LogoutResponse::release_result() {
+  // @@protoc_insertion_point(field_release:vipuser_proto.LogoutResponse.result)
   
-  ::vipuser::ReplyResult* temp = result_;
+  ::vipuser_proto::Result* temp = result_;
   result_ = nullptr;
   return temp;
 }
-inline ::vipuser::ReplyResult* LogoutReply::_internal_mutable_result() {
+inline ::vipuser_proto::Result* LogoutResponse::_internal_mutable_result() {
   
   if (result_ == nullptr) {
-    auto* p = CreateMaybeMessage<::vipuser::ReplyResult>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::vipuser_proto::Result>(GetArenaNoVirtual());
     result_ = p;
   }
   return result_;
 }
-inline ::vipuser::ReplyResult* LogoutReply::mutable_result() {
-  // @@protoc_insertion_point(field_mutable:vipuser.LogoutReply.result)
+inline ::vipuser_proto::Result* LogoutResponse::mutable_result() {
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.LogoutResponse.result)
   return _internal_mutable_result();
 }
-inline void LogoutReply::set_allocated_result(::vipuser::ReplyResult* result) {
+inline void LogoutResponse::set_allocated_result(::vipuser_proto::Result* result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete result_;
@@ -3068,7 +3068,7 @@ inline void LogoutReply::set_allocated_result(::vipuser::ReplyResult* result) {
     
   }
   result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:vipuser.LogoutReply.result)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.LogoutResponse.result)
 }
 
 // -------------------------------------------------------------------
@@ -3080,15 +3080,15 @@ inline void ReLoginRequest::clear_refreshtoken() {
   refreshtoken_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& ReLoginRequest::refreshtoken() const {
-  // @@protoc_insertion_point(field_get:vipuser.ReLoginRequest.refreshToken)
+  // @@protoc_insertion_point(field_get:vipuser_proto.ReLoginRequest.refreshToken)
   return _internal_refreshtoken();
 }
 inline void ReLoginRequest::set_refreshtoken(const std::string& value) {
   _internal_set_refreshtoken(value);
-  // @@protoc_insertion_point(field_set:vipuser.ReLoginRequest.refreshToken)
+  // @@protoc_insertion_point(field_set:vipuser_proto.ReLoginRequest.refreshToken)
 }
 inline std::string* ReLoginRequest::mutable_refreshtoken() {
-  // @@protoc_insertion_point(field_mutable:vipuser.ReLoginRequest.refreshToken)
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.ReLoginRequest.refreshToken)
   return _internal_mutable_refreshtoken();
 }
 inline const std::string& ReLoginRequest::_internal_refreshtoken() const {
@@ -3102,26 +3102,26 @@ inline void ReLoginRequest::set_refreshtoken(std::string&& value) {
   
   refreshtoken_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:vipuser.ReLoginRequest.refreshToken)
+  // @@protoc_insertion_point(field_set_rvalue:vipuser_proto.ReLoginRequest.refreshToken)
 }
 inline void ReLoginRequest::set_refreshtoken(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   refreshtoken_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:vipuser.ReLoginRequest.refreshToken)
+  // @@protoc_insertion_point(field_set_char:vipuser_proto.ReLoginRequest.refreshToken)
 }
 inline void ReLoginRequest::set_refreshtoken(const char* value, size_t size) {
   
   refreshtoken_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:vipuser.ReLoginRequest.refreshToken)
+  // @@protoc_insertion_point(field_set_pointer:vipuser_proto.ReLoginRequest.refreshToken)
 }
 inline std::string* ReLoginRequest::_internal_mutable_refreshtoken() {
   
   return refreshtoken_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* ReLoginRequest::release_refreshtoken() {
-  // @@protoc_insertion_point(field_release:vipuser.ReLoginRequest.refreshToken)
+  // @@protoc_insertion_point(field_release:vipuser_proto.ReLoginRequest.refreshToken)
   
   return refreshtoken_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -3132,55 +3132,55 @@ inline void ReLoginRequest::set_allocated_refreshtoken(std::string* refreshtoken
     
   }
   refreshtoken_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), refreshtoken);
-  // @@protoc_insertion_point(field_set_allocated:vipuser.ReLoginRequest.refreshToken)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.ReLoginRequest.refreshToken)
 }
 
 // -------------------------------------------------------------------
 
-// ReLoginReply
+// ReLoginResponse
 
-// .vipuser.ReplyResult result = 1;
-inline bool ReLoginReply::_internal_has_result() const {
+// .vipuser_proto.Result result = 1;
+inline bool ReLoginResponse::_internal_has_result() const {
   return this != internal_default_instance() && result_ != nullptr;
 }
-inline bool ReLoginReply::has_result() const {
+inline bool ReLoginResponse::has_result() const {
   return _internal_has_result();
 }
-inline void ReLoginReply::clear_result() {
+inline void ReLoginResponse::clear_result() {
   if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
     delete result_;
   }
   result_ = nullptr;
 }
-inline const ::vipuser::ReplyResult& ReLoginReply::_internal_result() const {
-  const ::vipuser::ReplyResult* p = result_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser::ReplyResult*>(
-      &::vipuser::_ReplyResult_default_instance_);
+inline const ::vipuser_proto::Result& ReLoginResponse::_internal_result() const {
+  const ::vipuser_proto::Result* p = result_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser_proto::Result*>(
+      &::vipuser_proto::_Result_default_instance_);
 }
-inline const ::vipuser::ReplyResult& ReLoginReply::result() const {
-  // @@protoc_insertion_point(field_get:vipuser.ReLoginReply.result)
+inline const ::vipuser_proto::Result& ReLoginResponse::result() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.ReLoginResponse.result)
   return _internal_result();
 }
-inline ::vipuser::ReplyResult* ReLoginReply::release_result() {
-  // @@protoc_insertion_point(field_release:vipuser.ReLoginReply.result)
+inline ::vipuser_proto::Result* ReLoginResponse::release_result() {
+  // @@protoc_insertion_point(field_release:vipuser_proto.ReLoginResponse.result)
   
-  ::vipuser::ReplyResult* temp = result_;
+  ::vipuser_proto::Result* temp = result_;
   result_ = nullptr;
   return temp;
 }
-inline ::vipuser::ReplyResult* ReLoginReply::_internal_mutable_result() {
+inline ::vipuser_proto::Result* ReLoginResponse::_internal_mutable_result() {
   
   if (result_ == nullptr) {
-    auto* p = CreateMaybeMessage<::vipuser::ReplyResult>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::vipuser_proto::Result>(GetArenaNoVirtual());
     result_ = p;
   }
   return result_;
 }
-inline ::vipuser::ReplyResult* ReLoginReply::mutable_result() {
-  // @@protoc_insertion_point(field_mutable:vipuser.ReLoginReply.result)
+inline ::vipuser_proto::Result* ReLoginResponse::mutable_result() {
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.ReLoginResponse.result)
   return _internal_mutable_result();
 }
-inline void ReLoginReply::set_allocated_result(::vipuser::ReplyResult* result) {
+inline void ReLoginResponse::set_allocated_result(::vipuser_proto::Result* result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete result_;
@@ -3196,51 +3196,51 @@ inline void ReLoginReply::set_allocated_result(::vipuser::ReplyResult* result) {
     
   }
   result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:vipuser.ReLoginReply.result)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.ReLoginResponse.result)
 }
 
-// .vipuser.TokenInfo tokenInfo = 2;
-inline bool ReLoginReply::_internal_has_tokeninfo() const {
+// .vipuser_proto.TokenInfo tokenInfo = 2;
+inline bool ReLoginResponse::_internal_has_tokeninfo() const {
   return this != internal_default_instance() && tokeninfo_ != nullptr;
 }
-inline bool ReLoginReply::has_tokeninfo() const {
+inline bool ReLoginResponse::has_tokeninfo() const {
   return _internal_has_tokeninfo();
 }
-inline void ReLoginReply::clear_tokeninfo() {
+inline void ReLoginResponse::clear_tokeninfo() {
   if (GetArenaNoVirtual() == nullptr && tokeninfo_ != nullptr) {
     delete tokeninfo_;
   }
   tokeninfo_ = nullptr;
 }
-inline const ::vipuser::TokenInfo& ReLoginReply::_internal_tokeninfo() const {
-  const ::vipuser::TokenInfo* p = tokeninfo_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser::TokenInfo*>(
-      &::vipuser::_TokenInfo_default_instance_);
+inline const ::vipuser_proto::TokenInfo& ReLoginResponse::_internal_tokeninfo() const {
+  const ::vipuser_proto::TokenInfo* p = tokeninfo_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser_proto::TokenInfo*>(
+      &::vipuser_proto::_TokenInfo_default_instance_);
 }
-inline const ::vipuser::TokenInfo& ReLoginReply::tokeninfo() const {
-  // @@protoc_insertion_point(field_get:vipuser.ReLoginReply.tokenInfo)
+inline const ::vipuser_proto::TokenInfo& ReLoginResponse::tokeninfo() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.ReLoginResponse.tokenInfo)
   return _internal_tokeninfo();
 }
-inline ::vipuser::TokenInfo* ReLoginReply::release_tokeninfo() {
-  // @@protoc_insertion_point(field_release:vipuser.ReLoginReply.tokenInfo)
+inline ::vipuser_proto::TokenInfo* ReLoginResponse::release_tokeninfo() {
+  // @@protoc_insertion_point(field_release:vipuser_proto.ReLoginResponse.tokenInfo)
   
-  ::vipuser::TokenInfo* temp = tokeninfo_;
+  ::vipuser_proto::TokenInfo* temp = tokeninfo_;
   tokeninfo_ = nullptr;
   return temp;
 }
-inline ::vipuser::TokenInfo* ReLoginReply::_internal_mutable_tokeninfo() {
+inline ::vipuser_proto::TokenInfo* ReLoginResponse::_internal_mutable_tokeninfo() {
   
   if (tokeninfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::vipuser::TokenInfo>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::vipuser_proto::TokenInfo>(GetArenaNoVirtual());
     tokeninfo_ = p;
   }
   return tokeninfo_;
 }
-inline ::vipuser::TokenInfo* ReLoginReply::mutable_tokeninfo() {
-  // @@protoc_insertion_point(field_mutable:vipuser.ReLoginReply.tokenInfo)
+inline ::vipuser_proto::TokenInfo* ReLoginResponse::mutable_tokeninfo() {
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.ReLoginResponse.tokenInfo)
   return _internal_mutable_tokeninfo();
 }
-inline void ReLoginReply::set_allocated_tokeninfo(::vipuser::TokenInfo* tokeninfo) {
+inline void ReLoginResponse::set_allocated_tokeninfo(::vipuser_proto::TokenInfo* tokeninfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete tokeninfo_;
@@ -3256,7 +3256,7 @@ inline void ReLoginReply::set_allocated_tokeninfo(::vipuser::TokenInfo* tokeninf
     
   }
   tokeninfo_ = tokeninfo;
-  // @@protoc_insertion_point(field_set_allocated:vipuser.ReLoginReply.tokenInfo)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.ReLoginResponse.tokenInfo)
 }
 
 // -------------------------------------------------------------------
@@ -3268,15 +3268,15 @@ inline void UserSession::clear_uuid() {
   uuid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& UserSession::uuid() const {
-  // @@protoc_insertion_point(field_get:vipuser.UserSession.uuid)
+  // @@protoc_insertion_point(field_get:vipuser_proto.UserSession.uuid)
   return _internal_uuid();
 }
 inline void UserSession::set_uuid(const std::string& value) {
   _internal_set_uuid(value);
-  // @@protoc_insertion_point(field_set:vipuser.UserSession.uuid)
+  // @@protoc_insertion_point(field_set:vipuser_proto.UserSession.uuid)
 }
 inline std::string* UserSession::mutable_uuid() {
-  // @@protoc_insertion_point(field_mutable:vipuser.UserSession.uuid)
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.UserSession.uuid)
   return _internal_mutable_uuid();
 }
 inline const std::string& UserSession::_internal_uuid() const {
@@ -3290,26 +3290,26 @@ inline void UserSession::set_uuid(std::string&& value) {
   
   uuid_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:vipuser.UserSession.uuid)
+  // @@protoc_insertion_point(field_set_rvalue:vipuser_proto.UserSession.uuid)
 }
 inline void UserSession::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   uuid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:vipuser.UserSession.uuid)
+  // @@protoc_insertion_point(field_set_char:vipuser_proto.UserSession.uuid)
 }
 inline void UserSession::set_uuid(const char* value, size_t size) {
   
   uuid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:vipuser.UserSession.uuid)
+  // @@protoc_insertion_point(field_set_pointer:vipuser_proto.UserSession.uuid)
 }
 inline std::string* UserSession::_internal_mutable_uuid() {
   
   return uuid_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* UserSession::release_uuid() {
-  // @@protoc_insertion_point(field_release:vipuser.UserSession.uuid)
+  // @@protoc_insertion_point(field_release:vipuser_proto.UserSession.uuid)
   
   return uuid_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -3320,7 +3320,7 @@ inline void UserSession::set_allocated_uuid(std::string* uuid) {
     
   }
   uuid_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uuid);
-  // @@protoc_insertion_point(field_set_allocated:vipuser.UserSession.uuid)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.UserSession.uuid)
 }
 
 // string accessToken = 2;
@@ -3328,15 +3328,15 @@ inline void UserSession::clear_accesstoken() {
   accesstoken_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& UserSession::accesstoken() const {
-  // @@protoc_insertion_point(field_get:vipuser.UserSession.accessToken)
+  // @@protoc_insertion_point(field_get:vipuser_proto.UserSession.accessToken)
   return _internal_accesstoken();
 }
 inline void UserSession::set_accesstoken(const std::string& value) {
   _internal_set_accesstoken(value);
-  // @@protoc_insertion_point(field_set:vipuser.UserSession.accessToken)
+  // @@protoc_insertion_point(field_set:vipuser_proto.UserSession.accessToken)
 }
 inline std::string* UserSession::mutable_accesstoken() {
-  // @@protoc_insertion_point(field_mutable:vipuser.UserSession.accessToken)
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.UserSession.accessToken)
   return _internal_mutable_accesstoken();
 }
 inline const std::string& UserSession::_internal_accesstoken() const {
@@ -3350,26 +3350,26 @@ inline void UserSession::set_accesstoken(std::string&& value) {
   
   accesstoken_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:vipuser.UserSession.accessToken)
+  // @@protoc_insertion_point(field_set_rvalue:vipuser_proto.UserSession.accessToken)
 }
 inline void UserSession::set_accesstoken(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   accesstoken_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:vipuser.UserSession.accessToken)
+  // @@protoc_insertion_point(field_set_char:vipuser_proto.UserSession.accessToken)
 }
 inline void UserSession::set_accesstoken(const char* value, size_t size) {
   
   accesstoken_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:vipuser.UserSession.accessToken)
+  // @@protoc_insertion_point(field_set_pointer:vipuser_proto.UserSession.accessToken)
 }
 inline std::string* UserSession::_internal_mutable_accesstoken() {
   
   return accesstoken_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* UserSession::release_accesstoken() {
-  // @@protoc_insertion_point(field_release:vipuser.UserSession.accessToken)
+  // @@protoc_insertion_point(field_release:vipuser_proto.UserSession.accessToken)
   
   return accesstoken_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -3380,14 +3380,14 @@ inline void UserSession::set_allocated_accesstoken(std::string* accesstoken) {
     
   }
   accesstoken_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), accesstoken);
-  // @@protoc_insertion_point(field_set_allocated:vipuser.UserSession.accessToken)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.UserSession.accessToken)
 }
 
 // -------------------------------------------------------------------
 
 // BusinessRequest
 
-// .vipuser.UserSession session = 1;
+// .vipuser_proto.UserSession session = 1;
 inline bool BusinessRequest::_internal_has_session() const {
   return this != internal_default_instance() && session_ != nullptr;
 }
@@ -3400,35 +3400,35 @@ inline void BusinessRequest::clear_session() {
   }
   session_ = nullptr;
 }
-inline const ::vipuser::UserSession& BusinessRequest::_internal_session() const {
-  const ::vipuser::UserSession* p = session_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser::UserSession*>(
-      &::vipuser::_UserSession_default_instance_);
+inline const ::vipuser_proto::UserSession& BusinessRequest::_internal_session() const {
+  const ::vipuser_proto::UserSession* p = session_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser_proto::UserSession*>(
+      &::vipuser_proto::_UserSession_default_instance_);
 }
-inline const ::vipuser::UserSession& BusinessRequest::session() const {
-  // @@protoc_insertion_point(field_get:vipuser.BusinessRequest.session)
+inline const ::vipuser_proto::UserSession& BusinessRequest::session() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.BusinessRequest.session)
   return _internal_session();
 }
-inline ::vipuser::UserSession* BusinessRequest::release_session() {
-  // @@protoc_insertion_point(field_release:vipuser.BusinessRequest.session)
+inline ::vipuser_proto::UserSession* BusinessRequest::release_session() {
+  // @@protoc_insertion_point(field_release:vipuser_proto.BusinessRequest.session)
   
-  ::vipuser::UserSession* temp = session_;
+  ::vipuser_proto::UserSession* temp = session_;
   session_ = nullptr;
   return temp;
 }
-inline ::vipuser::UserSession* BusinessRequest::_internal_mutable_session() {
+inline ::vipuser_proto::UserSession* BusinessRequest::_internal_mutable_session() {
   
   if (session_ == nullptr) {
-    auto* p = CreateMaybeMessage<::vipuser::UserSession>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::vipuser_proto::UserSession>(GetArenaNoVirtual());
     session_ = p;
   }
   return session_;
 }
-inline ::vipuser::UserSession* BusinessRequest::mutable_session() {
-  // @@protoc_insertion_point(field_mutable:vipuser.BusinessRequest.session)
+inline ::vipuser_proto::UserSession* BusinessRequest::mutable_session() {
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.BusinessRequest.session)
   return _internal_mutable_session();
 }
-inline void BusinessRequest::set_allocated_session(::vipuser::UserSession* session) {
+inline void BusinessRequest::set_allocated_session(::vipuser_proto::UserSession* session) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete session_;
@@ -3444,115 +3444,115 @@ inline void BusinessRequest::set_allocated_session(::vipuser::UserSession* sessi
     
   }
   session_ = session;
-  // @@protoc_insertion_point(field_set_allocated:vipuser.BusinessRequest.session)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.BusinessRequest.session)
 }
 
-// string params = 2;
-inline void BusinessRequest::clear_params() {
-  params_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+// bytes request = 2;
+inline void BusinessRequest::clear_request() {
+  request_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline const std::string& BusinessRequest::params() const {
-  // @@protoc_insertion_point(field_get:vipuser.BusinessRequest.params)
-  return _internal_params();
+inline const std::string& BusinessRequest::request() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.BusinessRequest.request)
+  return _internal_request();
 }
-inline void BusinessRequest::set_params(const std::string& value) {
-  _internal_set_params(value);
-  // @@protoc_insertion_point(field_set:vipuser.BusinessRequest.params)
+inline void BusinessRequest::set_request(const std::string& value) {
+  _internal_set_request(value);
+  // @@protoc_insertion_point(field_set:vipuser_proto.BusinessRequest.request)
 }
-inline std::string* BusinessRequest::mutable_params() {
-  // @@protoc_insertion_point(field_mutable:vipuser.BusinessRequest.params)
-  return _internal_mutable_params();
+inline std::string* BusinessRequest::mutable_request() {
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.BusinessRequest.request)
+  return _internal_mutable_request();
 }
-inline const std::string& BusinessRequest::_internal_params() const {
-  return params_.GetNoArena();
+inline const std::string& BusinessRequest::_internal_request() const {
+  return request_.GetNoArena();
 }
-inline void BusinessRequest::_internal_set_params(const std::string& value) {
+inline void BusinessRequest::_internal_set_request(const std::string& value) {
   
-  params_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  request_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
 }
-inline void BusinessRequest::set_params(std::string&& value) {
+inline void BusinessRequest::set_request(std::string&& value) {
   
-  params_.SetNoArena(
+  request_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:vipuser.BusinessRequest.params)
+  // @@protoc_insertion_point(field_set_rvalue:vipuser_proto.BusinessRequest.request)
 }
-inline void BusinessRequest::set_params(const char* value) {
+inline void BusinessRequest::set_request(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  params_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:vipuser.BusinessRequest.params)
+  request_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:vipuser_proto.BusinessRequest.request)
 }
-inline void BusinessRequest::set_params(const char* value, size_t size) {
+inline void BusinessRequest::set_request(const void* value, size_t size) {
   
-  params_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  request_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:vipuser.BusinessRequest.params)
+  // @@protoc_insertion_point(field_set_pointer:vipuser_proto.BusinessRequest.request)
 }
-inline std::string* BusinessRequest::_internal_mutable_params() {
+inline std::string* BusinessRequest::_internal_mutable_request() {
   
-  return params_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  return request_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline std::string* BusinessRequest::release_params() {
-  // @@protoc_insertion_point(field_release:vipuser.BusinessRequest.params)
+inline std::string* BusinessRequest::release_request() {
+  // @@protoc_insertion_point(field_release:vipuser_proto.BusinessRequest.request)
   
-  return params_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  return request_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline void BusinessRequest::set_allocated_params(std::string* params) {
-  if (params != nullptr) {
+inline void BusinessRequest::set_allocated_request(std::string* request) {
+  if (request != nullptr) {
     
   } else {
     
   }
-  params_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), params);
-  // @@protoc_insertion_point(field_set_allocated:vipuser.BusinessRequest.params)
+  request_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), request);
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.BusinessRequest.request)
 }
 
 // -------------------------------------------------------------------
 
-// BusinessReply
+// BusinessResponse
 
-// .vipuser.ReplyResult result = 1;
-inline bool BusinessReply::_internal_has_result() const {
+// .vipuser_proto.Result result = 1;
+inline bool BusinessResponse::_internal_has_result() const {
   return this != internal_default_instance() && result_ != nullptr;
 }
-inline bool BusinessReply::has_result() const {
+inline bool BusinessResponse::has_result() const {
   return _internal_has_result();
 }
-inline void BusinessReply::clear_result() {
+inline void BusinessResponse::clear_result() {
   if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
     delete result_;
   }
   result_ = nullptr;
 }
-inline const ::vipuser::ReplyResult& BusinessReply::_internal_result() const {
-  const ::vipuser::ReplyResult* p = result_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser::ReplyResult*>(
-      &::vipuser::_ReplyResult_default_instance_);
+inline const ::vipuser_proto::Result& BusinessResponse::_internal_result() const {
+  const ::vipuser_proto::Result* p = result_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::vipuser_proto::Result*>(
+      &::vipuser_proto::_Result_default_instance_);
 }
-inline const ::vipuser::ReplyResult& BusinessReply::result() const {
-  // @@protoc_insertion_point(field_get:vipuser.BusinessReply.result)
+inline const ::vipuser_proto::Result& BusinessResponse::result() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.BusinessResponse.result)
   return _internal_result();
 }
-inline ::vipuser::ReplyResult* BusinessReply::release_result() {
-  // @@protoc_insertion_point(field_release:vipuser.BusinessReply.result)
+inline ::vipuser_proto::Result* BusinessResponse::release_result() {
+  // @@protoc_insertion_point(field_release:vipuser_proto.BusinessResponse.result)
   
-  ::vipuser::ReplyResult* temp = result_;
+  ::vipuser_proto::Result* temp = result_;
   result_ = nullptr;
   return temp;
 }
-inline ::vipuser::ReplyResult* BusinessReply::_internal_mutable_result() {
+inline ::vipuser_proto::Result* BusinessResponse::_internal_mutable_result() {
   
   if (result_ == nullptr) {
-    auto* p = CreateMaybeMessage<::vipuser::ReplyResult>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::vipuser_proto::Result>(GetArenaNoVirtual());
     result_ = p;
   }
   return result_;
 }
-inline ::vipuser::ReplyResult* BusinessReply::mutable_result() {
-  // @@protoc_insertion_point(field_mutable:vipuser.BusinessReply.result)
+inline ::vipuser_proto::Result* BusinessResponse::mutable_result() {
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.BusinessResponse.result)
   return _internal_mutable_result();
 }
-inline void BusinessReply::set_allocated_result(::vipuser::ReplyResult* result) {
+inline void BusinessResponse::set_allocated_result(::vipuser_proto::Result* result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete result_;
@@ -3568,67 +3568,67 @@ inline void BusinessReply::set_allocated_result(::vipuser::ReplyResult* result) 
     
   }
   result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:vipuser.BusinessReply.result)
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.BusinessResponse.result)
 }
 
-// string data = 2;
-inline void BusinessReply::clear_data() {
-  data_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+// bytes response = 2;
+inline void BusinessResponse::clear_response() {
+  response_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline const std::string& BusinessReply::data() const {
-  // @@protoc_insertion_point(field_get:vipuser.BusinessReply.data)
-  return _internal_data();
+inline const std::string& BusinessResponse::response() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.BusinessResponse.response)
+  return _internal_response();
 }
-inline void BusinessReply::set_data(const std::string& value) {
-  _internal_set_data(value);
-  // @@protoc_insertion_point(field_set:vipuser.BusinessReply.data)
+inline void BusinessResponse::set_response(const std::string& value) {
+  _internal_set_response(value);
+  // @@protoc_insertion_point(field_set:vipuser_proto.BusinessResponse.response)
 }
-inline std::string* BusinessReply::mutable_data() {
-  // @@protoc_insertion_point(field_mutable:vipuser.BusinessReply.data)
-  return _internal_mutable_data();
+inline std::string* BusinessResponse::mutable_response() {
+  // @@protoc_insertion_point(field_mutable:vipuser_proto.BusinessResponse.response)
+  return _internal_mutable_response();
 }
-inline const std::string& BusinessReply::_internal_data() const {
-  return data_.GetNoArena();
+inline const std::string& BusinessResponse::_internal_response() const {
+  return response_.GetNoArena();
 }
-inline void BusinessReply::_internal_set_data(const std::string& value) {
+inline void BusinessResponse::_internal_set_response(const std::string& value) {
   
-  data_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  response_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
 }
-inline void BusinessReply::set_data(std::string&& value) {
+inline void BusinessResponse::set_response(std::string&& value) {
   
-  data_.SetNoArena(
+  response_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:vipuser.BusinessReply.data)
+  // @@protoc_insertion_point(field_set_rvalue:vipuser_proto.BusinessResponse.response)
 }
-inline void BusinessReply::set_data(const char* value) {
+inline void BusinessResponse::set_response(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  data_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:vipuser.BusinessReply.data)
+  response_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:vipuser_proto.BusinessResponse.response)
 }
-inline void BusinessReply::set_data(const char* value, size_t size) {
+inline void BusinessResponse::set_response(const void* value, size_t size) {
   
-  data_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  response_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:vipuser.BusinessReply.data)
+  // @@protoc_insertion_point(field_set_pointer:vipuser_proto.BusinessResponse.response)
 }
-inline std::string* BusinessReply::_internal_mutable_data() {
+inline std::string* BusinessResponse::_internal_mutable_response() {
   
-  return data_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  return response_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline std::string* BusinessReply::release_data() {
-  // @@protoc_insertion_point(field_release:vipuser.BusinessReply.data)
+inline std::string* BusinessResponse::release_response() {
+  // @@protoc_insertion_point(field_release:vipuser_proto.BusinessResponse.response)
   
-  return data_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  return response_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline void BusinessReply::set_allocated_data(std::string* data) {
-  if (data != nullptr) {
+inline void BusinessResponse::set_allocated_response(std::string* response) {
+  if (response != nullptr) {
     
   } else {
     
   }
-  data_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), data);
-  // @@protoc_insertion_point(field_set_allocated:vipuser.BusinessReply.data)
+  response_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), response);
+  // @@protoc_insertion_point(field_set_allocated:vipuser_proto.BusinessResponse.response)
 }
 
 #ifdef __GNUC__
@@ -3663,7 +3663,7 @@ inline void BusinessReply::set_allocated_data(std::string* data) {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace vipuser
+}  // namespace vipuser_proto
 
 // @@protoc_insertion_point(global_scope)
 
