@@ -380,6 +380,8 @@ class TokenInfo :
     kUuidFieldNumber = 1,
     kAccessTokenFieldNumber = 2,
     kRefreshTokenFieldNumber = 3,
+    kAccessTokenExpiresInSecsFieldNumber = 4,
+    kRefreshTokenExpiresInSecsFieldNumber = 5,
   };
   // string uuid = 1;
   void clear_uuid();
@@ -429,6 +431,24 @@ class TokenInfo :
   std::string* _internal_mutable_refreshtoken();
   public:
 
+  // int32 accessTokenExpiresInSecs = 4;
+  void clear_accesstokenexpiresinsecs();
+  ::PROTOBUF_NAMESPACE_ID::int32 accesstokenexpiresinsecs() const;
+  void set_accesstokenexpiresinsecs(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_accesstokenexpiresinsecs() const;
+  void _internal_set_accesstokenexpiresinsecs(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 refreshTokenExpiresInSecs = 5;
+  void clear_refreshtokenexpiresinsecs();
+  ::PROTOBUF_NAMESPACE_ID::int32 refreshtokenexpiresinsecs() const;
+  void set_refreshtokenexpiresinsecs(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_refreshtokenexpiresinsecs() const;
+  void _internal_set_refreshtokenexpiresinsecs(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
   // @@protoc_insertion_point(class_scope:vipuser_proto.TokenInfo)
  private:
   class _Internal;
@@ -437,6 +457,8 @@ class TokenInfo :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uuid_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr accesstoken_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr refreshtoken_;
+  ::PROTOBUF_NAMESPACE_ID::int32 accesstokenexpiresinsecs_;
+  ::PROTOBUF_NAMESPACE_ID::int32 refreshtokenexpiresinsecs_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vipuser_2eproto;
 };
@@ -2481,6 +2503,46 @@ inline void TokenInfo::set_allocated_refreshtoken(std::string* refreshtoken) {
   }
   refreshtoken_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), refreshtoken);
   // @@protoc_insertion_point(field_set_allocated:vipuser_proto.TokenInfo.refreshToken)
+}
+
+// int32 accessTokenExpiresInSecs = 4;
+inline void TokenInfo::clear_accesstokenexpiresinsecs() {
+  accesstokenexpiresinsecs_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 TokenInfo::_internal_accesstokenexpiresinsecs() const {
+  return accesstokenexpiresinsecs_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 TokenInfo::accesstokenexpiresinsecs() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.TokenInfo.accessTokenExpiresInSecs)
+  return _internal_accesstokenexpiresinsecs();
+}
+inline void TokenInfo::_internal_set_accesstokenexpiresinsecs(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  accesstokenexpiresinsecs_ = value;
+}
+inline void TokenInfo::set_accesstokenexpiresinsecs(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_accesstokenexpiresinsecs(value);
+  // @@protoc_insertion_point(field_set:vipuser_proto.TokenInfo.accessTokenExpiresInSecs)
+}
+
+// int32 refreshTokenExpiresInSecs = 5;
+inline void TokenInfo::clear_refreshtokenexpiresinsecs() {
+  refreshtokenexpiresinsecs_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 TokenInfo::_internal_refreshtokenexpiresinsecs() const {
+  return refreshtokenexpiresinsecs_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 TokenInfo::refreshtokenexpiresinsecs() const {
+  // @@protoc_insertion_point(field_get:vipuser_proto.TokenInfo.refreshTokenExpiresInSecs)
+  return _internal_refreshtokenexpiresinsecs();
+}
+inline void TokenInfo::_internal_set_refreshtokenexpiresinsecs(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  refreshtokenexpiresinsecs_ = value;
+}
+inline void TokenInfo::set_refreshtokenexpiresinsecs(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_refreshtokenexpiresinsecs(value);
+  // @@protoc_insertion_point(field_set:vipuser_proto.TokenInfo.refreshTokenExpiresInSecs)
 }
 
 // -------------------------------------------------------------------

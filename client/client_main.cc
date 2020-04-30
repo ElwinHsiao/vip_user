@@ -40,6 +40,14 @@ class ClientSink : public VipUserClientSink {
 
 int main(int argc, char **argv)
 {
+    std::string userName = "user1";
+    bool isLogin = false;
+    if (argc > 1) {
+        userName = std::string(argv[1]);
+    }
+    if (argc > 2) {
+        isLogin = true;
+    }
     std::cout << "client is comming ^_^ ..." << std::endl;
 
     char *crtFilePath = getenv("VIP_USER_SEVER_CRT");
@@ -53,10 +61,16 @@ int main(int argc, char **argv)
 
     std::string serverAddr = "localhost:50051";
     VipUserClient client(serverAddr, crt);
-    client.CreateAccount("elwin", "c20b711740111b5141a3780b7c548bfadedbf7cb78663847d70647c7b6a90aeb");
-    client.setVipUserClientSink(new ClientSink());
 
-    std::this_thread::sleep_for(std::chrono::seconds(5));
+    std::string password = "mypassword1";
+    client.setVipUserClientSink(new ClientSink());
+    if (isLogin) {
+        client.Login(userName, password);
+    } else {
+        client.CreateAccount(userName, password);
+    }
+
+    std::this_thread::sleep_for(std::chrono::seconds(2));
     
 
     return 0;

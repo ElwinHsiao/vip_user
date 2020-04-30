@@ -26,6 +26,8 @@ message TokenInfo {
   string uuid = 1;
   string accessToken = 2;
   string refreshToken = 3;
+  int32 accessTokenExpiresInSecs = 4;
+  int32 refreshTokenExpiresInSecs = 5;
 }
 
 message Result {

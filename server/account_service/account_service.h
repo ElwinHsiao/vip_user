@@ -7,30 +7,22 @@
 namespace vipuser {
 
     
-enum VipUserStatus {
-    VipUserStatusOK = 0,
-    VipUserStatusError = -1,
-    VipUserStatusErrorFormat = -3,
-    VipUserStatusAccountExist = -10001,
-    VipUserStatusAccountNotExist = -10002,
-};
-struct UserTicket {
-    std::string accessToken;
-    std::string refreshToken;
-};
+
 class AccountService {
 public:
-    AccountService(Psql &_psql);
+    AccountService();
     ~AccountService();
-    VipUserStatus CreateAccount(std::string userAlias, std::string passwordSHA256, UserTicket &ticket);
-    VipUserStatus Login(std::string userAlias, std::string passwordSHA256, UserTicket &ticket);
-    VipUserStatus CheckLogin(std::string accessToken);
-    VipUserStatus Logout(std::string accessToken);
-    VipUserStatus Relogin(std::string refreshToken, UserTicket &ticket);
+    // VipUserStatus CreateAccount(std::string userAlias, std::string passwordSHA256, UserTicket &ticket);
+    // VipUserStatus Login(std::string userAlias, std::string passwordSHA256, UserTicket &ticket);
+    // VipUserStatus CheckLogin(std::string accessToken);
+    // VipUserStatus Logout(std::string accessToken);
+    // VipUserStatus Relogin(std::string refreshToken, UserTicket &ticket);
+    VipUserStatus AddUser(std::string userAlias, std::string passwordSHA256, std::string& outUuid);
+    VipUserStatus CheckUser(std::string userAlias, std::string passwordSHA256, std::string& outUuid);
 private:
-    Psql &_psql;
+    Psql *_psql;
 
-    VipUserStatus StoreNewUser(std::string uuid, std::string userId, std::string passwordSHA256);
+    // VipUserStatus StoreNewUser(std::string uuid, std::string userId, std::string passwordSHA256);
     int CheckUserAliasExist(std::string userAlias);
 };
 

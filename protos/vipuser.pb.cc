@@ -303,6 +303,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vipuser_2eproto::offsets[] PRO
   PROTOBUF_FIELD_OFFSET(::vipuser_proto::TokenInfo, uuid_),
   PROTOBUF_FIELD_OFFSET(::vipuser_proto::TokenInfo, accesstoken_),
   PROTOBUF_FIELD_OFFSET(::vipuser_proto::TokenInfo, refreshtoken_),
+  PROTOBUF_FIELD_OFFSET(::vipuser_proto::TokenInfo, accesstokenexpiresinsecs_),
+  PROTOBUF_FIELD_OFFSET(::vipuser_proto::TokenInfo, refreshtokenexpiresinsecs_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vipuser_proto::Result, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -386,18 +388,18 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vipuser_2eproto::offsets[] PRO
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::vipuser_proto::AccountInfo)},
   { 7, -1, sizeof(::vipuser_proto::TokenInfo)},
-  { 15, -1, sizeof(::vipuser_proto::Result)},
-  { 22, -1, sizeof(::vipuser_proto::CreateAccountRequest)},
-  { 28, -1, sizeof(::vipuser_proto::CreateAccountResponse)},
-  { 35, -1, sizeof(::vipuser_proto::LoginRequest)},
-  { 41, -1, sizeof(::vipuser_proto::LoginResponse)},
-  { 48, -1, sizeof(::vipuser_proto::LogoutRequest)},
-  { 54, -1, sizeof(::vipuser_proto::LogoutResponse)},
-  { 60, -1, sizeof(::vipuser_proto::ReLoginRequest)},
-  { 66, -1, sizeof(::vipuser_proto::ReLoginResponse)},
-  { 73, -1, sizeof(::vipuser_proto::UserSession)},
-  { 80, -1, sizeof(::vipuser_proto::BusinessRequest)},
-  { 87, -1, sizeof(::vipuser_proto::BusinessResponse)},
+  { 17, -1, sizeof(::vipuser_proto::Result)},
+  { 24, -1, sizeof(::vipuser_proto::CreateAccountRequest)},
+  { 30, -1, sizeof(::vipuser_proto::CreateAccountResponse)},
+  { 37, -1, sizeof(::vipuser_proto::LoginRequest)},
+  { 43, -1, sizeof(::vipuser_proto::LoginResponse)},
+  { 50, -1, sizeof(::vipuser_proto::LogoutRequest)},
+  { 56, -1, sizeof(::vipuser_proto::LogoutResponse)},
+  { 62, -1, sizeof(::vipuser_proto::ReLoginRequest)},
+  { 68, -1, sizeof(::vipuser_proto::ReLoginResponse)},
+  { 75, -1, sizeof(::vipuser_proto::UserSession)},
+  { 82, -1, sizeof(::vipuser_proto::BusinessRequest)},
+  { 89, -1, sizeof(::vipuser_proto::BusinessResponse)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -420,41 +422,42 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 const char descriptor_table_protodef_vipuser_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\rvipuser.proto\022\rvipuser_proto\"8\n\013Accoun"
   "tInfo\022\021\n\tuserAlias\030\001 \001(\t\022\026\n\016passwordSHA2"
-  "56\030\002 \001(\t\"D\n\tTokenInfo\022\014\n\004uuid\030\001 \001(\t\022\023\n\013a"
-  "ccessToken\030\002 \001(\t\022\024\n\014refreshToken\030\003 \001(\t\"\'"
-  "\n\006Result\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\""
-  "G\n\024CreateAccountRequest\022/\n\013accountInfo\030\001"
-  " \001(\0132\032.vipuser_proto.AccountInfo\"k\n\025Crea"
-  "teAccountResponse\022%\n\006result\030\001 \001(\0132\025.vipu"
-  "ser_proto.Result\022+\n\ttokenInfo\030\002 \001(\0132\030.vi"
-  "puser_proto.TokenInfo\"\?\n\014LoginRequest\022/\n"
-  "\013accountInfo\030\001 \001(\0132\032.vipuser_proto.Accou"
-  "ntInfo\"c\n\rLoginResponse\022%\n\006result\030\001 \001(\0132"
-  "\025.vipuser_proto.Result\022+\n\ttokenInfo\030\002 \001("
-  "\0132\030.vipuser_proto.TokenInfo\"$\n\rLogoutReq"
-  "uest\022\023\n\013accessToken\030\001 \001(\t\"7\n\016LogoutRespo"
-  "nse\022%\n\006result\030\001 \001(\0132\025.vipuser_proto.Resu"
-  "lt\"&\n\016ReLoginRequest\022\024\n\014refreshToken\030\001 \001"
-  "(\t\"e\n\017ReLoginResponse\022%\n\006result\030\001 \001(\0132\025."
-  "vipuser_proto.Result\022+\n\ttokenInfo\030\002 \001(\0132"
-  "\030.vipuser_proto.TokenInfo\"0\n\013UserSession"
-  "\022\014\n\004uuid\030\001 \001(\t\022\023\n\013accessToken\030\002 \001(\t\"O\n\017B"
-  "usinessRequest\022+\n\007session\030\001 \001(\0132\032.vipuse"
-  "r_proto.UserSession\022\017\n\007request\030\002 \001(\014\"K\n\020"
-  "BusinessResponse\022%\n\006result\030\001 \001(\0132\025.vipus"
-  "er_proto.Result\022\020\n\010response\030\002 \001(\0142\222\003\n\007Vi"
-  "pUser\022[\n\014CreateAcount\022#.vipuser_proto.Cr"
-  "eateAccountRequest\032$.vipuser_proto.Creat"
-  "eAccountResponse\"\000\022D\n\005Login\022\033.vipuser_pr"
-  "oto.LoginRequest\032\034.vipuser_proto.LoginRe"
-  "sponse\"\000\022G\n\006Logout\022\034.vipuser_proto.Logou"
-  "tRequest\032\035.vipuser_proto.LogoutResponse\""
-  "\000\022J\n\007ReLogin\022\035.vipuser_proto.ReLoginRequ"
-  "est\032\036.vipuser_proto.ReLoginResponse\"\000\022O\n"
-  "\nDoBusiness\022\036.vipuser_proto.BusinessRequ"
-  "est\032\037.vipuser_proto.BusinessResponse\"\000B)"
-  "\n\021per.elwin.vipuserB\014VipUserProtoP\001\242\002\003VP"
-  "Ub\006proto3"
+  "56\030\002 \001(\t\"\211\001\n\tTokenInfo\022\014\n\004uuid\030\001 \001(\t\022\023\n\013"
+  "accessToken\030\002 \001(\t\022\024\n\014refreshToken\030\003 \001(\t\022"
+  " \n\030accessTokenExpiresInSecs\030\004 \001(\005\022!\n\031ref"
+  "reshTokenExpiresInSecs\030\005 \001(\005\"\'\n\006Result\022\014"
+  "\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\"G\n\024CreateA"
+  "ccountRequest\022/\n\013accountInfo\030\001 \001(\0132\032.vip"
+  "user_proto.AccountInfo\"k\n\025CreateAccountR"
+  "esponse\022%\n\006result\030\001 \001(\0132\025.vipuser_proto."
+  "Result\022+\n\ttokenInfo\030\002 \001(\0132\030.vipuser_prot"
+  "o.TokenInfo\"\?\n\014LoginRequest\022/\n\013accountIn"
+  "fo\030\001 \001(\0132\032.vipuser_proto.AccountInfo\"c\n\r"
+  "LoginResponse\022%\n\006result\030\001 \001(\0132\025.vipuser_"
+  "proto.Result\022+\n\ttokenInfo\030\002 \001(\0132\030.vipuse"
+  "r_proto.TokenInfo\"$\n\rLogoutRequest\022\023\n\013ac"
+  "cessToken\030\001 \001(\t\"7\n\016LogoutResponse\022%\n\006res"
+  "ult\030\001 \001(\0132\025.vipuser_proto.Result\"&\n\016ReLo"
+  "ginRequest\022\024\n\014refreshToken\030\001 \001(\t\"e\n\017ReLo"
+  "ginResponse\022%\n\006result\030\001 \001(\0132\025.vipuser_pr"
+  "oto.Result\022+\n\ttokenInfo\030\002 \001(\0132\030.vipuser_"
+  "proto.TokenInfo\"0\n\013UserSession\022\014\n\004uuid\030\001"
+  " \001(\t\022\023\n\013accessToken\030\002 \001(\t\"O\n\017BusinessReq"
+  "uest\022+\n\007session\030\001 \001(\0132\032.vipuser_proto.Us"
+  "erSession\022\017\n\007request\030\002 \001(\014\"K\n\020BusinessRe"
+  "sponse\022%\n\006result\030\001 \001(\0132\025.vipuser_proto.R"
+  "esult\022\020\n\010response\030\002 \001(\0142\222\003\n\007VipUser\022[\n\014C"
+  "reateAcount\022#.vipuser_proto.CreateAccoun"
+  "tRequest\032$.vipuser_proto.CreateAccountRe"
+  "sponse\"\000\022D\n\005Login\022\033.vipuser_proto.LoginR"
+  "equest\032\034.vipuser_proto.LoginResponse\"\000\022G"
+  "\n\006Logout\022\034.vipuser_proto.LogoutRequest\032\035"
+  ".vipuser_proto.LogoutResponse\"\000\022J\n\007ReLog"
+  "in\022\035.vipuser_proto.ReLoginRequest\032\036.vipu"
+  "ser_proto.ReLoginResponse\"\000\022O\n\nDoBusines"
+  "s\022\036.vipuser_proto.BusinessRequest\032\037.vipu"
+  "ser_proto.BusinessResponse\"\000B)\n\021per.elwi"
+  "n.vipuserB\014VipUserProtoP\001\242\002\003VPUb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_vipuser_2eproto_deps[1] = {
 };
@@ -477,7 +480,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vip
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_vipuser_2eproto_once;
 static bool descriptor_table_vipuser_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_vipuser_2eproto = {
-  &descriptor_table_vipuser_2eproto_initialized, descriptor_table_protodef_vipuser_2eproto, "vipuser.proto", 1449,
+  &descriptor_table_vipuser_2eproto_initialized, descriptor_table_protodef_vipuser_2eproto, "vipuser.proto", 1519,
   &descriptor_table_vipuser_2eproto_once, descriptor_table_vipuser_2eproto_sccs, descriptor_table_vipuser_2eproto_deps, 14, 0,
   schemas, file_default_instances, TableStruct_vipuser_2eproto::offsets,
   file_level_metadata_vipuser_2eproto, 14, file_level_enum_descriptors_vipuser_2eproto, file_level_service_descriptors_vipuser_2eproto,
@@ -754,6 +757,9 @@ TokenInfo::TokenInfo(const TokenInfo& from)
   if (!from._internal_refreshtoken().empty()) {
     refreshtoken_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.refreshtoken_);
   }
+  ::memcpy(&accesstokenexpiresinsecs_, &from.accesstokenexpiresinsecs_,
+    static_cast<size_t>(reinterpret_cast<char*>(&refreshtokenexpiresinsecs_) -
+    reinterpret_cast<char*>(&accesstokenexpiresinsecs_)) + sizeof(refreshtokenexpiresinsecs_));
   // @@protoc_insertion_point(copy_constructor:vipuser_proto.TokenInfo)
 }
 
@@ -762,6 +768,9 @@ void TokenInfo::SharedCtor() {
   uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   accesstoken_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   refreshtoken_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&accesstokenexpiresinsecs_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&refreshtokenexpiresinsecs_) -
+      reinterpret_cast<char*>(&accesstokenexpiresinsecs_)) + sizeof(refreshtokenexpiresinsecs_));
 }
 
 TokenInfo::~TokenInfo() {
@@ -793,6 +802,9 @@ void TokenInfo::Clear() {
   uuid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   accesstoken_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   refreshtoken_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&accesstokenexpiresinsecs_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&refreshtokenexpiresinsecs_) -
+      reinterpret_cast<char*>(&accesstokenexpiresinsecs_)) + sizeof(refreshtokenexpiresinsecs_));
   _internal_metadata_.Clear();
 }
 
@@ -827,6 +839,20 @@ const char* TokenInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
           auto str = _internal_mutable_refreshtoken();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vipuser_proto.TokenInfo.refreshToken"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 accessTokenExpiresInSecs = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          accesstokenexpiresinsecs_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 refreshTokenExpiresInSecs = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          refreshtokenexpiresinsecs_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -886,6 +912,18 @@ failure:
         3, this->_internal_refreshtoken(), target);
   }
 
+  // int32 accessTokenExpiresInSecs = 4;
+  if (this->accesstokenexpiresinsecs() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_accesstokenexpiresinsecs(), target);
+  }
+
+  // int32 refreshTokenExpiresInSecs = 5;
+  if (this->refreshtokenexpiresinsecs() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_refreshtokenexpiresinsecs(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -921,6 +959,20 @@ size_t TokenInfo::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_refreshtoken());
+  }
+
+  // int32 accessTokenExpiresInSecs = 4;
+  if (this->accesstokenexpiresinsecs() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_accesstokenexpiresinsecs());
+  }
+
+  // int32 refreshTokenExpiresInSecs = 5;
+  if (this->refreshtokenexpiresinsecs() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_refreshtokenexpiresinsecs());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -966,6 +1018,12 @@ void TokenInfo::MergeFrom(const TokenInfo& from) {
 
     refreshtoken_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.refreshtoken_);
   }
+  if (from.accesstokenexpiresinsecs() != 0) {
+    _internal_set_accesstokenexpiresinsecs(from._internal_accesstokenexpiresinsecs());
+  }
+  if (from.refreshtokenexpiresinsecs() != 0) {
+    _internal_set_refreshtokenexpiresinsecs(from._internal_refreshtokenexpiresinsecs());
+  }
 }
 
 void TokenInfo::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -995,6 +1053,8 @@ void TokenInfo::InternalSwap(TokenInfo* other) {
     GetArenaNoVirtual());
   refreshtoken_.Swap(&other->refreshtoken_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
+  swap(accesstokenexpiresinsecs_, other->accesstokenexpiresinsecs_);
+  swap(refreshtokenexpiresinsecs_, other->refreshtokenexpiresinsecs_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata TokenInfo::GetMetadata() const {

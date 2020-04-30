@@ -9,9 +9,9 @@
 
 using namespace vipuser;
 
-Psql::Psql()
+Psql::Psql(std::string connectName)
 {
-    Connect();
+    Connect(connectName);
     CreateUserDetailTable();
 }
 
@@ -20,12 +20,11 @@ Psql::~Psql()
     DisConnect();
 }
 
-int Psql::Connect()
+int Psql::Connect(std::string connectName)
 {
     try
     {
-        _conn = new pqxx::connection("dbname = vipuser user = postgres password = nicE_Work-878 \
-      hostaddr = 127.0.0.1 port = 5432");
+        _conn = new pqxx::connection(connectName);
         if (_conn->is_open())
         {
             std::cout << "Opened database successfully: " << _conn->dbname() << std::endl;
@@ -118,26 +117,21 @@ int Psql::QueryUserByAlias(std::string &userAlias, AccountDetailInfo &accountDet
 
     try
     {
-        /* Create SQL statement */
         char sql[1024] = {0};
-        sprintf(sql, "SELECT (uuid,user_alias,passwd_sum,create_time) from accountdetail "
-                     "WHERE user_alias = %s",
+        sprintf(sql, "SELECT uuid,user_alias,passwd_sum,create_time FROM accountdetail "
+                     "WHERE user_alias = '%s'; ",
                 userAlias.c_str());
 
-        /* Create a non-transactional object. */
         pqxx::nontransaction nonTrans(*_conn);
-
-        /* Execute SQL query */
         pqxx::result queryResult(nonTrans.exec(sql));
 
-        /* List down all the records */
-        for (pqxx::result::const_iterator iterator = queryResult.begin(); iterator != queryResult.end(); ++iterator)
-        {
-            std::cout << "uuid = " << iterator[0].as<std::string>() << std::endl;
-            std::cout << "user_alias = " << iterator[1].as<std::string>() << std::endl;
-            std::cout << "passwd_sum = " << iterator[2].as<std::string>() << std::endl;
-            std::cout << "create_time = " << iterator[3].as<uint64_t>() << std::endl;
-        }
+        // for (pqxx::result::const_iterator iterator = queryResult.begin(); iterator != queryResult.end(); ++iterator)
+        // {
+        //     std::cout << "uuid = " << iterator[0].as<std::string>() << std::endl;
+        //     std::cout << "user_alias = " << iterator[1].as<std::string>() << std::endl;
+        //     std::cout << "passwd_sum = " << iterator[2].as<std::string>() << std::endl;
+        //     std::cout << "create_time = " << iterator[3].as<uint64_t>() << std::endl;
+        // }
 
         if (queryResult.empty()) {
             std::cout << "user not exist" << std::endl;
@@ -154,7 +148,7 @@ int Psql::QueryUserByAlias(std::string &userAlias, AccountDetailInfo &accountDet
         accountDetail.userAlias = row[1].as<std::string>();
         accountDetail.passwordSum = row[2].as<std::string>();
         accountDetail.createTimeMills = row[3].as<uint64_t>();
-        std::cout << "Operation done successfully" << std::endl;
+        //std::cout << "Query done successfully" << std::endl;
     }
     catch (const std::exception &e)
     {

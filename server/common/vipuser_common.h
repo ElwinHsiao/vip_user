@@ -5,6 +5,21 @@
 
 // namespace vipuser {
 
+enum VipUserStatus {
+    VipUserStatusOK = 0,
+    VipUserStatusError = -1,
+    VipUserStatusErrorParam = -2,
+    VipUserStatusErrorFormat = -3,
+    VipUserStatusDBFailed = -4,
+    VipUserStatusRedisError = -5,
+
+    VipUserStatusAccountExist = -10001,
+    VipUserStatusAccountNotExist = -10002,
+    VipUserStatusErrorPassword = -10001,
+
+    VipUserStatusTicketError = -20001,
+};
+
 struct AccountDetailInfo {
     std::string uuid;
     std::string userAlias;
@@ -15,11 +30,17 @@ struct AccountDetailInfo {
     uint64_t index;     // the DB auto increate index;
 };
 
-struct RefreshTokenInfo
-{
+
+struct TokenInfo {
+    std::string accessToken;
+    std::string refreshToken;
+    uint64_t accessTokenExpiredInSecs;
+    uint64_t refreshTokenExpiredInSecs;
+};
+
+struct UserTicket {
     std::string uuid;
-    uint64_t timestamp;
-    uint64_t salt;
+    TokenInfo tokenInfo;
 };
 
 

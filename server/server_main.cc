@@ -18,13 +18,80 @@ class VipUserGRPC final : public vipuser_proto::VipUser::Service
 public:
     grpc::Status CreateAcount(::grpc::ServerContext *context, const ::vipuser_proto::CreateAccountRequest *request, ::vipuser_proto::CreateAccountResponse *response)
     {
+        if (!request->has_accountinfo() || request->accountinfo().useralias().empty() || request->accountinfo().passwordsha256().empty()) {
+            std::cout << "invalid account info" << std::endl;
+            auto result = new vipuser_proto::Result();
+            result->set_code(VipUserStatusErrorParam);
+            result->set_message("invalid account info");
+            response->set_allocated_result(result);
+            return grpc::Status::OK;
+        }
+        
+        auto userAlias = request->accountinfo().useralias();
+        auto passwordSum = request->accountinfo().passwordsha256();
+        std::cout << "CreateAcount: userAlias=" << userAlias << ", passwordSum=" << passwordSum << std::endl;
+
+        UserTicket ticket;
+        auto status = _vipUserServer.CreateAccount(userAlias, passwordSum, ticket);
+        if (status != VipUserStatusOK) {
+            auto result = new vipuser_proto::Result();
+            result->set_code(status);
+            result->set_message("create account error");
+            response->set_allocated_result(result);
+            return grpc::Status::OK;
+        }
+
+        std::cout << "create account success: uuid=" << ticket.uuid << ", accessToken=" << ticket.tokenInfo.accessToken << ", refreshToken=" << ticket.tokenInfo.refreshToken << std::endl;
+        auto tokenInfo = new vipuser_proto::TokenInfo();
+        tokenInfo->set_uuid(ticket.uuid);
+        tokenInfo->set_accesstoken(ticket.tokenInfo.accessToken);
+        tokenInfo->set_refreshtoken(ticket.tokenInfo.refreshToken);
+        //tokenInfo.set_
+        response->set_allocated_tokeninfo(tokenInfo);
+
         auto result = new vipuser_proto::Result();
         result->set_message("success");
         response->set_allocated_result(result);
+
         return grpc::Status::OK;
     }
     grpc::Status Login(::grpc::ServerContext *context, const ::vipuser_proto::LoginRequest *request, ::vipuser_proto::LoginResponse *response)
     {
+        if (!request->has_accountinfo() || request->accountinfo().useralias().empty() || request->accountinfo().passwordsha256().empty()) {
+            std::cout << "invalid account info" << std::endl;
+            auto result = new vipuser_proto::Result();
+            result->set_code(VipUserStatusErrorParam);
+            result->set_message("invalid account info");
+            response->set_allocated_result(result);
+            return grpc::Status::OK;
+        }
+
+        auto userAlias = request->accountinfo().useralias();
+        auto passwordSum = request->accountinfo().passwordsha256();
+        std::cout << "Login: userAlias=" << userAlias << ", passwordSum=" << passwordSum << std::endl;
+        
+        UserTicket ticket;
+        auto status = _vipUserServer.Login(userAlias, passwordSum, ticket);
+        if (status != VipUserStatusOK) {
+            auto result = new vipuser_proto::Result();
+            result->set_code(status);
+            result->set_message("login account error");
+            response->set_allocated_result(result);
+            return grpc::Status::OK;
+        }
+
+        std::cout << "login success: uuid=" << ticket.uuid << ", accessToken=" << ticket.tokenInfo.accessToken << ", refreshToken=" << ticket.tokenInfo.refreshToken << std::endl;
+        auto tokenInfo = new vipuser_proto::TokenInfo();
+        tokenInfo->set_uuid(ticket.uuid);
+        tokenInfo->set_accesstoken(ticket.tokenInfo.accessToken);
+        tokenInfo->set_refreshtoken(ticket.tokenInfo.refreshToken);
+        //tokenInfo.set_
+        response->set_allocated_tokeninfo(tokenInfo);
+
+        auto result = new vipuser_proto::Result();
+        result->set_message("success");
+        response->set_allocated_result(result);
+
         return grpc::Status::OK;
     }
     grpc::Status Logout(::grpc::ServerContext *context, const ::vipuser_proto::LogoutRequest *request, ::vipuser_proto::LogoutResponse *response)

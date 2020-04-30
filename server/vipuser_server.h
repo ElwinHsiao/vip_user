@@ -16,7 +16,7 @@ public:
 
     VipUserStatus CreateAccount(std::string userAlias, std::string passwordSHA256, UserTicket &ticket);
     VipUserStatus Login(std::string userAlias, std::string passwordSHA256, UserTicket &ticket);
-    VipUserStatus CheckLogin(std::string accessToken);
+    VipUserStatus CheckLogin(std::string uuid, std::string accessToken);
     VipUserStatus Logout(std::string accessToken);
     VipUserStatus Relogin(std::string refreshToken, UserTicket &ticket);
 
