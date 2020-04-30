@@ -20,7 +20,6 @@ cc_library(
     hdrs = glob(["account_service/*.h"]),
     srcs = glob(["account_service/*.cc"]),
     deps = [
-        "@hiredis//:hiredis",
         ":common",
         ":libpqxx",
     ],
@@ -34,6 +33,7 @@ cc_library(
     srcs = glob(["access_service/*.cc"]),
     deps = [
         ":common",
+        "@hiredis//:hiredis",
     ],
 )
 

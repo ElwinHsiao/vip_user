@@ -15,10 +15,20 @@ struct AccountDetailInfo {
     uint64_t index;     // the DB auto increate index;
 };
 
+struct RefreshTokenInfo
+{
+    std::string uuid;
+    uint64_t timestamp;
+    uint64_t salt;
+};
+
+
 uint64_t getCurrentTimeMills();
 uint64_t genRandom();
 std::string generateUuid();
 
+std::string toHex(void *const data, const size_t dataLength);
+size_t fromHex(const std::string &in, void *const data);
 
 // }
 

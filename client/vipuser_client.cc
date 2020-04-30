@@ -1,7 +1,7 @@
 #include "vipuser_client.h"
 #include <chrono>
 #include <grpcpp/grpcpp.h>
-
+#include "picosha2.h"
 
 #define DECLARE_RPC_PAIR(REQUEST, RESPONSE) \
     REQUEST request; RESPONSE response;
@@ -131,6 +131,13 @@ protected:
     }
 };
 
+std::string sha256Of(std::string src_str) {
+    std::vector<unsigned char> hash(32);
+    picosha2::hash256(src_str.begin(), src_str.end(), hash.begin(), hash.end());
+    std::string hex_str = picosha2::bytes_to_hex_string(hash.begin(), hash.end());
+    return hex_str;
+}
+
 VipUserClient::VipUserClient(std::string &serverAddr, std::string &sslKey) : _sink(NULL), _isWorkThreadStarted(false)
 {
     grpc::SslCredentialsOptions sslOpts;
@@ -145,13 +152,18 @@ VipUserClient::~VipUserClient()
 
 }
 
-int VipUserClient::CreateAccount(std::string userAlias, std::string passwordSum)
+int VipUserClient::CreateAccount(std::string userAlias, std::string password)
 {
     if (userAlias.size() == 0) {
         std::cout << "empty userAlias" << std::endl;
         return -1;
     }
+    if (password.size() == 0) {
+        std::cout << "empty password" << std::endl;
+        return -1;
+    }
     
+    std::string passwordSum = sha256Of(password);
     auto *call = new CreateAccountCall(userAlias, passwordSum);
     std::unique_ptr<grpc::ClientAsyncResponseReader<vipuser_proto::CreateAccountResponse>> rpc(
         _stub->AsyncCreateAcount(&call->context, call->request, &_cq));
@@ -161,13 +173,18 @@ int VipUserClient::CreateAccount(std::string userAlias, std::string passwordSum)
     return 0;
 }
 
-int VipUserClient::Login(std::string userAlias, std::string passwordSum)
+int VipUserClient::Login(std::string userAlias, std::string password)
 {
     if (userAlias.size() == 0) {
         std::cout << "empty userAlias" << std::endl;
         return -1;
     }
+    if (password.size() == 0) {
+        std::cout << "empty password" << std::endl;
+        return -1;
+    }
 
+    std::string passwordSum = sha256Of(password);
     auto *call = new LoginCall(userAlias, passwordSum);
     std::unique_ptr<grpc::ClientAsyncResponseReader<vipuser_proto::LoginResponse>> rpc(
         _stub->AsyncLogin(&call->context, call->request, &_cq));
