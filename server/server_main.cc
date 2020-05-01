@@ -1,8 +1,7 @@
 #include <iostream>
-
 #include <fstream>
 #include <sstream>
-#include <iostream>
+#include <thread>
 
 #include <grpcpp/grpcpp.h>
 #include <grpcpp/health_check_service_interface.h>

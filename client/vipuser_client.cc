@@ -12,6 +12,11 @@ struct BaseCall
 {
     grpc::ClientContext context;
     grpc::Status status;
+    BaseCall() 
+    {
+        auto deadline = std::chrono::system_clock::now() + std::chrono::seconds(5);
+        context.set_deadline(deadline);
+    }
 
     void CallSink(VipUserClientSink *sink, ReplyResult &result)
     {

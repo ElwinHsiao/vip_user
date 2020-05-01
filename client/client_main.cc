@@ -70,9 +70,9 @@ int main(int argc, char **argv)
         client.CreateAccount(userName, password);
     }
 
-    std::this_thread::sleep_for(std::chrono::seconds(1));
+    std::this_thread::sleep_for(std::chrono::seconds(10));   // wait the response
     client.ShutdownImmediately();
-    std::this_thread::sleep_for(std::chrono::microseconds(200));
+    std::this_thread::sleep_for(std::chrono::microseconds(200));    // wait worker thread shutdown
 
     return 0;
 }
