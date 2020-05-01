@@ -26,7 +26,7 @@ class ClientSink : public VipUserClientSink {
 
     void OnLoginEnd(ReplyResult &result, UserTicket &ticket)
     {
-
+        std::cout << "OnLoginEnd: result={code=" << result.code << ", message=" << result.message << "}" << std::endl;
     }
     void OnReLoginEnd(ReplyResult &result, UserTicket &ticket)
     {

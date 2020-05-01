@@ -35,51 +35,58 @@ protected:
     virtual void DoCallSink(VipUserClientSink *sink, ReplyResult result) = 0;
 };
 
+inline vipuser_proto::AccountInfo* newAccountInfo(std::string userAlias, std::string passwordSum)
+{
+    auto accountInfo = new vipuser_proto::AccountInfo();
+    accountInfo->set_useralias(userAlias);
+    accountInfo->set_passwordsha256(passwordSum);
+    return accountInfo;
+}
+
+typedef void (VipUserClientSink::*AccountCallBack)(ReplyResult&, UserTicket&);
+template<typename RESPONSE>
+void HandleCallSink(VipUserClientSink *sink, AccountCallBack callback, ReplyResult result, RESPONSE response)
+{
+    UserTicket ticket;
+    if (!response.has_result()) {
+        std::cout << "has no result" << std::endl;
+        result = { -501, "has no result"};
+        (sink->*callback)(result, ticket);
+        return;
+    }
+    result.code = response.result().code();
+    result.message = response.result().message();
+    if (result.code != 0) {
+        std::cout << "response error: code=" << result.code << ", message=" << result.message << std::endl;
+        (sink->*callback)(result, ticket);
+        return;
+    }
+    if (!response.has_tokeninfo()) {
+        std::cout << "has no token" << std::endl;
+        result = { -502, "has no token"};
+        (sink->*callback)(result, ticket);
+        return;
+    }
+    ticket.uuid = response.tokeninfo().uuid();
+    ticket.accessToken = response.tokeninfo().accesstoken();
+    ticket.refreshToken = response.tokeninfo().refreshtoken();
+    std::cout << "response normal: uuid=" << ticket.uuid << ", accessToken=" << ticket.accessToken << std::endl;
+    (sink->*callback)(result, ticket);
+}
+
 struct CreateAccountCall: public BaseCall//<vipuser_proto::CreateAccountRequest, vipuser_proto::CreateAccountResponse>
 {
     DECLARE_RPC_PAIR(vipuser_proto::CreateAccountRequest, vipuser_proto::CreateAccountResponse)
 
-    CreateAccountCall(std::string userAlias, std::string passwordSum) {
-        auto accountInfo = new vipuser_proto::AccountInfo();
-        accountInfo->set_useralias(userAlias);
-        accountInfo->set_passwordsha256(passwordSum);
-        request.set_allocated_accountinfo(accountInfo);
+    CreateAccountCall(std::string userAlias, std::string passwordSum) 
+    {
+        request.set_allocated_accountinfo(newAccountInfo(userAlias, passwordSum));
     }
-
 
 protected:
     void DoCallSink(VipUserClientSink *sink, ReplyResult result)
     {
-        UserTicket ticket;
-
-        if (!response.has_result()) {
-            std::cout << "has no result" << std::endl;
-            result = { -501, "has no result"};
-            sink->OnCreateAccountEnd(result, ticket);
-            return;
-        }
-
-        result.code = response.result().code();
-        result.message = response.result().message();
-        if (result.code != 0) {
-            std::cout << "response error: code=" << result.code << ", message=" << result.message << std::endl;
-            sink->OnCreateAccountEnd(result, ticket);
-            return;
-        }
-
-        if (!response.has_tokeninfo()) {
-            std::cout << "has no token" << std::endl;
-            result = { -502, "has no token"};
-            sink->OnCreateAccountEnd(result, ticket);
-            return;
-        }
-
-        ticket.uuid = response.tokeninfo().uuid();
-        ticket.accessToken = response.tokeninfo().accesstoken();
-        ticket.refreshToken = response.tokeninfo().refreshtoken();
-
-        std::cout << "response normal: uuid=" << ticket.uuid << ", accessToken=" << ticket.accessToken << std::endl;
-        sink->OnCreateAccountEnd(result, ticket);
+        HandleCallSink(sink, &VipUserClientSink::OnCreateAccountEnd, result, response);
     }
 };
 
@@ -87,49 +94,21 @@ struct LoginCall: public BaseCall
 {
     DECLARE_RPC_PAIR(vipuser_proto::LoginRequest, vipuser_proto::LoginResponse)
 
-    LoginCall(std::string userAlias, std::string passwordSum) {
-        auto accountInfo = new vipuser_proto::AccountInfo();
-        accountInfo->set_useralias(userAlias);
-        accountInfo->set_passwordsha256(passwordSum);
-        request.set_allocated_accountinfo(accountInfo);
+    LoginCall(std::string userAlias, std::string passwordSum)// : CreateAccountCall(userAlias, passwordSum) 
+    {
+        request.set_allocated_accountinfo(newAccountInfo(userAlias, passwordSum));
     }
 
 
 protected:
     void DoCallSink(VipUserClientSink *sink, ReplyResult result)
     {
-        UserTicket ticket;
-
-        if (!response.has_result()) {
-            std::cout << "has no result" << std::endl;
-            result = { -501, "has no result"};
-            sink->OnCreateAccountEnd(result, ticket);
-            return;
-        }
-
-        result.code = response.result().code();
-        result.message = response.result().message();
-        if (result.code != 0) {
-            std::cout << "response error: code=" << result.code << ", message=" << result.message << std::endl;
-            sink->OnCreateAccountEnd(result, ticket);
-            return;
-        }
-
-        if (!response.has_tokeninfo()) {
-            std::cout << "has no token" << std::endl;
-            result = { -502, "has no token"};
-            sink->OnCreateAccountEnd(result, ticket);
-            return;
-        }
-
-        ticket.uuid = response.tokeninfo().uuid();
-        ticket.accessToken = response.tokeninfo().accesstoken();
-        ticket.refreshToken = response.tokeninfo().refreshtoken();
-
-        std::cout << "response normal: uuid=" << ticket.uuid << ", accessToken=" << ticket.accessToken << std::endl;
-        sink->OnCreateAccountEnd(result, ticket);
+        HandleCallSink(sink, &VipUserClientSink::OnLoginEnd, result, response);
     }
 };
+
+
+
 
 std::string sha256Of(std::string src_str) {
     std::vector<unsigned char> hash(32);
@@ -214,7 +193,6 @@ void VipUserClient::StartWorkerThread()
     }
     _isWorkThreadStarted = true;
 
-    std::cout << "Start The Worker Thread";
     std::thread thread(&VipUserClient::HandleResponseQueue, this);
     thread.detach();
 }
