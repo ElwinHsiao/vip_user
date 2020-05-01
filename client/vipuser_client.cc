@@ -117,7 +117,7 @@ std::string sha256Of(std::string src_str) {
     return hex_str;
 }
 
-VipUserClient::VipUserClient(std::string &serverAddr, std::string &sslKey) : _sink(NULL), _isWorkThreadStarted(false)
+VipUserClient::VipUserClient(std::string &serverAddr, std::string &sslKey) : _sink(NULL), _cq(NULL)//, _isWorkThreadStarted(false)
 {
     grpc::SslCredentialsOptions sslOpts;
     sslOpts.pem_root_certs = sslKey;
@@ -141,14 +141,13 @@ int VipUserClient::CreateAccount(std::string userAlias, std::string password)
         std::cout << "empty password" << std::endl;
         return -1;
     }
-    
+
     std::string passwordSum = sha256Of(password);
     auto *call = new CreateAccountCall(userAlias, passwordSum);
-    std::unique_ptr<grpc::ClientAsyncResponseReader<vipuser_proto::CreateAccountResponse>> rpc(
-        _stub->AsyncCreateAcount(&call->context, call->request, &_cq));
 
+    std::unique_ptr<grpc::ClientAsyncResponseReader<vipuser_proto::CreateAccountResponse>> rpc(
+        _stub->AsyncCreateAcount(&call->context, call->request, GetQueue()));
     rpc->Finish(&call->response, &call->status, (void *)call);
-    StartWorkerThread();
     return 0;
 }
 
@@ -166,32 +165,32 @@ int VipUserClient::Login(std::string userAlias, std::string password)
     std::string passwordSum = sha256Of(password);
     auto *call = new LoginCall(userAlias, passwordSum);
     std::unique_ptr<grpc::ClientAsyncResponseReader<vipuser_proto::LoginResponse>> rpc(
-        _stub->AsyncLogin(&call->context, call->request, &_cq));
+        _stub->AsyncLogin(&call->context, call->request, GetQueue()));
 
     rpc->Finish(&call->response, &call->status, (void *)call);
-    StartWorkerThread();
     return 0;
 }
 
 int VipUserClient::ReLogin(std::string accessToken)
 {
 
-    StartWorkerThread();
+
     return 0;
 }
 int VipUserClient::Logout(std::string accessToken)
 {
 
-    StartWorkerThread();
+
+
     return 0;
 }
 
 void VipUserClient::StartWorkerThread()
 {
-    if (_isWorkThreadStarted) {
+    if (_cq != NULL) {
         return;
     }
-    _isWorkThreadStarted = true;
+    _cq = new grpc::CompletionQueue;
 
     std::thread thread(&VipUserClient::HandleResponseQueue, this);
     thread.detach();
@@ -199,9 +198,9 @@ void VipUserClient::StartWorkerThread()
 
 void VipUserClient::StopWorkerThread()
 {
-    if (_isWorkThreadStarted) {
-        std::cout << "Ask to stop The Worker Thread";
-        _isWorkThreadStarted = false;
+    if (_cq != NULL) {
+        std::cout << "Ask to stop The Worker Thread" << std::endl;
+        _cq->Shutdown();
     }
 }
 
@@ -221,18 +220,30 @@ void VipUserClient::HandleResponseQueue()
 {
     std::cout << "RPC Response Thread Start" << std::endl;
 
+    bool shutdown = false;
     void* got_tag;
     bool ok = false;
-    while (_isWorkThreadStarted)
+    while (!shutdown)
     {
-        _cq.Next(&got_tag, &ok);
+        auto deadline = std::chrono::system_clock::now() + std::chrono::milliseconds(100); 
+        auto status = _cq->AsyncNext(&got_tag, &ok, deadline);
+        if (status == grpc::CompletionQueue::SHUTDOWN) {
+            break;
+        }
+        if (status == grpc::CompletionQueue::TIMEOUT) {
+            continue;
+        }
+        if (status != grpc::CompletionQueue::GOT_EVENT) {
+            continue;
+        } 
+
         std::cout << "got a response: ok=" << ok << std::endl;
 
         BaseCall* call = static_cast<BaseCall*>(got_tag);
         ReplyResult result = composeResult(ok, call->status);
         call->CallSink(_sink, result);
         
-        std::this_thread::sleep_for(std::chrono::milliseconds(1));
+        //std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
     
     std::cout << "RPC Response Thread End" << std::endl;

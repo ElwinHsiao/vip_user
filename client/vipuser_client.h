@@ -3,9 +3,6 @@
 
 #include <iostream>
 #include <thread>
-#include <atomic>
-// #include <future>
-
 
 #include "protos/vipuser.grpc.pb.h"
 
@@ -44,22 +41,19 @@ public:
     VipUserClient(std::string &serverAddr, std::string &sslKey);
     ~VipUserClient();
 
-    // AccountInfo &accountInfo, UserTicket &ticket
     int CreateAccount(std::string userAlias, std::string passwordSum);
     int Login(std::string userAlias, std::string passwordSum);
     int ReLogin(std::string accessToken);
     int Logout(std::string accessToken);
-
+    
+    inline void ShutdownImmediately() { StopWorkerThread(); }
     inline void setVipUserClientSink(VipUserClientSink *sink) { _sink = sink; }
 private:
-    // std::string _serverAddr;
-    // std::string _sslKey;
     std::unique_ptr<vipuser_proto::VipUser::Stub> _stub;
-    grpc::CompletionQueue _cq;
+    grpc::CompletionQueue *_cq;
     VipUserClientSink *_sink;
 
-    std::atomic_bool _isWorkThreadStarted;
-
+    inline grpc::CompletionQueue *GetQueue() { StartWorkerThread(); return _cq; };
     void StartWorkerThread();
     void StopWorkerThread();
     void HandleResponseQueue();
