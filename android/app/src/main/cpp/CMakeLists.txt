@@ -5,21 +5,56 @@
 
 cmake_minimum_required(VERSION 3.4.1)
 
+set( CMAKE_CXX_STANDARD 11 )
+
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
 # You can define multiple libraries, and CMake builds them for you.
 # Gradle automatically packages shared libraries with your APK.
 
+include_directories(
+        .
+        ../../../../../djinni/cpp
+        ./protobuf_include
+        ../../../../..
+        )
+
+
+file(GLOB djinni_generated_src
+        "../../../../../djinni/jni/*.hpp"
+        "../../../../../djinni/jni/*.cpp"
+        "../../../../../djinni/cpp/*.hpp"
+        )
+
+add_library(
+             djinni_generated_lib
+        STATIC
+             ${djinni_generated_src} )
+
+add_library(
+             vipuser_client_lib
+        STATIC
+             "../../../../../client/vipuser_client.h"
+             "../../../../../client/vipuser_client.cc"
+             "../../../../../protos/vipuser.grpc.pb.h"
+             "../../../../../protos/vipuser.grpc.pb.cc"
+             "../../../../../protos/vipuser.pb.h"
+             "../../../../../protos/vipuser.pb.cc"
+             "../../../../../client/picosha2.h" )
+
 add_library( # Sets the name of the library.
-             native-lib
+             vipuser
 
              # Sets the library as a shared library.
              SHARED
 
              # Provides a relative path to your source file(s).
-             djinni_main.cpp
-             djinni_support.cpp
-             native-lib.cpp )
+             "djinni_main.cpp"
+             "djinni_support.cpp"
+             "Marshal.hpp"
+             "proxy_cache_impl.hpp"
+             "proxy_cache_interface.hpp"
+             "vipuser_client_jni.cpp" )
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by
@@ -39,8 +74,10 @@ find_library( # Sets the name of the path variable.
 # build script, prebuilt third-party libraries, or system libraries.
 
 target_link_libraries( # Specifies the target library.
-                       native-lib
+                       vipuser
 
-                       # Links the target library to the log library
+        # Links the target library to the log library
                        # included in the NDK.
-                       ${log-lib} )
+                       ${log-lib}
+                       ${djinni_generated_lib}
+                       ${vipuser_client_lib} )
