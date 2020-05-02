@@ -1,0 +1,43 @@
+account_info = record {
+    user_name: string;
+    password: string;
+}
+
+token_info = record {
+    uuid: string;
+    access_token: string;
+    refresh_token: string;
+    access_token_expire: i64;
+    refresh_token_expire: i64;
+}
+
+access_ticket = record {
+    uuid: string;
+    access_token: string;
+}
+
+reply_result = record {
+    code: i32;
+    message: string;
+}
+
+
+vipuser_service = interface +c {
+    # Instance Method 
+    create_account(account: account_info);
+    login(account: account_info);
+    re_login(ticket: access_ticket);
+    logout(ticket: access_ticket);
+    do_business(ticket: access_ticket, request: binary);
+
+    # Class Method
+    static create_with_listener(listener: vipuser_listener): vipuser_service;
+}
+
+vipuser_listener = interface +j +o {
+    on_create_account(result: reply_result, token: token_info);
+    on_login(result: reply_result, token: token_info);
+    on_re_login(result: reply_result, token: token_info);
+    on_logout(result: reply_result);
+    on_do_business(result: reply_result, response: binary);
+}
