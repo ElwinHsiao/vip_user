@@ -4,6 +4,7 @@
 #include <random>
 #include <sstream>
 #include <iomanip>
+#include <chrono>
 
 #include "boost/uuid/uuid.hpp"
 #include "boost/uuid/uuid_io.hpp"
