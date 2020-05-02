@@ -60,7 +60,7 @@ cmake_external(
    lib_name = "libpqxx",
    lib_source = "@libpqxx//:all",
 #    out_lib_dir = "src",
-   #static_libraries = ["libpqxx-7.0.a"],
+#    static_libraries = ["libpqxx.a"],
    shared_libraries = ["libpqxx.dylib"],
 )
 
