@@ -12,7 +12,7 @@ out_dir="$base_dir/generated"
 cpp_out="$out_dir/cpp"
 jni_out="$out_dir/jni"
 objc_out="$out_dir/objc"
-java_out="$out_dir/per/elwin/vipuser/djinni"
+java_out="$out_dir/java/per/elwin/vipuser/djinni"
 
 java_package="per.elwin.vipuser.djinni"
 cpp_namespace="vipuser"
