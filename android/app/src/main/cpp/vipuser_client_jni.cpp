@@ -12,7 +12,7 @@ namespace textsort {
 
 
 
-    VipUserClientJni::VipUserClientJni(std::shared_ptr<VipuserListener> &listener) {
+    VipUserClientJni::VipUserClientJni(std::shared_ptr<VipUserWrapListener> &listener) {
         this->m_listener = listener;
     }
 
@@ -39,8 +39,8 @@ namespace textsort {
 
 
 /** Class Method */
-    std::shared_ptr<VipuserService>
-    VipuserService::create_with_listener(const std::shared_ptr<VipuserListener> &listener) {
+    std::shared_ptr<VipUserClientWrap>
+    VipUserClientWrap::create_with_listener(const std::shared_ptr<VipUserWrapListener> &listener) {
         VipUserClientJni clientJni1();
 
         return nullptr;
@@ -48,11 +48,11 @@ namespace textsort {
 //    return std::make_shared<VipUserClientJni>(clientJni);
     }
 
-//std::shared_ptr<VipuserService> create_with_listener(const std::shared_ptr<VipuserListener> & listener) {
+//std::shared_ptr<VipUserClientWrap> create_with_listener(const std::shared_ptr<VipuserListener> & listener) {
 //    return nullptr;
 //}
 
-//static std::shared_ptr<VipuserService> VipUserClientJni::create_with_listener(const std::shared_ptr<VipuserListener> & listener)
+//static std::shared_ptr<VipUserClientWrap> VipUserClientJni::create_with_listener(const std::shared_ptr<VipuserListener> & listener)
 //{
 //    return std::make_shared<VipUserClientJni>(listener);
 //}

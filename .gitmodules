@@ -1,3 +1,6 @@
 [submodule "third_party/hiredis"]
 	path = third_party/hiredis
 	url = https://github.com/redis/hiredis.git
+[submodule "third_party/djinni"]
+	path = third_party/djinni
+	url = https://github.com/dropbox/djinni.git

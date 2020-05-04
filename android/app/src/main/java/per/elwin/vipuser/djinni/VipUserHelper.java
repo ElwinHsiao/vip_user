@@ -9,7 +9,7 @@ import javax.annotation.Nonnull;
 
 import per.elwin.vipuser.Utils;
 
-public class VipUserHelper implements VipuserListener {
+public class VipUserHelper implements VipUserWrapListener {
 
     public static class VipUserResult {
         private int code;
@@ -47,18 +47,18 @@ public class VipUserHelper implements VipuserListener {
         this.listener = listener;
     }
 
-    private VipuserService vipuserService = VipuserService.createWithListener(this);
+    private VipUserClientWrap vipUserClientWrap = VipUserClientWrap.createWithListener(this);
     private OnVipUserListener listener;
     private TokenInfo tokenInfo;
 
     public void register(String userName, String password) {
         AccountInfo accountInfo = new AccountInfo(userName, password);
-        vipuserService.createAccount(accountInfo);
+        vipUserClientWrap.createAccount(accountInfo);
     }
 
     public void login(String userName, String password) {
         AccountInfo accountInfo = new AccountInfo(userName, password);
-        vipuserService.login(accountInfo);
+        vipUserClientWrap.login(accountInfo);
     }
 
     public void doBusiness(byte[] request) {
@@ -68,7 +68,7 @@ public class VipUserHelper implements VipuserListener {
             if (listener != null) listener.onDoBusinessResult(new VipUserResult(-1, "have't login"), null);
             return;
         }
-        vipuserService.doBusiness(getTicket(), request);
+        vipUserClientWrap.doBusiness(getTicket(), request);
     }
 
     public void reLogin() {
@@ -78,7 +78,7 @@ public class VipUserHelper implements VipuserListener {
             if (listener != null) listener.onDoBusinessResult(new VipUserResult(-1, "have't login"), null);
             return;
         }
-        vipuserService.reLogin(getTicket());
+        vipUserClientWrap.reLogin(getTicket());
     }
 
     public void logout() {
@@ -89,7 +89,7 @@ public class VipUserHelper implements VipuserListener {
             return;
         }
 
-        vipuserService.logout(getTicket());
+        vipUserClientWrap.logout(getTicket());
     }
 
     private boolean isLogin() {

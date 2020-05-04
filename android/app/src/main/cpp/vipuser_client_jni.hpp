@@ -1,13 +1,13 @@
-#include "../../../../../djinni/cpp/vipuser_service.hpp"
+#include "vip_user_client_wrap.hpp"
 
 using namespace textsort;
 
 namespace textsort {
 
-class VipUserClientJni: public VipuserService
+class VipUserClientJni: public VipUserClientWrap
 {
 public:
-    VipUserClientJni(std::shared_ptr<VipuserListener> & listener);
+    VipUserClientJni(std::shared_ptr<VipUserWrapListener> & listener);
     virtual ~VipUserClientJni() {}
 
     virtual void create_account(const AccountInfo & account) override;
@@ -21,10 +21,10 @@ public:
     virtual void do_business(const AccessTicket & ticket, const std::vector<uint8_t> & request) override;
 
     /** Class Method */
-    //static std::shared_ptr<VipuserService> create_with_listener(const std::shared_ptr<VipuserListener> & listener);
+    //static std::shared_ptr<VipUserClientWrap> create_with_listener(const std::shared_ptr<VipUserWrapListener> & listener);
 
 private:
-    std::shared_ptr<VipuserListener> m_listener;
+    std::shared_ptr<VipUserWrapListener> m_listener;
 };
 
 }

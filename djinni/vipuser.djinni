@@ -22,7 +22,7 @@ reply_result = record {
 }
 
 
-vipuser_service = interface +c {
+vip_user_client_wrap = interface +c {
     # Instance Method 
     create_account(account: account_info);
     login(account: account_info);
@@ -31,10 +31,10 @@ vipuser_service = interface +c {
     do_business(ticket: access_ticket, request: binary);
 
     # Class Method
-    static create_with_listener(listener: vipuser_listener): vipuser_service;
+    static create_with_listener(listener: vip_user_wrap_listener): vip_user_client_wrap;
 }
 
-vipuser_listener = interface +j +o {
+vip_user_wrap_listener = interface +j +o {
     on_create_account(result: reply_result, token: token_info);
     on_login(result: reply_result, token: token_info);
     on_re_login(result: reply_result, token: token_info);

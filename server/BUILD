@@ -59,35 +59,44 @@ cmake_external(
    name = "libpqxx",
    lib_name = "libpqxx",
    lib_source = "@libpqxx//:all",
+   cmake_options = [
+        "-DPostgreSQL_TYPE_INCLUDE_DIR=/usr/include/postgresql"
+   #    "-DCMAKE_CXX_FLAGS=-std=c++11",
+   #    "-DCMAKE_TOOLCHAIN_FILE=/home/elwinxiao/work/vip_user/linux.toolchain.cmake"
+   #    "-DCMAKE_C_COMPILER=/usr/bin/clang", 
+   #    "-DCMAKE_CXX_COMPILER=/usr/bin/clang++",
+   ],
+   env_vars = {
+   #    "CXXFLAG": "-std=c++11"
+   #    "CC": "/opt/rh/devtoolset-7/root/usr/bin/gcc",
+   #    "CXX": "/opt/rh/devtoolset-7/root/usr/bin/g++",
+   },
+   #cmake_options = ["CMAKE_CXX_FLAGS -std=c++11"],
+#   env_vars = {"CMAKE_CXX_FLAGS": "-std=gnu++11"},
 #    out_lib_dir = "src",
 #    static_libraries = ["libpqxx.a"],
-   shared_libraries = ["libpqxx.dylib"],
+#   shared_libraries = ["libpqxx.dylib"],
 )
 
+#load("@rules_foreign_cc//tools/build_defs:configure.bzl", "configure_make")
+#configure_make(
+#    name = "libpqxx",
+#    lib_source = "@libpqxx//:all",
+#    configure_options = [
+#        "--disable-documentation",
+#    ],
+#    #configure_env_vars = {
+#    #    "C_FLAGS": "-Wall -std=c++11",
+#    #    "CXXFLAG": "-Wall",
+#    #    "CC": "/usr/bin/clang",
+#    #    "CXX": "/usr/bin/clang++",
+#    #    "AR": "/usr/bin/llvm-ar",
+#    #    "LINKER": "/usr/bin/llvm-ld",
+#    #    "NM": "/usr/bin/llvm-nm",
+#    #    "OBJDUMP": "/usr/bin/llvm-objdump",
+#    #    "RANLIB": "/usr/bin/llvm-ranlib",
+#    #},
+#    #static_libraries = ["libpqxx.a"],
+#    #shared_libraries = ["libaprutil-1.so"],
+#)
 
-
-
-
-
-
-cc_binary(
-    name = "greeting_server",
-    srcs = [
-        "greeter_server.cc",
-        "helloworld.pb.cc",
-        "helloworld.grpc.pb.cc",
-        "helloworld.grpc.pb.h",
-        "helloworld.pb.h",
-        "account_service/redis_helper.cc",
-        "account_service/redis_helper.h",
-    ],
-    # copts = ["-I/usr/local/include"],
-    # linkopts = ["-lhiredis"],
-    deps = [
-        "@com_github_grpc_grpc//:grpc++_reflection",
-        # "@usr_local//:hiredis",
-        # "@usr_local//:libs",
-        "@hiredis//:hiredis",
-    ],
-    # linkstatic = 1,
-)
