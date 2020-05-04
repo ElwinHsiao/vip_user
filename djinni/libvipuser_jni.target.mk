@@ -2,6 +2,7 @@
 
 include $(CLEAR_VARS)
 
+GYP_CONFIGURATION := Release
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE := libvipuser_jni
 LOCAL_MODULE_SUFFIX := .so
@@ -29,6 +30,7 @@ GYP_COPIED_SOURCE_ORIGIN_DIRS := \
 
 LOCAL_SRC_FILES := \
 	third_party/djinni/support-lib/jni/djinni_main.cpp \
+	android/app/src/main/cpp/vipuser_client_jni.cpp \
 	djinni/generated/jni/NativeTokenInfo.cpp \
 	djinni/generated/jni/NativeAccountInfo.cpp \
 	djinni/generated/jni/NativeAccessTicket.cpp \
@@ -57,6 +59,7 @@ LOCAL_C_INCLUDES_Debug := \
 	$(LOCAL_PATH)/djinni/generated/jni \
 	$(LOCAL_PATH)/djinni/generated/cpp \
 	$(LOCAL_PATH)/client \
+	$(LOCAL_PATH)/android/app/src/main/cpp \
 	$(LOCAL_PATH)/third_party/djinni/support-lib/jni
 
 
@@ -89,6 +92,7 @@ LOCAL_C_INCLUDES_Release := \
 	$(LOCAL_PATH)/djinni/generated/jni \
 	$(LOCAL_PATH)/djinni/generated/cpp \
 	$(LOCAL_PATH)/client \
+	$(LOCAL_PATH)/android/app/src/main/cpp \
 	$(LOCAL_PATH)/third_party/djinni/support-lib/jni
 
 

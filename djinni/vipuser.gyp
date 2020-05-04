@@ -9,6 +9,7 @@
       "ldflags": [ "-llog", "-Wl,--build-id,--gc-sections,--exclude-libs,ALL" ],
       "sources": [
         "../third_party/djinni/support-lib/jni/djinni_main.cpp",
+        "../android/app/src/main/cpp/vipuser_client_jni.cpp",
         "<!@(python <(DJINNI_DIR)/example/glob.py generated/jni '*.cpp')",
         "<!@(python <(DJINNI_DIR)/example/glob.py generated/cpp '*.cpp')",
         "<!@(python <(DJINNI_DIR)/example/glob.py ../client 'vipuser_client.*')",
@@ -17,6 +18,7 @@
         "generated/jni",
         "generated/cpp",
         "../client",
+        "../android/app/src/main/cpp",
       ],
     },
     {
