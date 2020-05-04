@@ -9,7 +9,7 @@ import javax.annotation.Nonnull;
 
 import per.elwin.vipuser.Utils;
 
-public class VipUserHelper implements VipUserWrapListener {
+public class VipUserHelper extends VipUserWrapListener {
 
     public static class VipUserResult {
         private int code;

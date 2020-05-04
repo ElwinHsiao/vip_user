@@ -1,5 +1,6 @@
 package per.elwin.vipuser
 
+import android.content.Context
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,7 +19,7 @@ import kotlin.reflect.KClass
 
 class MainActivity : AppCompatActivity(), VipUserPresenter, VipUserHelper.OnVipUserListener {
 
-    private val mainFragment = object : Fragment() {
+    class MainFragment: Fragment() {
         override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity(), VipUserPresenter, VipUserHelper.OnVipU
                     button {
                         text = "Test Register"
                         onClick {
-                            switchFragment(RegisterFragment::class)
+                            (activity as MainActivity).switchFragment(RegisterFragment::class)
                         }
                     }
                     button {
@@ -68,22 +69,28 @@ class MainActivity : AppCompatActivity(), VipUserPresenter, VipUserHelper.OnVipU
 //        setContentView(R.layout.activity_main)
 //        sample_text.text = stringFromJNI()
 
-        verticalLayout {
-            padding = 16
-            button {
-                text = "Back"
-                onClick {
-                    supportFragmentManager.popBackStack()
-                }
-            }
-            frameLayout {
-                id = R.id.fragment_container
-            }
+        frameLayout {
+            id = R.id.fragment_container
         }
 
         supportFragmentManager.beginTransaction()
-            .add(R.id.fragment_container, mainFragment)
+            .add(R.id.fragment_container, MainFragment())
             .commit()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        if (supportFragmentManager.backStackEntryCount > 0) {
+            supportFragmentManager.popBackStack()
+        }
+        if (supportFragmentManager.backStackEntryCount <= 1) {
+            supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        }
+        return false
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        supportFragmentManager.popBackStack()
     }
 
     private var currentFragment: VipUserFragment? = null
@@ -162,7 +169,7 @@ class MainActivity : AppCompatActivity(), VipUserPresenter, VipUserHelper.OnVipU
     companion object {
         // Used to load the 'native-lib' library on application startup.
         init {
-            System.loadLibrary("vipuser")
+            System.loadLibrary("vipuser_jni")
         }
     }
 
@@ -177,6 +184,11 @@ interface VipUserPresenter {
 }
 
 abstract class VipUserFragment(val presenter: VipUserPresenter): Fragment() {
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
     fun updateState(isSuccess: Boolean, message: String) {
         if (!isDetached) {
             onUpdateState(isSuccess, message)

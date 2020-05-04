@@ -15,15 +15,15 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        externalNativeBuild {
-            cmake {
-                cppFlags "-std=c++11"
-            }
-        }
+//        externalNativeBuild {
+//            ndkBuild {
+//                cppFlags "-std=c++11"
+//            }
+//        }
     }
 
     sourceSets {
-        main.java.srcDir('../../djinni/java')
+        main.java.srcDir('../../djinni/generated/java')
     }
 
     buildTypes {
@@ -34,9 +34,12 @@ android {
     }
 
     externalNativeBuild {
-        cmake {
-            path "src/main/cpp/CMakeLists.txt"
-            version "3.10.2"
+//        cmake {
+//            path "src/main/cpp/CMakeLists.txt"
+//            version "3.10.2"
+//        }
+        ndkBuild {
+            path "jni/Android.mk"
         }
     }
     compileOptions {
