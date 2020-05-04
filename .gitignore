@@ -2,3 +2,4 @@ bazel-*
 .*
 build
 android/app/obj/
+android/app/libs/
