@@ -71,8 +71,8 @@ $djinni_dir/deps/gyp/gyp --depth=. -f xcode -DOS=ios \
     --generator-output ios \
     -I$djinni_dir/common.gypi \
     -DDJINNI_DIR=$djinni_dir \
-    $base_dir/vipuser.gyp
-
+    $base_dir/vipuser.gyp \
+    --root-target=libvipuser_objc
 
 
 echo "gpy generation finish."
