@@ -35,21 +35,20 @@ GYP_COPIED_SOURCE_ORIGIN_DIRS := \
 	$(LOCAL_PATH)/protos
 
 LOCAL_SRC_FILES := \
-	third_party/djinni/support-lib/jni/djinni_main.cpp \
 	android/app/src/main/cpp/vipuser_client_jni.cpp \
 	djinni/generated/jni/NativeVipUserClientWrap.cpp \
 	djinni/generated/jni/NativeTokenInfo.cpp \
 	djinni/generated/jni/NativeVipUserWrapListener.cpp \
 	djinni/generated/jni/NativeAccountInfo.cpp \
 	djinni/generated/jni/NativeAccessTicket.cpp \
-	djinni/generated/jni/NativeReplyResult.cpp \
-	client/vipuser_client.cc \
-	protos/vipuser.pb.cc \
-	protos/vipuser.grpc.pb.cc
+	djinni/generated/jni/NativeReplyResult.cpp
+
 
 # Flags passed to both C and C++ files.
 MY_CFLAGS_Debug := \
 	-gdwarf-2 \
+	-Werror \
+	-Wall \
 	-Wextra \
 	-Wno-missing-field-initializers \
 	-g \
@@ -79,6 +78,8 @@ LOCAL_CPPFLAGS_Debug := \
 # Flags passed to both C and C++ files.
 MY_CFLAGS_Release := \
 	-gdwarf-2 \
+	-Werror \
+	-Wall \
 	-Wextra \
 	-Wno-missing-field-initializers \
 	-Os \
@@ -111,7 +112,6 @@ LOCAL_CFLAGS := $(MY_CFLAGS_$(GYP_CONFIGURATION)) $(MY_DEFS_$(GYP_CONFIGURATION)
 LOCAL_C_INCLUDES := $(GYP_COPIED_SOURCE_ORIGIN_DIRS) $(LOCAL_C_INCLUDES_$(GYP_CONFIGURATION))
 LOCAL_CPPFLAGS := $(LOCAL_CPPFLAGS_$(GYP_CONFIGURATION))
 LOCAL_ASFLAGS := $(LOCAL_CFLAGS)
-
 ### Rules for final target.
 
 LOCAL_LDFLAGS_Debug := \
@@ -128,10 +128,7 @@ LOCAL_GYP_LIBS :=
 LOCAL_LDFLAGS := $(LOCAL_LDFLAGS_$(GYP_CONFIGURATION)) $(LOCAL_GYP_LIBS)
 
 LOCAL_STATIC_LIBRARIES := \
-	djinni_jni \
-	protobuf \
-	grpc \
-	grpc++
+	djinni_jni
 
 # Enable grouping to fix circular references
 LOCAL_GROUP_STATIC_LIBRARIES := true

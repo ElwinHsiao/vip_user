@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		07E4536C4C4A18A3A07F6077 /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B85D2CF66D3DE11B0C42C39A /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				4C600CE41451EAC3F8BD502C /* PBXTargetDependency */,
+				6E5CC1F5F86E63316B8A9437 /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		12A648D75DC0512BFB9F8800 /* VPDReplyResult.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61C5AA46B8BBE602A78C6EA6 /* VPDReplyResult.mm */; };
+		135918BFCD4EA3C2A00D70FA /* VPDAccountInfo+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 82BE0F39AEA3B40461FA4DA7 /* VPDAccountInfo+Private.mm */; };
+		1B8AD2B525EBEF3312534022 /* vipuser_client.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3347FA8A3813FBC386C56303 /* vipuser_client.cc */; };
+		2E25210D34BDAF90A37237FC /* NativeVipUserWrapListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B33C36AB9AB157EF900617 /* NativeVipUserWrapListener.cpp */; };
+		367835E21EE86547506E086B /* VPDAccessTicket.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9D40D68951CD3F9A557C077 /* VPDAccessTicket.mm */; };
+		38D24F75CF79DA55E861AA7E /* VPDTokenInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 056357DA2BA2DD859D71F52E /* VPDTokenInfo.mm */; };
+		40CEC208419DECC9E33FEAD8 /* NativeReplyResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6CD9CCF06432C8C333D3473 /* NativeReplyResult.cpp */; };
+		5D00121231E865AE0164C0F1 /* vipuser.grpc.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = E9FE7761F40B1388E6CD554F /* vipuser.grpc.pb.cc */; };
+		65EB16306F503D1C082CB5C2 /* NativeAccessTicket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B216A8EC29ED8BB44DB6296 /* NativeAccessTicket.cpp */; };
+		6D5722E8837B27232FC2C566 /* libdjinni_jni.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6003F3A78329307BC8E389 /* libdjinni_jni.a */; };
+		7DA7490E03CBEB679ED5C60B /* vipuser.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = DE0633A5F11701438A2C3DCC /* vipuser.pb.cc */; };
+		7E205A427A0B6AC578C69DDA /* NativeAccountInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F85FA832EC29FA1B5AED32C /* NativeAccountInfo.cpp */; };
+		81449E927F290B0FAF50EEA6 /* NativeVipUserClientWrap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04AC7958489B714373A82174 /* NativeVipUserClientWrap.cpp */; };
+		8540484C799527604F1418B7 /* VPDAccessTicket+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = E86C60A77B0DF46FC956F1BB /* VPDAccessTicket+Private.mm */; };
+		87F98812B7F83E7A2D6E1747 /* VPDVipUserClientWrap+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7507D237DF74FBADEF65B21C /* VPDVipUserClientWrap+Private.mm */; };
+		B29607F3D38A0BA16B8E2A36 /* VPDVipUserWrapListener+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F36FB44C053A2C0F365E5C5 /* VPDVipUserWrapListener+Private.mm */; };
+		B2E5BE4D89ED2532E1C9A624 /* vipuser_client_jni.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2630C9B8790E32B463ACA2FA /* vipuser_client_jni.cpp */; };
+		C4104AF0D8A81FE251ADA06E /* NativeTokenInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30B3823AD397E3A103E85472 /* NativeTokenInfo.cpp */; };
+		CBA80DCBDC4BF8B20F0EA634 /* vipuser_client.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3347FA8A3813FBC386C56303 /* vipuser_client.cc */; };
+		D5BA2FD5556DABF88674CB35 /* VPDReplyResult+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 357090E6B3E3B2D64EC9AD4E /* VPDReplyResult+Private.mm */; };
+		DB8FCE26C94B28BBF157217D /* VPDTokenInfo+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 126747A252C024A04AC6E527 /* VPDTokenInfo+Private.mm */; };
+		E19D723F9D7588ADA6F1AF93 /* vipuser.grpc.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = E9FE7761F40B1388E6CD554F /* vipuser.grpc.pb.cc */; };
+		E1BFD6195A880FBDC9BEAEE0 /* VPDAccountInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = D7AF1BF949D4621AFFE6F5AC /* VPDAccountInfo.mm */; };
+		F18ACD96665690366244B214 /* vipuser.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = DE0633A5F11701438A2C3DCC /* vipuser.pb.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6206AFC2B75EED2D1F0D1EF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01FD044741D93A4F3E1B9426 /* support_lib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AD97C5F2356EF26110758A40;
+			remoteInfo = djinni_jni;
+		};
+		735E918FF13447A2302A0EB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52A7592662999F325591C25A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E628F753927671AA7FCBAE5A;
+			remoteInfo = libvipuser_jni;
+		};
+		740F27526DE409905739ADB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01FD044741D93A4F3E1B9426 /* support_lib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC658C749F521B13A5BDCBBC;
+			remoteInfo = djinni_jni;
+		};
+		D69B339931DAE9E0C27F6AF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01FD044741D93A4F3E1B9426 /* support_lib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 830C2426AC54ADA0794D7413;
+			remoteInfo = djinni_jni_main;
+		};
+		E0443E85ED5CE3C87BECA609 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52A7592662999F325591C25A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A18AE754E786539938DD9A2;
+			remoteInfo = libvipuser_objc;
+		};
+		E4D6581EB0D247CB142713B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01FD044741D93A4F3E1B9426 /* support_lib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C99AA4F95316AA552A79C55;
+			remoteInfo = djinni_objc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01FD044741D93A4F3E1B9426 /* support_lib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = support_lib.xcodeproj; path = "../third_party/djinni/support-lib/support_lib.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		04AC7958489B714373A82174 /* NativeVipUserClientWrap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NativeVipUserClientWrap.cpp; sourceTree = "<group>"; };
+		056357DA2BA2DD859D71F52E /* VPDTokenInfo.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VPDTokenInfo.mm; sourceTree = "<group>"; };
+		0B351653C325B7DC5D550986 /* libvipuser_objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libvipuser_objc.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		126747A252C024A04AC6E527 /* VPDTokenInfo+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "VPDTokenInfo+Private.mm"; sourceTree = "<group>"; };
+		2630C9B8790E32B463ACA2FA /* vipuser_client_jni.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vipuser_client_jni.cpp; sourceTree = "<group>"; };
+		30B3823AD397E3A103E85472 /* NativeTokenInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NativeTokenInfo.cpp; sourceTree = "<group>"; };
+		3347FA8A3813FBC386C56303 /* vipuser_client.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vipuser_client.cc; sourceTree = "<group>"; };
+		357090E6B3E3B2D64EC9AD4E /* VPDReplyResult+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "VPDReplyResult+Private.mm"; sourceTree = "<group>"; };
+		43B33C36AB9AB157EF900617 /* NativeVipUserWrapListener.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NativeVipUserWrapListener.cpp; sourceTree = "<group>"; };
+		4B216A8EC29ED8BB44DB6296 /* NativeAccessTicket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NativeAccessTicket.cpp; sourceTree = "<group>"; };
+		4F85FA832EC29FA1B5AED32C /* NativeAccountInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NativeAccountInfo.cpp; sourceTree = "<group>"; };
+		5F36FB44C053A2C0F365E5C5 /* VPDVipUserWrapListener+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "VPDVipUserWrapListener+Private.mm"; sourceTree = "<group>"; };
+		61C5AA46B8BBE602A78C6EA6 /* VPDReplyResult.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VPDReplyResult.mm; sourceTree = "<group>"; };
+		73A3227DA451B7BEF8856728 /* common.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; name = common.gypi; path = ../third_party/djinni/common.gypi; sourceTree = "<group>"; };
+		7507D237DF74FBADEF65B21C /* VPDVipUserClientWrap+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "VPDVipUserClientWrap+Private.mm"; sourceTree = "<group>"; };
+		82BE0F39AEA3B40461FA4DA7 /* VPDAccountInfo+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "VPDAccountInfo+Private.mm"; sourceTree = "<group>"; };
+		C6CD9CCF06432C8C333D3473 /* NativeReplyResult.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NativeReplyResult.cpp; sourceTree = "<group>"; };
+		D3DB57467C1F77C4B64ACC09 /* vipuser.gyp */ = {isa = PBXFileReference; explicitFileType = sourcecode; path = vipuser.gyp; sourceTree = "<group>"; };
+		D7AF1BF949D4621AFFE6F5AC /* VPDAccountInfo.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VPDAccountInfo.mm; sourceTree = "<group>"; };
+		DE0633A5F11701438A2C3DCC /* vipuser.pb.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vipuser.pb.cc; sourceTree = "<group>"; };
+		E0FF8207401F49F5264E8949 /* libvipuser_jni.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libvipuser_jni.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		E86C60A77B0DF46FC956F1BB /* VPDAccessTicket+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "VPDAccessTicket+Private.mm"; sourceTree = "<group>"; };
+		E9D40D68951CD3F9A557C077 /* VPDAccessTicket.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VPDAccessTicket.mm; sourceTree = "<group>"; };
+		E9FE7761F40B1388E6CD554F /* vipuser.grpc.pb.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vipuser.grpc.pb.cc; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17847A3322DFC00F5CF610FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D5722E8837B27232FC2C566 /* libdjinni_jni.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A77CEF001AE29DC00ADE3AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		093C20E8FA8882C2F1437D69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0FF8207401F49F5264E8949 /* libvipuser_jni.dylib */,
+				0B351653C325B7DC5D550986 /* libvipuser_objc.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BE5CCCF501C62DAC4D15982 /* android/app/src/main/cpp */ = {
+			isa = PBXGroup;
+			children = (
+				2630C9B8790E32B463ACA2FA /* vipuser_client_jni.cpp */,
+			);
+			path = android/app/src/main/cpp;
+			sourceTree = "<group>";
+		};
+		980EB921D97E5997B6B65D31 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				3BE5CCCF501C62DAC4D15982 /* android/app/src/main/cpp */,
+				DF8D199834CA4FF4B9A79F3D /* client */,
+				DE09DE24035309ABDF2F991D /* protos */,
+			);
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A45458BFAF2E30EC2C1DF42E = {
+			isa = PBXGroup;
+			children = (
+				AB47D9038D2988BD16209BD2 /* Source */,
+				BF41D2AEF87C386A9E527C3B /* Projects */,
+				093C20E8FA8882C2F1437D69 /* Products */,
+				DBA5515DD9A169FB1A9BF77C /* Build */,
+			);
+			sourceTree = "<group>";
+		};
+		AB47D9038D2988BD16209BD2 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				980EB921D97E5997B6B65D31 /* .. */,
+				DBA90991609224497B8D9B6C /* generated */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		BF41D2AEF87C386A9E527C3B /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				01FD044741D93A4F3E1B9426 /* support_lib.xcodeproj */,
+			);
+			name = Projects;
+			sourceTree = "<group>";
+		};
+		D4C2A604FB7E0A8F9CAAEACC /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				E86C60A77B0DF46FC956F1BB /* VPDAccessTicket+Private.mm */,
+				E9D40D68951CD3F9A557C077 /* VPDAccessTicket.mm */,
+				82BE0F39AEA3B40461FA4DA7 /* VPDAccountInfo+Private.mm */,
+				D7AF1BF949D4621AFFE6F5AC /* VPDAccountInfo.mm */,
+				357090E6B3E3B2D64EC9AD4E /* VPDReplyResult+Private.mm */,
+				61C5AA46B8BBE602A78C6EA6 /* VPDReplyResult.mm */,
+				126747A252C024A04AC6E527 /* VPDTokenInfo+Private.mm */,
+				056357DA2BA2DD859D71F52E /* VPDTokenInfo.mm */,
+				7507D237DF74FBADEF65B21C /* VPDVipUserClientWrap+Private.mm */,
+				5F36FB44C053A2C0F365E5C5 /* VPDVipUserWrapListener+Private.mm */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
+		DBA5515DD9A169FB1A9BF77C /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				73A3227DA451B7BEF8856728 /* common.gypi */,
+				D3DB57467C1F77C4B64ACC09 /* vipuser.gyp */,
+			);
+			name = Build;
+			sourceTree = "<group>";
+		};
+		DBA90991609224497B8D9B6C /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				ECDCACE9FCD6E94D5692CE9E /* jni */,
+				D4C2A604FB7E0A8F9CAAEACC /* objc */,
+			);
+			path = generated;
+			sourceTree = "<group>";
+		};
+		DE09DE24035309ABDF2F991D /* protos */ = {
+			isa = PBXGroup;
+			children = (
+				E9FE7761F40B1388E6CD554F /* vipuser.grpc.pb.cc */,
+				DE0633A5F11701438A2C3DCC /* vipuser.pb.cc */,
+			);
+			path = protos;
+			sourceTree = "<group>";
+		};
+		DF8D199834CA4FF4B9A79F3D /* client */ = {
+			isa = PBXGroup;
+			children = (
+				3347FA8A3813FBC386C56303 /* vipuser_client.cc */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
+		E374A4D88C0696159CB8F653 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F6003F3A78329307BC8E389 /* libdjinni_jni.a */,
+				B8C59827BADBD8DA4CFFF4B3 /* libdjinni_jni_main.a */,
+				C38D215AD4731E2DEF7426FA /* libdjinni_objc.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECDCACE9FCD6E94D5692CE9E /* jni */ = {
+			isa = PBXGroup;
+			children = (
+				4B216A8EC29ED8BB44DB6296 /* NativeAccessTicket.cpp */,
+				4F85FA832EC29FA1B5AED32C /* NativeAccountInfo.cpp */,
+				C6CD9CCF06432C8C333D3473 /* NativeReplyResult.cpp */,
+				30B3823AD397E3A103E85472 /* NativeTokenInfo.cpp */,
+				04AC7958489B714373A82174 /* NativeVipUserClientWrap.cpp */,
+				43B33C36AB9AB157EF900617 /* NativeVipUserWrapListener.cpp */,
+			);
+			path = jni;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A18AE754E786539938DD9A2 /* libvipuser_objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE4582A18917F4C735C0C4F2 /* Build configuration list for PBXNativeTarget "libvipuser_objc" */;
+			buildPhases = (
+				6174DDF6232A0C133875D796 /* Sources */,
+				2A77CEF001AE29DC00ADE3AF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libvipuser_objc;
+			productName = vipuser_objc;
+			productReference = 0B351653C325B7DC5D550986 /* libvipuser_objc.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E628F753927671AA7FCBAE5A /* libvipuser_jni */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A155F20F05DE804DD79BC2C7 /* Build configuration list for PBXNativeTarget "libvipuser_jni" */;
+			buildPhases = (
+				2234DCA5E16D8242014FE4A6 /* Sources */,
+				17847A3322DFC00F5CF610FB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B18AB4FE52827FC243370373 /* PBXTargetDependency */,
+			);
+			name = libvipuser_jni;
+			productName = vipuser_jni;
+			productReference = E0FF8207401F49F5264E8949 /* libvipuser_jni.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52A7592662999F325591C25A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 2491338CB92FD36E7D9F7E9A /* Build configuration list for PBXProject "vipuser" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = A45458BFAF2E30EC2C1DF42E;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E374A4D88C0696159CB8F653 /* Products */;
+					ProjectRef = 01FD044741D93A4F3E1B9426 /* support_lib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				07E4536C4C4A18A3A07F6077 /* All */,
+				E628F753927671AA7FCBAE5A /* libvipuser_jni */,
+				4A18AE754E786539938DD9A2 /* libvipuser_objc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6F6003F3A78329307BC8E389 /* libdjinni_jni.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libdjinni_jni.a;
+			remoteRef = 740F27526DE409905739ADB5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8C59827BADBD8DA4CFFF4B3 /* libdjinni_jni_main.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libdjinni_jni_main.a;
+			remoteRef = D69B339931DAE9E0C27F6AF0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C38D215AD4731E2DEF7426FA /* libdjinni_objc.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libdjinni_objc.a;
+			remoteRef = E4D6581EB0D247CB142713B4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2234DCA5E16D8242014FE4A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E5BE4D89ED2532E1C9A624 /* vipuser_client_jni.cpp in Sources */,
+				CBA80DCBDC4BF8B20F0EA634 /* vipuser_client.cc in Sources */,
+				81449E927F290B0FAF50EEA6 /* NativeVipUserClientWrap.cpp in Sources */,
+				C4104AF0D8A81FE251ADA06E /* NativeTokenInfo.cpp in Sources */,
+				2E25210D34BDAF90A37237FC /* NativeVipUserWrapListener.cpp in Sources */,
+				7E205A427A0B6AC578C69DDA /* NativeAccountInfo.cpp in Sources */,
+				65EB16306F503D1C082CB5C2 /* NativeAccessTicket.cpp in Sources */,
+				40CEC208419DECC9E33FEAD8 /* NativeReplyResult.cpp in Sources */,
+				F18ACD96665690366244B214 /* vipuser.pb.cc in Sources */,
+				5D00121231E865AE0164C0F1 /* vipuser.grpc.pb.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6174DDF6232A0C133875D796 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B8AD2B525EBEF3312534022 /* vipuser_client.cc in Sources */,
+				D5BA2FD5556DABF88674CB35 /* VPDReplyResult+Private.mm in Sources */,
+				DB8FCE26C94B28BBF157217D /* VPDTokenInfo+Private.mm in Sources */,
+				12A648D75DC0512BFB9F8800 /* VPDReplyResult.mm in Sources */,
+				38D24F75CF79DA55E861AA7E /* VPDTokenInfo.mm in Sources */,
+				8540484C799527604F1418B7 /* VPDAccessTicket+Private.mm in Sources */,
+				B29607F3D38A0BA16B8E2A36 /* VPDVipUserWrapListener+Private.mm in Sources */,
+				135918BFCD4EA3C2A00D70FA /* VPDAccountInfo+Private.mm in Sources */,
+				367835E21EE86547506E086B /* VPDAccessTicket.mm in Sources */,
+				87F98812B7F83E7A2D6E1747 /* VPDVipUserClientWrap+Private.mm in Sources */,
+				E1BFD6195A880FBDC9BEAEE0 /* VPDAccountInfo.mm in Sources */,
+				7DA7490E03CBEB679ED5C60B /* vipuser.pb.cc in Sources */,
+				E19D723F9D7588ADA6F1AF93 /* vipuser.grpc.pb.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C600CE41451EAC3F8BD502C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E628F753927671AA7FCBAE5A /* libvipuser_jni */;
+			targetProxy = 735E918FF13447A2302A0EB9 /* PBXContainerItemProxy */;
+		};
+		6E5CC1F5F86E63316B8A9437 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A18AE754E786539938DD9A2 /* libvipuser_objc */;
+			targetProxy = E0443E85ED5CE3C87BECA609 /* PBXContainerItemProxy */;
+		};
+		B18AB4FE52827FC243370373 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = djinni_jni;
+			targetProxy = 6206AFC2B75EED2D1F0D1EF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4288599241A439691C4D7C37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = All;
+			};
+			name = Release;
+		};
+		7EF1FC297A2F0D2251AC9008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEAD_CODE_STRIPPING = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				HEADER_SEARCH_PATHS = (
+					generated/jni,
+					generated/cpp,
+					../client,
+					../android/app/src/main/cpp,
+					"../third_party/djinni/support-lib/jni",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = "-Wall";
+				OTHER_CPLUSPLUSFLAGS = "-Wall";
+				PRODUCT_NAME = vipuser_jni;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+			};
+			name = Release;
+		};
+		8058C56D1F91793F43796C9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEAD_CODE_STRIPPING = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				HEADER_SEARCH_PATHS = (
+					generated/objc,
+					generated/cpp,
+					../client,
+					"../third_party/djinni/support-lib/objc",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = "-Wall";
+				OTHER_CPLUSPLUSFLAGS = "-Wall";
+				PRODUCT_NAME = vipuser_objc;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+			};
+			name = Release;
+		};
+		9AE2FBAB03988720D2CC257A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEAD_CODE_STRIPPING = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = (
+					generated/objc,
+					generated/cpp,
+					../client,
+					"../third_party/djinni/support-lib/objc",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-Wall";
+				OTHER_CPLUSPLUSFLAGS = "-Wall";
+				PRODUCT_NAME = vipuser_objc;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+			};
+			name = Debug;
+		};
+		BC944DE3DAA428EC18547A91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+			};
+			name = Debug;
+		};
+		C34F9D4DE6BF44C6C59BA543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = All;
+			};
+			name = Debug;
+		};
+		CCAC3881FC34FF0901451F33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEAD_CODE_STRIPPING = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = (
+					generated/jni,
+					generated/cpp,
+					../client,
+					../android/app/src/main/cpp,
+					"../third_party/djinni/support-lib/jni",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-Wall";
+				OTHER_CPLUSPLUSFLAGS = "-Wall";
+				PRODUCT_NAME = vipuser_jni;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+			};
+			name = Debug;
+		};
+		D84C8ED40B42C257C44550EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2491338CB92FD36E7D9F7E9A /* Build configuration list for PBXProject "vipuser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC944DE3DAA428EC18547A91 /* Debug */,
+				D84C8ED40B42C257C44550EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Debug;
+		};
+		A155F20F05DE804DD79BC2C7 /* Build configuration list for PBXNativeTarget "libvipuser_jni" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCAC3881FC34FF0901451F33 /* Debug */,
+				7EF1FC297A2F0D2251AC9008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Debug;
+		};
+		AE4582A18917F4C735C0C4F2 /* Build configuration list for PBXNativeTarget "libvipuser_objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AE2FBAB03988720D2CC257A /* Debug */,
+				8058C56D1F91793F43796C9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Debug;
+		};
+		B85D2CF66D3DE11B0C42C39A /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C34F9D4DE6BF44C6C59BA543 /* Debug */,
+				4288599241A439691C4D7C37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52A7592662999F325591C25A /* Project object */;
+}
