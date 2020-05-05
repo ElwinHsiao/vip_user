@@ -10,7 +10,7 @@ namespace djinni_generated {
 
 class NativeTokenInfo final {
 public:
-    using CppType = ::vipuser::TokenInfo;
+    using CppType = ::vipuser_djinni::TokenInfo;
     using JniType = jobject;
 
     using Boxed = NativeTokenInfo;

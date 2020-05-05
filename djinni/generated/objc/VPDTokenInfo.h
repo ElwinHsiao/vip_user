@@ -3,7 +3,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface VPUTokenInfo : NSObject
+@interface VPDTokenInfo : NSObject
 - (nonnull instancetype)initWithUuid:(nonnull NSString *)uuid
                          accessToken:(nonnull NSString *)accessToken
                         refreshToken:(nonnull NSString *)refreshToken

@@ -6,16 +6,16 @@
 
 static_assert(__has_feature(objc_arc), "Djinni requires ARC to be enabled for this file");
 
-@class VPUVipUserClientWrap;
+@class VPDVipUserClientWrap;
 
 namespace djinni_generated {
 
 class VipUserClientWrap
 {
 public:
-    using CppType = std::shared_ptr<::vipuser::VipUserClientWrap>;
-    using CppOptType = std::shared_ptr<::vipuser::VipUserClientWrap>;
-    using ObjcType = VPUVipUserClientWrap*;
+    using CppType = std::shared_ptr<::vipuser_djinni::VipUserClientWrap>;
+    using CppOptType = std::shared_ptr<::vipuser_djinni::VipUserClientWrap>;
+    using ObjcType = VPDVipUserClientWrap*;
 
     using Boxed = VipUserClientWrap;
 

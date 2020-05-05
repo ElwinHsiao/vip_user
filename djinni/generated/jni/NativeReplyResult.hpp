@@ -10,7 +10,7 @@ namespace djinni_generated {
 
 class NativeReplyResult final {
 public:
-    using CppType = ::vipuser::ReplyResult;
+    using CppType = ::vipuser_djinni::ReplyResult;
     using JniType = jobject;
 
     using Boxed = NativeReplyResult;

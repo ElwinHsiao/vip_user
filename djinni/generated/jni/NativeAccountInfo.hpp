@@ -10,7 +10,7 @@ namespace djinni_generated {
 
 class NativeAccountInfo final {
 public:
-    using CppType = ::vipuser::AccountInfo;
+    using CppType = ::vipuser_djinni::AccountInfo;
     using JniType = jobject;
 
     using Boxed = NativeAccountInfo;

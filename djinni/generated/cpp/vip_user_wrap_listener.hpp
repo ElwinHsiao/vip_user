@@ -6,7 +6,7 @@
 #include <cstdint>
 #include <vector>
 
-namespace vipuser {
+namespace vipuser_djinni {
 
 struct ReplyResult;
 struct TokenInfo;
@@ -26,4 +26,4 @@ public:
     virtual void on_do_business(const ReplyResult & result, const std::vector<uint8_t> & response) = 0;
 };
 
-}  // namespace vipuser
+}  // namespace vipuser_djinni

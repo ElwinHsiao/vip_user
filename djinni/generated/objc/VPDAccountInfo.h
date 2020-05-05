@@ -3,7 +3,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface VPUAccountInfo : NSObject
+@interface VPDAccountInfo : NSObject
 - (nonnull instancetype)initWithUserName:(nonnull NSString *)userName
                                 password:(nonnull NSString *)password;
 + (nonnull instancetype)accountInfoWithUserName:(nonnull NSString *)userName

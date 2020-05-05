@@ -7,7 +7,7 @@
 #include <string>
 #include <utility>
 
-namespace vipuser {
+namespace vipuser_djinni {
 
 struct TokenInfo final {
     std::string uuid;
@@ -29,4 +29,4 @@ struct TokenInfo final {
     {}
 };
 
-}  // namespace vipuser
+}  // namespace vipuser_djinni

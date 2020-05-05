@@ -8,10 +8,10 @@
 
 namespace djinni_generated {
 
-class NativeVipUserClientWrap final : ::djinni::JniInterface<::vipuser::VipUserClientWrap, NativeVipUserClientWrap> {
+class NativeVipUserClientWrap final : ::djinni::JniInterface<::vipuser_djinni::VipUserClientWrap, NativeVipUserClientWrap> {
 public:
-    using CppType = std::shared_ptr<::vipuser::VipUserClientWrap>;
-    using CppOptType = std::shared_ptr<::vipuser::VipUserClientWrap>;
+    using CppType = std::shared_ptr<::vipuser_djinni::VipUserClientWrap>;
+    using CppOptType = std::shared_ptr<::vipuser_djinni::VipUserClientWrap>;
     using JniType = jobject;
 
     using Boxed = NativeVipUserClientWrap;
@@ -25,7 +25,7 @@ public:
 private:
     NativeVipUserClientWrap();
     friend ::djinni::JniClass<NativeVipUserClientWrap>;
-    friend ::djinni::JniInterface<::vipuser::VipUserClientWrap, NativeVipUserClientWrap>;
+    friend ::djinni::JniInterface<::vipuser_djinni::VipUserClientWrap, NativeVipUserClientWrap>;
 
 };
 

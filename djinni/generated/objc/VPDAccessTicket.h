@@ -3,7 +3,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface VPUAccessTicket : NSObject
+@interface VPDAccessTicket : NSObject
 - (nonnull instancetype)initWithUuid:(nonnull NSString *)uuid
                          accessToken:(nonnull NSString *)accessToken;
 + (nonnull instancetype)accessTicketWithUuid:(nonnull NSString *)uuid

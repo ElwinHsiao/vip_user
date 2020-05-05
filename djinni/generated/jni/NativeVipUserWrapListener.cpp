@@ -8,7 +8,7 @@
 
 namespace djinni_generated {
 
-NativeVipUserWrapListener::NativeVipUserWrapListener() : ::djinni::JniInterface<::vipuser::VipUserWrapListener, NativeVipUserWrapListener>() {}
+NativeVipUserWrapListener::NativeVipUserWrapListener() : ::djinni::JniInterface<::vipuser_djinni::VipUserWrapListener, NativeVipUserWrapListener>() {}
 
 NativeVipUserWrapListener::~NativeVipUserWrapListener() = default;
 
@@ -16,7 +16,7 @@ NativeVipUserWrapListener::JavaProxy::JavaProxy(JniType j) : Handle(::djinni::jn
 
 NativeVipUserWrapListener::JavaProxy::~JavaProxy() = default;
 
-void NativeVipUserWrapListener::JavaProxy::on_create_account(const ::vipuser::ReplyResult & c_result, const ::vipuser::TokenInfo & c_token) {
+void NativeVipUserWrapListener::JavaProxy::on_create_account(const ::vipuser_djinni::ReplyResult & c_result, const ::vipuser_djinni::TokenInfo & c_token) {
     auto jniEnv = ::djinni::jniGetThreadEnv();
     ::djinni::JniLocalScope jscope(jniEnv, 10);
     const auto& data = ::djinni::JniClass<::djinni_generated::NativeVipUserWrapListener>::get();
@@ -25,7 +25,7 @@ void NativeVipUserWrapListener::JavaProxy::on_create_account(const ::vipuser::Re
                            ::djinni::get(::djinni_generated::NativeTokenInfo::fromCpp(jniEnv, c_token)));
     ::djinni::jniExceptionCheck(jniEnv);
 }
-void NativeVipUserWrapListener::JavaProxy::on_login(const ::vipuser::ReplyResult & c_result, const ::vipuser::TokenInfo & c_token) {
+void NativeVipUserWrapListener::JavaProxy::on_login(const ::vipuser_djinni::ReplyResult & c_result, const ::vipuser_djinni::TokenInfo & c_token) {
     auto jniEnv = ::djinni::jniGetThreadEnv();
     ::djinni::JniLocalScope jscope(jniEnv, 10);
     const auto& data = ::djinni::JniClass<::djinni_generated::NativeVipUserWrapListener>::get();
@@ -34,7 +34,7 @@ void NativeVipUserWrapListener::JavaProxy::on_login(const ::vipuser::ReplyResult
                            ::djinni::get(::djinni_generated::NativeTokenInfo::fromCpp(jniEnv, c_token)));
     ::djinni::jniExceptionCheck(jniEnv);
 }
-void NativeVipUserWrapListener::JavaProxy::on_re_login(const ::vipuser::ReplyResult & c_result, const ::vipuser::TokenInfo & c_token) {
+void NativeVipUserWrapListener::JavaProxy::on_re_login(const ::vipuser_djinni::ReplyResult & c_result, const ::vipuser_djinni::TokenInfo & c_token) {
     auto jniEnv = ::djinni::jniGetThreadEnv();
     ::djinni::JniLocalScope jscope(jniEnv, 10);
     const auto& data = ::djinni::JniClass<::djinni_generated::NativeVipUserWrapListener>::get();
@@ -43,7 +43,7 @@ void NativeVipUserWrapListener::JavaProxy::on_re_login(const ::vipuser::ReplyRes
                            ::djinni::get(::djinni_generated::NativeTokenInfo::fromCpp(jniEnv, c_token)));
     ::djinni::jniExceptionCheck(jniEnv);
 }
-void NativeVipUserWrapListener::JavaProxy::on_logout(const ::vipuser::ReplyResult & c_result) {
+void NativeVipUserWrapListener::JavaProxy::on_logout(const ::vipuser_djinni::ReplyResult & c_result) {
     auto jniEnv = ::djinni::jniGetThreadEnv();
     ::djinni::JniLocalScope jscope(jniEnv, 10);
     const auto& data = ::djinni::JniClass<::djinni_generated::NativeVipUserWrapListener>::get();
@@ -51,7 +51,7 @@ void NativeVipUserWrapListener::JavaProxy::on_logout(const ::vipuser::ReplyResul
                            ::djinni::get(::djinni_generated::NativeReplyResult::fromCpp(jniEnv, c_result)));
     ::djinni::jniExceptionCheck(jniEnv);
 }
-void NativeVipUserWrapListener::JavaProxy::on_do_business(const ::vipuser::ReplyResult & c_result, const std::vector<uint8_t> & c_response) {
+void NativeVipUserWrapListener::JavaProxy::on_do_business(const ::vipuser_djinni::ReplyResult & c_result, const std::vector<uint8_t> & c_response) {
     auto jniEnv = ::djinni::jniGetThreadEnv();
     ::djinni::JniLocalScope jscope(jniEnv, 10);
     const auto& data = ::djinni::JniClass<::djinni_generated::NativeVipUserWrapListener>::get();

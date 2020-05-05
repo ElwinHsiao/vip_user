@@ -6,7 +6,7 @@
 #include <string>
 #include <utility>
 
-namespace vipuser {
+namespace vipuser_djinni {
 
 struct AccessTicket final {
     std::string uuid;
@@ -19,4 +19,4 @@ struct AccessTicket final {
     {}
 };
 
-}  // namespace vipuser
+}  // namespace vipuser_djinni

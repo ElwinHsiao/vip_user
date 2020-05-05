@@ -6,7 +6,7 @@
 #include <string>
 #include <utility>
 
-namespace vipuser {
+namespace vipuser_djinni {
 
 struct AccountInfo final {
     std::string user_name;
@@ -19,4 +19,4 @@ struct AccountInfo final {
     {}
 };
 
-}  // namespace vipuser
+}  // namespace vipuser_djinni

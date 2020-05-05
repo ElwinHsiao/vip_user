@@ -8,10 +8,10 @@
 
 namespace djinni_generated {
 
-class NativeVipUserWrapListener final : ::djinni::JniInterface<::vipuser::VipUserWrapListener, NativeVipUserWrapListener> {
+class NativeVipUserWrapListener final : ::djinni::JniInterface<::vipuser_djinni::VipUserWrapListener, NativeVipUserWrapListener> {
 public:
-    using CppType = std::shared_ptr<::vipuser::VipUserWrapListener>;
-    using CppOptType = std::shared_ptr<::vipuser::VipUserWrapListener>;
+    using CppType = std::shared_ptr<::vipuser_djinni::VipUserWrapListener>;
+    using CppOptType = std::shared_ptr<::vipuser_djinni::VipUserWrapListener>;
     using JniType = jobject;
 
     using Boxed = NativeVipUserWrapListener;
@@ -25,22 +25,22 @@ public:
 private:
     NativeVipUserWrapListener();
     friend ::djinni::JniClass<NativeVipUserWrapListener>;
-    friend ::djinni::JniInterface<::vipuser::VipUserWrapListener, NativeVipUserWrapListener>;
+    friend ::djinni::JniInterface<::vipuser_djinni::VipUserWrapListener, NativeVipUserWrapListener>;
 
-    class JavaProxy final : ::djinni::JavaProxyHandle<JavaProxy>, public ::vipuser::VipUserWrapListener
+    class JavaProxy final : ::djinni::JavaProxyHandle<JavaProxy>, public ::vipuser_djinni::VipUserWrapListener
     {
     public:
         JavaProxy(JniType j);
         ~JavaProxy();
 
-        void on_create_account(const ::vipuser::ReplyResult & result, const ::vipuser::TokenInfo & token) override;
-        void on_login(const ::vipuser::ReplyResult & result, const ::vipuser::TokenInfo & token) override;
-        void on_re_login(const ::vipuser::ReplyResult & result, const ::vipuser::TokenInfo & token) override;
-        void on_logout(const ::vipuser::ReplyResult & result) override;
-        void on_do_business(const ::vipuser::ReplyResult & result, const std::vector<uint8_t> & response) override;
+        void on_create_account(const ::vipuser_djinni::ReplyResult & result, const ::vipuser_djinni::TokenInfo & token) override;
+        void on_login(const ::vipuser_djinni::ReplyResult & result, const ::vipuser_djinni::TokenInfo & token) override;
+        void on_re_login(const ::vipuser_djinni::ReplyResult & result, const ::vipuser_djinni::TokenInfo & token) override;
+        void on_logout(const ::vipuser_djinni::ReplyResult & result) override;
+        void on_do_business(const ::vipuser_djinni::ReplyResult & result, const std::vector<uint8_t> & response) override;
 
     private:
-        friend ::djinni::JniInterface<::vipuser::VipUserWrapListener, ::djinni_generated::NativeVipUserWrapListener>;
+        friend ::djinni::JniInterface<::vipuser_djinni::VipUserWrapListener, ::djinni_generated::NativeVipUserWrapListener>;
     };
 
     const ::djinni::GlobalRef<jclass> clazz { ::djinni::jniFindClass("per/elwin/vipuser/djinni/VipUserWrapListener") };

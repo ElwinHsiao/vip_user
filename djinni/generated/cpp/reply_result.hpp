@@ -7,7 +7,7 @@
 #include <string>
 #include <utility>
 
-namespace vipuser {
+namespace vipuser_djinni {
 
 struct ReplyResult final {
     int32_t code;
@@ -20,4 +20,4 @@ struct ReplyResult final {
     {}
 };
 
-}  // namespace vipuser
+}  // namespace vipuser_djinni

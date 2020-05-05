@@ -7,7 +7,7 @@
 #include <memory>
 #include <vector>
 
-namespace vipuser {
+namespace vipuser_djinni {
 
 class VipUserWrapListener;
 struct AccessTicket;
@@ -32,4 +32,4 @@ public:
     static std::shared_ptr<VipUserClientWrap> create_with_listener(const std::shared_ptr<VipUserWrapListener> & listener);
 };
 
-}  // namespace vipuser
+}  // namespace vipuser_djinni

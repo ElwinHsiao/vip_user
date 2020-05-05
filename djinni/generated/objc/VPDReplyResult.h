@@ -3,7 +3,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface VPUReplyResult : NSObject
+@interface VPDReplyResult : NSObject
 - (nonnull instancetype)initWithCode:(int32_t)code
                              message:(nonnull NSString *)message;
 + (nonnull instancetype)replyResultWithCode:(int32_t)code

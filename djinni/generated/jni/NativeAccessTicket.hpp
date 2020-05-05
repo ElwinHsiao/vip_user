@@ -10,7 +10,7 @@ namespace djinni_generated {
 
 class NativeAccessTicket final {
 public:
-    using CppType = ::vipuser::AccessTicket;
+    using CppType = ::vipuser_djinni::AccessTicket;
     using JniType = jobject;
 
     using Boxed = NativeAccessTicket;

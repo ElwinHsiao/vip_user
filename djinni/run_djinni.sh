@@ -15,8 +15,8 @@ objc_out="$out_dir/objc"
 java_out="$out_dir/java/per/elwin/vipuser/djinni"
 
 java_package="per.elwin.vipuser.djinni"
-cpp_namespace="vipuser"
-objc_type_prefix="VPU"
+cpp_namespace="vipuser_djinni"
+objc_type_prefix="VPD"
 
 djinni_dir=$base_dir/../third_party/djinni
 # Build djinni
