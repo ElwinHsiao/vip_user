@@ -4,3 +4,6 @@
 [submodule "third_party/djinni"]
 	path = third_party/djinni
 	url = https://github.com/dropbox/djinni.git
+[submodule "third_party/libpqxx"]
+	path = third_party/libpqxx
+	url = https://github.com/jtv/libpqxx.git

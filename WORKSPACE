@@ -85,12 +85,33 @@ load("@rules_foreign_cc//:workspace_definitions.bzl", "rules_foreign_cc_dependen
 #      The default is True.
 rules_foreign_cc_dependencies()
 
-http_archive(
-   name = "libpqxx",
-   build_file_content = all_content,
-   strip_prefix = "libpqxx-6.4.6",
-   urls = ["https://github.com/jtv/libpqxx/archive/6.4.6.tar.gz"],
+new_local_repository (
+    name = "libpqxx",
+    path = "third_party/libpqxx",
+    build_file_content = all_content,
 )
+
+
+new_local_repository (
+    name = "libpq",
+    path = "../postgres",
+    build_file_content = all_content,
+)
+
+#http_archive(
+#   name = "libpqxx",
+#   build_file_content = all_content,
+#   strip_prefix = "libpqxx-6.4.6",
+#   urls = ["https://github.com/jtv/libpqxx/archive/6.4.6.tar.gz"],
+#)
+
+#http_archive(
+#   name = "libpq",
+#   build_file_content = all_content,
+#   strip_prefix = "libpq-REL_12_2",
+#   urls = ["https://github.com/postgres/postgres/archive/REL_12_2.tar.gz"],
+#)
+
 
 # git_repository(
 #     name = 'protobuf',
