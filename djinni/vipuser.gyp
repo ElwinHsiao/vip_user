@@ -10,9 +10,10 @@
       "sources": [
         "../third_party/djinni/support-lib/jni/djinni_main.cpp",
         "../android/app/src/main/cpp/vipuser_client_jni.cpp",
+        "../client/vipuser_client.cc",
         "<!@(python <(DJINNI_DIR)/example/glob.py generated/jni '*.cpp')",
         "<!@(python <(DJINNI_DIR)/example/glob.py generated/cpp '*.cpp')",
-        "<!@(python <(DJINNI_DIR)/example/glob.py ../client 'vipuser_client.*')",
+        "<!@(python <(DJINNI_DIR)/example/glob.py ../protos '*.cc')",
       ],
       "include_dirs": [
         "generated/jni",

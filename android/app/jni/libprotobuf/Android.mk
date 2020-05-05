@@ -3,9 +3,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := protobuf
 
-LOCAL_EXPORT_C_INCLUDES := \
-	$(LOCAL_PATH)/include \
-	$(LOCAL_PATH)/../libgrpc_headers
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/include
 
 
 ### tips : .a build
