@@ -12,7 +12,7 @@ class VipUserClientJni: public vipuser_djinni::VipUserClientWrap
 {
 public:
     VipUserClientJni();
-    virtual ~VipUserClientJni() {}
+    virtual ~VipUserClientJni();
 
     virtual void create_account(const vipuser_djinni::AccountInfo & account) override;
 
@@ -30,6 +30,7 @@ public:
 
 private:
     std::shared_ptr<vipuser_djinni::VipUserWrapListener> m_listener;
+    VipUserClient *_client;
 };
 
 }

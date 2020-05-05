@@ -28,6 +28,7 @@ GYP_COPIED_SOURCE_ORIGIN_DIRS := \
 	$(LOCAL_PATH)/client
 
 LOCAL_SRC_FILES := \
+	client/vipuser_client.cc \
 	third_party/djinni/support-lib/jni/djinni_main.cpp \
 	android/app/src/main/cpp/vipuser_client_jni.cpp \
 	djinni/generated/jni/NativeTokenInfo.cpp \
