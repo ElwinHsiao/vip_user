@@ -45,7 +45,7 @@ djinni_dir=$base_dir/../third_party/djinni
 echo "djinni generate completed."
 
 
-echo "start gpy generation..."
+echo "start android gpy generation..."
 make -C $djinni_dir ./deps/gyp
 
 
@@ -64,5 +64,15 @@ if [ -f GypAndroid.mk ]; then
 else
     echo "gpy generate failed!"
 fi
+
+
+echo "start ios gpy generation..."
+$djinni_dir/deps/gyp/gyp --depth=. -f xcode -DOS=ios \
+    --generator-output ios \
+    -I$djinni_dir/common.gypi \
+    -DDJINNI_DIR=$djinni_dir \
+    $base_dir/vipuser.gyp
+
+
 
 echo "gpy generation finish."
