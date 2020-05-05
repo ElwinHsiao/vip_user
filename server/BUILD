@@ -8,7 +8,7 @@ cc_library(
   srcs = glob(["common/*.cc"]),
   deps = [
       "@boost//:uuid",
-      "@com_github_grpc_grpc//:grpc++_reflection",
+      "@com_github_grpc_grpc//:grpc++",
   ],
 
   visibility = ["//visibility:public"],
@@ -46,7 +46,7 @@ cc_binary(
         "vipuser_server.h",
     ],
     deps = [
-        # "@com_github_grpc_grpc//:grpc++_reflection",
+        # "@com_github_grpc_grpc//:grpc++",
         ":account_service",
         ":access_service",
         "//protos:vipuser_proto",
@@ -118,6 +118,10 @@ configure_make(
     #    "OBJDUMP": "/usr/bin/llvm-objdump",
     #    "RANLIB": "/usr/bin/llvm-ranlib",
     #},
-    static_libraries = ["libpq.a", "libpgport.a"],
+    static_libraries = [
+        "libpq.a", 
+        "libpgcommon.a", 
+        "libpgport.a",
+    ],
     #shared_libraries = ["libaprutil-1.so"],
 )

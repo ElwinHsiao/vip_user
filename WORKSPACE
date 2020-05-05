@@ -85,31 +85,31 @@ load("@rules_foreign_cc//:workspace_definitions.bzl", "rules_foreign_cc_dependen
 #      The default is True.
 rules_foreign_cc_dependencies()
 
-new_local_repository (
-    name = "libpqxx",
-    path = "third_party/libpqxx",
-    build_file_content = all_content,
+
+http_archive(
+   name = "libpqxx",
+   build_file_content = all_content,
+   strip_prefix = "libpqxx-6.4.6",
+   urls = ["https://github.com/jtv/libpqxx/archive/6.4.6.tar.gz"],
 )
 
-
-new_local_repository (
-    name = "libpq",
-    path = "../postgres",
-    build_file_content = all_content,
+http_archive(
+   name = "libpq",
+   build_file_content = all_content,
+   strip_prefix = "postgres-REL_12_2",
+   urls = ["https://github.com/postgres/postgres/archive/REL_12_2.tar.gz"],
 )
 
-#http_archive(
-#   name = "libpqxx",
-#   build_file_content = all_content,
-#   strip_prefix = "libpqxx-6.4.6",
-#   urls = ["https://github.com/jtv/libpqxx/archive/6.4.6.tar.gz"],
+#new_local_repository (
+#    name = "libpqxx",
+#    path = "third_party/libpqxx",
+#    build_file_content = all_content,
 #)
 
-#http_archive(
-#   name = "libpq",
-#   build_file_content = all_content,
-#   strip_prefix = "libpq-REL_12_2",
-#   urls = ["https://github.com/postgres/postgres/archive/REL_12_2.tar.gz"],
+#new_local_repository (
+#    name = "libpq",
+#    path = "../postgres",
+#    build_file_content = all_content,
 #)
 
 
@@ -118,12 +118,10 @@ new_local_repository (
 #     remote = 'https://github.com/google/protobuf.git',
 #     commit = 'e35e24800fb8d694bdeea5fd63dc7d1b14d68723',
 # )
-
 # bind(
 #     name = 'protobuf_compiler',
 #     actual = '@protobuf//:protoc_lib',
 # )
-
 # bind(
 #     name = 'protobuf_clib',
 #     actual = '@protobuf//:protobuf',
