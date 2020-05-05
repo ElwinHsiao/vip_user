@@ -1,6 +1,6 @@
 // Protocol Buffers - Google's data interchange format
 // Copyright 2008 Google Inc.  All rights reserved.
-// http://code.google.com/p/protobuf/
+// https://developers.google.com/protocol-buffers/
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -28,60 +28,37 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-// Author: kenton@google.com (Kenton Varda)
+// Author: seongkim@google.com (Seong Beom Kim)
 //  Based on original Protocol Buffers design by
 //  Sanjay Ghemawat, Jeff Dean, and others.
 
-#ifndef GOOGLE_PROTOBUF_COMPILER_JAVANANO_ENUM_H__
-#define GOOGLE_PROTOBUF_COMPILER_JAVANANO_ENUM_H__
+#ifndef GOOGLE_PROTOBUF_COMPILER_CPP_PADDING_OPTIMIZER_H__
+#define GOOGLE_PROTOBUF_COMPILER_CPP_PADDING_OPTIMIZER_H__
 
-#include <string>
-#include <vector>
-
-#include <google/protobuf/compiler/javanano/javanano_params.h>
-#include <google/protobuf/descriptor.h>
+#include <google/protobuf/compiler/cpp/cpp_message_layout_helper.h>
 
 namespace google {
 namespace protobuf {
-  namespace io {
-    class Printer;             // printer.h
-  }
-}
-
-namespace protobuf {
 namespace compiler {
-namespace javanano {
+namespace cpp {
 
-class EnumGenerator {
+// Rearranges the fields of a message to minimize padding.
+// Fields are grouped by the type and the size.
+// For example, grouping four boolean fields and one int32
+// field results in zero padding overhead. See OptimizeLayout's
+// comment for details.
+class PaddingOptimizer : public MessageLayoutHelper {
  public:
-  explicit EnumGenerator(const EnumDescriptor* descriptor, const Params& params);
-  ~EnumGenerator();
+  PaddingOptimizer() {}
+  ~PaddingOptimizer() override {}
 
-  void Generate(io::Printer* printer);
-
- private:
-  const Params& params_;
-  const EnumDescriptor* descriptor_;
-
-  // The proto language allows multiple enum constants to have the same numeric
-  // value.  Java, however, does not allow multiple enum constants to be
-  // considered equivalent.  We treat the first defined constant for any
-  // given numeric value as "canonical" and the rest as aliases of that
-  // canonical value.
-  vector<const EnumValueDescriptor*> canonical_values_;
-
-  struct Alias {
-    const EnumValueDescriptor* value;
-    const EnumValueDescriptor* canonical_value;
-  };
-  vector<Alias> aliases_;
-
-  GOOGLE_DISALLOW_EVIL_CONSTRUCTORS(EnumGenerator);
+  void OptimizeLayout(std::vector<const FieldDescriptor*>* fields,
+                      const Options& options) override;
 };
 
-}  // namespace javanano
+}  // namespace cpp
 }  // namespace compiler
 }  // namespace protobuf
-
 }  // namespace google
-#endif  // GOOGLE_PROTOBUF_COMPILER_JAVANANO_ENUM_H__
+
+#endif  // GOOGLE_PROTOBUF_COMPILER_CPP_PADDING_OPTIMIZER_H__

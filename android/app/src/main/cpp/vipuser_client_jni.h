@@ -1,4 +1,5 @@
 #include "vip_user_client_wrap.hpp"
+#include "vipuser_client.h"
 
 #include "account_info.hpp"
 #include "access_ticket.hpp"
