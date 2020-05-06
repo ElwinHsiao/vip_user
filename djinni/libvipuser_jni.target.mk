@@ -41,13 +41,14 @@ LOCAL_SRC_FILES := \
 	djinni/generated/jni/NativeVipUserWrapListener.cpp \
 	djinni/generated/jni/NativeAccountInfo.cpp \
 	djinni/generated/jni/NativeAccessTicket.cpp \
-	djinni/generated/jni/NativeReplyResult.cpp
-
+	djinni/generated/jni/NativeReplyResult.cpp \
+	client/vipuser_client.cc \
+	protos/vipuser.pb.cc \
+	protos/vipuser.grpc.pb.cc
 
 # Flags passed to both C and C++ files.
 MY_CFLAGS_Debug := \
 	-gdwarf-2 \
-	-Werror \
 	-Wall \
 	-Wextra \
 	-Wno-missing-field-initializers \
@@ -78,7 +79,6 @@ LOCAL_CPPFLAGS_Debug := \
 # Flags passed to both C and C++ files.
 MY_CFLAGS_Release := \
 	-gdwarf-2 \
-	-Werror \
 	-Wall \
 	-Wextra \
 	-Wno-missing-field-initializers \
@@ -115,12 +115,12 @@ LOCAL_ASFLAGS := $(LOCAL_CFLAGS)
 ### Rules for final target.
 
 LOCAL_LDFLAGS_Debug := \
-	-llog \
+	-llog -lz \
 	-Wl,--build-id,--gc-sections,--exclude-libs,ALL
 
 
 LOCAL_LDFLAGS_Release := \
-	-llog \
+	-llog -lz \
 	-Wl,--build-id,--gc-sections,--exclude-libs,ALL
 
 LOCAL_GYP_LIBS :=
