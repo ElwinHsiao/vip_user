@@ -1,0 +1,14 @@
+workspace 'vipuser.xcworkspace'
+
+platform :ios, '8.0'
+use_frameworks!
+
+project '../djinni/vipuser.xcodeproj'
+
+target 'libvipuser_objc' do
+  use_frameworks!
+  pod 'Protobuf-C++'
+  pod 'gRPC-ProtoRPC'
+  #pod 'vipuser', :path => '.'
+end
+

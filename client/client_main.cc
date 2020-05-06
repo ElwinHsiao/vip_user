@@ -65,8 +65,10 @@ int main(int argc, char **argv)
     std::string password = "mypassword1";
     client.setVipUserClientSink(new ClientSink());
     if (isLogin) {
+        std::cout << "Login" << std::endl;
         client.Login(userName, password);
     } else {
+        std::cout << "CreateAccount" << std::endl;
         client.CreateAccount(userName, password);
     }
 
