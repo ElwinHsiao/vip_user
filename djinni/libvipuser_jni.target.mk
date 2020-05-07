@@ -129,7 +129,6 @@ LOCAL_LDFLAGS := $(LOCAL_LDFLAGS_$(GYP_CONFIGURATION)) $(LOCAL_GYP_LIBS)
 
 LOCAL_STATIC_LIBRARIES := \
 	djinni_jni \
-	protobuf \
 	grpc++
 
 # Enable grouping to fix circular references
