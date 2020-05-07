@@ -7,6 +7,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 public abstract class VipUserClientWrap {
     /** Instance Method  */
+    public abstract void init(String svraddr, String pubkey);
+
     public abstract void createAccount(AccountInfo account);
 
     public abstract void login(AccountInfo account);
@@ -45,6 +47,14 @@ public abstract class VipUserClientWrap {
             _djinni_private_destroy();
             super.finalize();
         }
+
+        @Override
+        public void init(String svraddr, String pubkey)
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            native_init(this.nativeRef, svraddr, pubkey);
+        }
+        private native void native_init(long _nativeRef, String svraddr, String pubkey);
 
         @Override
         public void createAccount(AccountInfo account)

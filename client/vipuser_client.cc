@@ -122,7 +122,7 @@ std::string sha256Of(std::string src_str) {
     return hex_str;
 }
 
-VipUserClient::VipUserClient(std::string &serverAddr, std::string &sslKey) : _sink(NULL), _cq(NULL)//, _isWorkThreadStarted(false)
+VipUserClient::VipUserClient(const std::string &serverAddr, const std::string &sslKey) : _sink(NULL), _cq(NULL)//, _isWorkThreadStarted(false)
 {
     grpc::SslCredentialsOptions sslOpts;
     sslOpts.pem_root_certs = sslKey;

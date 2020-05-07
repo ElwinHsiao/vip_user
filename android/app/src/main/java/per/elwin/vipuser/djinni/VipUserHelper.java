@@ -47,7 +47,12 @@ public class VipUserHelper extends VipUserWrapListener {
         this.listener = listener;
     }
 
-    private VipUserClientWrap vipUserClientWrap = VipUserClientWrap.createWithListener(this);
+    public void init(String serverAddr, String publicKey) {
+        vipUserClientWrap = VipUserClientWrap.createWithListener(this);
+        vipUserClientWrap.init(serverAddr, publicKey);
+    }
+
+    private VipUserClientWrap vipUserClientWrap;
     private OnVipUserListener listener;
     private TokenInfo tokenInfo;
 

@@ -24,6 +24,7 @@ reply_result = record {
 
 vip_user_client_wrap = interface +c {
     # Instance Method 
+    init(svraddr: string, pubkey: string);
     create_account(account: account_info);
     login(account: account_info);
     re_login(ticket: access_ticket);

@@ -22,6 +22,16 @@ CJNIEXPORT void JNICALL Java_per_elwin_vipuser_djinni_VipUserClientWrap_00024Cpp
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, )
 }
 
+CJNIEXPORT void JNICALL Java_per_elwin_vipuser_djinni_VipUserClientWrap_00024CppProxy_native_1init(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jstring j_svraddr, jstring j_pubkey)
+{
+    try {
+        DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
+        const auto& ref = ::djinni::objectFromHandleAddress<::vipuser_djinni::VipUserClientWrap>(nativeRef);
+        ref->init(::djinni::String::toCpp(jniEnv, j_svraddr),
+                  ::djinni::String::toCpp(jniEnv, j_pubkey));
+    } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, )
+}
+
 CJNIEXPORT void JNICALL Java_per_elwin_vipuser_djinni_VipUserClientWrap_00024CppProxy_native_1createAccount(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jobject j_account)
 {
     try {

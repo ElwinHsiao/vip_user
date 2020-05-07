@@ -175,18 +175,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2016DE795E8FD516D7FDFD12 /* vipuser_client.cc in Sources */,
+				DD814933EB30394DF86E893D /* VPDAccessTicket.mm in Sources */,
 				9082BB77FCE7FC699FA9EE83 /* VPDReplyResult+Private.mm in Sources */,
-				8F7382938AD09F77D69623D1 /* VPDTokenInfo+Private.mm in Sources */,
-				FF79FB9C5C63CE4FAFE8BCE3 /* VPDReplyResult.mm in Sources */,
-				FB92A6C1061F3A165ABE2C4F /* VPDTokenInfo.mm in Sources */,
-				BAE3ADAA1987C22D33F094D1 /* VPDAccessTicket+Private.mm in Sources */,
+				739BDAE64007C93A8F87431E /* VPDAccountInfo.mm in Sources */,
 				A4E4A5CC4DFFBD423BE071E9 /* VPDVipUserWrapListener+Private.mm in Sources */,
 				9F739630C960B2B9044694C9 /* VPDAccountInfo+Private.mm in Sources */,
-				DD814933EB30394DF86E893D /* VPDAccessTicket.mm in Sources */,
+				8F7382938AD09F77D69623D1 /* VPDTokenInfo+Private.mm in Sources */,
+				FB92A6C1061F3A165ABE2C4F /* VPDTokenInfo.mm in Sources */,
+				FF79FB9C5C63CE4FAFE8BCE3 /* VPDReplyResult.mm in Sources */,
 				580F3B7C3CEB2831AA691C0E /* VPDVipUserClientWrap+Private.mm in Sources */,
-				739BDAE64007C93A8F87431E /* VPDAccountInfo.mm in Sources */,
-				E4114CB21C52C401DA01218C /* vipuser.pb.cc in Sources */,
+				BAE3ADAA1987C22D33F094D1 /* VPDAccessTicket+Private.mm in Sources */,
 				19F64538A51B21BF99599F15 /* vipuser.grpc.pb.cc in Sources */,
+				E4114CB21C52C401DA01218C /* vipuser.pb.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

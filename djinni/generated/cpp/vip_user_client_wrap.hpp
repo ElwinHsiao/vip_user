@@ -5,6 +5,7 @@
 
 #include <cstdint>
 #include <memory>
+#include <string>
 #include <vector>
 
 namespace vipuser_djinni {
@@ -18,6 +19,8 @@ public:
     virtual ~VipUserClientWrap() {}
 
     /** Instance Method  */
+    virtual void init(const std::string & svraddr, const std::string & pubkey) = 0;
+
     virtual void create_account(const AccountInfo & account) = 0;
 
     virtual void login(const AccountInfo & account) = 0;

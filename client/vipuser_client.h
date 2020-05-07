@@ -38,7 +38,7 @@ public:
 class VipUserClient
 {
 public:
-    VipUserClient(std::string &serverAddr, std::string &sslKey);
+    VipUserClient(const std::string &serverAddr, const std::string &sslKey);
     ~VipUserClient();
 
     int CreateAccount(std::string userAlias, std::string passwordSum);

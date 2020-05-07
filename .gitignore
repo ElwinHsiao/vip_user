@@ -1,5 +1,7 @@
 bazel-*
 .*
+*.iml
+local.properties
 build
 android/app/obj/
 android/app/libs/

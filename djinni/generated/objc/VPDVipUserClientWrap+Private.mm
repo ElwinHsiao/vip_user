@@ -33,6 +33,14 @@ static_assert(__has_feature(objc_arc), "Djinni requires ARC to be enabled for th
     return self;
 }
 
+- (void)init:(nonnull NSString *)svraddr
+      pubkey:(nonnull NSString *)pubkey {
+    try {
+        _cppRefHandle.get()->init(::djinni::String::toCpp(svraddr),
+                                  ::djinni::String::toCpp(pubkey));
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
 - (void)createAccount:(nonnull VPDAccountInfo *)account {
     try {
         _cppRefHandle.get()->create_account(::djinni_generated::AccountInfo::toCpp(account));

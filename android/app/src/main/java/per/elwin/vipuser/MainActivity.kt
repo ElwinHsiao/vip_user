@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -71,11 +72,22 @@ class MainActivity : AppCompatActivity(), VipUserPresenter, VipUserHelper.OnVipU
 
         frameLayout {
             id = R.id.fragment_container
+            button {
+                text = "init"
+                onClick {
+                    vipUserHelper.init("127.0.0.1:50051",readServerCAKey())
+                }
+            }.lparams {
+                gravity = Gravity.BOTTOM
+                wrapContent
+            }
         }
 
         supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container, MainFragment())
             .commit()
+
+        //vipUserHelper.init("127.0.0.1:50051",readServerCAKey())
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -165,6 +177,12 @@ class MainActivity : AppCompatActivity(), VipUserPresenter, VipUserHelper.OnVipU
         TODO("Not yet implemented")
     }
 
+    private fun readServerCAKey(): String {
+        val file_name = "server.crt"
+        return application.assets.open(file_name).bufferedReader().use {
+            it.readText()
+        }
+    }
 
     companion object {
         // Used to load the 'native-lib' library on application startup.

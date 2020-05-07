@@ -14,6 +14,8 @@ public:
     VipUserClientJni();
     virtual ~VipUserClientJni();
 
+    virtual void init(const std::string & svraddr, const std::string & pubkey);
+
     virtual void create_account(const vipuser_djinni::AccountInfo & account) override;
 
     virtual void login(const vipuser_djinni::AccountInfo & account) override;

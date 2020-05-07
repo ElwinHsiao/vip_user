@@ -11,6 +11,9 @@
 @interface VPDVipUserClientWrap : NSObject
 
 /** Instance Method  */
+- (void)init:(nonnull NSString *)svraddr
+      pubkey:(nonnull NSString *)pubkey;
+
 - (void)createAccount:(nonnull VPDAccountInfo *)account;
 
 - (void)login:(nonnull VPDAccountInfo *)account;

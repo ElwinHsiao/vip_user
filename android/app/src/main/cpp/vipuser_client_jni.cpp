@@ -15,16 +15,22 @@ using namespace vipuser;
 
 
 
-VipUserClientJni::VipUserClientJni()
+VipUserClientJni::VipUserClientJni(): _client(NULL)
 {
-    std::string serverAddr = "192.168.50.106:50051";
-    std::string sslKey = "";
-    _client = new VipUserClient(serverAddr, sslKey);
 }
 
 VipUserClientJni::~VipUserClientJni()
 {
-    delete _client;
+    if (_client != NULL) {
+        delete _client;
+    }
+}
+
+void VipUserClientJni::init(const std::string & svraddr, const std::string & pubkey)
+{
+    if (_client == NULL) {
+        _client = new VipUserClient(svraddr, pubkey);
+    }
 }
 
 void VipUserClientJni::create_account(const vipuser_djinni::AccountInfo &account) {
