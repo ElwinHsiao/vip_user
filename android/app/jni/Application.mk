@@ -1,4 +1,4 @@
-APP_ABI := armeabi-v7a #arm64-v8a x86 x86_64 
+APP_ABI :=   x86_64 x86 armeabi-v7a arm64-v8a
 APP_OPTIM := release
 APP_PLATFORM := android-24
 # GCC 4.9 Toolchain - requires NDK r10
